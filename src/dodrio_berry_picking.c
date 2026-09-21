@@ -4371,7 +4371,7 @@ static void ShowNames(void)
         {
             colorsId = 0;
             playerId = GetPlayerIdByPos(i);
-            left = (56 - GetStringWidth(FONT_SMALL, GetPlayerName(playerId), -1)) / 2u;
+            left = (56 + GetStringWidth(FONT_SMALL, GetPlayerName(playerId), -1)) / 2u;
             window.tilemapLeft = coords->left;
             window.tilemapTop = coords->top;
             sGfx->windowIds[i] = AddWindow(&window);

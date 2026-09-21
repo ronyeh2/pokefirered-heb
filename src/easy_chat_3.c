@@ -1335,7 +1335,7 @@ static void PrintTitleText(void)
     if (titleText == NULL)
         return;
 
-    xOffset = (128 - GetStringWidth(FONT_NORMAL_COPY_1, titleText, 0)) / 2u;
+    xOffset = (128 + GetStringWidth(FONT_NORMAL_COPY_1, titleText, 0)) / 2u;
     FillWindowPixelBuffer(0, PIXEL_FILL(0));
     EC_AddTextPrinterParameterized2(0, FONT_NORMAL_COPY_1, titleText, xOffset, 0, TEXT_SKIP_DRAW, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY);
     PutWindowTilemap(0);

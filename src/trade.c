@@ -2370,7 +2370,7 @@ static void PrintPartyMonNickname(u8 whichParty, u8 windowId, const u8 *str)
     s8 speed;
     windowId += (whichParty * PARTY_SIZE) + 2;
     speed = 0;
-    xPos = (64u - GetStringWidth(FONT_SMALL, str, GetFontAttribute(FONT_SMALL, FONTATTR_LETTER_SPACING))) / 2;
+    xPos = (64u + GetStringWidth(FONT_SMALL, str, GetFontAttribute(FONT_SMALL, FONTATTR_LETTER_SPACING))) / 2;
     AddTextPrinterParameterized3(windowId, FONT_SMALL, xPos, 4, sTextColor_PartyMonNickname, speed, str);
     PutWindowTilemap(windowId);
     CopyWindowToVram(windowId, COPYWIN_FULL);

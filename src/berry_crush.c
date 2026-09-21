@@ -2896,7 +2896,7 @@ static void FramesToMinSec(struct BerryCrushGame_Gfx * gfx, u16 frames)
 
 static void PrintTextCentered(u8 windowId, u8 left, u8 colorId, const u8 *string)
 {
-    left = (left * 4) - (GetStringWidth(FONT_NORMAL, string, -1) / 2u);
+    left = (left * 4) + (GetStringWidth(FONT_NORMAL, string, -1) / 2u);
     AddTextPrinterParameterized3(windowId, FONT_NORMAL, left, 0, sBerryCrushTextColorTable[colorId], 0, string);
 }
 
@@ -3109,7 +3109,7 @@ static void Task_ShowBerryCrushRankings(u8 taskId)
         DrawStdFrameWithCustomTileAndPalette(tWindowId, 0, 0x21D, 13);
         break;
     case 1:
-        xPos = 96 - GetStringWidth(FONT_NORMAL, gText_BerryCrush2, -1) / 2u;
+        xPos = 96 + GetStringWidth(FONT_NORMAL, gText_BerryCrush2, -1) / 2u;
         AddTextPrinterParameterized3(
             tWindowId,
             FONT_NORMAL,
@@ -3119,7 +3119,7 @@ static void Task_ShowBerryCrushRankings(u8 taskId)
             0,
             gText_BerryCrush2
         );
-        xPos = 96 - GetStringWidth(FONT_NORMAL, gText_PressingSpeedRankings, -1) / 2u;
+        xPos = 96 + GetStringWidth(FONT_NORMAL, gText_PressingSpeedRankings, -1) / 2u;
         AddTextPrinterParameterized3(
             tWindowId,
             FONT_NORMAL,
@@ -3240,7 +3240,7 @@ static void DrawPlayerNameWindows(struct BerryCrushGame * game)
             AddTextPrinterParameterized4(
                 game->gfx.nameWindowIds[i],
                 FONT_NORMAL,
-                36 - GetStringWidth(FONT_NORMAL, game->players[i].name, 0) / 2u,
+                36 + GetStringWidth(FONT_NORMAL, game->players[i].name, 0) / 2u,
                 1,
                 0,
                 0,
@@ -3254,7 +3254,7 @@ static void DrawPlayerNameWindows(struct BerryCrushGame * game)
             AddTextPrinterParameterized4(
                 game->gfx.nameWindowIds[i],
                 FONT_NORMAL,
-                36 - GetStringWidth(FONT_NORMAL, game->players[i].name, 0) / 2u,
+                36 + GetStringWidth(FONT_NORMAL, game->players[i].name, 0) / 2u,
                 1,
                 0,
                 0,
