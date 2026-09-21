@@ -841,7 +841,12 @@ static void PrintMoveInfo(u16 move)
     }
     ConvertIntToDecimalStringN(buffer, gBattleMoves[move].pp, STR_CONV_MODE_LEFT_ALIGN, 2);
     PrintTextOnWindow(4, buffer, 2, 2, 0, 0);
-    PrintTextOnWindow(5, gMoveDescriptionPointers[move - 1], 1, 0, 0, 0);
+    // RTL: window 5 is 15 tiles wide and the pen is the first glyph's LEFT edge,
+    // so upstream's x = 1 drew the first glyph against the left border and walked
+    // the rest of the description off the window. Anchor it at the right edge
+    // instead. (Unchanged from upstream until now -- the neighbouring printers in
+    // this file were mirrored, this one was missed.)
+    PrintTextOnWindow(5, gMoveDescriptionPointers[move - 1], 15 * 8 - 8, 0, 0, 0);
 }
 
 static void LoadMoveInfoUI(void)

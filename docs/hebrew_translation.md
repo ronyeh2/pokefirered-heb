@@ -310,6 +310,19 @@ Still untranslated by design: the braille text in `data/text/braille.inc` (its o
 Latin chat keyboard rows in `src/keyboard_text.c`, the Japanese upstream leftovers, and blocks
 marked `@ Unused`.
 
+**A known remaining gap.** `audit.py` covers the strings in `data/`, the item and move
+descriptions, and the help panel. It does not cover the ~1900 Hebrew strings defined in C
+(`src/strings.c` alone has about a thousand), because each goes to a window whose geometry is
+decided at its call site. A cheap way to find suspects: grep for `AddTextPrinterParameterized*`
+calls with a literal `x` of 8 or less. Under RTL a small `x` puts the *first* glyph against the
+left border and walks the rest of the string out of the window, so it is almost always an
+upstream left inset that was never mirrored. There are about 150 such calls; most are in the
+link-cable screens nobody can reach in single-player, but that is exactly how the move
+relearner's description bug survived -- `src/learn_move.c` printed it at `x = 1`, byte-identical
+to upstream, while the printers on either side of it had been mirrored. Check each against its
+window's width before assuming it is deliberate; a small `x` is correct for a genuinely narrow
+field.
+
 One known cosmetic wart: the menu cursor `▶` still points right, away from the Hebrew label it
 marks, in every list menu. It is consistent everywhere, so it reads as a convention rather than
 a bug, but mirroring the glyph would be an improvement. The cursor's *position* is deliberately

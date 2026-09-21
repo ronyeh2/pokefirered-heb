@@ -117,6 +117,27 @@ def check_help(blocks):
     return sorted(bad, reverse=True)
 
 
+def check_move_descriptions():
+    """Move descriptions go to two windows: the summary screen's move panel
+    (src/pokemon_summary_screen.c prints them at x=107) and the move relearner's
+    15-tile window. The summary panel is the tighter of the two -- measured on
+    screen at about 121px usable, so a line fits when total - first <= 113."""
+    path = os.path.join(ROOT, "src/move_descriptions.c")
+    if not os.path.exists(path):
+        return []
+    text = io.open(path, encoding="utf-8").read()
+    defn = re.compile(r'\b(gMoveDescription_[A-Za-z_0-9]*)\s*\[\s*\]\s*=\s*_\("((?:[^"\\]|\\.)*)"\)')
+    bad = []
+    for m in defn.finditer(text):
+        for seg in re.split(r"\\n", m.group(2).replace("$", "")):
+            if not seg.strip():
+                continue
+            o = T.overhang(seg, pen=107)
+            if o is not None and o > 0:
+                bad.append((o, m.group(1).replace("gMoveDescription_", ""), seg))
+    return sorted(bad, reverse=True)
+
+
 def check_items():
     path = os.path.join(ROOT, "src/data/items.json")
     if not os.path.exists(path):
@@ -169,6 +190,8 @@ def main():
     section("help-system lines outside the 208px panel", helps,
             lambda r: "+%dpx %s:%d  %s" % r)
     section("item descriptions outside their pane", items,
+            lambda r: "+%dpx %s  %s" % r)
+    section("move descriptions outside the summary panel", check_move_descriptions(),
             lambda r: "+%dpx %s  %s" % r)
     section("text blocks with no $ terminator", unterminated,
             lambda r: "%s:%d  %s%s" % (r[0], r[1], r[2], "" if r[3] else "  (not via msgbox)"))
