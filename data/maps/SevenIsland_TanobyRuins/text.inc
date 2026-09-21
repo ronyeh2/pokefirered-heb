@@ -1,52 +1,52 @@
 SevenIsland_TanobyRuins_Text_BrandonIntro::
-    .string "Do you know anything about this\n"
-    .string "stone chamber?$"
+    .string "אתה יודע משהו על\n"
+    .string "חדר האבן הזה?$"
 
 SevenIsland_TanobyRuins_Text_BrandonDefeat::
-    .string "That was uncalled for.\n"
-    .string "You didn't have to be so rough.$"
+    .string "זה היה מיותר.\n"
+    .string "לא היית צריך להיות כזה גס.$"
 
 SevenIsland_TanobyRuins_Text_BrandonPostBattle::
-    .string "The TANOBY RUINS date back at\n"
-    .string "least 1,500 years.\p"
-    .string "But it's a baffling mystery as to\n"
-    .string "why it was built in the first place.$"
+    .string "חורבות טאנובי הן בנות\n"
+    .string "0051 שנה לפחות.\p"
+    .string "אבל זו תעלומה גדולה\n"
+    .string "למה בכלל בנו אותן.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminIntro::
-    .string "A mystic POKéMON is said to sleep\n"
-    .string "inside here.$"
+    .string "מספרים שפוקימון מיסטי\n"
+    .string "ישן כאן בפנים.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminDefeat::
-    .string "I'm not much good in battle.$"
+    .string "אני לא כזה טוב בקרבות.$"
 
 SevenIsland_TanobyRuins_Text_BenjaminPostBattle::
-    .string "I hear there are other ruins like\n"
-    .string "the one here.\p"
-    .string "Might they be the resting places\n"
-    .string "of other mystic POKéMON?$"
+    .string "שמעתי שיש עוד חורבות\n"
+    .string "כמו אלה שכאן.\p"
+    .string "אולי הן מקומות המנוחה\n"
+    .string "של פוקימונים מיסטיים אחרים?$"
 
 SevenIsland_TanobyRuins_Text_EdnaIntro::
-    .string "CLIFFORD is teaching me how to\n"
-    .string "paint.$"
+    .string "קליפורד מלמד אותי\n"
+    .string "לצייר.$"
 
 SevenIsland_TanobyRuins_Text_EdnaDefeat::
-    .string "We might get in trouble for being\n"
-    .string "noisy here.$"
+    .string "אולי נסתבך בצרות\n"
+    .string "אם נרעיש כאן.$"
 
 SevenIsland_TanobyRuins_Text_EdnaPostBattle::
-    .string "I said that I wanted to paint an\n"
-    .string "old building.\p"
-    .string "So CLIFFORD brought me here.$"
+    .string "אמרתי שאני רוצה לצייר\n"
+    .string "מבנה עתיק.\p"
+    .string "אז קליפורד הביא אותי לכאן.$"
 
 SevenIsland_TanobyRuins_Text_CliffordIntro::
-    .string "Today, in addition to our lesson,\n"
-    .string "we came to see the chamber.$"
+    .string "היום, מלבד השיעור שלנו,\n"
+    .string "באנו לראות את החדר.$"
 
 SevenIsland_TanobyRuins_Text_CliffordDefeat::
-    .string "My, how extraordinary.$"
+    .string "הו, כמה יוצא דופן.$"
 
 SevenIsland_TanobyRuins_Text_CliffordPostBattle::
-    .string "Ah, so you are studying POKéMON\n"
-    .string "on your own…\p"
-    .string "Yes, you certainly are quite the\n"
-    .string "extraordinary person, indeed.$"
+    .string "אה, אז אתה חוקר פוקימונים\n"
+    .string "בכוחות עצמך…\p"
+    .string "כן, אתה בהחלט אדם\n"
+    .string "יוצא דופן, אין ספק.$"

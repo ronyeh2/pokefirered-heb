@@ -1,17 +1,16 @@
 SevenIsland_Mart_Text_MonHavePersonalitiesOfTheirOwn::
-    .string "POKéMON have personalities of their\n"
-    .string "own, just like people.\p"
-    .string "My PIKACHU has a HASTY nature,\n"
-    .string "so it grew to be a speedy POKéMON.$"
+    .string "לפוקימונים יש אופי משלהם,\n"
+    .string "בדיוק כמו לבני אדם.\p"
+    .string "לפיקאצ'ו שלי יש אופי חפוז,\n"
+    .string "אז הוא גדל לפוקימון מהיר.$"
 
 SevenIsland_Mart_Text_PreparationsCompleteForRuins::
-    .string "Okay, preparations are complete\n"
-    .string "for me to explore the RUINS.$"
+    .string "יופי, ההכנות שלי הושלמו\n"
+    .string "לקראת חקר החורבות.$"
 
 SevenIsland_Mart_Text_NeedToFishOnSevenIsland::
-    .string "I need to fish on SEVEN ISLAND.\p"
-    .string "That will complete my fishing tour\n"
-    .string "of the SEVII ISLANDS.\p"
-    .string "I'd better stock up on some\n"
-    .string "POKé BALLS first, though.$"
-
+    .string "אני חייב לדוג באי 7.\p"
+    .string "זה ישלים את סיבוב הדיג שלי\n"
+    .string "בכל איי סווי.\p"
+    .string "אבל כדאי שאצטייד קודם\n"
+    .string "בכמה פוקיבולים.$"

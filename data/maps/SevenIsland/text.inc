@@ -1,38 +1,38 @@
 Text_SwordsDanceTeach::
-    .string "Not many people come out here.\p"
-    .string "If I train here, I'm convinced that\n"
-    .string "I'll get stronger and stronger.\p"
-    .string "Yep, stronger and stronger…\p"
-    .string "How would you like to learn a move\n"
-    .string "like that? It's SWORDS DANCE.$"
+    .string "לא הרבה אנשים מגיעים לכאן.\p"
+    .string "אם אתאמן כאן, אני משוכנע\n"
+    .string "שאהיה חזק יותר ויותר.\p"
+    .string "כן, חזק יותר ויותר…\p"
+    .string "רוצה ללמוד מהלך כזה?\n"
+    .string "קוראים לו מחול חרבות.$"
 
 Text_SwordsDanceDeclined::
-    .string "Well, that's fine, too.$"
+    .string "טוב, גם זה בסדר גמור.$"
 
 Text_SwordsDanceWhichMon::
-    .string "All right, pick which POKéMON\n"
-    .string "I should teach it to.$"
+    .string "בסדר, בחר לאיזה פוקימון\n"
+    .string "אני צריך ללמד את זה.$"
 
 Text_SwordsDanceTaught::
-    .string "If only we could keep getting\n"
-    .string "stronger and stronger, eh?$"
+    .string "הלוואי שנוכל להמשיך להתחזק\n"
+    .string "עוד ועוד, נכון?$"
 
 SevenIsland_Text_IslandSign::
-    .string "SEVEN ISLAND\n"
-    .string "Quest Island of Infinity$"
+    .string "אי 7\n"
+    .string "אי המסע האינסופי$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
-    .string "These islands are called the SEVII\n"
-    .string "ISLANDS because there are seven.\p"
-    .string "…Or at least that's what the young\n"
-    .string "people believe.\p"
-    .string "The truth is, these islands are so\n"
-    .string "named because they are said to\l"
-    .string "have been made in seven days.$"
+    .string "האיים האלה נקראים איי סווי\n"
+    .string "כי יש כאן שבעה איים.\p"
+    .string "…לפחות ככה הצעירים\n"
+    .string "מאמינים.\p"
+    .string "האמת היא שהם נקראים כך\n"
+    .string "כי מספרים שהם נבראו\l"
+    .string "בשבעה ימים.$"
 
 SevenIsland_Text_IslandVirtuallyUntouched::
-    .string "This island has been left virtually\n"
-    .string "untouched in its natural state.\p"
-    .string "It could be a little difficult to\n"
-    .string "hike around because of that.$"
+    .string "האי הזה נשאר כמעט לגמרי\n"
+    .string "במצבו הטבעי.\p"
+    .string "בגלל זה קצת קשה\n"
+    .string "לטייל בו ברגל.$"
 

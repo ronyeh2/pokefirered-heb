@@ -1,34 +1,34 @@
 SevenIsland_TrainerTower_Text_DarioIntro::
-    .string "I sensed your approach.$"
+    .string "חשתי בהתקרבותך.$"
 
 SevenIsland_TrainerTower_Text_DarioDefeat::
-    .string "Give up…$"
+    .string "אני מוותר…$"
 
 SevenIsland_TrainerTower_Text_DarioPostBattle::
-    .string "In your future, I sense that you\n"
-    .string "will meet many others.\p"
-    .string "I think you will be linked to each\n"
-    .string "other by a strange power.$"
+    .string "בעתידך אני חש שתפגוש\n"
+    .string "רבים אחרים.\p"
+    .string "אני חושב שכוח מוזר\n"
+    .string "יקשור ביניכם.$"
 
 SevenIsland_TrainerTower_Text_RodetteIntro::
-    .string "Somewhere on this island, peculiar\n"
-    .string "POKéMON are sleeping.$"
+    .string "אי שם באי הזה ישנים\n"
+    .string "פוקימונים מוזרים.$"
 
 SevenIsland_TrainerTower_Text_RodetteDefeat::
-    .string "What an amazing TRAINER!$"
+    .string "איזה מאמן מדהים!$"
 
 SevenIsland_TrainerTower_Text_RodettePostBattle::
-    .string "Somewhere on this island, peculiar\n"
-    .string "POKéMON are sleeping.\p"
-    .string "Could it be that they're waiting\n"
-    .string "for you?$"
+    .string "אי שם באי הזה ישנים\n"
+    .string "פוקימונים מוזרים.\p"
+    .string "יכול להיות שהם\n"
+    .string "מחכים דווקא לך?$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerSign::
-    .string "TRAINER TOWER ENTRANCE\n"
-    .string "Rise to the Challenge, TRAINERS!$"
+    .string "הכניסה למגדל המאמנים\n"
+    .string "מאמנים, עמדו באתגר!$"
 
 SevenIsland_TrainerTower_Text_TrainerTowerAhead::
-    .string "TRAINER TOWER AHEAD$"
+    .string "מגדל המאמנים לפניך$"
 
 @ Unused text perhaps indicating Trainer Tower was planned to be unlocked by something
 SevenIsland_TrainerTower_Text_LooksLikeTrainerTowerIsClosed::
