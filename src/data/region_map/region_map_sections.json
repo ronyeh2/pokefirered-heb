@@ -723,7 +723,7 @@
     {
       "map_section": "MAPSEC_CANYON_ENTRANCE",
       "name": "CANYON ENTRANCE",
-      "hebrew_name": "הכניסה לעמק",
+      "hebrew_name": "הכניסה לקניון",
       "x": 5,
       "y": 9,
       "width": 1,
@@ -732,6 +732,7 @@
     {
       "map_section": "MAPSEC_SEVAULT_CANYON",
       "name": "SEVAULT CANYON",
+      "hebrew_name": "קניון סבולט",
       "x": 6,
       "y": 9,
       "width": 1,
@@ -740,6 +741,7 @@
     {
       "map_section": "MAPSEC_TANOBY_RUINS",
       "name": "TANOBY RUINS",
+      "hebrew_name": "חורבות טאנובי",
       "x": 3,
       "y": 12,
       "width": 7,
@@ -748,6 +750,7 @@
     {
       "map_section": "MAPSEC_SEVII_ISLE_22",
       "name": "SEVII ISLE 22",
+      "hebrew_name": "אי 22",
       "x": 9,
       "y": 12,
       "width": 1,
@@ -756,6 +759,7 @@
     {
       "map_section": "MAPSEC_SEVII_ISLE_23",
       "name": "SEVII ISLE 23",
+      "hebrew_name": "אי 32",
       "x": 3,
       "y": 14,
       "width": 6,
@@ -764,6 +768,7 @@
     {
       "map_section": "MAPSEC_SEVII_ISLE_24",
       "name": "SEVII ISLE 24",
+      "hebrew_name": "אי 42",
       "x": 2,
       "y": 12,
       "width": 1,
@@ -772,6 +777,7 @@
     {
       "map_section": "MAPSEC_NAVEL_ROCK",
       "name": "NAVEL ROCK",
+      "hebrew_name": "סלע הטבור",
       "x": 10,
       "y": 8,
       "width": 1,
@@ -789,6 +795,7 @@
     {
       "map_section": "MAPSEC_BERRY_FOREST",
       "name": "BERRY FOREST",
+      "hebrew_name": "יער הפירות",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -797,6 +804,7 @@
     {
       "map_section": "MAPSEC_ICEFALL_CAVE",
       "name": "ICEFALL CAVE",
+      "hebrew_name": "מערת מפל הקרח",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -805,6 +813,7 @@
     {
       "map_section": "MAPSEC_ROCKET_WAREHOUSE",
       "name": "ROCKET WAREHOUSE",
+      "hebrew_name": "מחסן רוקט",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -813,7 +822,7 @@
     {
       "map_section": "MAPSEC_TRAINER_TOWER_2",
       "name": "TRAINER TOWER",
-      "name_clone": true,
+      "hebrew_name": "מגדל המאמנים",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -822,6 +831,7 @@
     {
       "map_section": "MAPSEC_DOTTED_HOLE",
       "name": "DOTTED HOLE",
+      "hebrew_name": "החור המנוקד",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -830,6 +840,7 @@
     {
       "map_section": "MAPSEC_LOST_CAVE",
       "name": "LOST CAVE",
+      "hebrew_name": "המערה האבודה",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -838,6 +849,7 @@
     {
       "map_section": "MAPSEC_PATTERN_BUSH",
       "name": "PATTERN BUSH",
+      "hebrew_name": "סבך התבניות",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -846,6 +858,7 @@
     {
       "map_section": "MAPSEC_ALTERING_CAVE",
       "name": "ALTERING CAVE",
+      "hebrew_name": "מערת השינוי",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -854,6 +867,7 @@
     {
       "map_section": "MAPSEC_TANOBY_CHAMBERS",
       "name": "TANOBY CHAMBERS",
+      "hebrew_name": "חדרי טאנובי",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -862,6 +876,7 @@
     {
       "map_section": "MAPSEC_THREE_ISLE_PATH",
       "name": "THREE ISLE PATH",
+      "hebrew_name": "דרך שלושת האיים",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -870,6 +885,7 @@
     {
       "map_section": "MAPSEC_TANOBY_KEY",
       "name": "TANOBY KEY",
+      "hebrew_name": "מפתח טאנובי",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -878,6 +894,7 @@
     {
       "map_section": "MAPSEC_BIRTH_ISLAND",
       "name": "BIRTH ISLAND",
+      "hebrew_name": "אי הלידה",
       "x": 18,
       "y": 13,
       "width": 1,
@@ -886,6 +903,7 @@
     {
       "map_section": "MAPSEC_MONEAN_CHAMBER",
       "name": "MONEAN CHAMBER",
+      "hebrew_name": "חדר מוניאן",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -894,6 +912,7 @@
     {
       "map_section": "MAPSEC_LIPTOO_CHAMBER",
       "name": "LIPTOO CHAMBER",
+      "hebrew_name": "חדר ליפטו",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -902,6 +921,7 @@
     {
       "map_section": "MAPSEC_WEEPTH_CHAMBER",
       "name": "WEEPTH CHAMBER",
+      "hebrew_name": "חדר ויפת",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -910,6 +930,7 @@
     {
       "map_section": "MAPSEC_DILFORD_CHAMBER",
       "name": "DILFORD CHAMBER",
+      "hebrew_name": "חדר דילפורד",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -918,6 +939,7 @@
     {
       "map_section": "MAPSEC_SCUFIB_CHAMBER",
       "name": "SCUFIB CHAMBER",
+      "hebrew_name": "חדר סקופיב",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -926,6 +948,7 @@
     {
       "map_section": "MAPSEC_RIXY_CHAMBER",
       "name": "RIXY CHAMBER",
+      "hebrew_name": "חדר ריקסי",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -934,6 +957,7 @@
     {
       "map_section": "MAPSEC_VIAPOIS_CHAMBER",
       "name": "VIAPOIS CHAMBER",
+      "hebrew_name": "חדר ויאפויס",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -951,7 +975,7 @@
     {
       "map_section": "MAPSEC_SPECIAL_AREA",
       "name": "CELADON DEPT.",
-      "hebrew_name": "חנות סלאדון",
+      "hebrew_name": "חנות סלדון",
       "x": 0,
       "y": 0,
       "width": 0,
