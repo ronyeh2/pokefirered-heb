@@ -370,7 +370,14 @@ void HS_ShowOrHideScrollArrows(u8 which, u8 mode)
     }
 }
 
-void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 width, u8 height)
+// Hebrew is rendered right-to-left, so throughout this function `x` is the
+// RIGHT edge of the next thing to draw, and the pen walks leftwards from
+// `orig_x`. BlitBitmapRect4Bit / FillBitmapRect4Bit both take a LEFT edge, so
+// every blit is issued at (x - itsWidth). `x` is a plain stack parameter (no
+// TextPrinter struct is involved here), so widening it to s16 costs no RAM and
+// lets an over-long line run off the left edge as a negative number instead of
+// wrapping through 255 and overprinting the line it just drew.
+void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, s16 x, u8 y, u8 width, u8 height)
 {
     // fontId -> sp+24
     // dest -> sp+28
@@ -381,9 +388,10 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
     // height -> sp+30
     struct Bitmap srcBlit;
     struct Bitmap destBlit;
-    u8 orig_x = x;
+    s16 orig_x = x;
     u8 i = 0;
     s32 clearPixels = 0;
+    s32 clearLeft = 0;
 
     while (1)
     {
@@ -412,11 +420,11 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
                     // This is required to match a dummy [sp+#0x24] read here
                     if (fontId == FONT_SMALL)
                     {
-                        x += gGlyphInfo.width;
+                        x -= gGlyphInfo.width;
                     }
                     else
                     {
-                        x += gGlyphInfo.width + ZERO;
+                        x -= gGlyphInfo.width + ZERO;
                     }
                 }
             }
@@ -442,11 +450,11 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
                     }
                     if (fontId == FONT_SMALL)
                     {
-                        x += gGlyphInfo.width;
+                        x -= gGlyphInfo.width;
                     }
                     else
                     {
-                        x += gGlyphInfo.width + ZERO;
+                        x -= gGlyphInfo.width + ZERO;
                     }
                 }
             }
@@ -489,15 +497,28 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
                 break;
             case EXT_CTRL_CODE_CLEAR_TO:
             {
-                clearPixels = *src + orig_x - x;
+                // The operand is a distance from the start of the line. The pen
+                // walks leftwards from orig_x, so the requested stop is at
+                // (orig_x - operand) and the gap still to erase is
+                // x - (orig_x - operand).
+                clearPixels = *src + x - orig_x;
 
                 if (clearPixels > 0)
                 {
                     destBlit.pixels = dest;
                     destBlit.width = width * 8;
                     destBlit.height = height * 8;
-                    FillBitmapRect4Bit(&destBlit, x, y, clearPixels, GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT), 0);
-                    x += clearPixels;
+                    // FillBitmapRect4Bit takes a LEFT edge: erase [x - clearPixels, x).
+                    clearLeft = x - clearPixels;
+                    x = clearLeft;
+                    if (clearLeft < 0)
+                    {
+                        // Clip the rect at the panel's left edge.
+                        clearPixels += clearLeft;
+                        clearLeft = 0;
+                    }
+                    if (clearPixels > 0)
+                        FillBitmapRect4Bit(&destBlit, clearLeft, y, clearPixels, GetFontAttribute(fontId, FONTATTR_MAX_LETTER_HEIGHT), 0);
                 }
                 src++;
                 break;
@@ -519,8 +540,10 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
             destBlit.pixels = dest;
             destBlit.width = width * 8;
             destBlit.height = height * 8;
-            BlitBitmapRect4Bit(&srcBlit, &destBlit, 0, 0, x, y, GetKeypadIconWidth(curChar), GetKeypadIconHeight(curChar), 0);
-            x += GetKeypadIconWidth(curChar);
+            // RTL: the icon occupies [x - iconWidth, x).
+            x -= GetKeypadIconWidth(curChar);
+            if (x >= 0)
+                BlitBitmapRect4Bit(&srcBlit, &destBlit, 0, 0, x, y, GetKeypadIconWidth(curChar), GetKeypadIconHeight(curChar), 0);
             break;
         case CHAR_EXTRA_SYMBOL:
             curChar = *src + 0x100;
@@ -531,11 +554,11 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
             {
                 if (fontId == FONT_SMALL)
                 {
-                    x += 5;
+                    x -= 5;
                 }
                 else
                 {
-                    x += 4;
+                    x -= 4;
                 }
             }
             else
@@ -543,11 +566,11 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
                 DecompressAndRenderGlyph(fontId, curChar, &srcBlit, &destBlit, dest, x, y, width, height);
                 if (fontId == FONT_SMALL)
                 {
-                    x += gGlyphInfo.width;
+                    x -= gGlyphInfo.width;
                 }
                 else
                 {
-                    x += gGlyphInfo.width + ZERO;
+                    x -= gGlyphInfo.width + ZERO;
                 }
             }
             break;
@@ -555,7 +578,10 @@ void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 w
     }
 }
 
-void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, u8 x, u8 y, u8 width, u8 height)
+// RTL: `x` is the glyph's RIGHT edge. The glyph's own width is only known after
+// the decompress, so it is subtracted here rather than by the caller; the caller
+// then steps its pen by the same gGlyphInfo.width, which is still valid on return.
+void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, s16 x, u8 y, u8 width, u8 height)
 {
     if (fontId == FONT_SMALL)
         DecompressGlyph_Small(glyph, FALSE);
@@ -569,22 +595,34 @@ void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, stru
     destBlit->pixels = destBuffer;
     destBlit->width = width * 8;
     destBlit->height = height * 8;
+    x -= gGlyphInfo.width;
+    // BlitBitmapRect4Bit's dstX is a u16; a negative one would wrap. It clips at
+    // the right edge on its own, but has no left-edge clip, so drop the glyph.
+    if (x < 0)
+        return;
     BlitBitmapRect4Bit(srcBlit, destBlit, 0, 0, x, y, gGlyphInfo.width, gGlyphInfo.height, 0);
 }
 
 void HelpSystem_PrintTextInTopLeftCorner(const u8 * str)
 {
     GenerateFontHalfRowLookupTable(TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_DARK_GRAY);
-    HelpSystemRenderText(5, gDecompressionBuffer + 0x3D00, str, 6, 2, 7, 2);
+    // RTL: mirror the old 6px left margin into a 6px right margin on this
+    // 7-tile (56px) panel.
+    HelpSystemRenderText(5, gDecompressionBuffer + 0x3D00, str, HS_PANEL3_WIDTH - 6, 2, 7, 2);
 }
 
 void HelpSystem_PrintTextRightAlign_Row52(const u8 * str)
 {
-    s32 left = 0x7C - GetStringWidth(FONT_SMALL, str, 0);
     GenerateFontHalfRowLookupTable(TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_DARK_GRAY);
-    HelpSystemRenderText(0, gDecompressionBuffer + 0x3400, str, left, 2, 16, 2);
+    // The renderer already draws leftwards from the x it is given, so the old
+    // "0x7C - GetStringWidth(...)" right-alignment is now built in: hand it the
+    // right edge directly. HS_PANEL2_WIDTH - 4 is the original 0x7C, unchanged.
+    HelpSystemRenderText(0, gDecompressionBuffer + 0x3400, str, HS_PANEL2_WIDTH - 4, 2, 16, 2);
 }
 
+// RTL: `x` is the RIGHT edge each line is anchored to, measured from the left of
+// the 26-tile main panel. Callers mirror their old left inset with
+// HS_PANEL1_WIDTH - inset.
 void HelpSystem_PrintTextAt(const u8 * str, u8 x, u8 y)
 {
     GenerateFontHalfRowLookupTable(TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_DARK_GRAY);
@@ -595,15 +633,18 @@ void HelpSystem_PrintQuestionAndAnswerPair(const u8 * question, const u8 * answe
 {
     CpuFill16(0xEEEE, gDecompressionBuffer + 0x0000, 0x3400);
     GenerateFontHalfRowLookupTable(TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_5, TEXT_COLOR_DARK_GRAY);
-    HelpSystemRenderText(2, gDecompressionBuffer + 0x0000, question, 0, 0, 26, 16);
-    HelpSystemRenderText(2, gDecompressionBuffer + 0x09C0, answer, 0, 0, 26, 13);
+    // RTL: both lines were flush with the panel's left edge; anchor them flush
+    // with its right edge instead.
+    HelpSystemRenderText(2, gDecompressionBuffer + 0x0000, question, HS_PANEL1_WIDTH, 0, 26, 16);
+    HelpSystemRenderText(2, gDecompressionBuffer + 0x09C0, answer, HS_PANEL1_WIDTH, 0, 26, 13);
 }
 
 void HelpSystem_PrintTopicMouseoverDescription(const u8 * str)
 {
     CpuFill16(0x1111, gDecompressionBuffer + 0x23C0, 0x1040);
     GenerateFontHalfRowLookupTable(TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
-    HelpSystemRenderText(2, gDecompressionBuffer + 0x23C0, str, 2, 6, 26, 5);
+    // RTL: mirror the old 2px left margin into a 2px right margin.
+    HelpSystemRenderText(2, gDecompressionBuffer + 0x23C0, str, HS_PANEL1_WIDTH - 2, 6, 26, 5);
 }
 
 void HelpSystem_FillPanel3(void)
@@ -719,7 +760,10 @@ void PrintListMenuItems(void)
 
     for (i = 0; i < gHelpSystemListMenu.sub.maxShowed; i++)
     {
-        u8 x = gHelpSystemListMenu.sub.left + 8;
+        // RTL: sub.left is the list's inset from the panel edge and the 8px gap
+        // holds the selector arrow, so the label's right edge sits that far in
+        // from the panel's right edge.
+        u8 x = HS_PANEL1_WIDTH - (gHelpSystemListMenu.sub.left + 8);
         u8 y = gHelpSystemListMenu.sub.top + glyphHeight * i;
         HelpSystem_PrintTextAt(gHelpSystemListMenu.sub.items[r5].label, x, y);
         r5++;
@@ -729,7 +773,8 @@ void PrintListMenuItems(void)
 void PlaceListMenuCursor(void)
 {
     u8 glyphHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) + 1;
-    u8 x = gHelpSystemListMenu.sub.left;
+    // RTL: the cursor sits in the 8px gutter at the panel's right edge.
+    u8 x = HS_PANEL1_WIDTH - gHelpSystemListMenu.sub.left;
     u8 y = gHelpSystemListMenu.sub.top + glyphHeight * gHelpSystemListMenu.cursorPos;
     HelpSystem_PrintTextAt(gText_SelectorArrow2, x, y);
 }
@@ -737,7 +782,10 @@ void PlaceListMenuCursor(void)
 void HS_RemoveSelectionCursorAt(u8 i)
 {
     u8 glyphHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) + 1;
-    u8 x = gHelpSystemListMenu.sub.left;
+    // RTL: must match PlaceListMenuCursor's anchor. "{CLEAR_TO 8}" now erases
+    // the 8px immediately to the LEFT of that anchor, which is where the cursor
+    // was drawn.
+    u8 x = HS_PANEL1_WIDTH - gHelpSystemListMenu.sub.left;
     u8 y = gHelpSystemListMenu.sub.top + i * glyphHeight;
     HelpSystem_PrintTextAt(gString_HelpSystem_ClearTo8, x, y);
 }

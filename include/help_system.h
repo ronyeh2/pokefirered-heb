@@ -6,6 +6,13 @@
 #include "blit.h"
 #include "constants/help_system.h"
 
+// Pixel widths of the help system's text panels, i.e. the tile width each
+// buffer is committed with, times 8. Hebrew is drawn right-to-left, so these
+// double as the right-edge origin strings on those panels are anchored to.
+#define HS_PANEL1_WIDTH (26 * 8) // main window, gDecompressionBuffer + 0x0000
+#define HS_PANEL2_WIDTH (16 * 8) // controls guide, gDecompressionBuffer + 0x3400
+#define HS_PANEL3_WIDTH ( 7 * 8) // "HELP" caption, gDecompressionBuffer + 0x3D00
+
 struct HelpSystemListMenu_sub
 {
     struct ListMenuItem * items;
@@ -85,7 +92,7 @@ void HelpSystem_SetInputDelay(u8);
 s32 HelpSystem_GetMenuInput(void);
 void HS_UpdateMenuScrollArrows(void);
 
-void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, u8 x, u8 y, u8 width, u8 height);
+void DecompressAndRenderGlyph(u8 fontId, u16 glyph, struct Bitmap *srcBlit, struct Bitmap *destBlit, u8 *destBuffer, s16 x, u8 y, u8 width, u8 height);
 void HelpSystem_PrintTextInTopLeftCorner(const u8 * str);
 void HelpSystem_FillPanel3(void);
 void PrintListMenuItems(void);
@@ -93,7 +100,8 @@ void PlaceListMenuCursor(void);
 bool8 MoveCursor(u8 by, u8 dirn);
 void BackupHelpContext(void);
 void RestoreHelpContext(void);
-void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, u8 x, u8 y, u8 width, u8 height);
+// RTL: `x` is the RIGHT edge the text is anchored to, and the pen walks left.
+void HelpSystemRenderText(u8 fontId, u8 * dest, const u8 * src, s16 x, u8 y, u8 width, u8 height);
 void HelpSystem_DisableToggleWithRButton(void);
 
 #endif //GUARD_HELP_SYSTEM_H

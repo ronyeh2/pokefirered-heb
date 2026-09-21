@@ -157,7 +157,10 @@ static void PrintTextOnSaveFailedScreen(const u8 *str)
     CpuFill16(PIXEL_FILL(1) | (PIXEL_FILL(1) << 8), gDecompressionBuffer + 0x20, 0x2300);
     // ofir changed here
     //HelpSystemRenderText(2, gDecompressionBuffer + 0x20, str, 2, 2, 28, 10);
-    HelpSystemRenderText(2, gDecompressionBuffer + 0x20, str, 2 + 100, 2, 28, 10);
+    // RTL: HelpSystemRenderText anchors each line at its right edge now, so the
+    // old "+ 100" nudge is gone; this buffer is 28 tiles (224px) wide, and the
+    // original 2px left margin becomes a 2px right margin.
+    HelpSystemRenderText(2, gDecompressionBuffer + 0x20, str, 28 * 8 - 2, 2, 28, 10);
     RequestDmaCopyFromCharBuffer();
 }
 

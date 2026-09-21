@@ -1974,7 +1974,8 @@ static void BuildAndPrintSubmenuList(struct HelpSystemListMenu * helpListMenu, s
     SetHelpSystemSubmenuItems(helpListMenu, listMenuItemsBuffer);
     PrintTextOnPanel2Row52RightAlign(gText_HelpSystemControls_PickOkCancel);
     HelpSystem_InitListMenuController(helpListMenu, helpListMenu->itemsAbove, helpListMenu->cursorPos);
-    HelpSystem_PrintTextAt(sHelpSystemTopicPtrs[gHelpSystemState.topic], 0, 0);
+    // RTL: anchor at the main panel's right edge, not its left.
+    HelpSystem_PrintTextAt(sHelpSystemTopicPtrs[gHelpSystemState.topic], HS_PANEL1_WIDTH, 0);
     HS_ShowOrHideMainWindowText(1);
     HS_ShowOrHideControlsGuideInTopRight(1);
 }
@@ -2385,7 +2386,8 @@ bool8 HelpMenuSubroutine_SubmenuInputHandler(struct HelpSystemListMenu * helpLis
 
 void HelpSystem_PrintTopicLabel(void)
 {
-    HelpSystem_PrintTextAt(sHelpSystemTopicPtrs[gHelpSystemState.topic], 0, 0);
+    // RTL: anchor at the main panel's right edge, not its left.
+    HelpSystem_PrintTextAt(sHelpSystemTopicPtrs[gHelpSystemState.topic], HS_PANEL1_WIDTH, 0);
 }
 
 bool8 HelpMenuSubroutine_HelpItemPrint(struct HelpSystemListMenu * helpListMenu, struct ListMenuItem * listMenuItemsBuffer)
@@ -2449,7 +2451,8 @@ bool8 HelpMenuSubroutine_HelpItemWaitButton(struct HelpSystemListMenu * helpList
 static void PrintWelcomeMessageOnPanel1(void)
 {
     HelpSystem_FillPanel1();
-    HelpSystem_PrintTextAt(Help_Text_Greetings, 0, 0);
+    // RTL: anchor at the main panel's right edge, not its left.
+    HelpSystem_PrintTextAt(Help_Text_Greetings, HS_PANEL1_WIDTH, 0);
 }
 
 static void PrintTextOnPanel2Row52RightAlign(const u8 * str)
