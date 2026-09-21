@@ -2,7 +2,7 @@ CeruleanCity_Text_RivalIntro::
     .string "{RIVAL}: יו!\n"
     .string "{PLAYER}!\p"
     .string "אתה עדיין צולע לך שם?\p"
-    .string "אני מתקדם נביל! תפסתי כל מיני\l"
+    .string "אני מתקדם יפה! תפסתי כל מיני\l"
     .string "פוקימונים חזקים וחכמים!\p"
     .string "קדימה, בוא נראה מה אתה תפסת,\l"
     .string "{PLAYER}!$"
@@ -22,7 +22,7 @@ CeruleanCity_Text_RivalPostBattle::
     .string "להראות לי את הפוקימונים\l"
     .string "הנדירים שלו!\p"
     .string "זה מילא לי הרבה דפים בפוקדקס!\p"
-    .string "אחרי הכל, ביל ידוע בתור פוקיטורף!\p"
+    .string "הרי ביל ידוע בתור פוקימניאק!\p"
     .string "הוא המציא את מערכת\n"
     .string "איחסון הפוקימונים שבמחשב!\p"
     .string "כדאי שתלך להודות לו, כי אתה משתמש\l"
@@ -38,7 +38,7 @@ CeruleanCity_Text_GruntIntro::
 
 CeruleanCity_Text_RecoveredTM28FromGrunt::
     .string "{PLAYER} מצא\n"
-    .string "מ”מ28!{}$"
+    .string "מ”מ82!{}$"
 
 CeruleanCity_Text_BetterGetMovingBye::
     .string "כדאי שאני אסתלק\n"
@@ -138,7 +138,7 @@ CeruleanCity_Text_CitySign::
 CeruleanCity_Text_TrainerTipsHeldItems::
     .string "טיפים למאמנים\p"
     .string "לחיצה על כפתור B\n"
-    .string "בזמן התפתחות תבמיסטי את ההתפתחות.$"
+    .string "בזמן התפתחות תבטל את ההתפתחות.$"
 
 CeruleanCity_Text_BikeShopSign::
     .string "עוברים מערות\n"
@@ -158,9 +158,9 @@ CeruleanCity_Text_ExplainFameCheckerSmellYa::
     .string "נתרחרח אחר-כך!$"
 
 CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
-    .string "If that SLOWBRO wasnt there, you\n"
-    .string "could CUT down the small tree.\p"
-    .string "That way, you could get to the\n"
-    .string "other side.\p"
-    .string "I think theres a way around it,\n"
-    .string "though.$"
+    .string "אם סלוברו לא היה שם, היית\n"
+    .string "יכול לכרות את העץ הקטן בחיתוך.\p"
+    .string "ככה היית יכול להגיע\n"
+    .string "לצד השני.\p"
+    .string "אבל אני חושב שיש\n"
+    .string "דרך לעקוף אותו.$"

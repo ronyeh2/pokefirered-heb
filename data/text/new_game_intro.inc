@@ -29,100 +29,100 @@ gNameChoice_Kene::
     .string "קאנה$"
 
 gNameChoice_Geki::
-    .string "GEKI$"
+    .string "גקי$"
 
 gNameChoice_Jak::
-    .string "JAK$"
+    .string "ג'ק$"
 
 gNameChoice_Janne::
-    .string "JANNE$"
+    .string "ג'אן$"
 
 gNameChoice_Jonn::
-    .string "JONN$"
+    .string "ג'וני$"
 
 gNameChoice_Kamon::
-    .string "KAMON$"
+    .string "קאמון$"
 
 gNameChoice_Karl::
-    .string "KARL$"
+    .string "קארל$"
 
 gNameChoice_Taylor::
-    .string "TAYLOR$"
+    .string "טיילור$"
 
 gNameChoice_Oscar::
-    .string "OSCAR$"
+    .string "אוסקר$"
 
 gNameChoice_Hiro::
-    .string "HIRO$"
+    .string "הירו$"
 
 gNameChoice_Max::
-    .string "MAX$"
+    .string "מקס$"
 
 gNameChoice_Jon::
-    .string "JON$"
+    .string "ג'ון$"
 
 gNameChoice_Ralph::
-    .string "RALPH$"
+    .string "ראלף$"
 
 gNameChoice_Kay::
-    .string "KAY$"
+    .string "קיי$"
 
 gNameChoice_Tosh::
-    .string "TOSH$"
+    .string "טוש$"
 
 gNameChoice_Roak::
-    .string "ROAK$"
+    .string "רואק$"
 
 gNameChoice_Omi::
-    .string "OMI$"
+    .string "אומי$"
 
 gNameChoice_Jodi::
-    .string "JODI$"
+    .string "ג'ודי$"
 
 gNameChoice_Amanda::
-    .string "AMANDA$"
+    .string "אמנדה$"
 
 gNameChoice_Hillary::
-    .string "HILLARY$"
+    .string "הילרי$"
 
 gNameChoice_Makey::
-    .string "MAKEY$"
+    .string "מייקי$"
 
 gNameChoice_Michi::
-    .string "MICHI$"
+    .string "מיצ'י$"
 
 gNameChoice_Paula::
-    .string "PAULA$"
+    .string "פאולה$"
 
 gNameChoice_June::
-    .string "JUNE$"
+    .string "ג'ון$"
 
 gNameChoice_Cassie::
-    .string "CASSIE$"
+    .string "קאסי$"
 
 gNameChoice_Rey::
-    .string "REY$"
+    .string "ריי$"
 
 gNameChoice_Seda::
-    .string "SEDA$"
+    .string "סדה$"
 
 gNameChoice_Kiko::
-    .string "KIKO$"
+    .string "קיקו$"
 
 gNameChoice_Mina::
-    .string "MINA$"
+    .string "מינה$"
 
 gNameChoice_Norie::
-    .string "NORIE$"
+    .string "נורי$"
 
 gNameChoice_Sai::
-    .string "SAI$"
+    .string "סאי$"
 
 gNameChoice_Momo::
-    .string "MOMO$"
+    .string "מומו$"
 
 gNameChoice_Suzi::
-    .string "SUZI$"
+    .string "סוזי$"
 
 gControlsGuide_Text_Intro::
     .string "הסבר על הכפתורים השונים\n"
@@ -131,7 +131,7 @@ gControlsGuide_Text_Intro::
 gControlsGuide_Text_DPad::
     .string "מזיז את הדמות הראשית.\n"
     .string "גם משמש כדי לבחור בין\n"
-    .string "אפשריות שונות.$"
+    .string "אפשרויות שונות.$"
 
 gControlsGuide_Text_AButton::
     .string "משמש כדי לאשר בחירה, לבדוק\n"
@@ -168,7 +168,7 @@ gPikachuIntro_Text_Page1::
     .string "מכל מקור אפשרי.$"
 
 gPikachuIntro_Text_Page2::
-    .string "דרכים חדשות יפתחו בפניכם על ידי\n"
+    .string "דרכים חדשות יפתחו בפניך על ידי\n"
     .string "עזרה לאנשים, התגברות על אתגרים,\n"
     .string "ופתירת תעלומות.\n"
     .string "\n"
@@ -181,7 +181,7 @@ gPikachuIntro_Text_Page3::
     .string "תתחבר לכל מיני אנשים ותרגיש את\n"
     .string "עצמך משתפר. זו המטרה הכי גדולה שלנו..\n"
     .string "\n"
-    .string "תלחץ על כפתור הA\n"
+    .string "תלחץ על כפתור A\n"
     .string "ובוא נתחיל בהרפתקה!!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
@@ -208,7 +208,7 @@ gOakSpeech_Text_IStudyPokemon::
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
     .string "אבל קודם, ספר לי\n"
-    .string "קצת על עצמיך.\p$"
+    .string "קצת על עצמך.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
     .string "בוא נתחיל עם השם.\n"

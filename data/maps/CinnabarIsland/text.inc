@@ -25,8 +25,8 @@ CinnabarIsland_Text_GymSign::
     .string "אלוף החידות חמום המח!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::
-    .string "Huh?\n"
-    .string "Hey, if it isnt {PLAYER}!$"
+    .string "הא?\n"
+    .string "היי, זה לא {PLAYER}?!$"
 
 CinnabarIsland_Text_ComeWithMeToOneIsland::
     .string "היי! זה אני - ביל.\n"
@@ -52,7 +52,7 @@ CinnabarIsland_Text_IllBeWaitingInPokeCenter::
     .string "בכל מקרה הסירה עדיין לא הגיעה.\p"
     .string "אני אחכה במרכז הפוקימונים שנמצא\n"
     .string "פה.\p"
-    .string "הוא לראות אותי כשאתה מסיים את\n"
+    .string "בוא לראות אותי כשאתה מסיים את\n"
     .string "העיסוקים שלך.$"
 
 CinnabarIsland_Text_MyPalsBoatArrived::
@@ -65,9 +65,9 @@ CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "היי, זה היה שייט די ארוך אה?\p"
     .string "נראה לי שסיילו החבר שלי נהנה\n"
     .string "איתך מאוד.\p"
-    .string "אני בטוח שהוא שיקבל אותך לפה\n"
+    .string "אני בטוח שהוא יקבל אותך פה\n"
     .string "בשמחה אם תרצה לבקר שוב.\p"
     .string "אם יש לך תלת-מעבר אתה\n"
     .string "תמיד יכול לקחת מעבורת\l"
-    .string "מהנמל בורמיליון.\p"
+    .string "מהנמל בוורמיליון.\p"
     .string "תודה שהצטרפת אלי!$"

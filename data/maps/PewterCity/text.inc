@@ -21,7 +21,7 @@ Text_DreamEaterTaught::
     .string "אני…לא יכול לאכול…יותר…$"
 
 PewterCity_Text_ClefairyCameFromMoon::
-    .string "האגדה מספרית\n"
+    .string "האגדה מספרת\n"
     .string "שקלפרי הן זן שמקורו מהירח!\p"
     .string "הן הופיעו אחרי שאבני ירח נפלו\l"
     .string "בהר הירח.$"
@@ -66,7 +66,7 @@ PewterCity_Text_BrocksLookingForChallengersFollowMe::
     .string "אתגר חדש! בוא אחרי!$"
 
 PewterCity_Text_GoTakeOnBrock::
-    .string "אם קורצת מהחומר\n"
+    .string "אם אתה קורץ מהחומר\n"
     .string "הנכון, לך ונסה להילחם בברוק!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
@@ -77,10 +77,10 @@ PewterCity_Text_TrainerTipsEarningEXP::
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "שימו לב!\p"
-    .string "כנופיית גסיל נצפתה גונבת\l"
+    .string "כנופיית גנבים נצפתה גונבת\l"
     .string "מאובנים מהר הירח!\l"
     .string "אם יש בידיכם מידע שיסייע לתפוס את\l"
-    .string "הגסיל, צרו קשר עם משטרת פיוטר!$"
+    .string "הגנבים, פנו למשטרת פיוטר!$"
 
 PewterCity_Text_MuseumOfScience::
     .string "מוזיאון המדע\n"
@@ -139,13 +139,13 @@ PewterCity_Text_ExplainRunningShoes::
     .string "אבל רק איפה שיש מקום לרוץ!$"
 
 PewterCity_Text_MustBeGoingBackToLab::
-    .string "ובכן, אני חייב לחזור ל\n"
-    .string "מעבדה.\p"
+    .string "ובכן, אני חייב לחזור\n"
+    .string "למעבדה.\p"
     .string "להתראות!$"
 
 PewterCity_Text_RunningShoesLetterFromMom::
     .string "מצורף מכתב…\p"
-    .string "ליקר שלי {PLAYER},\p"
+    .string "{PLAYER} יקירי,\p"
     .string "הנה זוג נעלי ריצה\n"
     .string "למתמודד האהוב שלי.\p"
     .string "זכור, תמיד אעודד אותך!\n"
