@@ -1,53 +1,53 @@
 Text_UltimateMoveThatMon::
-    .string "I perfected the ultimate move of\n"
-    .string "its type…\p"
-    .string "But will no one take it for\n"
-    .string "future use?\p"
-    .string "…Hm? Hmmm!\p"
-    .string "Y-you…\n"
-    .string "Th-that {STR_VAR_1}…$"
+    .string "שכללתי את מהלך העל\n"
+    .string "של הסוג שלו…\p"
+    .string "אך האם איש לא ינחיל אותו\n"
+    .string "לדורות הבאים?\p"
+    .string "…המ? המממ!\p"
+    .string "א-אתה…\n"
+    .string "ז-זה {STR_VAR_1}…$"
 
 Text_JustMistaken::
-    .string "…No…\n"
-    .string "I was just mistaken.$"
+    .string "…לא…\n"
+    .string "פשוט טעיתי.$"
 
 Text_AllowMeToTeachMonUltimateMove::
-    .string "Oh! This is the one!\n"
-    .string "This is the POKéMON!\p"
-    .string "This {STR_VAR_1} is worthy of\n"
-    .string "learning my ultimate move!\p"
-    .string "Will you allow it?\p"
-    .string "Will you allow your {STR_VAR_1} to\n"
-    .string "learn my {STR_VAR_2}?$"
+    .string "הו! זה הוא!\n"
+    .string "זה הפוקימון!\p"
+    .string "ה{STR_VAR_1} הזה ראוי\n"
+    .string "ללמוד את מהלך העל שלי!\p"
+    .string "תרשה לי?\p"
+    .string "תרשה ל{STR_VAR_1} שלך\n"
+    .string "ללמוד את {STR_VAR_2}?$"
 
 Text_YouRejectIt::
-    .string "Gaah! You reject it?\n"
-    .string "No, I won't be dissuaded!$"
+    .string "גאאה! אתה מסרב?\n"
+    .string "לא, לא אוותר!$"
 
 Text_LetMeConferUltimateMove::
-    .string "You will allow it?\p"
-    .string "Then, let me confer my ultimate\n"
-    .string "{STR_VAR_2} on your {STR_VAR_1}.\p"
-    .string "Ggggrah-awooo!$"
+    .string "אתה מרשה?\p"
+    .string "אם כך, אעניק את מהלך העל\n"
+    .string "{STR_VAR_2} ל{STR_VAR_1} שלך.\p"
+    .string "גררררה-אווווו!$"
 
 Text_TaughtMove::
-    .string "Gasp, gasp, gasp…\p"
-    .string "I didn't think I could teach that\n"
-    .string "move while I still lived…$"
+    .string "הא, הא, הא…\p"
+    .string "לא חשבתי שאספיק ללמד את\n"
+    .string "המהלך הזה בעודי בחיים…$"
 
 Text_MakeBestUseOfMove::
-    .string "I implore you to make the best\n"
-    .string "use of that move and gain power!$"
+    .string "אני מתחנן שתנצל את המהלך\n"
+    .string "הזה היטב ותצבור כוח!$"
 
 Text_PassedOnEverythingIKnow::
-    .string "Gasp, gasp, gasp…\p"
-    .string "I have no regrets now.\n"
-    .string "I've passed on everything I know.\p"
-    .string "Now I can live out my life knowing\n"
-    .string "my work is done.$"
+    .string "הא, הא, הא…\p"
+    .string "עכשיו אין לי חרטות.\n"
+    .string "העברתי את כל מה שידעתי.\p"
+    .string "עכשיו אוכל לחיות בידיעה\n"
+    .string "שמלאכתי הושלמה.$"
 
 Text_FeelRejuvenated::
-    .string "After I passed on my knowledge to\n"
-    .string "you, I felt so much relief.\p"
-    .string "In fact, I feel rejuvenated,\n"
-    .string "as if I were younger again!$"
+    .string "אחרי שהעברתי לך את הידע שלי,\n"
+    .string "נגולה אבן מעל ליבי.\p"
+    .string "למען האמת, אני מרגיש מחודש,\n"
+    .string "כאילו חזרתי להיות צעיר!$"
