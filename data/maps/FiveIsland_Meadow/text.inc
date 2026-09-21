@@ -4,56 +4,56 @@ FiveIsland_Meadow_Text_DoorNeedsTwoPasswords::
     .string "パスワードが　2つ　いるようだ$"
 
 FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded::
-    .string "{PLAYER} entered a password.\p"
-    .string "“GOLDEEN need log.”\p"
+    .string "{PLAYER} הזין סיסמה.\p"
+    .string "“גולדין צריך בול עץ.”\p"
     .string "… …  … …  … …\p"
-    .string "Another password is needed to\n"
-    .string "open the door…$"
+    .string "דרושה עוד סיסמה כדי\n"
+    .string "לפתוח את הדלת…$"
 
 FiveIsland_Meadow_Text_EnteredPasswordDoorOpened::
-    .string "{PLAYER} entered two passwords.\p"
-    .string "“GOLDEEN need log.”\n"
-    .string "“Yes, nah, CHANSEY.”\p"
+    .string "{PLAYER} הזין שתי סיסמאות.\p"
+    .string "“גולדין צריך בול עץ.”\n"
+    .string "“כן, לא, צ'נסי.”\p"
     .string "… …  … …  … …\p"
-    .string "The WAREHOUSE's door opened!$"
+    .string "דלת המחסן נפתחה!$"
 
 FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen::
-    .string "The WAREHOUSE's door is already\n"
-    .string "open.$"
+    .string "דלת המחסן כבר\n"
+    .string "פתוחה.$"
 
 FiveIsland_Meadow_Text_Rocket1Intro::
-    .string "This area's strictly off-limits!\n"
-    .string "Out, out!$"
+    .string "האזור הזה סגור לחלוטין!\n"
+    .string "החוצה, החוצה!$"
 
 FiveIsland_Meadow_Text_Rocket1Defeat::
-    .string "Is this for real?$"
+    .string "זה באמת קרה?$"
 
 FiveIsland_Meadow_Text_Rocket1PostBattle::
-    .string "You don't have any business here!\n"
-    .string "Go home!$"
+    .string "אין לך מה לחפש כאן!\n"
+    .string "לך הביתה!$"
 
 FiveIsland_Meadow_Text_Rocket2Intro::
-    .string "There's nothing past here except\n"
-    .string "our WAREHOUSE.\p"
-    .string "So what brings you here?$"
+    .string "אין כאן כלום מלבד\n"
+    .string "המחסן שלנו.\p"
+    .string "אז מה מביא אותך לכאן?$"
 
 FiveIsland_Meadow_Text_Rocket2Defeat::
-    .string "That wasn't supposed to happen…$"
+    .string "זה לא היה אמור לקרות…$"
 
 FiveIsland_Meadow_Text_Rocket2PostBattle::
-    .string "You're wanting to know what's inside\n"
-    .string "this WAREHOUSE?\p"
-    .string "It's better you didn't know.\n"
-    .string "For your own sake, I mean.$"
+    .string "אתה רוצה לדעת מה יש\n"
+    .string "בתוך המחסן הזה?\p"
+    .string "עדיף שלא תדע.\n"
+    .string "לטובתך, אני מתכוון.$"
 
 FiveIsland_Meadow_Text_Rocket3Intro::
-    .string "You'd be wasting time even if you\n"
-    .string "were to get by me.$"
+    .string "גם אם תצליח לעבור אותי,\n"
+    .string "זה יהיה בזבוז זמן.$"
 
 FiveIsland_Meadow_Text_Rocket3Defeat::
-    .string "Oh, that makes me furious!$"
+    .string "אוי, זה מרגיז אותי נורא!$"
 
 FiveIsland_Meadow_Text_Rocket3PostBattle::
-    .string "You won't be able to get in without\n"
-    .string "the passwords anyway.$"
+    .string "בלי הסיסמאות לא תוכל\n"
+    .string "להיכנס בכל מקרה.$"
 

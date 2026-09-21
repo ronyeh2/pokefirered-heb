@@ -1,68 +1,68 @@
 FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish::
-    .string "SELPHY: Oh?\n"
-    .string "Do I know you from somewhere?\p"
-    .string "Oh, but that doesn't matter.\p"
-    .string "I am exquisitely bored.\n"
-    .string "Please, hear my wish.$"
+    .string "סלפי: הו?\n"
+    .string "אני מכירה אותך מאיפשהו?\p"
+    .string "הו, אבל זה לא משנה.\p"
+    .string "אני משועממת להחריד.\n"
+    .string "בבקשה, שמע את משאלתי.$"
 
 FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease::
-    .string "I wish to see a POKéMON.\n"
-    .string "A darling {STR_VAR_1}.\p"
-    .string "I want to see one right away.\n"
-    .string "Please, make my wish come true.$"
+    .string "אני רוצה לראות פוקימון.\n"
+    .string "איזה יופי של {STR_VAR_1}.\p"
+    .string "אני רוצה לראות אחד מיד.\n"
+    .string "בבקשה, הגשם את משאלתי.$"
 
 FiveIsland_ResortGorgeous_House_Text_OhImTiredOfWaiting::
-    .string "SELPHY: Oh, I'm tired of this.\n"
-    .string "I'm tired of waiting for you.\p"
-    .string "I'll forgive you this time, but\n"
-    .string "please don't fail me next time.$"
+    .string "סלפי: הו, נמאס לי מזה.\n"
+    .string "נמאס לי לחכות לך.\p"
+    .string "אסלח לך הפעם, אבל בבקשה\n"
+    .string "אל תאכזב אותי בפעם הבאה.$"
 
 FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou::
-    .string "SELPHY: Oh, hello, there.\p"
-    .string "Oh, my gracious. That must be the\n"
-    .string "{STR_VAR_1} you caught for me.\p"
-    .string "Giggle…\n"
-    .string "I see a resemblance to you.\p"
-    .string "Thank you so kindly.\p"
+    .string "סלפי: הו, שלום לך.\p"
+    .string "אלוהים אדירים. זה בטח\n"
+    .string "ה{STR_VAR_1} שתפסת בשבילי.\p"
+    .string "חיחי…\n"
+    .string "יש בזה משהו שמזכיר אותך.\p"
+    .string "תודה רבה לך.\p"
     .string "… …  … …  … …\n"
-    .string "Is something the matter?\p"
-    .string "You may leave.\p"
+    .string "משהו לא בסדר?\p"
+    .string "אתה יכול ללכת.\p"
     .string "… …  … …  … …\n"
-    .string "Oh, fine. I understand now.\p"
-    .string "SEBASTIAN!\n"
-    .string "I need you here this instant!$"
+    .string "הו, בסדר. עכשיו הבנתי.\p"
+    .string "סבסטיאן!\n"
+    .string "אני צריכה אותך כאן מיד!$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerYesMyLady::
-    .string "Butler: Yes, my lady.$"
+    .string "משרת: כן, גבירתי.$"
 
 FiveIsland_ResortGorgeous_House_Text_SelphyGiveTokenOfAppreciation::
-    .string "SELPHY: See to it that this person\n"
-    .string "is given a token of appreciation.$"
+    .string "סלפי: דאג לכך שהאדם הזה\n"
+    .string "יקבל אות הוקרה.$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid::
-    .string "Butler: I shall do as you bid,\n"
-    .string "my lady.$"
+    .string "משרת: כרצונך,\n"
+    .string "גבירתי.$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks::
-    .string "Butler: I sincerely thank you for\n"
-    .string "pleasing Lady SELPHY.\p"
-    .string "Please accept this as her thanks…$"
+    .string "משרת: אני מודה לך מקרב לב\n"
+    .string "על שהשמחת את הגברת סלפי.\p"
+    .string "אנא קבל זאת כאות תודה ממנה…$"
 
 FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull::
-    .string "Butler: Your BAG appears to be\n"
-    .string "unfortunately full.$"
+    .string "משרת: נראה שהתיק שלך\n"
+    .string "מלא, לצערי.$"
 
 FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing::
-    .string "Oh…\n"
-    .string "How disappointing.$"
+    .string "הו…\n"
+    .string "כמה מאכזב.$"
 
 FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck::
-    .string "SELPHY: I wish you the best of\n"
-    .string "luck.$"
+    .string "סלפי: אני מאחלת לך\n"
+    .string "המון הצלחה.$"
 
 FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun::
-    .string "Butler: The smile of Lady SELPHY\n"
-    .string "has the brilliance of the sun.\p"
-    .string "Please, I beg you to bring joy\n"
-    .string "to Lady SELPHY.$"
+    .string "משרת: חיוכה של הגברת סלפי\n"
+    .string "זוהר כמו השמש.\p"
+    .string "אנא, אני מתחנן שתביא שמחה\n"
+    .string "לגברת סלפי.$"
 

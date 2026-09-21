@@ -1,137 +1,137 @@
 FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen::
-    .string "There are many POKéMON locked\n"
-    .string "away in the pen…$"
+    .string "הרבה פוקימונים כלואים\n"
+    .string "בתוך המכלאה…$"
 
 FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
-    .string "The pen door is unlocked.\n"
-    .string "The POKéMON appear to have fled.$"
+    .string "דלת המכלאה פתוחה.\n"
+    .string "נראה שהפוקימונים ברחו.$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Intro::
-    .string "Did you come here knowing it's\n"
-    .string "TEAM ROCKET's WAREHOUSE?$"
+    .string "באת לכאן בידיעה שזה\n"
+    .string "המחסן של צוות רוקט?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
-    .string "What do you think you're doing?!$"
+    .string "מה אתה חושב שאתה עושה?!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
-    .string "TEAM ROCKET broke up?\n"
-    .string "What planet are you from?$"
+    .string "צוות רוקט התפרק?\n"
+    .string "מאיזה כוכב אתה?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Intro::
-    .string "Oh, now your POKéMON look strong.\n"
-    .string "You're willing to sell them?\p"
-    .string "Oh?\n"
-    .string "You wanted to battle?$"
+    .string "הו, הפוקימונים שלך חזקים.\n"
+    .string "מוכן למכור אותם?\p"
+    .string "הו?\n"
+    .string "רצית להילחם?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Defeat::
-    .string "Oh, but…\n"
-    .string "Too much!$"
+    .string "הו, אבל…\n"
+    .string "יותר מדי!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1PostBattle::
-    .string "We can give you a great price.\n"
-    .string "Sell us your POKéMON!$"
+    .string "נוכל לתת לך מחיר מעולה.\n"
+    .string "תמכור לנו את הפוקימונים!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Intro::
-    .string "I got word about you from the\n"
-    .string "others.\p"
-    .string "But there's no way a kid like you'd\n"
-    .string "know our BOSS GIOVANNI!$"
+    .string "שמעתי עליך\n"
+    .string "מהאחרים.\p"
+    .string "אבל אין סיכוי שילד כמוך\n"
+    .string "מכיר את הבוס שלנו, ג'ובאני!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3Defeat::
-    .string "Don't…you…dare…laugh…$"
+    .string "אל… תעז… לצחוק…$"
 
 FiveIsland_RocketWarehouse_Text_Grunt3PostBattle::
-    .string "Don't mess in the doings of adults,\n"
-    .string "you jumped-up pip-squeak!$"
+    .string "אל תתערב בענייני מבוגרים,\n"
+    .string "פרחח קטן שכמותך!$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Intro::
-    .string "I don't know or care if what I'm\n"
-    .string "doing is right or wrong…\p"
-    .string "I just put my faith in GIOVANNI\n"
-    .string "and do as I am told.$"
+    .string "לא יודעת ולא אכפת לי אם מה\n"
+    .string "שאני עושה נכון או לא…\p"
+    .string "אני פשוט נותנת אמון בג'ובאני\n"
+    .string "ועושה מה שאומרים לי.$"
 
 FiveIsland_RocketWarehouse_Text_Admin1Defeat::
-    .string "I…\n"
-    .string "I'm shattered…$"
+    .string "אני…\n"
+    .string "אני מרוסקת…$"
 
 FiveIsland_RocketWarehouse_Text_Admin1PostBattle::
-    .string "You're doing things according to\n"
-    .string "your beliefs and morals.\p"
-    .string "I understand now…$"
+    .string "אתה פועל לפי האמונות\n"
+    .string "והמוסר שלך.\p"
+    .string "עכשיו אני מבינה…$"
 
 FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough::
-    .string "I've made it so you can come back\n"
-    .string "in through there.\p"
-    .string "Why don't you go get rested and\n"
-    .string "refreshed for what lies ahead?\p"
-    .string "The ADMIN after me outranks me\n"
-    .string "thoroughly as a TRAINER.\p"
-    .string "You'd better steel yourself for one\n"
-    .string "harsh challenge.$"
+    .string "דאגתי שתוכל לחזור פנימה\n"
+    .string "דרך שם.\p"
+    .string "למה שלא תלך לנוח ולהתרענן\n"
+    .string "לקראת מה שמחכה לך?\p"
+    .string "המנהל שממתין בהמשך עולה\n"
+    .string "עליי בהרבה כמאמן.\p"
+    .string "כדאי שתתכונן היטב\n"
+    .string "לאתגר קשה.$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Intro::
-    .string "That's quite enough of you \n"
-    .string "playing the hero, kid.\p"
-    .string "Spreading lies about how TEAM\n"
-    .string "ROCKET has disbanded…\p"
-    .string "It's such an obvious attempt to\n"
-    .string "cause confusion in our ranks.\p"
-    .string "Fortunately, we're not so ignorant\n"
-    .string "to fall for the lies of a child!\p"
-    .string "And now, I'll show you how scary\n"
-    .string "an angry adult can be!$"
+    .string "מספיק עם זה שאתה\n"
+    .string "משחק אותה גיבור, ילד.\p"
+    .string "מפיץ שקרים על כך שצוות רוקט\n"
+    .string "התפרק…\p"
+    .string "זה ניסיון כל כך שקוף\n"
+    .string "לזרוע בלבול בשורות שלנו.\p"
+    .string "למזלנו, אנחנו לא בורים\n"
+    .string "מספיק כדי להאמין לשקרי ילד!\p"
+    .string "ועכשיו, אראה לך כמה מפחיד\n"
+    .string "מבוגר כועס יכול להיות!$"
 
 FiveIsland_RocketWarehouse_Text_Admin2Defeat::
-    .string "Urgh…\n"
-    .string "You were too strong…\p"
+    .string "אוף…\n"
+    .string "היית חזק מדי…\p"
     .string "…\n"
-    .string "Th-that's GIOVANNI's BADGE!\p"
-    .string "So it's true?\n"
-    .string "TEAM ROCKET really has disbanded?$"
+    .string "ז-זה התג של ג'ובאני!\p"
+    .string "אז זה נכון?\n"
+    .string "צוות רוקט באמת התפרק?$"
 
 FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
-    .string "We will abandon this WAREHOUSE…\p"
-    .string "But don't think this is over.\n"
-    .string "I won't let this be the end.\p"
-    .string "I will find GIOVANNI.\n"
-    .string "And I will resurrect TEAM ROCKET!\l"
-    .string "I will…\p"
-    .string "Until then, farewell!$"
+    .string "אנחנו ננטוש את המחסן הזה…\p"
+    .string "אבל אל תחשוב שזה נגמר.\n"
+    .string "אני לא אתן לזה להיות הסוף.\p"
+    .string "אני אמצא את ג'ובאני.\n"
+    .string "ואקים מחדש את צוות רוקט!\l"
+    .string "אני אעשה זאת…\p"
+    .string "עד אז, להתראות!$"
 
 FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText::
-    .string "A report with graphs and text is on\n"
-    .string "the PC monitor.\p"
-    .string "“The Influence of Magnetic Waves\n"
-    .string "on POKéMON Evolution”…\p"
+    .string "על מסך המחשב יש דוח\n"
+    .string "עם גרפים וטקסט.\p"
+    .string "“השפעת גלים מגנטיים\n"
+    .string "על התפתחות פוקימונים”…\p"
     .string "… … … … … …\p"
-    .string "It's too difficult to understand…$"
+    .string "קשה מדי להבין את זה…$"
 
 FiveIsland_RocketWarehouse_Text_GideonIntro::
-    .string "I almost managed to sell the\n"
-    .string "SAPPHIRE for huge money…\p"
-    .string "Then, you just had to come along\n"
-    .string "and blow the whole deal apart!\p"
-    .string "Fufu… Fufufufu…\n"
-    .string "There's no forgiveness for you!$"
+    .string "כמעט הצלחתי למכור את\n"
+    .string "הספיר בהון עתק…\p"
+    .string "ואז היית חייב לבוא\n"
+    .string "ולפוצץ לי את כל העסקה!\p"
+    .string "פופו… פופופופו…\n"
+    .string "לא אסלח לך לעולם!$"
 
 FiveIsland_RocketWarehouse_Text_GideonDefeat::
-    .string "Gah! Darn!\n"
-    .string "Darn! Darn!$"
+    .string "אח! לעזאזל!\n"
+    .string "לעזאזל! לעזאזל!$"
 
 FiveIsland_RocketWarehouse_Text_GideonPostBattle::
-    .string "If I can't sell it, it's worthless!\n"
-    .string "Go ahead, take it!$"
+    .string "אם אני לא יכול למכור אותו,\n"
+    .string "הוא חסר ערך! קדימה, קח!$"
 
 FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe::
-    .string "What do you want now?\n"
-    .string "Go on, get lost, leave me be.$"
+    .string "מה אתה רוצה עכשיו?\n"
+    .string "קדימה, תסתלק, עזוב אותי.$"
 
 FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair::
-    .string "What, you again?\p"
-    .string "You… You're not GIOVANNI's kid,\n"
-    .string "are you?\p"
-    .string "No, that can't be right!\n"
-    .string "GIOVANNI's kid has red hair.\p"
-    .string "You don't have any reasons for\n"
-    .string "bugging me. Leave me alone!$"
+    .string "מה, שוב אתה?\p"
+    .string "אתה… אתה לא הילד של ג'ובאני,\n"
+    .string "נכון?\p"
+    .string "לא, זה לא יכול להיות נכון!\n"
+    .string "לילד של ג'ובאני יש שיער אדום.\p"
+    .string "אין לך שום סיבה להציק לי.\n"
+    .string "עזוב אותי בשקט!$"
 
