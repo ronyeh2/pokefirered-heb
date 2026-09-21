@@ -1083,7 +1083,10 @@ static void PrintUIHelp(u8 state)
     }
     width = GetStringWidth(FONT_SMALL, src, 0);
     FillWindowPixelRect(FCWINDOWID_UIHELP, PIXEL_FILL(0), 0, 0, 0xc0, 0x10);
-    AddTextPrinterParameterized4(FCWINDOWID_UIHELP, FONT_SMALL, 188 - width, 0, 0, 2, sTextColor_White, -1, src);
+    // The RTL anchor leaves one glyph cell before the right edge, but these hint
+    // strings start with a keypad icon and {START_BUTTON} is 24px wide, not 8, so
+    // it has to clear that instead (see sKeypadIcons in text.c).
+    AddTextPrinterParameterized4(FCWINDOWID_UIHELP, FONT_SMALL, 188 - 24, 0, 0, 2, sTextColor_White, -1, src);
     FC_PutWindowTilemapAndCopyWindowToVramMode3(FCWINDOWID_UIHELP);
 }
 
@@ -1430,7 +1433,7 @@ static void InitListMenuTemplate(void)
     gFameChecker_ListMenuTemplate.maxShowed = 1;
     gFameChecker_ListMenuTemplate.windowId = FCWINDOWID_LIST;
     gFameChecker_ListMenuTemplate.header_X = 0;
-    gFameChecker_ListMenuTemplate.item_X = 8;
+    gFameChecker_ListMenuTemplate.item_X = 56; // RTL: right edge of the 8-tile list window
     gFameChecker_ListMenuTemplate.cursor_X = 0;
     gFameChecker_ListMenuTemplate.upText_Y = 4;
     gFameChecker_ListMenuTemplate.cursorPal = 2;
@@ -1528,14 +1531,14 @@ static void FC_DoMoveCursor(s32 itemIndex, bool8 onInit)
     u16 who;
     ListMenuGetScrollAndRow(sFameCheckerData->listMenuTaskId, &listY, &cursorY);
     who = listY + cursorY;
-    AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 8, 14 * cursorY + 4, 0, 0, sTextColor_Green, 0, sListMenuItems[itemIndex].label);
+    AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 56, 14 * cursorY + 4, 0, 0, sTextColor_Green, 0, sListMenuItems[itemIndex].label);
     if (!onInit)
     {
         if (listY < sFameCheckerData->listMenuTopIdx2)
             sFameCheckerData->listMenuDrawnSelIdx++;
         else if (listY > sFameCheckerData->listMenuTopIdx2 && who != sFameCheckerData->numUnlockedPersons - 1)
             sFameCheckerData->listMenuDrawnSelIdx--;
-        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 8, 14 * sFameCheckerData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sFameCheckerData->listMenuCurIdx].label);
+        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 56, 14 * sFameCheckerData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sFameCheckerData->listMenuCurIdx].label);
 
     }
     sFameCheckerData->listMenuCurIdx = itemIndex;

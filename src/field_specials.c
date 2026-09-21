@@ -1102,10 +1102,10 @@ void DrawElevatorCurrentFloorWindow(void)
     sElevatorCurrentFloorWindowId = AddWindow(&sElevatorCurrentFloorWindowTemplate);
     LoadStdWindowGfx(sElevatorCurrentFloorWindowId, 0x21D, BG_PLTT_ID(13));
     DrawStdFrameWithCustomTileAndPalette(sElevatorCurrentFloorWindowId, FALSE, 0x21D, 13);
-    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, gText_NowOn, 0, 2, 0xFF, NULL);
+    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, gText_NowOn, 48, 2, 0xFF, NULL);
     floorname = sFloorNamePointers[gSpecialVar_0x8005];
     strwidth = GetStringWidth(FONT_NORMAL, floorname, 0);
-    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, floorname, 56 - strwidth, 16, 0xFF, NULL);
+    AddTextPrinterParameterized(sElevatorCurrentFloorWindowId, FONT_NORMAL, floorname, 48, 16, 0xFF, NULL);
     PutWindowTilemap(sElevatorCurrentFloorWindowId);
     CopyWindowToVram(sElevatorCurrentFloorWindowId, COPYWIN_FULL);
 }

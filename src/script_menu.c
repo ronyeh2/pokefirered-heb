@@ -1268,7 +1268,7 @@ void DrawSeagallopDestinationMenu(void)
     for (i = 0; i < numItems - 2; i++)
     {
         if (destinationId != gSpecialVar_0x8004)
-            AddTextPrinterParameterized(windowId, FONT_NORMAL, sSeagallopDestStrings[destinationId], cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(windowId, FONT_NORMAL, sSeagallopDestStrings[destinationId], 88 - cursorWidth - 8, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
         else
             i--;
         destinationId++;
@@ -1277,9 +1277,9 @@ void DrawSeagallopDestinationMenu(void)
         if (destinationId == SEAGALLOP_SEVEN_ISLAND + 1)
             destinationId = SEAGALLOP_VERMILION_CITY;
     }
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Other, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Other, 88 - cursorWidth - 8, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     i++;
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gOtherText_Exit, cursorWidth, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gOtherText_Exit, 88 - cursorWidth - 8, i * 16 + 2, TEXT_SKIP_DRAW, NULL);
     Menu_InitCursor(windowId, FONT_NORMAL, 0, 2, 16, numItems, 0);
     CreateMCMenuInputHandlerTask(FALSE, numItems, windowId, MULTICHOICE_NONE);
     ScheduleBgCopyTilemapToVram(0);

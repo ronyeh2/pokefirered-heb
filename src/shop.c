@@ -610,7 +610,10 @@ static void BuyMenuPrintPriceInList(u8 windowId, u32 item, u8 y)
     if (item != INDEX_CANCEL)
     {
         ConvertIntToDecimalStringN(gStringVar1, ItemId_GetPrice(item), 0, 4);
-        x = 4 - StringLength(gStringVar1);
+        // The leading pad spaces used to right-align this in LTR now render to
+        // the RIGHT of the price, which made the currency sign zig-zag down the
+        // column. The RTL pen already fixes the right edge, so drop the padding.
+        x = 0;
         loc = gStringVar4;
         while (x-- != 0)
             *loc++ = 0;

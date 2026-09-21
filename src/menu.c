@@ -461,12 +461,13 @@ s8 Menu_ProcessInputNoWrapAround_other(void)
 void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs)
 {
     u8 i;
+    u16 anchor = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
 
     for (i = 0; i < itemCount; i++)
     {
         // Ofir Changed this
         //AddTextPrinterParameterized(windowId, fontId, strs[i].text, left, (lineHeight * i) + top, 0xFF, NULL);
-        AddTextPrinterParameterized(windowId, fontId, strs[i].text, left + 30, (lineHeight * i) + top, 0xFF, NULL);
+        AddTextPrinterParameterized(windowId, fontId, strs[i].text, anchor, (lineHeight * i) + top, 0xFF, NULL);
     }
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
@@ -474,12 +475,13 @@ void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 i
 void MultichoiceList_PrintItems(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs, u8 letterSpacing, u8 lineSpacing)
 {
     u8 i;
+    u16 anchor = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
 
     for (i = 0; i < itemCount; i++)
     {
         // Ofir chenged this
         //AddTextPrinterParameterized5(windowId, fontId, strs[i].text, left, (lineHeight * i) + top, 0xFF, NULL, letterSpacing, lineSpacing);
-        AddTextPrinterParameterized5(windowId, fontId, strs[i].text, left + 10, (lineHeight * i) + top, 0xFF, NULL, letterSpacing, lineSpacing);
+        AddTextPrinterParameterized5(windowId, fontId, strs[i].text, anchor, (lineHeight * i) + top, 0xFF, NULL, letterSpacing, lineSpacing);
     }
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
@@ -506,9 +508,9 @@ void AddItemMenuActionTextPrinters(u8 windowId, u8 fontId, u8 left, u8 top, u8 l
     printer.lineSpacing = GetFontAttribute(fontId, FONTATTR_LINE_SPACING);
     // Ofir Changed this
     //printer.x = left;
-    printer.x = left + 30;
+    printer.x = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
     //printer.currentX = left;
-    printer.currentX = left + 30;
+    printer.currentX = printer.x;
     for (i = 0; i < itemCount; i++)
     {
         printer.currentChar = strs[orderArray[i]].text;
@@ -557,7 +559,7 @@ void CreateYesNoMenu(const struct WindowTemplate *window, u8 fontId, u8 left, u8
     textSubPrinter.fontId = fontId;
     // Ofir added this
     //textSubPrinter.x = GetMenuCursorDimensionByFont(fontId, 0) + left;
-    textSubPrinter.x = GetMenuCursorDimensionByFont(fontId, 0) + left + 30;
+    textSubPrinter.x = GetWindowAttribute(sYesNoWindowId, WINDOW_WIDTH) * 8 - GetMenuCursorDimensionByFont(fontId, 0) - left - 8;
     textSubPrinter.y = top;
     textSubPrinter.currentX = textSubPrinter.x;
     textSubPrinter.currentY = textSubPrinter.y;

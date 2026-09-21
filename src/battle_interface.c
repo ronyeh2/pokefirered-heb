@@ -768,9 +768,12 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
 
     // Ofir changed here
     //objVram = ConvertIntToDecimalStringN(text + 4, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
-    ConvertIntToDecimalStringN(lvl_str, lvl, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    lvl_str[0] = EXT_CTRL_CODE_BEGIN;
+    lvl_str[1] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+    lvl_str[2] = 5;
+    ConvertIntToDecimalStringN(lvl_str + 3, lvl, STR_CONV_MODE_RIGHT_ALIGN, 3);
     //xPos = 5 * (3 - (objVram - (text + 2)));
-    xPos = 6;
+    xPos = 10;
 
     // windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, &windowId);
     windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(lvl_str, xPos, 3, &windowId);
@@ -779,7 +782,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     color[1] = 1;
     color[2] = 3;
     // we have to do this because the lvl is not showing up in the correctly unless we print it separately
-    AddTextPrinterParameterized4(windowId, FONT_NORMAL, 12, 3, 0, 0, color, -1, text);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, 15, 3, 0, 0, color, -1, text);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
 
     if (GetBattlerSide(gSprites[healthboxSpriteId].sBattlerId) == B_SIDE_PLAYER)
@@ -810,8 +813,11 @@ void UpdateHpTextInHealthbox(u8 healthboxSpriteId, s16 value, u8 maxOrCurrent)
         u8 text[8];
         if (maxOrCurrent != HP_CURRENT) // singles, max
         {
-            ConvertIntToDecimalStringN(text, value, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, /*0*/8, 5, &windowId);
+            text[0] = EXT_CTRL_CODE_BEGIN;
+            text[1] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+            text[2] = 5;
+            ConvertIntToDecimalStringN(text + 3, value, STR_CONV_MODE_RIGHT_ALIGN, 3);
+            windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, /*0*/10, 5, &windowId);
             spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum;
             TextIntoHealthboxObject((void *)(OBJ_VRAM0) + spriteTileNum * TILE_SIZE_4BPP + 0xA40, windowTileData, 2);
             RemoveWindowOnHealthbox(windowId);
@@ -1767,7 +1773,7 @@ static void UpdateSafariBallsTextOnHealthbox(u8 healthboxSpriteId)
     u32 windowId, spriteTileNum;
     u8 *windowTileData;
 
-    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gText_SafariBalls, 0, 3, &windowId);
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gText_SafariBalls, 56, 3, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
     TextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x40) + spriteTileNum, windowTileData, 6);
     TextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x800) + spriteTileNum, windowTileData + 0xC0, 2);
@@ -1784,7 +1790,7 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
     txtPtr = StringCopy(text, gText_HighlightRed_Left);
     ConvertIntToDecimalStringN(txtPtr, gNumSafariBalls, STR_CONV_MODE_LEFT_ALIGN, 2);
 
-    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, 47 - GetStringWidth(FONT_SMALL, text, 0), 3, &windowId);
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, 39, 3, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
     SafariTextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x2C0) + spriteTileNum, windowTileData, 2);
     SafariTextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0xA00) + spriteTileNum, windowTileData + 0x40, 4);

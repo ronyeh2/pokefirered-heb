@@ -182,7 +182,7 @@ static void Task_DrawPlayerPcTopMenu(u8 taskId)
     SetStdWindowBorderStyle(tWindowId, 0);
     // Ofir Changed Here
     //AddItemMenuActionTextPrinters(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING), 16, sTopMenuItemCount, sMenuActions_TopMenu, sItemOrder);
-    AddItemMenuActionTextPrinters(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0) + 90, 2, GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING), 16, sTopMenuItemCount, sMenuActions_TopMenu, sItemOrder);
+    AddItemMenuActionTextPrinters(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING), 16, sTopMenuItemCount, sMenuActions_TopMenu, sItemOrder);
     Menu_InitCursor(tWindowId, FONT_NORMAL, 0, 2, 16, sTopMenuItemCount, 0);
     ScheduleBgCopyTilemapToVram(0);
     gTasks[taskId].func = Task_TopMenuHandleInput;
@@ -276,7 +276,7 @@ static void Task_CreateItemStorageSubmenu(u8 taskId, u8 cursorPos)
     SetStdWindowBorderStyle(tWindowId, FALSE);
     // Ofir Changed Here
     //PrintTextArray(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, 16, 3, sMenuActions_ItemPc);
-    PrintTextArray(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0) + 90, 2, 16, 3, sMenuActions_ItemPc);
+    PrintTextArray(tWindowId, FONT_NORMAL, GetMenuCursorDimensionByFont(FONT_NORMAL, 0), 2, 16, 3, sMenuActions_ItemPc);
     Menu_InitCursor(tWindowId, FONT_NORMAL, 0, 2, 16, 3, cursorPos);
     ScheduleBgCopyTilemapToVram(0);
     PrintStringOnWindow0WithDialogueFrame(sItemStorageActionDescriptionPtrs[cursorPos]);

@@ -522,7 +522,7 @@ static const struct ListMenuTemplate sListMenuTemplate_OrderedListMenu = {
     .header_X = 0,
     // Ofir changed here
     //.item_X = 56,
-    .item_X = 100,
+    .item_X = 112,
     .cursor_X = 4,
     .upText_Y = 2,
     .cursorPal = 1,
@@ -2953,13 +2953,11 @@ void DexScreen_PrintMonFlavorText(u8 windowId, u16 species, u8 x, u8 y)
         length = GetStringWidth(FONT_NORMAL, gPokedexEntries[species].description, 0);
         // Ofir changed here
         //xCenter = x + (240 - length) / 2;
-        xCenter = x + (240 + length + 8) / 2;
-        //if (xCenter > 0)
-        if (xCenter < 232)
-            x = xCenter;
-        else
-            x = 232;
-            // x = 0;
+        // RTL: the paragraph is right-aligned to a fixed margin. Centring it
+        // made short entries sit indented from the right edge and long ones
+        // overhang on both sides.
+        xCenter = length;
+        x = 232;
 
         printerTemplate.x = x;
         printerTemplate.y = y;

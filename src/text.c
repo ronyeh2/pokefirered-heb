@@ -528,7 +528,9 @@ void TextPrinterClearDownArrow(struct TextPrinter *textPrinter)
     FillWindowPixelRect(
         textPrinter->printerTemplate.windowId,
         textPrinter->printerTemplate.bgColor << 4 | textPrinter->printerTemplate.bgColor,
-        textPrinter->printerTemplate.currentX,
+        // The arrow is blitted at currentX - 10, so clear the same rect -
+        // otherwise the previous line's arrow is left on screen.
+        textPrinter->printerTemplate.currentX - 10,
         textPrinter->printerTemplate.currentY,
         10,
         12);

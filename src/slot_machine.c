@@ -2056,7 +2056,7 @@ static bool8 SlotsTask_GraphicsInit(u8 * state, struct SlotMachineSetupTaskData 
         FillWindowPixelBuffer(1, 0xFF);
         PutWindowTilemap(1);
 
-        x = DISPLAY_WIDTH - 4 - GetStringWidth(FONT_SMALL, gString_SlotMachineControls, 0);
+        x = DISPLAY_WIDTH - 4 - 8;
         textColor[0] = TEXT_DYNAMIC_COLOR_6;
         textColor[1] = TEXT_COLOR_WHITE;
         textColor[2] = TEXT_COLOR_DARK_GRAY;
@@ -2333,7 +2333,7 @@ static void Slot_PrintOnWindow0(const u8 * str)
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
     PutWindowTilemap(0);
     DrawTextBorderOuter(0, 0x001, 15);
-    AddTextPrinterParameterized5(0, FONT_NORMAL, str, 1, 2, TEXT_SKIP_DRAW, NULL, 1, 2);
+    AddTextPrinterParameterized5(0, FONT_NORMAL, str, 152, 2, TEXT_SKIP_DRAW, NULL, 1, 2);
 }
 
 static void Slot_ClearWindow0(void)
