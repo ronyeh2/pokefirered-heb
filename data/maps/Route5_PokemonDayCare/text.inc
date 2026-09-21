@@ -26,8 +26,8 @@ Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime::
     .string "עוד קצת זמן אצלי.$"
 
 Route5_PokemonDayCare_Text_OweMeXForMonsReturn::
-    .string "אתה חייב לי ¥{STR_VAR_2} עבור החזרת\n"
-    .string "הפוקימון הזה.$"
+    .string "אתה חייב לי ¥{STR_VAR_2} עבור\n"
+    .string "החזרת הפוקימון הזה.$"
 
 Route5_PokemonDayCare_Text_ThankYouHeresMon::
     .string "תודה!\n"

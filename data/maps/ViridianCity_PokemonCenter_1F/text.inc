@@ -10,6 +10,6 @@ ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown::
 
 ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons::
     .string "מרכז פוקימון מרפה את\n"
-	.string "הפוקימונים שלך.\p"
-    .string "הם יהפכו את הפוקימונים שלך לבריאים\n"
-    .string "וחזקים.$"
+    .string "הפוקימונים שלך.\p"
+    .string "הם יהפכו את הפוקימונים שלך\n"
+    .string "לבריאים וחזקים.$"

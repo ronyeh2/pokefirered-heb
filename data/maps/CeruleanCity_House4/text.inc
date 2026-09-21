@@ -37,8 +37,8 @@ CeruleanCity_House4_Text_ThanksForSpreadingNewsTakeThis::
     .string "אני רוצה שתקבל את זה.$"
 
 CeruleanCity_House4_Text_MagnificentNewsSpreadHaveBerries::
-    .string "המשכת להפיץ את החדשות אפילו יותר?\n"
-    .string "מדהים!\p"
+    .string "המשכת להפיץ את החדשות אפילו\n"
+    .string "יותר? מדהים!\p"
     .string "אני מאמין שפיסת החדשות הזו נהנת\n"
     .string "מאוד לעבור לעוד אנשים.\p"
     .string "כן, אני בטוח!\p"

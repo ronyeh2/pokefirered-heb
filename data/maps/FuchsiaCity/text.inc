@@ -76,8 +76,9 @@ Text_SubstituteTeach::
     .string "ולהתכרבל בכיס של אמא קנגסקאן\p"
     .string "אבל רק פוקימונים יודעים להשתמש\n"
     .string "במהלך 'ממלא מקום'…\p"
-    .string "אתה רוצה שאלמד את אחד מהפוקימונים\n"
-    .string "שלך את המהלך 'ממלא מקום'?$"
+    .string "אתה רוצה שאלמד את אחד\n"
+    .string "מהפוקימונים שלך את המהלך 'ממלא\l"
+    .string "מקום'?$"
 
 Text_SubstituteDeclined::
     .string "אה, באמת?\n"

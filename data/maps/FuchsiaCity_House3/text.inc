@@ -15,7 +15,8 @@ FuchsiaCity_House3_Text_MonOnlyKnowsOneMove::
     .string "{STR_VAR_1} יודע רק מהלך אחד...\n"
 
 FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten::
-    .string "הם! לגרום ל{STR_VAR_1} לשכוח את {STR_VAR_2}?$"
+    .string "הם! לגרום ל{STR_VAR_1} לשכוח את\n"
+    .string "{STR_VAR_2}?$"
 
 FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely::
     .string "זה עבד מצויין!\p"

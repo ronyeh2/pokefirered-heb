@@ -6,8 +6,8 @@ Text_SeismicTossTeach::
     .string "אבל זה צריך להמריץ אותנו ללמוד\n"
     .string "יותר, לא לוותר.\p"
     .string "הדבר היחיד שצריך לזרוק…\p"
-    .string "ובכן, מה דעתך על המהלך מכה ססמית?\n"
-    .string "האם ללמד אותה לפוקימון?$"
+    .string "ובכן, מה דעתך על המהלך מכה\n"
+    .string "ססמית? האם ללמד אותה לפוקימון?$"
 
 Text_SeismicTossDeclined::
     .string "האם כך?\n"

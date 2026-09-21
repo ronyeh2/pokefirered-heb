@@ -11,20 +11,22 @@ CeruleanCity_House1_Text_HaveJustTheThing::
     .string "בדיוק בשבילך.$"
 
 CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner::
-    .string "יש משהו חדש בקומה השנייה של מרכזי\n"
-    .string "פוקימון, זה נמצא בפינה הישירה.\p"
+    .string "יש משהו חדש בקומה השנייה של\n"
+    .string "מרכזי פוקימון, זה נמצא בפינה\l"
+    .string "הישירה.\p"
     .string "הם התקינו מכונה על חוטית\n"
     .string "שטוחנת פירות יער.\p"
     .string "פה אתה נכנס לתמונה.\p"
     .string "יש לי טובה לבקש ממך\p"
     .string "תוכל להכין עבורי אבקת פירות יער\n"
     .string "בעזרת המכונה הזו?\p"
-    .string "אל תשכח, המכונה נמצאת בפינה הישירה\n"
-    .string "במרכזי פוקימון.\p"
+    .string "אל תשכח, המכונה נמצאת בפינה\n"
+    .string "הישירה במרכזי פוקימון.\p"
     .string "אני ארקח עבורך תרופות אם\n"
     .string "תביא לי אבקת פירות יער.\p"
-    .string "אל תשכח, טתחן פירות יער כדי שיהפכו\n"
-    .string "לאבקת פירות יער, והבא אותה אלי.$"
+    .string "אל תשכח, טתחן פירות יער כדי\n"
+    .string "שיהפכו לאבקת פירות יער, והבא אותה\l"
+    .string "אלי.$"
 
 CeruleanCity_House1_Text_WhyMustYouLieNoBerries::
     .string "למה אתה משקר לי?\p"

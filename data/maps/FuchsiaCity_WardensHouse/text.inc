@@ -36,7 +36,8 @@ FuchsiaCity_WardensHouse_Text_ExplainStrength::
     .string "אה כן, מצאת את הביתן הסודי באזור\l"
     .string "הספארי?\p"
     .string "אם אתה מוצא, אתה זוכה במ”נ!\p"
-    .string "השמועה אומרת שזה מ”נ גלישה הנדיר.$"
+    .string "השמועה אומרת שזה מ”נ גלישה\n"
+    .string "הנדיר.$"
 
 FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay::
     .string "תמונות של פוקימון\n"

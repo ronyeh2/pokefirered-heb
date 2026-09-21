@@ -37,8 +37,8 @@ ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
     .string "מ”מ62!$"
 
 ViridianCity_Gym_Text_ExplainTM26::
-    .string "מ”מ62 מכיל את רעש אדמה!\n"
-    .string "מתקפה עוצמתית שגורמת לרעידת אדמה!\p"
+    .string "מ”מ62 מכיל את רעש אדמה! מתקפה\n"
+    .string "עוצמתית שגורמת לרעידת אדמה!\p"
     .string "הכנתי את זה בזמן שהייתי מנהל\l"
     .string "המכון כאן, לפני יותר מדי זמן...$"
 

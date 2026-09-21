@@ -94,5 +94,6 @@ CeruleanCity_Gym_Text_GymStatuePlayerWon::
     .string "{RIVAL}, {PLAYER}$"
 
 CeruleanCity_Gym_Text_DianaPostBattle::
-    .string "אתה צריך להתמודד מול מאמנים אחרים\n"
-    .string "כדי להבין כמה טוב אתה באמת.$"
+    .string "אתה צריך להתמודד מול מאמנים\n"
+    .string "אחרים כדי להבין כמה טוב אתה\l"
+    .string "באמת.$"

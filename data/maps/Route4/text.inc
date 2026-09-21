@@ -24,14 +24,15 @@ Route4_Text_RouteSign::
 Text_MegaPunchTeach::
     .string "מכה של עוצמה שאגה!\p"
     .string "מלאה בכוח הרסני!\p"
-    .string "כשאתה במצב רע,\n"
-    .string "מגה פאנץ' הוא ההתקפה האולטימטיבית!\l"
-    .string "אתה מסכים, נכון?\p"
+    .string "כשאתה במצב רע, מגה פאנץ' הוא\n"
+    .string "ההתקפה האולטימטיבית! אתה מסכים,\l"
+    .string "נכון?\p"
     .string "עכשיו!\n"
     .string "תן לי ללמד אותה לפוקימון שלך!$"
 
 Text_MegaPunchDeclined::
-    .string "תחזור כשתבין את הערך של מגה פאנץ'.$"
+    .string "תחזור כשתבין את הערך של מגה\n"
+    .string "פאנץ'.$"
 
 Text_MegaPunchWhichMon::
     .string "בסדר!\n"

@@ -36,7 +36,8 @@ Route22_Text_LateRivalIntro::
     .string "אז אתה הולך לליגת פוקימון?\n"
     .string "אספת את כל התגים גם?\p"
     .string "זה מגניב!\p"
-    .string "אז אני אתמודד איתך, {PLAYER}, כחימום לליגת פוקימון!\p"
+    .string "אז אני אתמודד איתך, {PLAYER},\n"
+    .string "כחימום לליגת פוקימון!\p"
     .string "בוא נתחיל!$"
 
 Route22_Text_LateRivalDefeat::

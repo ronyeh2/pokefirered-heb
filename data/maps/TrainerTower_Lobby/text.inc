@@ -80,7 +80,8 @@ TrainerTower_Roof_Text_IdLikeToSeeBetterTime::
     .string "עד אז, להתראות…$"
 
 TrainerTower_Text_XMinYZSec::
-    .string "{STR_VAR_1}דק' {STR_VAR_3}.{STR_VAR_2}שנ'$"
+    .string "{STR_VAR_1}דק'\n"
+    .string "{STR_VAR_3}.{STR_VAR_2}שנ'$"
 
 TrainerTower_Lobby_Text_HereAreTheResults::
     .string "せいせきひょうです$"

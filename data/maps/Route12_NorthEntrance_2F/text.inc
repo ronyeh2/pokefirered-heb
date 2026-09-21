@@ -16,8 +16,8 @@ Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl::
 
 Route12_NorthEntrance_2F_Text_ExplainTM27::
     .string "מ”מ72 הוא מהלך שנקרא חזור…\p"
-    .string "אם תתייחס לפוקימון שלך טוב,\n"
-    .string "הוא יחזיר לך את האהבה על ידי עבודה\l"
+    .string "אם תתייחס לפוקימון שלך טוב, הוא\n"
+    .string "יחזיר לך את האהבה על ידי עבודה\l"
     .string "הכי קשה שלו בקרב.$"
 
 Route12_NorthEntrance_2F_Text_DontHaveRoomForThis::

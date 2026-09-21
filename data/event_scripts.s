@@ -955,7 +955,8 @@ Text_HavePokedexRated::
 	.string "לפוקדקס שלך?$"
 
 Text_ClosedLinkToProfOaksPC::
-	.string "סגרת את החיבור למחשב של פרופ' אוק.$"
+	.string "סגרת את החיבור למחשב של פרופ'\n"
+	.string "אוק.$"
 
 Text_VoiceRangOutDontRunAway::
 	.string "קולו של מישהו נשמע,\n"

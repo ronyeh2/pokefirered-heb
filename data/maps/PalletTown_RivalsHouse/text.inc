@@ -75,8 +75,8 @@ PalletTown_RivalsHouse_Text_CantGroomAnEgg::
 PalletTown_RivalsHouse_Text_MayISeeFirstMon::
     .string "דייזי: הפוקימונים שלך ילמדו לאהוב\n"
     .string "אותך אם תגדל אותם באהבה.\p"
-    .string "לדוגמא, {PLAYER}, אני יכולה לראות את\n"
-    .string "הפוקימון הראשון שלך?$"
+    .string "לדוגמא, {PLAYER}, אני יכולה לראות\n"
+    .string "את הפוקימון הראשון שלך?$"
 
 PalletTown_RivalsHouse_Text_CouldntLoveYouMore::
     .string "הפוקימון שלך אוהב אותך מעבר\n"
@@ -84,8 +84,8 @@ PalletTown_RivalsHouse_Text_CouldntLoveYouMore::
 
 PalletTown_RivalsHouse_Text_ItLooksVeryHappy::
     .string "הוא נראה מאוד שמח ומרוצה.\p"
-    .string "הלוואי ש{RIVAL} היה פה לראות את זה\n"
-    .string "אולי הוא היה לומד ממך משהו.$"
+    .string "הלוואי ש{RIVAL} היה פה לראות את\n"
+    .string "זה אולי הוא היה לומד ממך משהו.$"
 
 PalletTown_RivalsHouse_Text_ItsQuiteFriendly::
     .string "נראה שהוא מרוצה למדי.\n"

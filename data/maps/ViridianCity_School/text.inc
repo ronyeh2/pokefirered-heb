@@ -82,8 +82,8 @@ ViridianCity_School_Text_ExplainFreeze::
     .string "לבלתי ניתן לתנועה.\p"
     .string "הוא נשאר קפוא גם לאחר\n"
     .string "שהקרב מסתיים.\p"
-    .string "השתמש בתרופה להמסה כדי להפשיר את\n"
-    .string "הפוקימון הקפוא.$"
+    .string "השתמש בתרופה להמסה כדי להפשיר\n"
+    .string "את הפוקימון הקפוא.$"
 
 ViridianCity_School_Text_ExplainParalysis::
     .string "שיתוק מפחית את מהירות הפוקימון\n"

@@ -137,7 +137,8 @@ SaffronCity_PokemonTrainerFanClub_Text_YoullBeTalkedAboutIfYouKeepWinning::
 SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeYouOneDay::
     .string "זה {PLAYER}!\n"
     .string "זה {PLAYER}!\p"
-    .string "אני רוצה להיות כמו {PLAYER} יום אחד!$"
+    .string "אני רוצה להיות כמו {PLAYER} יום\n"
+    .string "אחד!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan::
     .string "כולם הפסיקו להיות מעריצים\n"
@@ -235,8 +236,8 @@ SaffronCity_PokemonTrainerFanClub_Text_ImLoneTrainerFan::
     .string "כולם הפכו לאוהדים שלך.\p"
     .string "אז אחרי כל מה שעברנו,\n"
     .string "אני האוהד היחיד של {STR_VAR_1}?\p"
-    .string "אה, להיות האוהד היחיד\n"
-    .string "{STR_VAR_1} זה הסגנון שלי, בכל מקרה.$"
+    .string "אה, להיות האוהד היחיד {STR_VAR_1}\n"
+    .string "זה הסגנון שלי, בכל מקרה.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_AdoreWayYouBattle::
     .string "וואו, אלוהים!\n"
@@ -289,7 +290,8 @@ SaffronCity_PokemonTrainerFanClub_Text_BelieveInMasterWithAllMyHeart::
     .string "אני מאמין במאסטר {STR_VAR_1}\n"
     .string "עם כל הלב שלי.\p"
     .string "אפילו אם אני היחיד שמאמין בו.\p"
-    .string "אני לא ארגיש בודד אף פעם, עם זאת.\p"
+    .string "אני לא ארגיש בודד אף פעם, עם\n"
+    .string "זאת.\p"
     .string "לא אם אני ממשיך לחשוב על מאסטר\n"
     .string "{STR_VAR_1}.$"
 
@@ -315,8 +317,8 @@ SaffronCity_PokemonTrainerFanClub_Text_OnlyMasterHasMyRespect::
     .string "שיש לו את הכבוד שלי.\p"
     .string "וזה אף אחד אחר מאשר המאסטר שלי\n"
     .string "בדוגו'.\p"
-    .string "אתה צריך להיות אוהד של המאסטר שלי\n"
-    .string "כמוני! היי!$"
+    .string "אתה צריך להיות אוהד של המאסטר\n"
+    .string "שלי כמוני! היי!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_NeverBeFanOfAnyoneButMaster::
     .string "היי! אני מכבד את המאסטר שלי\n"

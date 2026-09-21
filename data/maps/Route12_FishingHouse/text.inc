@@ -5,9 +5,9 @@ Route12_FishingHouse_Text_DoYouLikeToFish::
     .string "תגיד לי, אתה אוהב לדוג?$"
 
 Route12_FishingHouse_Text_TakeThisAndFish::
-    .string "מצוין! אני אוהב את הסגנון שלך. אני\n"
-    .string "חושב שאנחנו יכולים להיות חברים. קח\l"
-    .string "את זה ודוג, חבר צעיר!$"
+    .string "מצוין! אני אוהב את הסגנון שלך.\n"
+    .string "אני חושב שאנחנו יכולים להיות\l"
+    .string "חברים. קח את זה ודוג, חבר צעיר!$"
 
 Route12_FishingHouse_Text_ReceivedSuperRod::
     .string "{PLAYER} קיבל את ה-סופר חכה מ\n"

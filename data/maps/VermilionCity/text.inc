@@ -87,12 +87,14 @@ VermilionCity_Text_BoardSeagallopRainbowPass::
 VermilionCity_Text_OhMysticTicketTakeYouToNavelRock::
     .string "וואו! זה כרטיס מיסטי!\n"
     .string "זה נדיר מאוד.\p"
-    .string "נשמח לקחת אותך ל-נמל האבן בכל עת.$"
+    .string "נשמח לקחת אותך ל-נמל האבן בכל\n"
+    .string "עת.$"
 
 VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland::
     .string "וואו! זה כרטיס אורורה!\n"
     .string "זה נדיר מאוד.\p"
-    .string "נשמח לקחת אותך ל-אי הנולד בכל עת.$"
+    .string "נשמח לקחת אותך ל-אי הנולד בכל\n"
+    .string "עת.$"
 
 VermilionCity_Text_BoardSeagallopFerry::
     .string "רוצה לעלות למעבורת סיגאלופ?$"
@@ -112,7 +114,8 @@ VermilionCity_Text_Seagallop12Departing::
 VermilionCity_Text_Route2AideHasPackageForYou::
     .string "או, שלום, {PLAYER}!\n"
     .string "מה שלומך?\p"
-    .string "זה אני, אחד מהעוזרים של פרופ' אוק.\p"
+    .string "זה אני, אחד מהעוזרים של פרופ'\n"
+    .string "אוק.\p"
     .string "פגשת את העוזר השני?\p"
     .string "הוא אמר שיש לו חבילה מפרופ' אוק\n"
     .string "בשבילך, {PLAYER}.\p"

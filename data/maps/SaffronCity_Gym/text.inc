@@ -114,8 +114,8 @@ SaffronCity_Gym_Text_CameronPostBattle::
     .string "בסאפרון.\p"
     .string "הדוג'ו של הלוחמים שליד איבד\n"
     .string "את מעמדו כמכון, אבל.\p"
-    .string "פשוט חיסלנו אותם כשהחלטנו על מכון\n"
-    .string "אחד.$"
+    .string "פשוט חיסלנו אותם כשהחלטנו על\n"
+    .string "מכון אחד.$"
 
 SaffronCity_Gym_Text_PrestonIntro::
     .string "מכון הפוקימונים בסאפרון מפורסם\n"

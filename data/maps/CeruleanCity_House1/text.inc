@@ -58,8 +58,8 @@ CeruleanCity_House1_Text_SpStatsWaterfall::
     .string "נתון ההתקפה\n"
     .string "המיוחדת וההגנה המיוחדת של כל\l"
     .string "הפוקימונים יגדל מעט.\p"
-    .string "בנוסף תוכל להשתמש במהלך “מפל מים”\n"
-    .string "גם מחוץ לקרב$"
+    .string "בנוסף תוכל להשתמש במהלך “מפל\n"
+    .string "מים” גם מחוץ לקרב$"
 
 CeruleanCity_House1_Text_AllMonsWillObeyYou::
     .string "כל הפוקימונים\n"

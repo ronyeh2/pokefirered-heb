@@ -4,9 +4,9 @@ Text_CounterTeach::
     .string "עוד לא סיימת? אולי זה יעזור!\p$"
 
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
-    .string "כשפוקימון נתפס,\n"
-    .string "הוא מקבל מספר זהות - או DI -\l"
-    .string "וTO, שהוא השם של המאמן שתפס אותו!$"
+    .string "כשפוקימון נתפס, הוא מקבל מספר\n"
+    .string "זהות - או DI - וTO, שהוא השם של\l"
+    .string "המאמן שתפס אותו!$"
 
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::
     .string "יאללה!\p"

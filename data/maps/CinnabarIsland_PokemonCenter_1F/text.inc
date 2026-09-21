@@ -2,7 +2,8 @@ CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
     .string "הגעתי לכאן כדי לבקר את המכון\n"
     .string "אבל הדלת נעולה.\p"
     .string "כנראה יש מפתח איפשהו.\p"
-    .string "יכול להיות שהוא באחוזה השרופה הזו\p"
+    .string "יכול להיות שהוא באחוזה השרופה\n"
+    .string "הזו\p"
     .string "חבר של מנהיג המכון גר שם פעם\n"
     .string "או לפחות ככה שמעתי.$"
 

@@ -104,10 +104,12 @@ SilphCo_7F_Text_Grunt2PostBattle::
     .string "יתעצבן!$"
 
 SilphCo_7F_Text_RivalWhatKeptYou::
-    .string "{RIVAL}: מה לקח לך כל כך הרבה זמן, {PLAYER}?$"
+    .string "{RIVAL}: מה לקח לך כל כך הרבה\n"
+    .string "זמן, {PLAYER}?$"
 
 SilphCo_7F_Text_RivalIntro::
-    .string "{RIVAL}: חחח! חשבתי שתגיע אם אחכה פה!\p"
+    .string "{RIVAL}: חחח! חשבתי שתגיע אם\n"
+    .string "אחכה פה!\p"
     .string "נראה שצוות רוקט האטו אותך\n"
     .string "אבל אני לא אכפת לי!\p"
     .string "ראיתי אותך בסאפרון, אז החלטתי\n"

@@ -56,7 +56,8 @@ SilphCo_5F_Text_Grunt2PostBattle::
 SilphCo_5F_Text_PorygonFirstVRMon::
     .string "זה דיווח פוקימון!\p"
     .string "מעבדת פוקימון יצרה את פוריגון,\n"
-    .string "הפוקימון הראשון במציאות וירטואלית.$"
+    .string "הפוקימון הראשון במציאות\l"
+    .string "וירטואלית.$"
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
     .string "זה דיווח פוקימון!\p"

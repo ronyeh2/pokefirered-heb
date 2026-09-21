@@ -19,16 +19,17 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain::
     .string "הו! זה {STR_VAR_2}!\p"
-    .string "זה מאובן של {STR_VAR_1}, פוקימון שכבר\l"
-    .string "נכחד!\p"
+    .string "זה מאובן של {STR_VAR_1}, פוקימון\n"
+    .string "שכבר נכחד!\p"
     .string "מכונת ההחייאה שלי\n"
     .string "תהפוך את הפוקימון הזה לחי שוב!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_HandedFossilToWeirdDoctor::
     .string "אז! תמהר ותתן\n"
     .string "לי את זה!\p"
-    .string "{PLAYER} מסר את {STR_VAR_2}"
-    .string "לדוקטור המוזר!\p$"
+    .string "{PLAYER} מסר את {STR_VAR_2}לדוקטור\n"
+    .string "המוזר!\p"
+    .string "$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk::
     .string "אני לקחת קצת זמן!\p"
@@ -59,8 +60,8 @@ Text_MetronomeWhichMon::
 Text_MetronomeTaught::
     .string "טיק-טיק-טיק!\n"
     .string "זה הצליל של פעמן.\p"
-    .string "זה גורם למוח של פוקימון\n"
-    .string "להשתמש במהלכים שהוא אפילו לא מכיר.$"
+    .string "זה גורם למוח של פוקימון להשתמש\n"
+    .string "במהלכים שהוא אפילו לא מכיר.$"
 
 @ Unused
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_NoRoomForPokemon::

@@ -22,8 +22,8 @@ PalletTown_Text_SignsAreUsefulArentThey::
 
 PalletTown_Text_LookCopiedTrainerTipsSign::
 	.string "תראה, תראה!\p"
-	.string "העתקתי את מה שכתוב על אחד מהשלטים\n"
-	.string "של הטיפים למאמנים!$"
+	.string "העתקתי את מה שכתוב על אחד\n"
+	.string "מהשלטים של הטיפים למאמנים!$"
 
 @ Used by NPC
 PalletTown_Text_PressStartToOpenMenuCopy::

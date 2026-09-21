@@ -1,13 +1,14 @@
 Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough::
     .string "שלום! זוכר אותי?\n"
     .string "אני אחד מהעוזרים של פרופ' אוק.\p"
-    .string "אם לפוקדקס שלך יש נתונים מלאים\n"
-    .string "על {STR_VAR_1} מינים, אני אמור להעניק לך פרס.\p"
+    .string "אם לפוקדקס שלך יש נתונים מלאים על\n"
+    .string "{STR_VAR_1} מינים, אני אמור להעניק\l"
+    .string "לך פרס.\p"
     .string "פרופ' אוק הפקיד בידי את {STR_VAR_2}\n"
     .string "עבורך.\p"
     .string "אז, {PLAYER}, הרשה לי לשאול.\p"
-    .string "האם אספת נתונים על לפחות {STR_VAR_1}\n"
-    .string "סוגי פוקימונים?$"
+    .string "האם אספת נתונים על לפחות\n"
+    .string "{STR_VAR_1} סוגי פוקימונים?$"
 
 Route15_WestEntrance_2F_Text_GreatHereYouGo::
     .string "מצוין! תפסת או החזקת {STR_VAR_3}\n"

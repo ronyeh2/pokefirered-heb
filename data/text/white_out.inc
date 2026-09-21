@@ -5,8 +5,8 @@ Text_FirstShouldRestoreMonsHealth::
 Text_MonsHealedShouldBuyPotions::
 	.string "הפוקימונים שלך רופאו\n"
 	.string "לבריאות מושלמת.\p"
-	.string "אם האנרגיה של הפוקימונים שלך, נ”ח,\n"
-	.string "נמוכה, בבקשה בוא לבקר אותנו.\p"
+	.string "אם האנרגיה של הפוקימונים שלך,\n"
+	.string "נ”ח, נמוכה, בבקשה בוא לבקר אותנו.\p"
 	.string "אם אתה מתכנן ללכת רחוק בשטח,\n"
 	.string "כדאי שתקנה כמה שיקויים\l"
 	.string "בחנות הפוקימונים.\p"
@@ -43,7 +43,8 @@ Text_MomExplainHPGetPotions::
 Text_WhitedOutLostMoney::
 	.string "ל{PLAYER} נגמרו הפוקימונים\n"
 	.string "הכשירים לקרב!\p"
-	.string "{PLAYER} נכנס לפאניקה ואיבד ¥{STR_VAR_1}…\p"
+	.string "{PLAYER} נכנס לפאניקה ואיבד\n"
+	.string "¥{STR_VAR_1}…\p"
 	.string "… … … …\p"
 	.string "{PLAYER} התעלף!$"
 

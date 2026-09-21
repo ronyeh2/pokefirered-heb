@@ -1,8 +1,8 @@
 SilphCo_11F_Text_ThanksForSavingMeDearBoy::
     .string "נשיא: או, ילד יקר!\n"
     .string "תודה שהצלת את סילפ.\p"
-    .string "אני לא אשכח לעולם שאתה הצלת אותנו\n"
-    .string "ברגעי הסכנה.\p"
+    .string "אני לא אשכח לעולם שאתה הצלת\n"
+    .string "אותנו ברגעי הסכנה.\p"
     .string "אני חייב להודות לך איכשהו.\p"
     .string "מכיוון שאני עשיר, אני יכול לתת לך\n"
     .string "כל דבר.\p"
@@ -11,8 +11,8 @@ SilphCo_11F_Text_ThanksForSavingMeDearBoy::
 SilphCo_11F_Text_ThanksForSavingMeDearGirl::
     .string "נשיא: או, ילדה יקרה!\n"
     .string "תודה שהצלת את סילפ.\p"
-    .string "אני לא אשכח לעולם שאתה הצלת אותנו\n"
-    .string "ברגעי הסכנה.\p"
+    .string "אני לא אשכח לעולם שאתה הצלת\n"
+    .string "אותנו ברגעי הסכנה.\p"
     .string "אני חייב להודות לך איכשהו.\p"
     .string "מכיוון שאני עשיר, אני יכול לתת לך\n"
     .string "כל דבר.\p"

@@ -1,7 +1,8 @@
 CeladonCity_GameCorner_Text_TryPokemonPrinter::
 	.string "זוהי מדפסת פוקימון!\p"
-	.string "היא יכולה להדפיס תמונה של הפוקימון\n"
-	.string "שלך על גב כרטיס המאמן שלך.\p"
+	.string "היא יכולה להדפיס תמונה של\n"
+	.string "הפוקימון שלך על גב כרטיס המאמן\l"
+	.string "שלך.\p"
 	.string "זה עולה רק ¥05.\n"
 	.string "תרצה לנסות?$"
 
@@ -145,8 +146,8 @@ FourIsland_House2_Text_WowLinkWinsHigh::
 	.string "אתן לך אחת מאלה.$"
 
 FourIsland_House2_Text_WowLinkWinsHighest::
-	.string "מ... וואו מטורף!\n"
-	.string "ניצחת מספר פעמים שמטריף את הדעת!\p"
+	.string "מ... וואו מטורף! ניצחת מספר פעמים\n"
+	.string "שמטריף את הדעת!\p"
 	.string "זה פשוט מדהים אותי לחשוב\n"
 	.string "על כמה חזק אתה.\p"
 	.string "אתה סיוט אמיתי!\n"
