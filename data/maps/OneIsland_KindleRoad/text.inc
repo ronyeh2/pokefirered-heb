@@ -1,164 +1,164 @@
 OneIsland_KindleRoad_Text_MariaIntro::
-    .string "The weather's gorgeous!\n"
-    .string "Perfect for a battle!$"
+    .string "מזג האוויר מהמם!\n"
+    .string "מושלם לקרב!$"
 
 OneIsland_KindleRoad_Text_MariaDefeat::
-    .string "Aiyeeeeh!$"
+    .string "אאאאיייי!$"
 
 OneIsland_KindleRoad_Text_MariaPostBattle::
-    .string "Please don't splash my face!\n"
-    .string "You'll ruin the makeup.$"
+    .string "אל תתיז לי מים על הפנים!\n"
+    .string "תהרוס לי את האיפור.$"
 
 OneIsland_KindleRoad_Text_AbigailIntro::
-    .string "I'm beginning to get a sunburn…$"
+    .string "אני מתחילה להישרף מהשמש…$"
 
 OneIsland_KindleRoad_Text_AbigailDefeat::
-    .string "Oh, you're so awful.$"
+    .string "אוף, אתה ממש נורא.$"
 
 OneIsland_KindleRoad_Text_AbigailPostBattle::
-    .string "I like that cap you have.\n"
-    .string "Maybe I should wear one, too…$"
+    .string "אני אוהבת את הכובע שלך.\n"
+    .string "אולי כדאי שגם אני אחבוש כזה…$"
 
 OneIsland_KindleRoad_Text_FinnIntro::
-    .string "Seen from here, MT. EMBER towers\n"
-    .string "into the sky.$"
+    .string "מכאן נראה שהר אמבר מתנשא\n"
+    .string "אל תוך השמיים.$"
 
 OneIsland_KindleRoad_Text_FinnDefeat::
-    .string "Well, aren't you tough?$"
+    .string "וואו, אתה ממש קשוח, אה?$"
 
 OneIsland_KindleRoad_Text_FinnPostBattle::
-    .string "The sky is immense around these\n"
-    .string "parts.$"
+    .string "השמיים באזורים האלה\n"
+    .string "פשוט עצומים.$"
 
 OneIsland_KindleRoad_Text_GarrettIntro::
-    .string "I took a break from swimming,\n"
-    .string "only to have you challenge me?$"
+    .string "לקחתי הפסקה מהשחייה,\n"
+    .string "ואתה בא לאתגר אותי?$"
 
 OneIsland_KindleRoad_Text_GarrettDefeat::
-    .string "Hey, what the…\n"
-    .string "You're good, you!$"
+    .string "היי, מה זה…\n"
+    .string "אתה ממש טוב!$"
 
 OneIsland_KindleRoad_Text_GarrettPostBattle::
-    .string "Instead of using SURF all the time,\n"
-    .string "you should swim some.$"
+    .string "במקום להשתמש בגלישה כל הזמן,\n"
+    .string "כדאי שתשחה קצת בעצמך.$"
 
 OneIsland_KindleRoad_Text_TommyIntro::
-    .string "Wait! Wait a second!\n"
-    .string "I think I've hooked a big one!$"
+    .string "רגע! רגע אחד!\n"
+    .string "נדמה לי שתפסתי דג ענק!$"
 
 OneIsland_KindleRoad_Text_TommyDefeat::
-    .string "I've lost it all again…$"
+    .string "שוב הפסדתי הכול…$"
 
 OneIsland_KindleRoad_Text_TommyPostBattle::
-    .string "Not only did I lose, the big one\n"
-    .string "got away from me, too!$"
+    .string "לא רק שהפסדתי, גם הדג הענק\n"
+    .string "ברח לי!$"
 
 OneIsland_KindleRoad_Text_SharonIntro::
-    .string "Could you help me out with my\n"
-    .string "training?$"
+    .string "תוכל לעזור לי קצת\n"
+    .string "עם האימונים שלי?$"
 
 OneIsland_KindleRoad_Text_SharonDefeat::
-    .string "You were a cut above me.$"
+    .string "היית ברמה גבוהה משלי.$"
 
 OneIsland_KindleRoad_Text_SharonPostBattle::
-    .string "It's clear that you're skilled.\n"
-    .string "I like you!$"
+    .string "ברור שאתה מיומן.\n"
+    .string "אתה מוצא חן בעיניי!$"
 
 OneIsland_KindleRoad_Text_TanyaIntro::
-    .string "There isn't a day in which we don't\n"
-    .string "train!$"
+    .string "אין יום שבו אנחנו\n"
+    .string "לא מתאמנים!$"
 
 OneIsland_KindleRoad_Text_TanyaDefeat::
-    .string "I'm such a fool!$"
+    .string "איזו טיפשה אני!$"
 
 OneIsland_KindleRoad_Text_TanyaPostBattle::
-    .string "I'll train even harder from now on!$"
+    .string "מעכשיו אתאמן עוד יותר קשה!$"
 
 OneIsland_KindleRoad_Text_SheaIntro::
-    .string "Every morning, before breakfast,\n"
-    .string "I swim around this island.$"
+    .string "כל בוקר, לפני ארוחת הבוקר,\n"
+    .string "אני שוחה סביב האי הזה.$"
 
 OneIsland_KindleRoad_Text_SheaDefeat::
-    .string "Gasp…\n"
-    .string "Gasp…$"
+    .string "הוף…\n"
+    .string "הוף…$"
 
 OneIsland_KindleRoad_Text_SheaPostBattle::
-    .string "I lost because I'm pooped from all\n"
-    .string "the running I did…$"
+    .string "הפסדתי כי אני מותש מכל\n"
+    .string "הריצה שעשיתי…$"
 
 OneIsland_KindleRoad_Text_HughIntro::
-    .string "Dress appropriately for battle!\n"
-    .string "Lose that frivolous outfit!$"
+    .string "תתלבש כמו שצריך לקרב!\n"
+    .string "תוריד את התלבושת המצחיקה!$"
 
 OneIsland_KindleRoad_Text_HughDefeat::
-    .string "Why me?!$"
+    .string "למה דווקא אני?!$"
 
 OneIsland_KindleRoad_Text_HughPostBattle::
-    .string "Even martial artists are becoming\n"
-    .string "fashion conscious these days…$"
+    .string "אפילו לוחמי קרב מגע נעשים\n"
+    .string "מודעים לאופנה בימינו…$"
 
 OneIsland_KindleRoad_Text_BryceIntro::
-    .string "You know, everything tastes great\n"
-    .string "when you're out in the wild.$"
+    .string "אתה יודע, בטבע כל דבר\n"
+    .string "פשוט טעים יותר.$"
 
 OneIsland_KindleRoad_Text_BryceDefeat::
-    .string "Awww, blown!$"
+    .string "אוףף, פספסתי!$"
 
 OneIsland_KindleRoad_Text_BrycePostBattle::
-    .string "The water in volcanic regions is\n"
-    .string "delicious.$"
+    .string "המים באזורים געשיים\n"
+    .string "טעימים במיוחד.$"
 
 OneIsland_KindleRoad_Text_ClaireIntro::
-    .string "My lunch filled us up, so will you\n"
-    .string "battle us for some exercise?$"
+    .string "אכלנו צהריים ושבענו,\n"
+    .string "אז אולי קרב קטן להתעמלות?$"
 
 OneIsland_KindleRoad_Text_ClaireDefeat::
-    .string "That made me all sweaty.$"
+    .string "זה גרם לי להזיע.$"
 
 OneIsland_KindleRoad_Text_ClairePostBattle::
-    .string "What should I do?\n"
-    .string "I feel famished again.$"
+    .string "מה אני אעשה?\n"
+    .string "אני שוב מתה מרעב.$"
 
 OneIsland_KindleRoad_Text_KiaIntro::
-    .string "KIA: My big brother and I make\n"
-    .string "an awesome combination!$"
+    .string "קיה: אני והאח הגדול שלי\n"
+    .string "צמד מנצח!$"
 
 OneIsland_KindleRoad_Text_KiaDefeat::
-    .string "KIA: Huh?!\n"
-    .string "I can't believe it!$"
+    .string "קיה: הא?!\n"
+    .string "אני לא מאמינה!$"
 
 OneIsland_KindleRoad_Text_KiaPostBattle::
-    .string "KIA: How could there be anyone\n"
-    .string "better than my big brother?$"
+    .string "קיה: איך יכול להיות מישהו\n"
+    .string "טוב יותר מהאח הגדול שלי?$"
 
 OneIsland_KindleRoad_Text_KiaNotEnoughMons::
-    .string "KIA: If you want to battle with\n"
-    .string "us, you have to bring at least two\l"
-    .string "POKéMON with you.$"
+    .string "קיה: אם אתה רוצה להילחם\n"
+    .string "בנו, אתה חייב להביא איתך\l"
+    .string "לפחות שני פוקימונים.$"
 
 OneIsland_KindleRoad_Text_MikIntro::
-    .string "MIK: Together with KIA, I'm afraid\n"
-    .string "of nothing!$"
+    .string "מיק: יחד עם קיה אני\n"
+    .string "לא מפחד מכלום!$"
 
 OneIsland_KindleRoad_Text_MikDefeat::
-    .string "MIK: Whoa!\n"
-    .string "That's too much!$"
+    .string "מיק: וואו!\n"
+    .string "זה יותר מדי!$"
 
 OneIsland_KindleRoad_Text_MikPostBattle::
-    .string "MIK: How could my combination\n"
-    .string "with KIA fail?$"
+    .string "מיק: איך הצמד שלי עם קיה\n"
+    .string "יכול היה להיכשל?$"
 
 OneIsland_KindleRoad_Text_MikNotEnoughMons::
-    .string "MIK: Hey, do you want to battle\n"
-    .string "with us two?\p"
-    .string "Bring two or more POKéMON with\n"
-    .string "you, then.$"
+    .string "מיק: היי, בא לך להילחם\n"
+    .string "בשנינו?\p"
+    .string "אז תביא איתך שני פוקימונים\n"
+    .string "או יותר.$"
 
 OneIsland_KindleRoad_Text_RouteSign::
-    .string "This is KINDLE ROAD.\p"
-    .string "Go straight for MT. EMBER.$"
+    .string "זוהי דרך קינדל.\p"
+    .string "המשך ישר להר אמבר.$"
 
 OneIsland_KindleRoad_Text_EmberSpaSign::
-    .string "Light the Fire in Your Heart!\n"
-    .string "EMBER SPA$"
+    .string "הצת את האש שבלבך!\n"
+    .string "ספא אמבר$"
 

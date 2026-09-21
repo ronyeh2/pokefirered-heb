@@ -1,24 +1,24 @@
 Text_ExplosionTeach::
-    .string "Can you imagine?\n"
-    .string "If this volcano were to erupt?\p"
-    .string "The explosion would be the end of\n"
-    .string "us. How terrifying is that?\p"
-    .string "While we're terrified, would you\n"
-    .string "like me to teach EXPLOSION?$"
+    .string "אתה מסוגל לדמיין?\n"
+    .string "מה יקרה אם הר הגעש יתפרץ?\p"
+    .string "הפיצוץ יהיה הסוף שלנו.\n"
+    .string "מפחיד, נכון?\p"
+    .string "אז כשאנחנו כבר מפוחדים,\n"
+    .string "רוצה שאלמד את המהלך פיצוץ?$"
 
 Text_ExplosionDeclined::
-    .string "Yeah, you're right.\n"
-    .string "It is too terrifying.$"
+    .string "כן, אתה צודק.\n"
+    .string "זה מפחיד מדי.$"
 
 Text_ExplosionWhichMon::
-    .string "You're terribly brave!\p"
-    .string "Which POKéMON should I teach\n"
-    .string "EXPLOSION?$"
+    .string "אתה ממש אמיץ!\p"
+    .string "איזה פוקימון ילמד את\n"
+    .string "המהלך פיצוץ?$"
 
 Text_ExplosionTaught::
-    .string "Using EXPLOSION while on this\n"
-    .string "volcano…\p"
-    .string "What a terrifying thrill!$"
+    .string "להשתמש בפיצוץ על הר הגעש\n"
+    .string "הזה…\p"
+    .string "איזה ריגוש מפחיד!$"
 
 @ Below 4 are unused JP versions of the above texts
 Text_ExplosionTeachJP::
@@ -42,103 +42,103 @@ Text_ExplosionTaughtJP::
     .string "す　すごい　スリル！$"
 
 MtEmber_Exterior_Text_WellTryDiggingHere::
-    .string "Over here.\n"
-    .string "We'll try digging here.\p"
-    .string "That treasure the ADMINS've been\n"
-    .string "talking about should be here.$"
+    .string "בוא הנה.\n"
+    .string "ננסה לחפור כאן.\p"
+    .string "האוצר שהמפקדים מדברים\n"
+    .string "עליו אמור להיות כאן.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost::
-    .string "What the…?\n"
-    .string "You're in the way. Get lost.$"
+    .string "מה ל…?\n"
+    .string "אתה מפריע. תסתלק מכאן.$"
 
 MtEmber_Exterior_Text_PunchedThroughAtLast::
-    .string "Whew, punched through at last.\n"
-    .string "Let's go treasure hunting!$"
+    .string "אוף, סוף סוף פרצנו פנימה.\n"
+    .string "קדימה לציד האוצרות!$"
 
 MtEmber_Exterior_Text_WhatsPasswordAgain::
-    .string "Any treasure we find, we haul back\n"
-    .string "to the WAREHOUSE, understood?\p"
-    .string "…Oh, and what're the passwords?\n"
-    .string "At the ROCKET WAREHOUSE, I mean.$"
+    .string "כל אוצר שנמצא מועבר\n"
+    .string "בחזרה למחסן, הבנת?\p"
+    .string "…אה, ומה הסיסמאות?\n"
+    .string "במחסן רוקט, כלומר.$"
 
 MtEmber_Exterior_Text_FirstPasswordGoldeen::
-    .string "What, you forgot the password?\n"
-    .string "There're actually two.\p"
-    .string "The first one's “GOLDEEN need\n"
-    .string "log.”\p"
-    .string "And the second one is…$"
+    .string "מה, שכחת את הסיסמה?\n"
+    .string "יש בעצם שתיים.\p"
+    .string "הראשונה היא “גולדין צריך\n"
+    .string "בול עץ.”\p"
+    .string "והשנייה היא…$"
 
 MtEmber_Exterior_Text_SnoopsBeenListeningIn::
-    .string "Hey!\n"
-    .string "This snoop's been listening in!$"
+    .string "היי!\n"
+    .string "החטטן הזה מקשיב לנו!$"
 
 MtEmber_Exterior_Text_Grunt1Intro::
-    .string "You've been eavesdropping on us,\n"
-    .string "haven't you?$"
+    .string "צותת לנו כל הזמן,\n"
+    .string "נכון?$"
 
 MtEmber_Exterior_Text_Grunt1Defeat::
-    .string "Huh, what?$"
+    .string "הא, מה?$"
 
 MtEmber_Exterior_Text_Grunt1PostBattle::
-    .string "Why'd you have to win?$"
+    .string "למה היית חייב לנצח?$"
 
 MtEmber_Exterior_Text_Grunt2Intro::
-    .string "Trying to horn in on our treasure?\n"
-    .string "Don't bet on it!$"
+    .string "מנסה להתערב לנו באוצר?\n"
+    .string "אל תבנה על זה!$"
 
 MtEmber_Exterior_Text_Grunt2Defeat::
-    .string "Wait!\n"
-    .string "But how?$"
+    .string "רגע!\n"
+    .string "אבל איך?$"
 
 MtEmber_Exterior_Text_Grunt2PostBattle::
-    .string "Develop amnesia conveniently and\n"
-    .string "forget everything you heard!$"
+    .string "תחטוף שכחה פתאומית\n"
+    .string "ותשכח כל מה ששמעת!$"
 
 MtEmber_Exterior_Text_WellRegroupDontStepInsideThere::
-    .string "What a setback…\n"
-    .string "We'll have to regroup.\p"
-    .string "You! Don't even think about taking\n"
-    .string "a step inside here!\p"
-    .string "If you know what's good for you,\n"
-    .string "don't even think about this!$"
+    .string "איזו נסיגה…\n"
+    .string "נצטרך להתארגן מחדש.\p"
+    .string "אתה! אל תעז אפילו לחשוב\n"
+    .string "להיכנס לכאן!\p"
+    .string "אם אתה יודע מה טוב בשבילך,\n"
+    .string "אל תחשוב על זה בכלל!$"
 
 MtEmber_Exterior_Text_LoganIntro::
-    .string "An active volcano is one that's\n"
-    .string "erupting, or about to.$"
+    .string "הר געש פעיל הוא כזה שמתפרץ,\n"
+    .string "או עומד להתפרץ.$"
 
 MtEmber_Exterior_Text_LoganDefeat::
-    .string "Whew… That was hot!\n"
-    .string "Sweat's erupting from me!$"
+    .string "אוף… זה היה חם!\n"
+    .string "הזיעה מתפרצת ממני!$"
 
 MtEmber_Exterior_Text_LoganPostBattle::
-    .string "They say there're over 1,500\n"
-    .string "active volcanoes in the world.\p"
-    .string "Just thinking about them makes me\n"
-    .string "feel all hot and gooey inside!$"
+    .string "אומרים שיש בעולם יותר\n"
+    .string "מ-005,1 הרי געש פעילים.\p"
+    .string "עצם המחשבה עליהם גורמת לי\n"
+    .string "להרגיש חם ונמס מבפנים!$"
 
 MtEmber_Exterior_Text_BethIntro::
-    .string "Do you know how caves form inside\n"
-    .string "volcanoes?$"
+    .string "אתה יודע איך נוצרות מערות\n"
+    .string "בתוך הרי געש?$"
 
 MtEmber_Exterior_Text_BethDefeat::
-    .string "Atchah!\n"
-    .string "You're shockingly good!$"
+    .string "אצ'ה!\n"
+    .string "אתה טוב בצורה מדהימה!$"
 
 MtEmber_Exterior_Text_BethPostBattle::
-    .string "When lava at the surface of magma\n"
-    .string "hardens, and the magma inside flows\l"
-    .string "out, caverns are left behind.$"
+    .string "כשהלבה על פני המאגמה\n"
+    .string "מתקשה, והמאגמה שבפנים\l"
+    .string "זורמת החוצה, נשארים חללים.$"
 
 MtEmber_Exterior_Text_JocelynIntro::
-    .string "I've been in training so I can mend\n"
-    .string "my broken heart…\p"
-    .string "It toughened me up physically at\n"
-    .string "least! Hi-yah!$"
+    .string "התאמנתי כדי לאחות\n"
+    .string "את הלב השבור שלי…\p"
+    .string "לפחות התחזקתי פיזית!\n"
+    .string "הי-יה!$"
 
 MtEmber_Exterior_Text_JocelynDefeat::
-    .string "I think I tried to overdo it…$"
+    .string "נראה לי שהגזמתי…$"
 
 MtEmber_Exterior_Text_JocelynPostBattle::
-    .string "The way you battle, it reminds me\n"
-    .string "of the guy who dumped me…$"
+    .string "הצורה שבה אתה נלחם\n"
+    .string "מזכירה לי את מי שזרק אותי…$"
 

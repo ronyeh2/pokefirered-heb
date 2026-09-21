@@ -1,357 +1,357 @@
 OneIsland_PokemonCenter_1F_Text_BillHeyThereCelio::
-    .string "BILL: Hey, there!\n"
-    .string "CELIO!$"
+    .string "ביל: היי!\n"
+    .string "סליו!$"
 
 OneIsland_PokemonCenter_1F_Text_CelioCantBelieveYouCameOut::
-    .string "CELIO: BILL!\n"
-    .string "I can't believe you came out here.$"
+    .string "סליו: ביל!\n"
+    .string "אני לא מאמין שבאת עד לכאן.$"
 
 OneIsland_PokemonCenter_1F_Text_BillHowsYourResearchComing::
-    .string "BILL: Well, absolutely!\n"
-    .string "How's your research coming along?\p"
-    .string "…Oh, wait a sec.$"
+    .string "ביל: ברור שכן!\n"
+    .string "איך המחקר שלך מתקדם?\p"
+    .string "…אה, רגע אחד.$"
 
 OneIsland_PokemonCenter_1F_Text_ThisIsMyBuddyCelio::
-    .string "{PLAYER}, this is my buddy CELIO.\n"
-    .string "He's one dedicated PC MANIAC!$"
+    .string "{PLAYER}, זה החבר שלי סליו.\n"
+    .string "הוא משוגע אמיתי על מחשבים!$"
 
 OneIsland_PokemonCenter_1F_Text_PlayerIsRisingPokemonChamp::
-    .string "CELIO, this is {PLAYER}, a rising\n"
-    .string "contender as the POKéMON CHAMP!$"
+    .string "סליו, זה {PLAYER}, מועמד\n"
+    .string "עולה לתואר אלוף הפוקימון!$"
 
 OneIsland_PokemonCenter_1F_Text_PlayerIsReigningPokemonChamp::
-    .string "CELIO, this is {PLAYER}, the\n"
-    .string "reigning POKéMON CHAMP!$"
+    .string "סליו, זה {PLAYER},\n"
+    .string "אלוף הפוקימון המכהן!$"
 
 OneIsland_PokemonCenter_1F_Text_CelioThatsReallyImpressive::
-    .string "CELIO: That's really impressive.\p"
-    .string "I hate to say it, but I have zero\n"
-    .string "aptitude for battling.\p"
-    .string "Anyways, I'm glad to meet you.$"
+    .string "סליו: זה ממש מרשים.\p"
+    .string "קשה לי להודות בזה, אבל אין\n"
+    .string "לי שום כישרון לקרבות.\p"
+    .string "בכל אופן, נעים להכיר.$"
 
 OneIsland_PokemonCenter_1F_Text_BillBringMeUpToSpeed::
-    .string "BILL: So, bring me up to speed.\n"
-    .string "How's your machine running?$"
+    .string "ביל: אז ספר לי מה חדש.\n"
+    .string "איך המכונה שלך עובדת?$"
 
 OneIsland_PokemonCenter_1F_Text_CelioPCsCantLinkWithYours::
-    .string "CELIO: It's running fine, but we're\n"
-    .string "too remote out here.\p"
-    .string "The PCs on this island just can't\n"
-    .string "link with your PC, BILL.$"
+    .string "סליו: היא עובדת מצוין, אבל\n"
+    .string "אנחנו מרוחקים מדי כאן.\p"
+    .string "המחשבים באי הזה פשוט לא\n"
+    .string "מתחברים למחשב שלך, ביל.$"
 
 OneIsland_PokemonCenter_1F_Text_BillLetMeHelpYou::
-    .string "BILL: Oh, yeah?\n"
-    .string "Okay, let me take a look-see.\p"
-    .string "…Hang on here…\n"
-    .string "I think we can make it work.\l"
-    .string "Let me help you, okay?$"
+    .string "ביל: אה, כן?\n"
+    .string "טוב, תן לי להעיף מבט.\p"
+    .string "…רגע אחד…\n"
+    .string "נראה לי שאפשר לסדר את זה.\l"
+    .string "תן לי לעזור לך, בסדר?$"
 
 OneIsland_PokemonCenter_1F_Text_CanYouDeliverThisMeteoritePlayer::
-    .string "{PLAYER}, can I get you to wait for\n"
-    .string "me just a bit?\p"
-    .string "…Actually, can I get you to do\n"
-    .string "me a favor?\p"
-    .string "The island next to this one's\n"
-    .string "called TWO ISLAND.\p"
-    .string "There's a guy there that runs\n"
-    .string "a GAME CORNER.\p"
-    .string "He has this thing for rare rocks\n"
-    .string "and gems.\p"
-    .string "We keep in touch, being fellow\n"
-    .string "maniacs.\p"
-    .string "So, can I get you to deliver this\n"
-    .string "METEORITE to him?$"
+    .string "{PLAYER}, אפשר לבקש ממך\n"
+    .string "לחכות לי עוד קצת?\p"
+    .string "…למען האמת, אפשר לבקש\n"
+    .string "ממך טובה?\p"
+    .string "האי שליד האי הזה\n"
+    .string "נקרא אי 2.\p"
+    .string "יש שם בחור שמנהל\n"
+    .string "משחקיה.\p"
+    .string "יש לו חיבה לסלעים\n"
+    .string "ולאבני חן נדירות.\p"
+    .string "אנחנו בקשר, כי שנינו\n"
+    .string "משוגעים לדבר.\p"
+    .string "אז אפשר לבקש ממך למסור\n"
+    .string "לו את המטאוריט הזה?$"
 
 OneIsland_PokemonCenter_1F_Text_AcceptedMeteoriteFromBill::
-    .string "{PLAYER} accepted the METEORITE\n"
-    .string "from BILL.$"
+    .string "{PLAYER} קיבל את המטאוריט\n"
+    .string "מביל.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioPleaseTakeThis::
-    .string "CELIO: {PLAYER}, if you are going\n"
-    .string "to TWO ISLAND, please take this.$"
+    .string "סליו: {PLAYER}, אם אתה נוסע\n"
+    .string "לאי 2, קח בבקשה את זה.$"
 
 OneIsland_PokemonCenter_1F_Text_PassLetsYouTravelBetweenIslands::
-    .string "It's a PASS for the ferry service\n"
-    .string "serving the local islands.\p"
-    .string "It will let you travel between the\n"
-    .string "ISLANDS ONE, TWO, and THREE.\p"
-    .string "Oh, you should have this, too.$"
+    .string "זהו כרטיס לשירות המעבורות\n"
+    .string "בין האיים המקומיים.\p"
+    .string "הוא יאפשר לך לנוע בין\n"
+    .string "האיים אחד, שתיים ושלוש.\p"
+    .string "אה, וכדאי שתיקח גם את זה.$"
 
 OneIsland_PokemonCenter_1F_Text_ReceivedExtraPageForTownMap::
-    .string "{PLAYER} received an extra page\n"
-    .string "for the TOWN MAP!$"
+    .string "{PLAYER} קיבל דף נוסף\n"
+    .string "למפת העיר!$"
 
 OneIsland_PokemonCenter_1F_Text_ReceivedTownMap::
-    .string "{PLAYER} received\n"
-    .string "a TOWN MAP!$"
+    .string "{PLAYER} קיבל\n"
+    .string "את מפת העיר!$"
 
 OneIsland_PokemonCenter_1F_Text_BillCatchYouLater::
-    .string "BILL: I'll catch you later!\n"
-    .string "Say hi to the guy for me!$"
+    .string "ביל: נתראה בקרוב!\n"
+    .string "תמסור לו ד”ש ממני!$"
 
 OneIsland_PokemonCenter_1F_Text_HmmHowAboutLikeThis::
-    .string "Hmm…\p"
-    .string "How about we try this like this…$"
+    .string "הממ…\p"
+    .string "אולי ננסה את זה ככה…$"
 
 OneIsland_PokemonCenter_1F_Text_GotPCWorkingStrollAWhileMore::
-    .string "Oh, hey, {PLAYER}!\p"
-    .string "Did you see?\n"
-    .string "We got the PC working!\p"
-    .string "I've got a few things to show\n"
-    .string "CELIO here.\p"
-    .string "Can you go out on a stroll or\n"
-    .string "something for a while more?$"
+    .string "אה, היי, {PLAYER}!\p"
+    .string "ראית?\n"
+    .string "הצלחנו להפעיל את המחשב!\p"
+    .string "יש לי עוד כמה דברים\n"
+    .string "להראות לסליו.\p"
+    .string "אולי תצא לסיבוב או משהו\n"
+    .string "לעוד קצת זמן?$"
 
 OneIsland_PokemonCenter_1F_Text_SorryForBeingPoorHost::
-    .string "I'm sorry for taking up so much of\n"
-    .string "BILL's time.\p"
-    .string "I'm also sorry for being such a \n"
-    .string "poor host on your visit here.$"
+    .string "אני מצטער שאני גוזל\n"
+    .string "כל כך הרבה מזמנו של ביל.\p"
+    .string "ואני מצטער גם שאני מארח\n"
+    .string "כל כך גרוע בביקור שלך כאן.$"
 
 OneIsland_PokemonCenter_1F_Text_UsualPCServicesUnavailable::
-    .string "The usual PC services aren't\n"
-    .string "available…$"
+    .string "שירותי המחשב הרגילים\n"
+    .string "אינם זמינים…$"
 
 OneIsland_PokemonCenter_1F_Text_BillOhHeyPlayer::
-    .string "BILL: Oh, hey!\n"
+    .string "ביל: אה, היי!\n"
     .string "{PLAYER}!$"
 
 OneIsland_PokemonCenter_1F_Text_BillWeGotItDone::
-    .string "BILL: What kept you so long?\n"
-    .string "Been out having a good time?\p"
-    .string "We got it done.\n"
-    .string "The PCs are up and running!$"
+    .string "ביל: מה לקח לך כל כך הרבה?\n"
+    .string "נהנית בחוץ?\p"
+    .string "סיימנו את העבודה.\n"
+    .string "המחשבים פועלים!$"
 
 OneIsland_PokemonCenter_1F_Text_CelioJobWentQuick::
-    .string "CELIO: The job went incredibly\n"
-    .string "quick.\p"
-    .string "BILL is one amazing guy…$"
+    .string "סליו: העבודה הלכה\n"
+    .string "מהר בטירוף.\p"
+    .string "ביל הוא בחור מדהים…$"
 
 OneIsland_PokemonCenter_1F_Text_BillYouveLearnedALot::
-    .string "BILL: No, no! There was almost\n"
-    .string "nothing left for me to do.\p"
-    .string "CELIO, I have to hand it to you.\n"
-    .string "You've learned a lot.$"
+    .string "ביל: לא, לא! כמעט לא\n"
+    .string "נשאר לי מה לעשות.\p"
+    .string "סליו, כל הכבוד לך.\n"
+    .string "למדת המון.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioOhReallyEhehe::
-    .string "CELIO: Oh, really?\n"
-    .string "Ehehe…$"
+    .string "סליו: באמת?\n"
+    .string "אהה…$"
 
 OneIsland_PokemonCenter_1F_Text_BillWeShouldHeadBackToKanto::
-    .string "BILL: Well, there you have it.\n"
-    .string "I'm finished with the job.\l"
-    .string "We should head back to KANTO.\p"
-    .string "CELIO, I'll be seeing you again.$"
+    .string "ביל: אז זהו זה.\n"
+    .string "סיימתי את העבודה.\l"
+    .string "כדאי שנחזור לקאנטו.\p"
+    .string "סליו, נתראה בקרוב.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioPromiseIllShowYouAroundSometime::
-    .string "CELIO: {PLAYER}, I'm really sorry\n"
-    .string "that we sent you off alone today.\p"
-    .string "I promise, I will show you around\n"
-    .string "these islands sometime.$"
+    .string "סליו: {PLAYER}, אני מצטער\n"
+    .string "ששלחנו אותך לבד היום.\p"
+    .string "אני מבטיח שאסייר איתך\n"
+    .string "באיים האלה מתישהו.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine::
-    .string "CELIO: Hello!\n"
-    .string "You look awfully busy as always.\p"
-    .string "How am I doing?\p"
-    .string "Well, I'm modifying my Network\n"
-    .string "Machine.\p"
-    .string "When I get done with the machine,\n"
-    .string "I hope you'll be first to use it,\l"
-    .string "{PLAYER}.$"
+    .string "סליו: שלום!\n"
+    .string "אתה נראה עסוק כתמיד.\p"
+    .string "ומה איתי?\p"
+    .string "ובכן, אני משפר את\n"
+    .string "מכונת הרשת שלי.\p"
+    .string "כשאסיים עם המכונה,\n"
+    .string "אני מקווה שתהיה הראשון\l"
+    .string "להשתמש בה, {PLAYER}.$"
 
 OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful::
-    .string "CELIO: {PLAYER}, how have things\n"
-    .string "been for you?\p"
-    .string "Oh, is that right?\n"
-    .string "You've caught more POKéMON.\p"
-    .string "Do you know what?\n"
-    .string "Maybe I can be useful to you.$"
+    .string "סליו: {PLAYER}, איך הולך\n"
+    .string "לך לאחרונה?\p"
+    .string "אה, באמת?\n"
+    .string "תפסת עוד פוקימונים.\p"
+    .string "אתה יודע מה?\n"
+    .string "אולי אני יכול להועיל לך.$"
 
 OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway::
-    .string "I'm modifying the Network Machine\n"
-    .string "right now.\p"
-    .string "I'm changing it so it can handle\n"
-    .string "trades over long distances.\p"
-    .string "When I get finished, you'll be\n"
-    .string "trading for exotic POKéMON from\l"
-    .string "TRAINERS far away.$"
+    .string "אני משפר עכשיו את\n"
+    .string "מכונת הרשת.\p"
+    .string "אני משנה אותה כך שתוכל\n"
+    .string "לטפל בהחלפות למרחקים.\p"
+    .string "כשאסיים, תוכל להחליף\n"
+    .string "ולקבל פוקימונים אקזוטיים\l"
+    .string "ממאמנים רחוקים.$"
 
 OneIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone::
-    .string "But, there is a slight catch.\p"
-    .string "For the link to work, the Machine\n"
-    .string "needs a special gemstone.\p"
-    .string "It's supposed to be on ONE ISLAND,\n"
-    .string "but I haven't found one yet.\p"
-    .string "Who knows where it could be.$"
+    .string "אבל יש בעיה קטנה.\p"
+    .string "כדי שהחיבור יעבוד, המכונה\n"
+    .string "צריכה אבן חן מיוחדת.\p"
+    .string "היא אמורה להיות באי 1,\n"
+    .string "אבל עוד לא מצאתי אותה.\p"
+    .string "מי יודע איפה היא מסתתרת.$"
 
 OneIsland_PokemonCenter_1F_Text_TryingToFindGem::
-    .string "I was trying to find the gem\n"
-    .string "even while I was studying.\p"
-    .string "As a result, I've made no headway\n"
-    .string "in both my search and studies…\p"
-    .string "If I relied on BILL, I'm sure my\n"
-    .string "research would progress.\p"
-    .string "But this time, I want to try to do\n"
-    .string "things by myself.$"
+    .string "ניסיתי למצוא את האבן\n"
+    .string "אפילו בזמן הלימודים.\p"
+    .string "התוצאה היא שלא התקדמתי\n"
+    .string "לא בחיפוש ולא בלימודים…\p"
+    .string "אם הייתי נשען על ביל,\n"
+    .string "בטוח שהמחקר שלי היה מתקדם.\p"
+    .string "אבל הפעם אני רוצה לנסות\n"
+    .string "לעשות דברים בעצמי.$"
 
 OneIsland_PokemonCenter_1F_Text_OhThats::
-    .string "Oh!\n"
-    .string "Th-that's…$"
+    .string "הו!\n"
+    .string "ז-זה…$"
 
 OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio::
-    .string "{PLAYER} handed the RUBY\n"
-    .string "to CELIO.$"
+    .string "{PLAYER} מסר את האודם\n"
+    .string "לסליו.$"
 
 OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor::
-    .string "Thank you!\n"
-    .string "{PLAYER}, you're simply amazing.\p"
+    .string "תודה רבה!\n"
+    .string "{PLAYER}, אתה פשוט מדהים.\p"
     .string "… … …  … … …\p"
-    .string "Um… May I ask one more giant favor\n"
-    .string "of you?$"
+    .string "אממ… אפשר לבקש ממך עוד\n"
+    .string "טובה ענקית אחת?$"
 
 OneIsland_PokemonCenter_1F_Text_PleaseINeedYourHelp::
-    .string "It… It's not anything weird.\n"
-    .string "Please, I need your help.$"
+    .string "זה… זה לא משהו מוזר.\n"
+    .string "בבקשה, אני צריך את עזרתך.$"
 
 OneIsland_PokemonCenter_1F_Text_AnotherGemstoneInSeviiIslands::
-    .string "While I was studying gemstones,\n"
-    .string "I discovered something important.\p"
-    .string "There is another gem that forms\n"
-    .string "a pair with this RUBY.\p"
-    .string "That other gemstone is supposed to\n"
-    .string "be in the SEVII ISLANDS.\p"
-    .string "{PLAYER}, please, I need you to go\n"
-    .string "find the other gem.\p"
-    .string "{PLAYER}, may I have your ferry\n"
-    .string "PASS and the TOWN MAP?$"
+    .string "בזמן שחקרתי אבני חן\n"
+    .string "גיליתי משהו חשוב.\p"
+    .string "יש עוד אבן חן שמהווה\n"
+    .string "זוג עם האודם הזה.\p"
+    .string "אבן החן השנייה אמורה\n"
+    .string "להיות באיי סווי.\p"
+    .string "{PLAYER}, בבקשה, אני צריך\n"
+    .string "שתמצא את האבן השנייה.\p"
+    .string "{PLAYER}, אפשר לקבל את\n"
+    .string "כרטיס המעבורת ומפת העיר?$"
 
 OneIsland_PokemonCenter_1F_Text_ReturnedTriPassForRainbowPass::
-    .string "{PLAYER} returned the TRI-PASS and\n"
-    .string "received the RAINBOW PASS.$"
+    .string "{PLAYER} החזיר את הכרטיס\n"
+    .string "המשולש וקיבל את כרטיס הקשת.$"
 
 OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage::
-    .string "Obtained an extra page for the\n"
-    .string "TOWN MAP!$"
+    .string "התקבל דף נוסף\n"
+    .string "למפת העיר!$"
 
 OneIsland_PokemonCenter_1F_Text_PassLetYouGetToAllIslands::
-    .string "This is my own ferry PASS.\p"
-    .string "It will let you get to all the\n"
-    .string "SEVII ISLANDS.\p"
-    .string "{PLAYER}, please, I can't do\n"
-    .string "it without your help.$"
+    .string "זהו כרטיס המעבורת שלי.\p"
+    .string "הוא יאפשר לך להגיע\n"
+    .string "לכל איי סווי.\p"
+    .string "{PLAYER}, בבקשה, אני לא\n"
+    .string "מסוגל בלי העזרה שלך.$"
 
 OneIsland_PokemonCenter_1F_Text_HandedSapphireToCelio::
-    .string "{PLAYER} handed the SAPPHIRE\n"
-    .string "to CELIO.$"
+    .string "{PLAYER} מסר את הספיר\n"
+    .string "לסליו.$"
 
 OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime::
-    .string "CELIO: So this is the gem that\n"
-    .string "forms a pair with the RUBY…\p"
-    .string "{PLAYER}, you've gone through a lot\n"
-    .string "to get this, didn't you?\p"
-    .string "You don't have to tell me. I know\n"
-    .string "it wasn't easy.\p"
-    .string "Thank you so much!\p"
-    .string "Now it's my turn to work for you!\n"
-    .string "Please give me a little time.$"
+    .string "סליו: אז זו אבן החן\n"
+    .string "שמהווה זוג עם האודם…\p"
+    .string "{PLAYER}, עברת לא מעט\n"
+    .string "כדי להשיג אותה, נכון?\p"
+    .string "אתה לא צריך לספר לי.\n"
+    .string "אני יודע שזה לא היה קל.\p"
+    .string "תודה רבה לך!\p"
+    .string "עכשיו תורי לעבוד בשבילך!\n"
+    .string "תן לי בבקשה קצת זמן.$"
 
 OneIsland_PokemonCenter_1F_Text_OkayThisIsGood::
-    .string "Okay, this is good…$"
+    .string "טוב, זה נראה בסדר…$"
 
 OneIsland_PokemonCenter_1F_Text_LinkedUpWithLanette::
-    .string "I did it!\n"
-    .string "I linked up with LANETTE!$"
+    .string "הצלחתי!\n"
+    .string "התחברתי ללאנט!$"
 
 OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou::
     .string "{PLAYER}…\n"
-    .string "{PLAYER}, I did it!\p"
-    .string "I've managed to link up with\n"
-    .string "TRAINERS in the HOENN region!\p"
-    .string "Finally, the Network Machine is\n"
-    .string "fully operational!\p"
-    .string "{PLAYER}, I owe it all to you!\p"
-    .string "Thanks to you, my dream came\n"
-    .string "true…$"
+    .string "{PLAYER}, הצלחתי!\p"
+    .string "הצלחתי להתחבר למאמנים\n"
+    .string "במחוז הואן!\p"
+    .string "סוף סוף מכונת הרשת\n"
+    .string "פועלת במלואה!\p"
+    .string "{PLAYER}, הכול בזכותך!\p"
+    .string "בזכותך החלום שלי\n"
+    .string "התגשם…$"
 
 OneIsland_PokemonCenter_1F_Text_WishYouBestOfLuck::
-    .string "I…\n"
-    .string "I'm not crying.\p"
-    .string "That's enough about me!\p"
-    .string "{PLAYER}, you're going to keep\n"
-    .string "looking for exotic POKéMON, right?\p"
-    .string "I wish you the best of luck!$"
+    .string "אני…\n"
+    .string "אני לא בוכה.\p"
+    .string "מספיק לדבר עליי!\p"
+    .string "{PLAYER}, אתה תמשיך לחפש\n"
+    .string "פוקימונים אקזוטיים, נכון?\p"
+    .string "אני מאחל לך בהצלחה!$"
 
 OneIsland_PokemonCenter_1F_Text_CelioHearingRumorsAboutYou::
-    .string "CELIO: Hello!\p"
-    .string "{PLAYER}, I've been hearing rumors\n"
-    .string "about you.$"
+    .string "סליו: שלום!\p"
+    .string "{PLAYER}, שמעתי עליך\n"
+    .string "שמועות.$"
 
 OneIsland_PokemonCenter_1F_Text_BillsFirstMonWasAbra::
-    .string "{PLAYER}, what's your favorite kind\n"
-    .string "of POKéMON?\p"
-    .string "BILL is a POKéMANIAC, so he loves\n"
-    .string "every kind.\p"
-    .string "Apparently, the first one he caught\n"
-    .string "was an ABRA.$"
+    .string "{PLAYER}, מהו סוג הפוקימון\n"
+    .string "האהוב עליך?\p"
+    .string "ביל הוא פוקימניאק,\n"
+    .string "אז הוא אוהב כל סוג.\p"
+    .string "מסתבר שהראשון שהוא תפס\n"
+    .string "היה אברה.$"
 
 OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod::
-    .string "By the way, {PLAYER}, you're from\n"
-    .string "PALLET TOWN, aren't you?\p"
-    .string "I've heard that it's a quiet and\n"
-    .string "pleasant place.\p"
-    .string "BILL's hometown is GOLDENROD CITY,\n"
-    .string "where his folks still live.\p"
-    .string "I've heard that it's quite the\n"
-    .string "festive, bustling city.\p"
-    .string "I'd like to go there one day.$"
+    .string "אגב, {PLAYER}, אתה מהעיירה\n"
+    .string "פאלט, נכון?\p"
+    .string "שמעתי שזה מקום שקט\n"
+    .string "ונעים מאוד.\p"
+    .string "עיר הולדתו של ביל היא עיר\n"
+    .string "גולדנרוד, שם גרים הוריו.\p"
+    .string "שמעתי שזו עיר חגיגית\n"
+    .string "ותוססת למדי.\p"
+    .string "הייתי רוצה לבקר שם יום אחד.$"
 
 OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk::
-    .string "{PLAYER}, is there anything that\n"
-    .string "you can't stand?\p"
-    .string "Apparently, BILL simply can't\n"
-    .string "stomach milk at all.$"
+    .string "{PLAYER}, יש משהו שאתה\n"
+    .string "לא סובל?\p"
+    .string "מסתבר שביל פשוט לא מסוגל\n"
+    .string "לשתות חלב בכלל.$"
 
 OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt::
-    .string "Oh, you're a stranger here!\n"
-    .string "Hi! Where did you come from?\p"
-    .string "…PALLET TOWN?\n"
-    .string "I don't know it!$"
+    .string "הו, אתה זר כאן!\n"
+    .string "היי! מאיפה באת?\p"
+    .string "…העיירה פאלט?\n"
+    .string "לא מכיר את המקום!$"
 
 OneIsland_PokemonCenter_1F_Text_EnormousVolcanoOnIsland::
-    .string "On this island, there's an enormous\n"
-    .string "volcano.\p"
-    .string "It hasn't erupted lately, so why\n"
-    .string "not enjoy a hike?$"
+    .string "באי הזה יש הר געש\n"
+    .string "עצום.\p"
+    .string "הוא לא התפרץ מזמן,\n"
+    .string "אז למה לא לצאת לטיול?$"
 
 OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend::
-    .string "I wish I could trade POKéMON with\n"
-    .string "my boyfriend who lives far away…$"
+    .string "הלוואי שיכולתי להחליף\n"
+    .string "פוקימונים עם החבר שלי הרחוק…$"
 
 OneIsland_PokemonCenter_1F_Text_TradedWithFarAwayBoyfriend::
-    .string "I traded POKéMON with my boyfriend\n"
-    .string "far away!\p"
-    .string "Everyone's saying that we can\n"
-    .string "thank you and CELIO.\p"
-    .string "So, thank you!$"
+    .string "החלפתי פוקימון עם החבר\n"
+    .string "שלי שגר רחוק!\p"
+    .string "כולם אומרים שאפשר להודות\n"
+    .string "לך ולסליו.\p"
+    .string "אז תודה!$"
 
 OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment::
-    .string "Network Machine\n"
-    .string "Link Level 0\p"
-    .string "…POKéMON Storage System under\n"
-    .string "adjustment…$"
+    .string "מכונת הרשת\n"
+    .string "רמת חיבור 0\p"
+    .string "…מערכת אחסון הפוקימונים\n"
+    .string "בכיוונון…$"
 
 OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKanto::
-    .string "Network Machine\n"
-    .string "Link Level 1\p"
-    .string "Link established with the KANTO\n"
-    .string "region.$"
+    .string "מכונת הרשת\n"
+    .string "רמת חיבור 1\p"
+    .string "נוצר חיבור עם מחוז\n"
+    .string "קאנטו.$"
 
 OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
-    .string "Network Machine\n"
-    .string "Link Level 2\p"
-    .string "Link established with the KANTO\n"
-    .string "and HOENN regions.$"
+    .string "מכונת הרשת\n"
+    .string "רמת חיבור 2\p"
+    .string "נוצר חיבור עם מחוזות\n"
+    .string "קאנטו והואן.$"
 
 OneIsland_PokemonCenter_1F_Text_ObtainedTriPass::
-    .string "Obtained the TRI-PASS!$"
+    .string "התקבל הכרטיס המשולש!$"
 
