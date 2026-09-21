@@ -1070,6 +1070,7 @@ static void HallOfFame_PrintMonInfo(struct HallofFameMon* currMon, u8 unused1, u
         AddTextPrinterParameterized3(0, FONT_NORMAL, 0xB0, 0x11, sTextColors[0], 0, text);
 
         stringPtr = StringCopy(text, gText_IDNumber);
+        *stringPtr++ = CHAR_SPACE;
         ConvertIntToDecimalStringN(stringPtr, (u16)(currMon->tid), STR_CONV_MODE_LEADING_ZEROS, 5);
         AddTextPrinterParameterized3(0, FONT_NORMAL, 0x70, 0x11, sTextColors[0], 0, text);
 

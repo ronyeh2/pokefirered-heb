@@ -2654,7 +2654,10 @@ static void ToggleFieldMoveDescriptionWindow(u8 action)
             ptr->windowId[2] = AddWindow(&sFieldMoveDescriptionWindowTemplate);
         DrawHelpMessageWindowTilesById(ptr->windowId[2]);
         letterSpacing = GetFontAttribute(FONT_NORMAL, FONTATTR_LETTER_SPACING);
-        AddTextPrinterParameterized4(ptr->windowId[2], FONT_NORMAL, 3, 6, letterSpacing, 0, sFontColorTable[5], 0, sFieldMoveDescriptionTable[action - CURSOR_OPTION_FIELD_MOVES]);
+        // RTL: the pen is the first glyph's left edge, so upstream's 3px left
+        // inset left one glyph against the border and walked the description off
+        // the window. Mirror it into a 3px inset from the right.
+        AddTextPrinterParameterized4(ptr->windowId[2], FONT_NORMAL, RTL_ANCHOR_WINDOW(ptr->windowId[2]) - 3, 6, letterSpacing, 0, sFontColorTable[5], 0, sFieldMoveDescriptionTable[action - CURSOR_OPTION_FIELD_MOVES]);
         PutWindowTilemap(ptr->windowId[2]);
         ScheduleBgCopyTilemapToVram(2);
     }

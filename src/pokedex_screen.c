@@ -2761,8 +2761,8 @@ void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
 void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
 {
     u16 height;
-    u32 inches, feet;
     const u8 *labelText;
+    const u8 *unitText;
     u8 buffer[32];
     u8 i;
     u8 j;
@@ -2771,6 +2771,7 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
     species = SpeciesToNationalPokedexNum(species);
     height = gPokedexEntries[species].height;
     labelText = gText_HT;
+    unitText = gText_Meters;
 
     i = 0;
     buffer[i++] = EXT_CTRL_CODE_BEGIN;
@@ -2780,36 +2781,21 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
 
     if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
     {
-        inches = 10000 * height / 254; // actually tenths of inches here
-        if (inches % 10 >= 5)
-            inches += 10;
-        feet = inches / 120;
-        inches = (inches - (feet * 120)) / 10;
-        if (feet / 10 == 0)
-        {
-            buffer[i++] = 0;
-            buffer[i++] = feet + CHAR_0;
-        }
-        else
-        {
-            buffer[i++] = feet / 10 + CHAR_0;
-            buffer[i++] = feet % 10 + CHAR_0;
-        }
-        buffer[i++] = CHAR_SGL_QUOTE_RIGHT;
-        buffer[i++] = inches / 10 + CHAR_0;
-        buffer[i++] = inches % 10 + CHAR_0;
-        buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
+        // The dex stores height in decimetres. Upstream turns that into feet and
+        // inches; this build prints metres, because the weight beneath it is
+        // already in kilograms and one screen cannot be half imperial.
+        if (height / 100 != 0)
+            buffer[i++] = height / 100 + CHAR_0;
+        buffer[i++] = (height / 10) % 10 + CHAR_0;
+        buffer[i++] = CHAR_PERIOD;
+        buffer[i++] = height % 10 + CHAR_0;
     }
     else
     {
         buffer[i++] = CHAR_QUESTION_MARK;
+        buffer[i++] = CHAR_PERIOD;
         buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_SGL_QUOTE_RIGHT;
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_QUESTION_MARK;
-        buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
     }
-
     // The renderer draws the buffer right-to-left, so the measurement has to be
     // stored reversed for it to read correctly on screen.
     for (j = 4; j < 4 + (i - 4) / 2; j++)
@@ -2819,7 +2805,15 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
         buffer[i - 1 - (j - 4)] = t;
     }
 
-    buffer[i++] = EOS;
+    buffer[i++] = CHAR_SPACE;
+    buffer[i++] = EXT_CTRL_CODE_BEGIN;
+    buffer[i++] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+    buffer[i++] = 0;
+
+    for (j = 0; j < 33 - i && unitText[j] != EOS; j++)
+        buffer[i + j] = unitText[j];
+
+    buffer[i + j] = EOS;
     DexScreen_AddTextPrinterParameterized(windowId, FONT_SMALL, labelText, x, y, 0);
     // Ofir changed here
     //x += 30;

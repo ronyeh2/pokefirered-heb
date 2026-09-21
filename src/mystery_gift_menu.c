@@ -471,8 +471,11 @@ void PrintMysteryGiftOrEReaderTopMenu(bool8 isEReader, bool32 useCancel)
     if (!isEReader)
     {
         options = useCancel == TRUE ? gText_PickOKExit : gText_PickOKCancel;
-        AddTextPrinterParameterized4(0, FONT_NORMAL, 2, 2, 0, 0, sTextColors_TopMenu, 0, gText_MysteryGift2);
-        width = 222 - GetStringWidth(FONT_SMALL, options, 0);
+        AddTextPrinterParameterized4(0, FONT_NORMAL, RTL_ANCHOR_WINDOW(0) - 2, 2, 0, 0, sTextColors_TopMenu, 0, gText_MysteryGift2);
+        // RTL: upstream right-aligns the hints at 222, i.e. against the right
+        // edge, where the mirrored title now is. Mirror their span instead:
+        // they start 18px from the left and the pen is their far end.
+        width = 18 + GetStringWidthRTL(FONT_SMALL, options, 0);
         AddTextPrinterParameterized4(0, FONT_SMALL, width, 2, 0, 0, sTextColors_TopMenu, 0, options);
     }
     else
@@ -661,7 +664,7 @@ s8 DoMysteryGiftYesNo(u8 * textState, u16 * windowId, bool8 yesNoBoxPlacement, c
         else
             *windowId = AddWindow(&sWindowTemplate_YesNoMsg);
         FillWindowPixelBuffer(*windowId, 0x11);
-        AddTextPrinterParameterized4(*windowId, FONT_NORMAL, 0, 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
+        AddTextPrinterParameterized4(*windowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(*windowId), 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
         DrawTextBorderOuter(*windowId, 0x001, 15);
         CopyWindowToVram(*windowId, COPYWIN_GFX);
         PutWindowTilemap(*windowId);
@@ -718,7 +721,7 @@ static s32 HandleMysteryGiftListMenu(u8 * textState, u16 * windowId, bool32 cann
             StringExpandPlaceholders(gStringVar4, gText_WhatToDoWithNews);
         *windowId = AddWindow(&sWindowTemplate_GiftSelect);
         FillWindowPixelBuffer(*windowId, 0x11);
-        AddTextPrinterParameterized4(*windowId, FONT_NORMAL, 0, 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
+        AddTextPrinterParameterized4(*windowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(*windowId), 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
         DrawTextBorderOuter(*windowId, 0x001, 15);
         CopyWindowToVram(*windowId, COPYWIN_GFX);
         PutWindowTilemap(*windowId);

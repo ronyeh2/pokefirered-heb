@@ -905,15 +905,15 @@ static void ShowResultsBoard(void)
     windowId = AddWindow(sTimeBoardWindowTemplate);
     LoadStdWindowFrameGfx();
     DrawStdWindowFrame(windowId, FALSE);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_TimeBoard, 74, 0, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_TimeBoard, RTL_ANCHOR_WINDOW(windowId) - 74, 0, TEXT_SKIP_DRAW, NULL);
 
     for (i = 0; i < NUM_TOWER_CHALLENGE_TYPES; i++)
     {
         PRINT_TOWER_TIME(GetTrainerTowerRecordTime(&TRAINER_TOWER.bestTime));
 
         StringExpandPlaceholders(gStringVar4, gText_XMinYZSec);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gTrainerTowerChallengeTypeTexts[i - 1], 24, 36 + 20 * i, TEXT_SKIP_DRAW, NULL);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, 96, 46 + 20 * i, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, gTrainerTowerChallengeTypeTexts[i - 1], RTL_ANCHOR_WINDOW(windowId) - 24, 36 + 20 * i, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, RTL_ANCHOR_WINDOW(windowId) - 96, 46 + 20 * i, TEXT_SKIP_DRAW, NULL);
     }
 
     PutWindowTilemap(windowId);
@@ -1059,14 +1059,14 @@ void PrintTrainerTowerRecords(void)
     SetUpTrainerTowerDataStruct();
     FillWindowPixelRect(0, PIXEL_FILL(0), 0, 0, 216, 144);
     ValidateOrResetCurTrainerTowerRecord();
-    AddTextPrinterParameterized3(0, FONT_NORMAL, 0x4a, 0, sTextColors, 0, gText_TimeBoard);
+    AddTextPrinterParameterized3(0, FONT_NORMAL, RTL_ANCHOR_WINDOW(0) - 0x4a, 0, sTextColors, 0, gText_TimeBoard);
 
     for (i = 0; i < NUM_TOWER_CHALLENGE_TYPES; i++)
     {
         PRINT_TOWER_TIME(GetTrainerTowerRecordTime(&gSaveBlock1Ptr->trainerTower[i].bestTime));
         StringExpandPlaceholders(gStringVar4, gText_XMinYZSec);
-        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 0x18, 0x24 + 0x14 * i, sTextColors, 0, gTrainerTowerChallengeTypeTexts[i]);
-        AddTextPrinterParameterized3(windowId, FONT_NORMAL, 0x60, 0x24 + 0x14 * i, sTextColors, 0, gStringVar4);
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(windowId) - 0x18, 0x24 + 0x14 * i, sTextColors, 0, gTrainerTowerChallengeTypeTexts[i]);
+        AddTextPrinterParameterized3(windowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(windowId) - 0x60, 0x24 + 0x14 * i, sTextColors, 0, gStringVar4);
     }
 
     PutWindowTilemap(windowId);

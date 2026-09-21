@@ -1048,6 +1048,52 @@ s32 (*GetFontWidthFunc(u8 glyphId))(u16 _glyphId, bool32 _isJapanese)
     return NULL;
 }
 
+// RenderText subtracts one extra pixel after each of these when the next
+// character is not ×, × or × -- see the wide-letter rule in RenderText.
+static bool32 IsWideHebrewLetter(u8 c)
+{
+    switch (c)
+    {
+    case 0x01: case 0x02: case 0x04: case 0x05: case 0x08: case 0x09:
+    case 0x0D: case 0x0F: case 0x10: case 0x11: case 0x15: case 0x16:
+    case 0x18: case 0x1A:
+        return TRUE;
+    default:
+        return FALSE;
+    }
+}
+
+// The width RenderText will actually produce. GetStringWidth predates the
+// wide-letter rule and is one pixel per wide letter short of it, which is
+// enough to push the left end of a long right-to-left line out of its window
+// when a layout positions the line by measuring it first.
+s32 GetStringWidthRTL(u8 fontId, const u8 *str, s16 letterSpacing)
+{
+    s32 bonus = 0;
+    const u8 *s = str;
+
+    while (*s != EOS)
+    {
+        if (*s == EXT_CTRL_CODE_BEGIN)
+        {
+            s++;
+            s += GetExtCtrlCodeLength(*s);
+            continue;
+        }
+        if (*s == CHAR_KEYPAD_ICON || *s == CHAR_EXTRA_SYMBOL)
+        {
+            s += 2;
+            continue;
+        }
+        if (IsWideHebrewLetter(*s)
+         && s[1] != 0x0A /*×*/ && s[1] != 0x06 /*×*/ && s[1] != 0x17 /*×*/)
+            bonus++;
+        s++;
+    }
+
+    return GetStringWidth(fontId, str, letterSpacing) + bonus;
+}
+
 s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
 {
     bool8 isJapanese;

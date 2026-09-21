@@ -234,7 +234,7 @@ void BagDrawDepositItemTextBox(void)
 {
     u32 x;
     DrawStdFrameWithCustomTileAndPalette(2, FALSE, 0x081, 12);
-    x = 0x40 - GetStringWidth(FONT_SMALL, gText_DepositItem, 0);
+    x = 0x40 + GetStringWidth(FONT_SMALL, gText_DepositItem, 0);
     AddTextPrinterParameterized(2, FONT_SMALL, gText_DepositItem, x / 2, 1, 0, NULL);
 }
 

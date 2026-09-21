@@ -1479,7 +1479,9 @@ static void DaycarePrintMonLvl(struct DayCare *daycare, u8 windowId, u32 daycare
     level = GetLevelAfterDaycareSteps(&daycare->mons[daycareSlotId].mon, daycare->mons[daycareSlotId].steps);
     ConvertIntToDecimalStringN(intText, level, STR_CONV_MODE_LEFT_ALIGN, 3);
     StringAppend(lvlText, intText);
-    x = 132 - GetStringWidth(FONT_NORMAL_COPY_2, lvlText, 0);
+    // RTL: the pen already walks leftwards, so subtracting the width again
+    // shifts the level off to the left. Anchor it on the 132px right edge.
+    x = RTL_ANCHOR_EDGE(132);
     DaycareAddTextPrinter(windowId, lvlText, x, y);
 }
 

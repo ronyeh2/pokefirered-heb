@@ -2526,7 +2526,8 @@ static void PrintInfoPage(void)
         if (sMonSummaryScreen->isBadEgg)
             hatchMsgIndex = 0;
 
-        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 7, 45, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sEggHatchTimeTexts[hatchMsgIndex]);
+        // RTL: mirror the 7px left inset onto the right edge of the pane.
+        AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, RTL_ANCHOR_WINDOW(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE]) - 7, 45, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sEggHatchTimeTexts[hatchMsgIndex]);
     }
 }
 
@@ -3979,8 +3980,10 @@ static void Task_InputHandler_SelectOrForgetMove(u8 taskId)
         break;
     case 5:
         FillWindowPixelBuffer(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], 0);
+        // RTL: upstream's 7 was a left inset; this pane's right-hand pen is 107,
+        // the same one the move description above it prints at.
         AddTextPrinterParameterized4(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL,
-                                     7, 42,
+                                     107, 42,
                                      0, 0,
                                      sLevelNickTextColors[0], TEXT_SKIP_DRAW,
                                      gText_PokeSum_HmMovesCantBeForgotten);

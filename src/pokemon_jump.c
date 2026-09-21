@@ -3169,7 +3169,7 @@ static void Msg_WantToPlayAgain(void)
     {
     case 0:
         sPokemonJumpGfx->msgWindowId = AddMessageWindow(1, 8, 20, 2);
-        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_WantToPlayAgain2, 0, 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_WantToPlayAgain2, RTL_ANCHOR_WINDOW(sPokemonJumpGfx->msgWindowId), 2, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sPokemonJumpGfx->msgWindowId, COPYWIN_GFX);
         sPokemonJumpGfx->mainState++;
         break;
@@ -3196,7 +3196,7 @@ static void Msg_SavingDontTurnOff(void)
     {
     case 0:
         sPokemonJumpGfx->msgWindowId = AddMessageWindow(2, 7, 26, 4);
-        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_SavingDontTurnOffPower, 0, 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_SavingDontTurnOffPower, RTL_ANCHOR_WINDOW(sPokemonJumpGfx->msgWindowId), 2, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sPokemonJumpGfx->msgWindowId, COPYWIN_GFX);
         sPokemonJumpGfx->mainState++;
         break;
@@ -3239,7 +3239,7 @@ static void Msg_SomeoneDroppedOut(void)
     {
     case 0:
         sPokemonJumpGfx->msgWindowId = AddMessageWindow(2, 8, 22, 4);
-        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_SomeoneDroppedOut2, 0, 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_SomeoneDroppedOut2, RTL_ANCHOR_WINDOW(sPokemonJumpGfx->msgWindowId), 2, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sPokemonJumpGfx->msgWindowId, COPYWIN_GFX);
         sPokemonJumpGfx->mainState++;
         break;
@@ -3265,7 +3265,7 @@ static void Msg_CommunicationStandby(void)
     {
     case 0:
         sPokemonJumpGfx->msgWindowId = AddMessageWindow(7, 10, 16, 2);
-        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_CommunicationStandby4, 0, 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sPokemonJumpGfx->msgWindowId, FONT_NORMAL, gText_CommunicationStandby4, RTL_ANCHOR_WINDOW(sPokemonJumpGfx->msgWindowId), 2, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sPokemonJumpGfx->msgWindowId, COPYWIN_GFX);
         sPokemonJumpGfx->mainState++;
         break;
@@ -3505,8 +3505,8 @@ static void PrintScoreSuffixes(void)
     PutWindowTilemap(WIN_TIMES);
     FillWindowPixelBuffer(WIN_POINTS, PIXEL_FILL(0));
     FillWindowPixelBuffer(WIN_TIMES, PIXEL_FILL(0));
-    AddTextPrinterParameterized3(WIN_POINTS, FONT_SMALL, 0, 2, color, 0, gText_SpacePoints2);
-    AddTextPrinterParameterized3(WIN_TIMES, FONT_SMALL, 0, 2, color, 0, gText_SpaceTimes3);
+    AddTextPrinterParameterized3(WIN_POINTS, FONT_SMALL, RTL_ANCHOR_WINDOW(WIN_POINTS), 2, color, 0, gText_SpacePoints2);
+    AddTextPrinterParameterized3(WIN_TIMES, FONT_SMALL, RTL_ANCHOR_WINDOW(WIN_TIMES), 2, color, 0, gText_SpaceTimes3);
 }
 
 // The venusaurs in the background are actually an empty 256x512 bg with 3 pairs of venusaurs on it.
@@ -4557,10 +4557,10 @@ static void PrintRecordsText(u16 windowId)
     LoadStdWindowGfx(windowId, 0x21D, BG_PLTT_ID(13));
     DrawTextBorderOuter(windowId, 0x21D, 13);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
-    AddTextPrinterParameterized5(windowId, FONT_NORMAL, gText_PkmnJumpRecords, 0, 0, TEXT_SKIP_DRAW, NULL, 1, 0);
+    AddTextPrinterParameterized5(windowId, FONT_NORMAL, gText_PkmnJumpRecords, RTL_ANCHOR_WINDOW(windowId), 0, TEXT_SKIP_DRAW, NULL, 1, 0);
     for (i = 0; i < ARRAY_COUNT(sRecordsTexts); i++)
     {
-        AddTextPrinterParameterized5(windowId, FONT_NORMAL, sRecordsTexts[i], 0, 20 + (i * 14), TEXT_SKIP_DRAW, NULL, 1, 0);
+        AddTextPrinterParameterized5(windowId, FONT_NORMAL, sRecordsTexts[i], RTL_ANCHOR_WINDOW(windowId), 20 + (i * 14), TEXT_SKIP_DRAW, NULL, 1, 0);
         ConvertIntToDecimalStringN(strbuf, recordNums[i], STR_CONV_MODE_LEFT_ALIGN, 5);
         TruncateToFirstWordOnly(strbuf);
         x = 0xDE - GetStringWidth(FONT_NORMAL, strbuf, 0);

@@ -90,6 +90,7 @@ const u8 gText_HT[] = _("גובה");
 const u8 gText_WT[] = _("משקל");
 const u8 gText_PokedexQuotationMark[] = _("”"); // Unused
 const u8 gText_Lbs[] = _("ק”ג");
+const u8 gText_Meters[] = _("מ'");
 const u8 gTextJP_PokemonData[] = _("נתוני פוקימון");
 const u8 gText_Cry[] = _("{START_BUTTON}קריאה");
 const u8 gText_NextDataCancel[] = _("{A_BUTTON}נתון הבא {B_BUTTON}ביטול");
@@ -846,7 +847,9 @@ const u8 gText_PokeSum_Controls_Pick[] = _("{DPAD_UPDOWN}בחר");
 const u8 gText_PokeSum_Controls_PickDelete[] = _("{DPAD_UPDOWN}בחר {A_BUTTON}מחק");
 const u8 gText_PokeSum_HmMovesCantBeForgotten[] = _("מהלכי HM לא ניתנים\nלשכחה כרגע.");
 const u8 gText_TrainerCardName[] = _("שם: ");
-const u8 gText_TrainerCardIDNo[] = _("מס' זיהוי");
+// The trailing space is the separator: PrintIdOnCard appends the digits
+// straight onto this, the way upstream's "IDNo. " expects.
+const u8 gText_TrainerCardIDNo[] = _("מס' זיהוי ");
 const u8 gText_TrainerCardMoney[] = _("כסף");
 const u8 gText_TrainerCardYen[] = _("¥");
 const u8 gText_TrainerCardPokedex[] = _("פוקדקס");
@@ -968,7 +971,7 @@ const u8 gText_Diploma_ThisDocument[] = _("תעודה זו מוענקת\nכהו�
 const u8 gText_Diploma_GameFreak[] = _("גיים פריק");
 const u8 gText_Diploma_National[] = _("הלאומי");
 const u8 gText_Diploma_Kanto[] = _("של קאנטו");
-const u8 gText_ClearAllSaveData[] = _("למחוק את כל אזורי נתוני השמירה?");
+const u8 gText_ClearAllSaveData[] = _("למחוק את כל אזורי\nנתוני השמירה?");
 const u8 gText_ClearingData[] = _("מוחק נתונים...\nאנא המתן.");
 const u8 gText_Player[] = _("שחקן");
 const u8 gText_Time[] = _("זמן");

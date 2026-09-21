@@ -2977,7 +2977,7 @@ static void printCrushingResults(struct BerryCrushGame * game)
     u8 y = GetWindowAttribute(game->gfx.resultsWindowId, WINDOW_HEIGHT) * 8 - 42;
 
     FramesToMinSec(&game->gfx, players->time);
-    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_TimeColon);
+    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(game->gfx.resultsWindowId) - 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_TimeColon);
 
     x = 190 - (u8)GetStringWidth(FONT_NORMAL, gText_SpaceSec, 0);
     AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, x, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_SpaceSec);
@@ -2997,7 +2997,7 @@ static void printCrushingResults(struct BerryCrushGame * game)
     AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, x, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gStringVar4);
 
     y += 14;
-    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_PressingSpeed);
+    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(game->gfx.resultsWindowId) - 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_PressingSpeed);
 
     x = 190 - (u8)GetStringWidth(FONT_NORMAL, gText_TimesPerSec, 0);
     AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL_COPY_2, x, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_TimesPerSec);
@@ -3015,7 +3015,7 @@ static void printCrushingResults(struct BerryCrushGame * game)
         AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, x, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gStringVar4);
 
     y += 14;
-    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_Silkiness);
+    AddTextPrinterParameterized3(game->gfx.resultsWindowId, FONT_NORMAL, RTL_ANCHOR_WINDOW(game->gfx.resultsWindowId) - 2, y, sBerryCrushTextColorTable[COLORID_GRAY], 0, gText_Silkiness);
 
     ConvertIntToDecimalStringN(gStringVar1, players->silkiness, STR_CONV_MODE_RIGHT_ALIGN, 3);
     StringExpandPlaceholders(gStringVar4, gText_Var1Percent);

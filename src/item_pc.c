@@ -907,7 +907,7 @@ static void ItemPc_DoWithdraw(u8 taskId)
     else
     {
         windowId = ItemPc_GetOrCreateSubwindow(2);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_NoMoreRoomInBag, 0, 2, 0, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_NoMoreRoomInBag, RTL_ANCHOR_WINDOW(windowId), 2, 0, NULL);
         gTasks[taskId].func = Task_ItemPcWaitButtonWithdrawMultipleFailed;
     }
 }
@@ -954,10 +954,12 @@ static void Task_ItemPcCleanUpWithdraw(u8 taskId)
 static void ItemPc_WithdrawMultipleInitWindow(u16 slotId)
 {
     u16 itemId = ItemPc_GetItemIdBySlotId(slotId);
+    u8 windowId;
 
     CopyItemName(itemId, gStringVar1);
     StringExpandPlaceholders(gStringVar4, gText_WithdrawHowMany);
-    AddTextPrinterParameterized(ItemPc_GetOrCreateSubwindow(1), FONT_NORMAL, gStringVar4, 0, 2, 0, NULL);
+    windowId = ItemPc_GetOrCreateSubwindow(1);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, RTL_ANCHOR_WINDOW(windowId), 2, 0, NULL);
     ConvertIntToDecimalStringN(gStringVar1, 1, STR_CONV_MODE_LEADING_ZEROS, 3);
     StringExpandPlaceholders(gStringVar4, gText_TimesStrVar1);
     ItemPc_SetBorderStyleOnWindow(3);

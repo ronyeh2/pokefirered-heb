@@ -3005,12 +3005,12 @@ static void PrintRecordsText(u8 windowId)
     LoadStdWindowGfx(windowId, 0x21D, BG_PLTT_ID(13));
     DrawTextBorderOuter(windowId, 0x21D, 13);
     FillWindowPixelBuffer(windowId, PIXEL_FILL(1));
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[0], 1, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[0], RTL_ANCHOR_WINDOW(windowId) - 1, 1, TEXT_SKIP_DRAW, NULL);
     for (i = 0; i < NUM_RECORD_TYPES; i++)
     {
         ConvertIntToDecimalStringN(strbuf, recordNums[i], STR_CONV_MODE_LEFT_ALIGN, sRecordNumMaxDigits[i]);
         numWidth = GetStringWidth(FONT_NORMAL, strbuf, -1);
-        AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[i + 1], 1, sRecordTextYCoords[i][0], TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL, sRecordsTexts[i + 1], RTL_ANCHOR_WINDOW(windowId) - 1, sRecordTextYCoords[i][0], TEXT_SKIP_DRAW, NULL);
         x = DISPLAY_WIDTH - 16 - numWidth;
         AddTextPrinterParameterized(windowId, FONT_NORMAL, strbuf, x, sRecordNumYCoords[i][0], TEXT_SKIP_DRAW, NULL);
     }
@@ -4679,7 +4679,7 @@ static void Msg_WantToPlayAgain(void)
         // Print text
         FillWindowPixelBuffer(sGfx->windowIds[WIN_PLAY_AGAIN], PIXEL_FILL(1));
         FillWindowPixelBuffer(sGfx->windowIds[WIN_YES_NO], PIXEL_FILL(1));
-        AddTextPrinterParameterized(sGfx->windowIds[WIN_PLAY_AGAIN], FONT_NORMAL, gText_WantToPlayAgain, 0, 6, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sGfx->windowIds[WIN_PLAY_AGAIN], FONT_NORMAL, gText_WantToPlayAgain, RTL_ANCHOR_WINDOW(sGfx->windowIds[WIN_PLAY_AGAIN]), 6, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(sGfx->windowIds[WIN_YES_NO], FONT_NORMAL, gText_Yes, 8, 2, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(sGfx->windowIds[WIN_YES_NO], FONT_NORMAL, gText_No, 8, 16, TEXT_SKIP_DRAW, NULL);
         AddTextPrinterParameterized(sGfx->windowIds[WIN_YES_NO], FONT_NORMAL, gText_SelectorArrow2, 0, 2, TEXT_SKIP_DRAW, NULL);
@@ -4796,7 +4796,7 @@ static void Msg_CommunicationStandby(void)
         break;
     case 1:
         FillWindowPixelBuffer(sGfx->windowIds[0], PIXEL_FILL(1));
-        AddTextPrinterParameterized(sGfx->windowIds[0], FONT_NORMAL, gText_CommunicationStandby3, 0, 6, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sGfx->windowIds[0], FONT_NORMAL, gText_CommunicationStandby3, RTL_ANCHOR_WINDOW(sGfx->windowIds[0]), 6, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sGfx->windowIds[0], COPYWIN_GFX);
         sGfx->state++;
         break;
@@ -4836,7 +4836,7 @@ static void Msg_SomeoneDroppedOut(void)
         break;
     case 1:
         FillWindowPixelBuffer(sGfx->windowIds[0], PIXEL_FILL(1));
-        AddTextPrinterParameterized(sGfx->windowIds[0], FONT_NORMAL, gText_SomeoneDroppedOut, 0, 6, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sGfx->windowIds[0], FONT_NORMAL, gText_SomeoneDroppedOut, RTL_ANCHOR_WINDOW(sGfx->windowIds[0]), 6, TEXT_SKIP_DRAW, NULL);
         CopyWindowToVram(sGfx->windowIds[0], COPYWIN_GFX);
         sGfx->state++;
         break;

@@ -232,7 +232,7 @@ void TopBarWindowPrintTwoStrings(const u8 *string, const u8 *string2, bool8 fgCo
         }
         // Ofir Changed this
         //AddTextPrinterParameterized4(sTopBarWindowId, FONT_NORMAL_COPY_1, 4, 1, 0, 0, color, 0, string);
-        width2 = GetStringWidth(FONT_SMALL, string, 0);
+        width2 = GetStringWidthRTL(FONT_NORMAL_COPY_1, string, 0);
         AddTextPrinterParameterized4(sTopBarWindowId, FONT_NORMAL_COPY_1, 4 + width2, 1, 0, 0, color, 0, string);
         if (copyToVram)
             CopyWindowToVram(sTopBarWindowId, COPYWIN_FULL);

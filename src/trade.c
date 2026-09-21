@@ -2577,7 +2577,7 @@ static void DoQueuedActions(void)
 static void PrintTradeMessage(u8 messageId)
 {
     FillWindowPixelBuffer(0, PIXEL_FILL(1));
-    AddTextPrinterParameterized(0, FONT_NORMAL_COPY_2, sMessages[messageId], 0, 2, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(0, FONT_NORMAL_COPY_2, sMessages[messageId], RTL_ANCHOR_WINDOW(0), 2, TEXT_SKIP_DRAW, NULL);
     DrawTextBorderOuter(0, 0x014, 12);
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_FULL);
