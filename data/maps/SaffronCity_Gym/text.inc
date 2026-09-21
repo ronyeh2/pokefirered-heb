@@ -60,7 +60,7 @@ SaffronCity_Gym_Text_JohanIntro::
     .string "הכוח שלנו שלא נראה מפחיד אותך?$"
 
 SaffronCity_Gym_Text_JohanDefeat::
-    .string "לא ראיתי את זה בא!\p"
+    .string "לא ראיתי את זה בא!$"
 
 SaffronCity_Gym_Text_JohanPostBattle::
     .string "פוקימוני פסיכי מפחדים רק מרוחות\n"

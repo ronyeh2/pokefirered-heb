@@ -11,7 +11,7 @@ CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
     .string "אנחנו מתכננים לחקור את המערה\l"
     .string "שליד העיר סרוליאן.\p"
     .string "מאת: צוות מחקר הפוקימון\p"
-    .string "...\p"
+    .string "...$"
 
 CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe::
     .string "מקטרת ענבר!$"

@@ -17,7 +17,7 @@ Route11_EastEntrance_2F_Text_GreatHereYouGo::
 
 Route11_EastEntrance_2F_Text_ReceivedItemfinderFromAide::
     .string "{PLAYER} קיבל את ה-{STR_VAR_2}\n"
-    .string "מהסייע.\l"
+    .string "מהסייע.$"
 
 Route11_EastEntrance_2F_Text_ExplainItemfinder::
     .string "יש פריטים על הקרקע שיכולים להיות\n"

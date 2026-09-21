@@ -87,10 +87,11 @@ Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
     .string "לך, תבדוק את המחשב שלי.$"
 
 Route25_SeaCottage_Text_TeleporterIsDisplayed::
-    .string "הטלפורטר מוצג על מסך המחשב.\n"
+    .string "הטלפורטר מוצג על מסך המחשב.$"
 
 Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator::
-    .string "{PLAYER} התחיל את מערכת הפרדת התאים של הטלפורטר.\n"
+    .string "{PLAYER} התחיל את מערכת הפרדת\n"
+    .string "התאים של הטלפורטר.$"
 
 Route25_SeaCottage_Text_BillsFavoriteMonList::
     .string "רשימת הפוקימונים המועדפים על ביל!$"

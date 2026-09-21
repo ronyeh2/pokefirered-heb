@@ -64,4 +64,4 @@ Route5_PokemonDayCare_Text_WantMeToTakeALookAtYours::
 
 Route5_PokemonDayCare_Text_CantAcceptMonWithHM::
     .string "מצטער, אבל אני לא יכול לקבל\n"
-    .string "פוקימון עם מהלך נסתר."
+    .string "פוקימון עם מהלך נסתר.$"

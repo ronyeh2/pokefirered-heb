@@ -129,7 +129,7 @@ Route12_Text_GiaIntro::
     .string "אם ננצח, אני אתחתן איתך!$"
 
 Route12_Text_GiaDefeat::
-    .string "גיה: אה, למה?\n"
+    .string "גיה: אה, למה?$"
 
 Route12_Text_GiaPostBattle::
     .string "גיה: ג'ס, אתה מטומטם!\n"

@@ -48,7 +48,8 @@ Text_MetronomeTeach::
     .string "אני אלמד אותך מהלך שווה.\p"
     .string "תלמד אותו לאחד הפוקימונים שלך\n"
     .string "ותראה בעצמך!\p"
-    .string "זה מהלך שנרקא פעמן.\n"
+    .string "זה מהלך שנקרא פעמן.\n"
+    .string "זה מעניין אותך?$"
 
 Text_MetronomeDeclined::
     .string "אני אומר לך, זה מהלך ממש כיף!$"

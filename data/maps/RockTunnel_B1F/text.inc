@@ -36,7 +36,7 @@ RockTunnel_B1F_Text_CooperPostBattle::
 
 RockTunnel_B1F_Text_SteveIntro::
     .string "אה… אתה יודע על קוספליי של\n"
-    .string "פוקימונים?"
+    .string "פוקימונים?$"
 
 RockTunnel_B1F_Text_SteveDefeat::
     .string "טוב, זהו.$"

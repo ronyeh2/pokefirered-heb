@@ -1,5 +1,5 @@
 CeladonCity_Condominiums_1F_Text_Meowth::
-    .string "מיאו: מיאו!"
+    .string "מיאו: מיאו!$"
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
     .string "אתה לא צריך לבזבז את כל הכסף שלך\n"
