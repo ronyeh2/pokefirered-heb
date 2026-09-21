@@ -209,7 +209,7 @@ const u8 gText_PlayedPokeFlute[] = _("ניגנת בחליל פוקימון.");
 const u8 gText_PokeFluteAwakenedMon[] = _("חליל הפוקימון העיר את\nהפוקימונים הישנים.{PAUSE_UNTIL_PRESS}");
 const u8 gText_TMCase[] = _("תיק מהלכים");
 const u8 gText_Close[] = _("סגור");
-const u8 gText_TMCaseWillBePutAway[] = _("תיק המכונות יאוחסן.");
+const u8 gText_TMCaseWillBePutAway[] = _("תיק המהלכים יאוחסן.");
 const u8 gText_FontSmall[] = _("{FONT_SMALL}");
 const u8 gText_FontNormal[] = _("{FONT_NORMAL}");
 const u8 gText_EmptySpace[] = _("  ");
@@ -910,7 +910,7 @@ const u8 gStartMenuDesc_Retire[] = _("פרוש ממשחק הספארי וחזו�
 
 #include "data/text/quest_log.h"
 
-const u8 gText_WasUsedOn[] = _(" שומש על\n");
+const u8 gText_WasUsedOn[] = _(" הופעל על\n");
 const u8 gText_Period[] = _(".");
 const u8 gText_LevelRoseTo[] = _(" עלה לרמה\n");
 const u8 gText_Period2[] = _(".");
@@ -977,7 +977,7 @@ const u8 gText_Pokedex[] = _("פוקדקס");
 const u8 gTextJPDummy_Hiki[] = _("");
 const u8 gText_Badges[] = _("תגים");
 const u8 gTextJPDummy_Ko[] = _("");
-const u8 gText_Register[] = _("רישום");
+const u8 gText_Register[] = _("רשום");
 const u8 gText_HatchedFromEgg[] = _("{STR_VAR_1} בקע מהביצה!");
 const u8 gText_NickHatchPrompt[] = _("האם תרצה לתת כינוי\nל{STR_VAR_1} שזה עתה בקע?");
 const u8 gString_OutOfCoins[] = _("נגמרו לך המטבעות.\nהמשחק נגמר!");

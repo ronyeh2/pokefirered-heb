@@ -50,9 +50,9 @@ static const u8 sText_Trainer1WinText[] = _("{B_TRAINER1_WIN_TEXT}");
 static const u8 sText_Trainer1RecallPkmn2[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON2_NAME}, חזרו!");
 static const u8 sText_Trainer1RecallBoth[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON1_NAME} ו\n{B_OPPONENT_MON2_NAME}, חזרו!");
 static const u8 sText_Trainer2WinText[] = _("{B_TRAINER2_WIN_TEXT}");
-static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} קיבל{B_BUFF2}\n{B_BUFF3} נקודות נסיון!\p");
+static const u8 sText_PkmnGainedEXP[] = _("{B_BUFF1} קיבל{B_BUFF2}\n{B_BUFF3} נקודות ניסיון!\p");
 static const u8 sText_EmptyString4[] = _("");
-static const u8 sText_ABoosted[] = _(" בונוס");
+static const u8 sText_ABoosted[] = _(" בונוס של");
 static const u8 sText_PkmnGrewToLv[] = _("{B_BUFF1} עלה\nלרמה {B_BUFF2}!{WAIT_SE}\p");
 static const u8 sText_PkmnLearnedMove[] = _("{B_BUFF1} למד\n{B_BUFF2}!{WAIT_SE}\p");
 static const u8 sText_TryToLearnMove1[] = _("{B_BUFF1} מנסה\nללמוד {B_BUFF2}.\p");
@@ -107,8 +107,8 @@ static const u8 sText_PkmnIsParalyzed[] = _("{B_ATK_NAME_WITH_PREFIX} משותק
 static const u8 sText_PkmnIsAlreadyParalyzed[] = _("{B_DEF_NAME_WITH_PREFIX} כבר\nמשותק!");
 static const u8 sText_PkmnHealedParalysis[] = _("{B_DEF_NAME_WITH_PREFIX}\nהחלים משיתוק!");
 static const u8 sText_PkmnDreamEaten[] = _("החלום של {B_DEF_NAME_WITH_PREFIX}\nנאכל!");
-static const u8 sText_StatsWontIncrease[] = _("ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}\nלא יעלה יותר!");
-static const u8 sText_StatsWontDecrease[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\nלא ירד יותר!");
+static const u8 sText_StatsWontIncrease[] = _("לא ניתן להעלות יותר\nאת ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}!");
+static const u8 sText_StatsWontDecrease[] = _("לא ניתן להוריד יותר\nאת ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_TeamStoppedWorking[] = _("ה{B_BUFF1} של הקבוצה שלך\nהפסיק לעבוד!");
 static const u8 sText_FoeStoppedWorking[] = _("ה{B_BUFF1} של היריב\nהפסיק לעבוד!");
 static const u8 sText_PkmnIsConfused[] = _("{B_ATK_NAME_WITH_PREFIX}\nמבולבל!");
@@ -186,13 +186,13 @@ static const u8 sText_PkmnMustRecharge[] = _("{B_ATK_NAME_WITH_PREFIX} חייב\
 static const u8 sText_PkmnRageBuilding[] = _("הזעם של {B_DEF_NAME_WITH_PREFIX}\nמתגבר!");
 static const u8 sText_PkmnMoveWasDisabled[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\nהושבת!");
 static const u8 sText_PkmnMoveDisabledNoMore[] = _("{B_ATK_NAME_WITH_PREFIX} כבר לא\nמושבת!");
-static const u8 sText_PkmnGotEncore[] = _("{B_DEF_NAME_WITH_PREFIX} קיבל\nעוד!");
-static const u8 sText_PkmnEncoreEnded[] = _("ה'עוד' של {B_ATK_NAME_WITH_PREFIX}\nנגמר!");
+static const u8 sText_PkmnGotEncore[] = _("{B_DEF_NAME_WITH_PREFIX} קיבל\nהדרן!");
+static const u8 sText_PkmnEncoreEnded[] = _("ההדרן של {B_ATK_NAME_WITH_PREFIX}\nנגמר!");
 static const u8 sText_PkmnTookAim[] = _("{B_ATK_NAME_WITH_PREFIX} כיוון אל\n{B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnSketchedMove[] = _("{B_ATK_NAME_WITH_PREFIX} שירטט\nאת {B_BUFF1}!");
 static const u8 sText_PkmnTryingToTakeFoe[] = _("{B_ATK_NAME_WITH_PREFIX} מנסה\nלקחת את היריב איתו!");
 static const u8 sText_PkmnTookFoe[] = _("{B_DEF_NAME_WITH_PREFIX} לקח את\n{B_ATK_NAME_WITH_PREFIX} איתו!");
-static const u8 sText_PkmnReducedPP[] = _("הורדת {B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\nב{B_BUFF2}!");
+static const u8 sText_PkmnReducedPP[] = _("ל{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\nירדו {B_BUFF2} נקודות כוח!");
 static const u8 sText_PkmnStoleItem[] = _("{B_ATK_NAME_WITH_PREFIX} גנב\nאת {B_LAST_ITEM} של {B_DEF_NAME_WITH_PREFIX}!");
 static const u8 sText_TargetCantEscapeNow[] = _("{B_DEF_NAME_WITH_PREFIX} לא יכול\nלברוח עכשיו!");
 static const u8 sText_PkmnFellIntoNightmare[] = _("{B_DEF_NAME_WITH_PREFIX} נפל\nלסיוט!");
@@ -214,7 +214,7 @@ static const u8 sText_PkmnShedLeechSeed[] = _("{B_ATK_NAME_WITH_PREFIX} השיל
 static const u8 sText_PkmnBlewAwaySpikes[] = _("{B_ATK_NAME_WITH_PREFIX} העיף\nאת הקוצים!");
 static const u8 sText_PkmnFledFromBattle[] = _("{B_ATK_NAME_WITH_PREFIX} ברח\nמהקרב!");
 static const u8 sText_PkmnForesawAttack[] = _("{B_ATK_NAME_WITH_PREFIX} חזה\nהתקפה!");
-static const u8 sText_PkmnTookAttack[] = _("{B_DEF_NAME_WITH_PREFIX} ספג את\nההתקפה {B_BUFF1}!");
+static const u8 sText_PkmnTookAttack[] = _("{B_DEF_NAME_WITH_PREFIX} ספג את\nמתקפת {B_BUFF1}!");
 static const u8 sText_PkmnChoseXAsDestiny[] = _("{B_ATK_NAME_WITH_PREFIX} בחר\nב{B_CURRENT_MOVE} כגורלו!");
 static const u8 sText_PkmnAttack[] = _("ההתקפה של {B_BUFF1}!");
 static const u8 sText_PkmnCenterAttention[] = _("{B_ATK_NAME_WITH_PREFIX} הפך למרכז\nתשומת הלב!");
@@ -286,29 +286,29 @@ static const u8 sText_PkmnsXWhippedUpSandstorm[] = _("ה{B_SCR_ACTIVE_ABILITY} �
 static const u8 sText_PkmnsXIntensifiedSun[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nהגביר את השמש!");
 static const u8 sText_PkmnsXPreventsYLoss[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nמונע אובדן {B_BUFF1}!");
 static const u8 sText_PkmnsXInfatuatedY[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nהתאהב ב{B_ATK_NAME_WITH_PREFIX}!");
-static const u8 sText_PkmnsXMadeYIneffective[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nהפך את {B_CURRENT_MOVE} לאינו תועלתי!");
+static const u8 sText_PkmnsXMadeYIneffective[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nהפך את {B_CURRENT_MOVE} לחסר תועלת!");
 static const u8 sText_PkmnsXCuredYProblem[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nרפא את בעייתו של {B_BUFF1}!");
-static const u8 sText_ItSuckedLiquidOoze[] = _("הוסיף את\nהנוזל הנוזל!");
-static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} התמודד!");
-static const u8 sText_PkmnsXTookAttack[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nסיפק את המכה!");
-const u8 gText_PkmnsXPreventsSwitching[] = _("ה{B_BUFF1} של {B_LAST_ABILITY}\nמונע החלפה!\p");
+static const u8 sText_ItSuckedLiquidOoze[] = _("הוא שאב את\nהנוזל הרעיל!");
+static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} השתנה!");
+static const u8 sText_PkmnsXTookAttack[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nספג את המכה!");
+const u8 gText_PkmnsXPreventsSwitching[] = _("ה{B_LAST_ABILITY} של {B_BUFF1}\nמונע החלפה!\p");
 static const u8 sText_PreventedFromWorking[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nמנע מ{B_SCR_ACTIVE_NAME_WITH_PREFIX}\nלהשתמש ב{B_BUFF1}!");
-static const u8 sText_PkmnsXMadeItIneffective[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nהפך את זה לאינו תועלתי!");
-static const u8 sText_PkmnsXPreventsFlinching[] = _("ה{B_EFF_ABILITY} של {B_EFF_NAME_WITH_PREFIX}\nמונע מתיישבות!");
+static const u8 sText_PkmnsXMadeItIneffective[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nהפך את זה לחסר תועלת!");
+static const u8 sText_PkmnsXPreventsFlinching[] = _("ה{B_EFF_ABILITY} של {B_EFF_NAME_WITH_PREFIX}\nמונע רתיעה!");
 static const u8 sText_PkmnsXPreventsYsZ[] = _("ה{B_ATK_ABILITY} של {B_ATK_NAME_WITH_PREFIX}\nמונע מ{B_DEF_NAME_WITH_PREFIX}\nלהשתמש ב{B_DEF_ABILITY}!");
 static const u8 sText_PkmnsXCuredItsYProblem[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nרפא את בעייתו של {B_BUFF1}!");
 static const u8 sText_PkmnsXHadNoEffectOnY[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nלא השפיע על {B_EFF_NAME_WITH_PREFIX}!");
 static const u8 sText_TooScaredToMove[] = _("{B_ATK_NAME_WITH_PREFIX} מחובש מפחד!");
 static const u8 sText_GetOutGetOut[] = _("רוח: יצאו… יצאו…");
-static const u8 sText_StatSharply[] = _("מאוד ");
-const u8 gBattleText_Rose[] = _("עלתה!");
-static const u8 sText_StatHarshly[] = _("חמור ");
-static const u8 sText_StatFell[] = _("ירדה!");
-static const u8 sText_AttackersStatRose[] = _("ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}");
-const u8 gText_DefendersStatRose[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}");
-static const u8 sText_UsingItemTheStatOfPkmnRose[] = _("באמצעות {B_LAST_ITEM}, ה{B_BUFF1}\nשל {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_BUFF2}");
-static const u8 sText_AttackersStatFell[] = _("ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}");
-static const u8 sText_DefendersStatFell[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}");
+static const u8 sText_StatSharply[] = _(" מאוד");
+const u8 gBattleText_Rose[] = _("עלתה");
+static const u8 sText_StatHarshly[] = _(" באופן חמור");
+static const u8 sText_StatFell[] = _("ירדה");
+static const u8 sText_AttackersStatRose[] = _("ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}!");
+const u8 gText_DefendersStatRose[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}!");
+static const u8 sText_UsingItemTheStatOfPkmnRose[] = _("באמצעות {B_LAST_ITEM}, ה{B_BUFF1}\nשל {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_BUFF2}!");
+static const u8 sText_AttackersStatFell[] = _("ה{B_BUFF1} של {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}!");
+static const u8 sText_DefendersStatFell[] = _("ה{B_BUFF1} של {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}!");
 static const u8 sText_StatsWontIncrease2[] = _("הסטטוס של {B_ATK_NAME_WITH_PREFIX}\nלא יעלה עוד!");
 static const u8 sText_StatsWontDecrease2[] = _("הסטטוס של {B_DEF_NAME_WITH_PREFIX}\nלא יירד עוד!");
 static const u8 sText_CriticalHit[] = _("מכה קריטית!");
@@ -330,51 +330,51 @@ static const u8 sText_PlayerBattledToDrawLinkTrainer[] = _("{PLAYER} הגיע ל
 static const u8 sText_PlayerBattledToDrawVsTwo[] = _("{PLAYER} הגיע לתיקו נגד\n{B_LINK_OPPONENT1_NAME} ונגד {B_LINK_OPPONENT2_NAME}!");
 static const u8 sText_WildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} ברח!");
 static const u8 sText_TwoWildFled[] = _("{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} ו\n{B_LINK_OPPONENT2_NAME} ברחו!");
-static const u8 sText_NoRunningFromTrainers[] = _("לא! אין בריחה\nמקרב נגד מאמין!\p");
+static const u8 sText_NoRunningFromTrainers[] = _("לא! אין בריחה\nמקרב נגד מאמן!\p");
 static const u8 sText_CantEscape[] = _("לא ניתן לברוח!\p");
 static const u8 sText_DontLeaveBirch[] = _(""); // Dummied
 static const u8 sText_ButNothingHappened[] = _("אבל לא קרה דבר!");
 static const u8 sText_ButItFailed[] = _("אבל זה נכשל!");
-static const u8 sText_ItHurtConfusion[] = _("הוא נפגע בבלבול שלו\nופגע בעצמו!");
-static const u8 sText_MirrorMoveFailed[] = _("המהלך המראה נכשל!");
-static const u8 sText_StartedToRain[] = _("התחיל לגשם!");
-static const u8 sText_DownpourStarted[] = _("התחיל גשם מורד!"); // corresponds to DownpourText in pokegold and pokecrystal and is used by Rain Dance in GSC
-static const u8 sText_RainContinues[] = _("הגשם ממשיך להמשך.");
-static const u8 sText_DownpourContinues[] = _("הגשם המורד ממשיך."); // unused
+static const u8 sText_ItHurtConfusion[] = _("הוא פגע בעצמו\nמרוב בלבול!");
+static const u8 sText_MirrorMoveFailed[] = _("העתקת המהלך נכשלה!");
+static const u8 sText_StartedToRain[] = _("התחיל לרדת גשם!");
+static const u8 sText_DownpourStarted[] = _("החל גשם זלעפות!"); // corresponds to DownpourText in pokegold and pokecrystal and is used by Rain Dance in GSC
+static const u8 sText_RainContinues[] = _("הגשם ממשיך לרדת.");
+static const u8 sText_DownpourContinues[] = _("גשם הזלעפות ממשיך."); // unused
 static const u8 sText_RainStopped[] = _("הגשם הפסיק.");
 static const u8 sText_SandstormBrewed[] = _("סופת חול התחילה!");
-static const u8 sText_SandstormRages[] = _("סופת החול מתרועעת.");
-static const u8 sText_SandstormSubsided[] = _("סופת החול התיישבה.");
-static const u8 sText_SunlightGotBright[] = _("השמש התארכה!");
-static const u8 sText_SunlightStrong[] = _("השמש חזקה.");
-static const u8 sText_SunlightFaded[] = _("השמש התעלמה.");
-static const u8 sText_StartedHail[] = _("התחיל להגשם ברד!");
-static const u8 sText_HailContinues[] = _("הברד ממשיך להגשם.");
+static const u8 sText_SandstormRages[] = _("סופת החול משתוללת.");
+static const u8 sText_SandstormSubsided[] = _("סופת החול שככה.");
+static const u8 sText_SunlightGotBright[] = _("אור השמש התחזק!");
+static const u8 sText_SunlightStrong[] = _("אור השמש חזק.");
+static const u8 sText_SunlightFaded[] = _("אור השמש דעך.");
+static const u8 sText_StartedHail[] = _("התחיל לרדת ברד!");
+static const u8 sText_HailContinues[] = _("הברד ממשיך לרדת.");
 static const u8 sText_HailStopped[] = _("הברד הפסיק.");
-static const u8 sText_FailedToSpitUp[] = _("אבל זה נכשל להשתמש\nבהשתקפה!");
-static const u8 sText_FailedToSwallow[] = _("אבל זה נכשל להשתמש\nבהבלעה!");
+static const u8 sText_FailedToSpitUp[] = _("אבל היריקה נכשלה!");
+static const u8 sText_FailedToSwallow[] = _("אבל הבליעה נכשלה!");
 static const u8 sText_WindBecameHeatWave[] = _("הרוח הפכה לגל\nשל חום!");
 static const u8 sText_StatChangesGone[] = _("כל שינויי הסטטוס\nנמחקו!");
-static const u8 sText_CoinsScattered[] = _("מטבעות זרזרו בכל מקום!");
+static const u8 sText_CoinsScattered[] = _("מטבעות התפזרו בכל מקום!");
 static const u8 sText_TooWeakForSubstitute[] = _("הוא חלש מדי כדי ליצור\nמחליף!");
-static const u8 sText_SharedPain[] = _("המתקרבים שיתפו\nאת הכאב!");
-static const u8 sText_BellChimed[] = _("צלצל התקע!");
-static const u8 sText_FaintInThree[] = _("כל הפוקמונים המשפיעים\nייכו בשלושה תורות!");
+static const u8 sText_SharedPain[] = _("הלוחמים חלקו\nאת הכאב!");
+static const u8 sText_BellChimed[] = _("פעמון צלצל!");
+static const u8 sText_FaintInThree[] = _("כל הפוקימונים המושפעים\nיתעלפו בתוך שלושה תורות!");
 static const u8 sText_NoPPLeft[] = _("אין נקודות כוח נותרות\nלמהלך זה!\p");
 static const u8 sText_ButNoPPLeft[] = _("אבל אין נקודות כוח נותרות\nלמהלך!");
-static const u8 sText_PkmnIgnoresAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} התעלם\nמהפקדה בשינה!");
-static const u8 sText_PkmnIgnoredOrders[] = _("{B_ATK_NAME_WITH_PREFIX} התעלם\nמהפקדות!");
-static const u8 sText_PkmnBeganToNap[] = _("{B_ATK_NAME_WITH_PREFIX} התחיל\nלשנוא!");
-static const u8 sText_PkmnLoafing[] = _("{B_ATK_NAME_WITH_PREFIX} מתענג\nבמקום להתקדם!");
+static const u8 sText_PkmnIgnoresAsleep[] = _("{B_ATK_NAME_WITH_PREFIX} התעלם\nמהפקודות והמשיך לישון!");
+static const u8 sText_PkmnIgnoredOrders[] = _("{B_ATK_NAME_WITH_PREFIX} התעלם\nמהפקודות!");
+static const u8 sText_PkmnBeganToNap[] = _("{B_ATK_NAME_WITH_PREFIX} התחיל\nלנמנם!");
+static const u8 sText_PkmnLoafing[] = _("{B_ATK_NAME_WITH_PREFIX} מתבטל\nבמקום להילחם!");
 static const u8 sText_PkmnWontObey[] = _("{B_ATK_NAME_WITH_PREFIX} לא ישמע\nלך!");
-static const u8 sText_PkmnTurnedAway[] = _("{B_ATK_NAME_WITH_PREFIX} פנה את הגב!");
-static const u8 sText_PkmnPretendNotNotice[] = _("{B_ATK_NAME_WITH_PREFIX} מתנהג\nכאילו לא שים לב!");
+static const u8 sText_PkmnTurnedAway[] = _("{B_ATK_NAME_WITH_PREFIX} הפנה את הגב!");
+static const u8 sText_PkmnPretendNotNotice[] = _("{B_ATK_NAME_WITH_PREFIX} מתנהג\nכאילו אינו שם לב!");
 static const u8 sText_EnemyAboutToSwitchPkmn[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME} עומד\nלשלוח את {B_BUFF2}.\pהאם {B_PLAYER_NAME} רוצה\nלהחליף פוקימונים?");
 static const u8 sText_PkmnLearnedMove2[] = _("{B_ATK_NAME_WITH_PREFIX} למד\n{B_BUFF1}!");
 static const u8 sText_PlayerDefeatedLinkTrainerTrainer1[] = _("ניצחת את\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME}!\p");
 static const u8 sText_ThrewARock[] = _("{B_PLAYER_NAME} הטיל אבן\nעל {B_OPPONENT_MON1_NAME}!");
-static const u8 sText_ThrewSomeBait[] = _("{B_PLAYER_NAME} הטיל מכשיש\nעל {B_OPPONENT_MON1_NAME}!");
-static const u8 sText_PkmnWatchingCarefully[] = _("{B_OPPONENT_MON1_NAME} מתרגל\nבזהירות!");
+static const u8 sText_ThrewSomeBait[] = _("{B_PLAYER_NAME} הטיל פיתיון\nעל {B_OPPONENT_MON1_NAME}!");
+static const u8 sText_PkmnWatchingCarefully[] = _("{B_OPPONENT_MON1_NAME} מתבונן\nבזהירות!");
 static const u8 sText_PkmnIsAngry[] = _("{B_OPPONENT_MON1_NAME} כועס!");
 static const u8 sText_PkmnIsEating[] = _("{B_OPPONENT_MON1_NAME} אוכל!");
 static const u8 sText_OutOfSafariBalls[] = _("{PLAY_SE SE_DING_DONG}כרוז: נגמרו לך\nכדורי ספארי! המשחק נגמר!\p");
@@ -392,11 +392,11 @@ static const u8 sText_TwoLinkTrainersWantToBattle[] = _("{B_LINK_OPPONENT1_NAME}
 static const u8 sText_Trainer1SentOutPkmn[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME} שלח\nאת {B_OPPONENT_MON1_NAME}!{PAUSE 60}");
 static const u8 sText_Trainer1SentOutTwoPkmn[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME} שלח\nאת {B_OPPONENT_MON1_NAME} ואת {B_OPPONENT_MON2_NAME}!{PAUSE 60}");
 static const u8 sText_Trainer1SentOutPkmn2[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME} שלח\nאת {B_BUFF1}!");
-static const u8 sText_LinkTrainerSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח בחור\n{B_OPPONENT_MON1_NAME}!");
-static const u8 sText_LinkTrainerSentOutTwoPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח בחור\n{B_OPPONENT_MON1_NAME} ואת {B_OPPONENT_MON2_NAME}!");
-static const u8 sText_TwoLinkTrainersSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח בחור\n{B_LINK_OPPONENT_MON1_NAME}!\n{B_LINK_OPPONENT2_NAME} שלח בחור {B_LINK_OPPONENT_MON2_NAME}!");
-static const u8 sText_LinkTrainerSentOutPkmn2[] = _("{B_LINK_OPPONENT1_NAME} שלח בחור\n{B_BUFF1}!");
-static const u8 sText_LinkTrainerMultiSentOutPkmn[] = _("{B_LINK_SCR_TRAINER_NAME} שלח בחור\n{B_BUFF1}!");
+static const u8 sText_LinkTrainerSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח את\n{B_OPPONENT_MON1_NAME}!");
+static const u8 sText_LinkTrainerSentOutTwoPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח את\n{B_OPPONENT_MON1_NAME} ואת {B_OPPONENT_MON2_NAME}!");
+static const u8 sText_TwoLinkTrainersSentOutPkmn[] = _("{B_LINK_OPPONENT1_NAME} שלח את\n{B_LINK_OPPONENT_MON1_NAME}!\n{B_LINK_OPPONENT2_NAME} שלח את {B_LINK_OPPONENT_MON2_NAME}!");
+static const u8 sText_LinkTrainerSentOutPkmn2[] = _("{B_LINK_OPPONENT1_NAME} שלח את\n{B_BUFF1}!");
+static const u8 sText_LinkTrainerMultiSentOutPkmn[] = _("{B_LINK_SCR_TRAINER_NAME} שלח את\n{B_BUFF1}!");
 static const u8 sText_GoPkmn[] = _("צא! {B_PLAYER_MON1_NAME}!");
 static const u8 sText_GoTwoPkmn[] = _("צאו! {B_PLAYER_MON1_NAME} ו-\n{B_PLAYER_MON2_NAME}!");
 static const u8 sText_GoPkmn2[] = _("צא! {B_BUFF1}!");
@@ -430,7 +430,7 @@ static const u8 sText_HP2[] = _("נ”ח");
 static const u8 sText_Attack2[] = _("התקפה");
 static const u8 sText_Defense2[] = _("הגנה");
 static const u8 sText_Speed[] = _("מהירות");
-static const u8 sText_SpAtk2[] = _("התק' מיוחד");
+static const u8 sText_SpAtk2[] = _("התק' מיוחדת");
 static const u8 sText_SpDef2[] = _("הגנ' מיוחדת");
 static const u8 sText_Accuracy[] = _("דיוק");
 static const u8 sText_Evasiveness[] = _("התחמקות");
@@ -1282,7 +1282,15 @@ const u8 gText_WhatWillPlayerThrow[] = _("מה יזרוק {B_PLAYER_NAME}?");
 const u8 gText_WhatWillOldManDo[] = _("מה יעשה\nהזקן?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}המתן בקישור...");
 const u8 gText_BattleMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}תיק{CLEAR_TO 36}הילחם\nלברוח{CLEAR_TO 36}פוקימון");
-const u8 gText_SafariZoneMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}כדור{CLEAR_TO 56}פיתיון\nאבן{CLEAR_TO 56}לברוח");
+// Under the RTL renderer the word written FIRST lands at the right anchor and
+// {CLEAR_TO n} jumps the pen left to window-absolute x = n, so the word that has to
+// appear in the physical LEFT column must be written SECOND. Cursor cells are fixed
+// at window-relative -8 (positions 0/2) and 48..55 (positions 1/3), so:
+//   pos 0 BALL (כדור)   -> left column,  pos 1 BAIT   (פיתיון) -> right column
+//   pos 2 ROCK (אבן)    -> left column,  pos 3 ESCAPE (לברוח)  -> right column
+// 36, not the upstream 56, for the same reason gText_BattleMenu above uses 36:
+// with 56 the left column starts at 39 and runs under the 48..55 cursor cell.
+const u8 gText_SafariZoneMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}פיתיון{CLEAR_TO 36}כדור\nלברוח{CLEAR_TO 36}אבן");
 const u8 gText_MoveInterfacePP[] = _("נכ");
 const u8 gText_MoveInterfaceType[] = _("סוג/");
 const u8 gText_MoveInterfaceDynamicColors[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}");
@@ -1294,10 +1302,10 @@ static const u8 sText_RightArrow2[] = _("{RIGHT_ARROW_2}");
 static const u8 sText_Plus[] = _("{PLUS}");
 static const u8 sText_Dash[] = _("-");
 
-static const u8 sText_MaxHP[] = _("{FONT_SMALL}מקס{FONT_NORMAL} נ”ח");
+static const u8 sText_MaxHP[] = _("{FONT_SMALL}מקס.{FONT_NORMAL} נ”ח");
 static const u8 sText_Attack[] = _("התקפה ");
 static const u8 sText_Defense[] = _("הגנה  ");
-static const u8 sText_SpAtk[] = _("התק' מיוחד");
+static const u8 sText_SpAtk[] = _("התק' מיוחדת");
 static const u8 sText_SpDef[] = _("הגנ' מיוחדת");
 
 // Unused
@@ -1325,7 +1333,7 @@ const u8 gText_BattleTowerBan_Space[] = _("  ");
 const u8 gText_BattleTowerBan_Newline1[] = _("\n");
 const u8 gText_BattleTowerBan_Newline2[] = _("\n");
 const u8 gText_BattleTowerBan_Is1[] = _(" הוא");
-const u8 gText_BattleTowerBan_Is2[] = _(" הוא");
+const u8 gText_BattleTowerBan_Is2[] = _(" הם");
 const u8 gText_BadEgg[] = _("ביצה רעה");
 const u8 gText_BattleWallyName[] = _("ולי");
 const u8 gText_Win[] = _("{HIGHLIGHT 0}ניצחון");
@@ -1353,7 +1361,7 @@ const u8 gText_ADragonMove[] = _("מהלך דרקון");
 const u8 gText_ADarkMove[] = _("מהלך אופל");
 const u8 gText_TimeBoard[] = _("לוח זמנים");
 const u8 gText_ClearTime[] = _("זמן סיום");
-const u8 gText_XMinYZSec[] = _("{STR_VAR_1}דק' {STR_VAR_2}.{STR_VAR_3}שנ'");
+const u8 gText_XMinYZSec[] = _("{STR_VAR_1}דק' {STR_VAR_3}.{STR_VAR_2}שנ'");
 const u8 gText_Unused_1F[] = _("ק1");
 const u8 gText_Unused_2F[] = _("ק2");
 const u8 gText_Unused_3F[] = _("ק3");
@@ -2228,7 +2236,24 @@ static void ExpandBattleTextBuffPlaceholders(const u8 *src, u8 *dst)
         {
         case B_BUFF_STRING: // battle string
             hword = T1_READ_16(&src[srcId + 1]);
-            StringAppend(dst, gBattleStringsTable[hword - BATTLESTRINGS_TABLE_START]);
+            // Ofir style prepend, same trick as B_BUFF_MON_NICK_WITH_PREFIX below.
+            // The stat-change builders emit the intensifier (STATSHARPLY /
+            // STATHARSHLY) BEFORE the verb, which is English word order. Hebrew
+            // wants "<verb> <adverb>", so the verb is inserted in front of whatever
+            // is already buffered instead of after it. When the verb is the only
+            // element (a one stage change) dst is still empty and this is identical
+            // to the plain append. The closing "!" lives in the message templates
+            // (sText_AttackersStatRose and friends) so that both forms end correctly.
+            if (hword == STRINGID_STATROSE || hword == STRINGID_STATFELL)
+            {
+                StringCopy(temp, gBattleStringsTable[hword - BATTLESTRINGS_TABLE_START]);
+                StringAppend(temp, dst);
+                StringCopy(dst, temp);
+            }
+            else
+            {
+                StringAppend(dst, gBattleStringsTable[hword - BATTLESTRINGS_TABLE_START]);
+            }
             srcId += 3;
             break;
         case B_BUFF_NUMBER: // int to string

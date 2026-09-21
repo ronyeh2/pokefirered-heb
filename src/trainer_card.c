@@ -1278,12 +1278,19 @@ static void PrintProfilePhraseOnCard(void)
 
 static void BufferNameForCardBack(void)
 {
-    StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_NAME], sTrainerCardDataPtr->trainerCard.rse.playerName);
-    ConvertInternationalString(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_NAME], sTrainerCardDataPtr->language);
+    u8 *dst = sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_NAME];
+
+    // Ofir style prepend. The English source was "<NAME>'s TRAINER CARD", a suffix,
+    // so the phrase was appended after the name. gText_Var1sTrainerCard is the Hebrew
+    // "<phrase> של " and the possessor follows it, so the phrase has to be written
+    // first and the name copied in after it; otherwise the card back reads
+    // "RONכרטיס מאמן של " with the name glued on the wrong side.
+    // StringCopy returns the terminator, so the second copy lands right after it.
     if (sTrainerCardDataPtr->cardType == CARD_TYPE_RSE)
-    {
-        StringAppend(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_NAME], gText_Var1sTrainerCard);
-    }
+        dst = StringCopy(dst, gText_Var1sTrainerCard);
+
+    StringCopy(dst, sTrainerCardDataPtr->trainerCard.rse.playerName);
+    ConvertInternationalString(dst, sTrainerCardDataPtr->language);
 }
 
 static void PrintNameOnCardBack(void)

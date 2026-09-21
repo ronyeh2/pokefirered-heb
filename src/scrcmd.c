@@ -1630,29 +1630,21 @@ bool8 ScrCmd_bufferitemname(struct ScriptContext * ctx)
     return FALSE;
 }
 
-static const u8 sText_S[] = _("S");
-static const u8 sText_IES[] = _("IES");
-
 bool8 ScrCmd_bufferitemnameplural(struct ScriptContext * ctx)
 {
     u8 stringVarIndex = ScriptReadByte(ctx);
     u16 itemId = VarGet(ScriptReadHalfword(ctx));
-    u16 quantity = VarGet(ScriptReadHalfword(ctx));
+
+    // The quantity operand is still consumed so the script pointer stays in sync,
+    // but nothing is done with it any more. Hebrew item names do not inflect for
+    // number: the original appended the English "S" to Poke Balls and "IES" to
+    // berries, and the berry branch also overwrote the name's last Hebrew letter
+    // first, so buying two Oran Berries printed "פירות אורIES". The count is
+    // already shown separately by {STR_VAR_1}, so the bare name is right for
+    // every quantity.
+    ScriptReadHalfword(ctx);
 
     CopyItemName(itemId, sScriptStringVars[stringVarIndex]);
-    if (itemId == ITEM_POKE_BALL && quantity >= 2)
-        StringAppend(sScriptStringVars[stringVarIndex], sText_S);
-    else if (itemId >= FIRST_BERRY_INDEX && itemId < LAST_BERRY_INDEX && quantity >= 2)
-    {
-        u16 strlength = StringLength(sScriptStringVars[stringVarIndex]);
-        if (strlength != 0)
-        {
-            u8 * endptr = sScriptStringVars[stringVarIndex] + strlength;
-            endptr[-1] = EOS;
-            StringAppend(sScriptStringVars[stringVarIndex], sText_IES);
-        }
-    }
-
     return FALSE;
 }
 
