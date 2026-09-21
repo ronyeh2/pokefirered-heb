@@ -882,7 +882,7 @@ Text_GiveNicknameToReceivedMon::
 	.string "{STR_VAR_2} you received?$"
 
 gText_PkmnFainted3::
-	.string "{STR_VAR_1} התעלף...\p"
+	.string "{STR_VAR_1} התעלף…\p"
 	.string "$"
 
 Text_WelcomeWantToHealPkmn::
@@ -915,13 +915,13 @@ Text_BigHoleInTheWall::
 	.string "おおきな　あなが　あいている！$"
 
 Text_WirelessClubUndergoingAdjustments::
-	.string "אני מצטער מאוד.\n"
+	.string "אני מצטערת מאוד.\n"
 	.string "מועדון הפוקימון האלחוטי\l"
 	.string "עובר התאמות כרגע.$"
 
 Text_AppearsToBeUndergoingAdjustments::
 	.string "נראה שהוא עובר\n"
-	.string "התאמות...$"
+	.string "התאמות…$"
 
 Text_HandedOverItem::
 	.string "{PLAYER} מסר את\n"
@@ -941,17 +941,17 @@ Text_CardKeyOpenedDoor::
 	.string "כרטיס המפתח פתח את הדלת!$"
 
 Text_ItNeedsCardKey::
-	.string "לא!\n"
+	.string "אוי לא!\n"
 	.string "צריך כרטיס מפתח!$"
 
 Text_AccessedProfOaksPC::
-	.string "התחברת למחשב של פרופ' אוק...\p"
+	.string "התחברת למחשב של פרופ' אוק…\p"
 	.string "נכנסת למערכת דירוג\n"
-	.string "הפוקידקס...$"
+	.string "הפוקדקס…$"
 
 Text_HavePokedexRated::
-	.string "האם תרצה לדרג את\n"
-	.string "הפוקידקס שלך?$"
+	.string "האם תרצה לקבל דירוג\n"
+	.string "לפוקדקס שלך?$"
 
 Text_ClosedLinkToProfOaksPC::
 	.string "סגרת את החיבור למחשב של פרופ' אוק.$"
@@ -983,14 +983,14 @@ Text_TheDoorIsClosed::
 	.string "ドアは　しまっている‥$"
 
 Text_TheDoorIsOpen::
-	.string "The door is open…$"
+	.string "הדלת פתוחה…$"
 
 	.include "data/text/pc_transfer.inc"
 	.include "data/text/white_out.inc"
 	.include "data/text/poke_mart.inc"
 
 Text_MonFlewAway::
-	.string "The {STR_VAR_1} flew away!$"
+	.string "{STR_VAR_1} עף משם!$"
 
 Text_TheresBedLetsRest::
 	.string "ベッドが　ある‥‥\n"

@@ -109,69 +109,69 @@ EventScript_GiveProfile:
 	end
 
 Text_IdLoveToHearYourProfile:
-	.string "Hi, glad to meet you!\p"
-	.string "…That's unfriendly of you.\n"
-	.string "How about saying hi back?\p"
-	.string "So, come on, tell me about\n"
-	.string "yourself.\p"
-	.string "I'd love to hear your profile!$"
+	.string "היי, נעים מאוד להכיר!\p"
+	.string "…זה ממש לא נחמד מצדך.\n"
+	.string "אולי תגיד גם אתה שלום?\p"
+	.string "אז נו, ספר לי קצת\n"
+	.string "על עצמך.\p"
+	.string "בא לי לשמוע את הפרופיל שלך!$"
 
 Text_TellMeWhatsYourProfile:
-	.string "Tell me something good about\n"
-	.string "yourself. What's your profile?$"
+	.string "ספר לי משהו טוב על עצמך.\n"
+	.string "מה הפרופיל שלך?$"
 
 Text_ExplainProfile:
-	.string "A profile is written using four\n"
-	.string "words or phrases.\p"
-	.string "There're plenty of words to choose\n"
-	.string "from for your profile.\p"
-	.string "The words and phrases are placed\n"
-	.string "in several convenient groups.\p"
-	.string "First, choose a group, then choose\n"
-	.string "a word or phrase.\p"
-	.string "…It's easier than it sounds.\n"
-	.string "Why don't you try it?$"
+	.string "פרופיל נכתב בעזרת ארבע\n"
+	.string "מילים או ביטויים.\p"
+	.string "יש המון מילים לבחור מהן\n"
+	.string "בשביל הפרופיל שלך.\p"
+	.string "המילים והביטויים מסודרים\n"
+	.string "בכמה קבוצות נוחות.\p"
+	.string "קודם בוחרים קבוצה, ואז\n"
+	.string "בוחרים מילה או ביטוי.\p"
+	.string "…זה קל יותר ממה שזה נשמע.\n"
+	.string "למה שלא תנסה?$"
 
 Text_WhatsYourProfile:
-	.string "What's your profile?$"
+	.string "מה הפרופיל שלך?$"
 
 Text_DontBeLikeThat:
-	.string "Aww… Don't be like that.\n"
-	.string "You can tell me your profile.$"
+	.string "אוף… אל תהיה כזה.\n"
+	.string "אתה יכול לספר לי את הפרופיל.$"
 
 Text_DecidedNotTo:
-	.string "Oh, you've decided not to?\n"
-	.string "You're fickle, aren't you?$"
+	.string "אה, החלטת שלא בכל זאת?\n"
+	.string "אתה ממש הפכפך, מה?$"
 
 Text_HiWeMeetAgain:
-	.string "Hi!\n"
-	.string "We meet again!$"
+	.string "היי!\n"
+	.string "נפגשנו שוב!$"
 
 Text_ChangeYourProfile:
-	.string "Would you like to change your\n"
-	.string "profile?$"
+	.string "רוצה לשנות את הפרופיל\n"
+	.string "שלך?$"
 
 Text_WhatAreYouLikeNow:
-	.string "What are you like now?\n"
-	.string "I'd really like to know.$"
+	.string "איזה בן אדם אתה עכשיו?\n"
+	.string "ממש מעניין אותי לדעת.$"
 
 Text_LikeProfileWayItIs:
-	.string "Okay, you like your profile the\n"
-	.string "way it is.\p"
-	.string "I think so, too.$"
+	.string "בסדר, אתה אוהב את הפרופיל\n"
+	.string "שלך כמו שהוא.\p"
+	.string "גם אני חושבת ככה.$"
 
 Text_ProfileSaysSomethingAboutYou:
-	.string "Hmhm…\p"
-	.string "Your profile really says something\n"
-	.string "about who you are.\p"
-	.string "Now that I know you better, it \n"
-	.string "makes us better friends than ever!$"
+	.string "הממ…\p"
+	.string "הפרופיל שלך באמת מספר\n"
+	.string "משהו על מי שאתה.\p"
+	.string "עכשיו כשאני מכירה אותך יותר,\n"
+	.string "אנחנו חברים טובים מתמיד!$"
 
 Text_HeardThatBefore:
-	.string "Oh, I've heard that before…\p"
-	.string "My cousin, who lives far away,\n"
-	.string "always used to say that, I think.$"
+	.string "אה, כבר שמעתי את זה…\p"
+	.string "נדמה לי שבן הדוד שלי,\n"
+	.string "שגר רחוק, תמיד אמר את זה.$"
 
 Text_TellMoreNextTime:
-	.string "Please tell me more about\n"
-	.string "yourself next time!$"
+	.string "בפעם הבאה ספר לי עוד\n"
+	.string "על עצמך, בבקשה!$"
