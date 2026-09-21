@@ -86,6 +86,21 @@ void FillWindowPixelBuffer8Bit(u8 windowId, u8 fillValue);
 void FillWindowPixelRect8Bit(u8 windowId, u8 fillValue, u16 x, u16 y, u16 width, u16 height);
 void BlitBitmapRectToWindow4BitTo8Bit(u8 windowId, const u8 *pixels, u16 srcX, u16 srcY, u16 srcWidth, int srcHeight, u16 destX, u16 destY, u16 rectWidth, u16 rectHeight, u8 paletteNum);
 
+// Hebrew text is laid out right-to-left: RenderText decrements currentX after
+// CopyGlyphToWindow has already blitted the glyph AT currentX, so a printer's x
+// is the FIRST glyph's left edge, not the string's right edge. A run that should
+// sit flush against a boundary therefore starts one glyph cell short of it.
+// (This is why the 26-tile dialogue box prints at 200 rather than 208.)
+#define RTL_GLYPH_CELL 8
+// Flush against the inner right edge of a window.
+#define RTL_ANCHOR_WINDOW(windowId) (GetWindowAttribute((windowId), WINDOW_WIDTH) * 8 - RTL_GLYPH_CELL)
+// Flush against an arbitrary right edge, in pixels (for scratch windows whose
+// contents are only partly copied out, e.g. the battle healthbox strips).
+#define RTL_ANCHOR_EDGE(rightEdgePx) ((rightEdgePx) - RTL_GLYPH_CELL)
+// Mirror of an upstream left-aligned column: an LTR run starting at `ltrX`
+// inside a window of `widthPx` occupies the same span measured from the right.
+#define RTL_MIRROR(widthPx, ltrX) ((widthPx) - (ltrX) - RTL_GLYPH_CELL)
+
 extern void *gWindowBgTilemapBuffers[];
 extern struct Window gWindows[];
 

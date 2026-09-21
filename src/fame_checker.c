@@ -1433,7 +1433,7 @@ static void InitListMenuTemplate(void)
     gFameChecker_ListMenuTemplate.maxShowed = 1;
     gFameChecker_ListMenuTemplate.windowId = FCWINDOWID_LIST;
     gFameChecker_ListMenuTemplate.header_X = 0;
-    gFameChecker_ListMenuTemplate.item_X = 56; // RTL: right edge of the 8-tile list window
+    gFameChecker_ListMenuTemplate.item_X = RTL_ANCHOR_EDGE(8 * 8); // 8-tile list window
     gFameChecker_ListMenuTemplate.cursor_X = 0;
     gFameChecker_ListMenuTemplate.upText_Y = 4;
     gFameChecker_ListMenuTemplate.cursorPal = 2;
@@ -1531,14 +1531,14 @@ static void FC_DoMoveCursor(s32 itemIndex, bool8 onInit)
     u16 who;
     ListMenuGetScrollAndRow(sFameCheckerData->listMenuTaskId, &listY, &cursorY);
     who = listY + cursorY;
-    AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 56, 14 * cursorY + 4, 0, 0, sTextColor_Green, 0, sListMenuItems[itemIndex].label);
+    AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, RTL_ANCHOR_WINDOW(FCWINDOWID_LIST), 14 * cursorY + 4, 0, 0, sTextColor_Green, 0, sListMenuItems[itemIndex].label);
     if (!onInit)
     {
         if (listY < sFameCheckerData->listMenuTopIdx2)
             sFameCheckerData->listMenuDrawnSelIdx++;
         else if (listY > sFameCheckerData->listMenuTopIdx2 && who != sFameCheckerData->numUnlockedPersons - 1)
             sFameCheckerData->listMenuDrawnSelIdx--;
-        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, 56, 14 * sFameCheckerData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sFameCheckerData->listMenuCurIdx].label);
+        AddTextPrinterParameterized4(FCWINDOWID_LIST, FONT_NORMAL, RTL_ANCHOR_WINDOW(FCWINDOWID_LIST), 14 * sFameCheckerData->listMenuDrawnSelIdx + 4, 0, 0, sTextColor_DkGrey, 0, sListMenuItems[sFameCheckerData->listMenuCurIdx].label);
 
     }
     sFameCheckerData->listMenuCurIdx = itemIndex;

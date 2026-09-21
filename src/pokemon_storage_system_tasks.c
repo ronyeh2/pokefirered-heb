@@ -2292,15 +2292,15 @@ static void PrintDisplayMonInfo(void)
     if (gStorage->boxOption != OPTION_MOVE_ITEMS)
     {
         for (i = 0, y = 0; i < 3; i++, y += 14)
-            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], 64, y, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], RTL_ANCHOR_WINDOW(0), y, TEXT_SKIP_DRAW, NULL);
 
-        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], 64, y + 2, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], RTL_ANCHOR_WINDOW(0), y + 2, TEXT_SKIP_DRAW, NULL);
     }
     else
     {
-        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], 64, 0, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(0, FONT_SMALL, gStorage->displayMonTexts[3], RTL_ANCHOR_WINDOW(0), 0, TEXT_SKIP_DRAW, NULL);
         for (i = 0, y = 15; i < 3; i++, y += 14)
-            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], 64, y, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(0, FONT_NORMAL, gStorage->displayMonTexts[i], RTL_ANCHOR_WINDOW(0), y, TEXT_SKIP_DRAW, NULL);
     }
 
     CopyWindowToVram(0, COPYWIN_GFX);

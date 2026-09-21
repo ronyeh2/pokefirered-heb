@@ -63,7 +63,7 @@ void DrawTextWindowAndBufferTiles(const u8 *string, void *dst, u8 zero1, u8 zero
         txtColor[0] = zero2;
     txtColor[1] = TEXT_DYNAMIC_COLOR_6;
     txtColor[2] = TEXT_DYNAMIC_COLOR_5;
-    AddTextPrinterParameterized4(windowId, FONT_NORMAL_COPY_1, bytesToBuffer * 32 - 8, 2, 0, 0, txtColor, -1, string);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL_COPY_1, RTL_ANCHOR_EDGE(bytesToBuffer * 32), 2, 0, 0, txtColor, -1, string);
 
     tileBytesToBuffer = bytesToBuffer;
     if (tileBytesToBuffer > 6)
@@ -106,7 +106,7 @@ static void PrintStringToBufferCopyNow(const u8 *string, void *dst, u16 offset, 
     txtColor[0] = bgColor;
     txtColor[1] = fgColor;
     txtColor[2] = shadowColor;
-    AddTextPrinterParameterized4(windowId, FONT_NORMAL_COPY_1, winTemplate.width * 8 - 8, 2, 0, 0, txtColor, -1, string);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL_COPY_1, RTL_ANCHOR_EDGE(winTemplate.width * 8), 2, 0, 0, txtColor, -1, string);
     CpuCopy16(tileData1, dst, var);
     CpuCopy16(tileData2, dst + offset, var);
     RemoveWindow(windowId);

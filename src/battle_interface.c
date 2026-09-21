@@ -773,6 +773,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     lvl_str[2] = 5;
     ConvertIntToDecimalStringN(lvl_str + 3, lvl, STR_CONV_MODE_RIGHT_ALIGN, 3);
     //xPos = 5 * (3 - (objVram - (text + 2)));
+    // 3 tiles (24px) are copied: digits take [0,15), the Lv glyph the rest.
     xPos = 10;
 
     // windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, &windowId);
@@ -817,7 +818,9 @@ void UpdateHpTextInHealthbox(u8 healthboxSpriteId, s16 value, u8 maxOrCurrent)
             text[1] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
             text[2] = 5;
             ConvertIntToDecimalStringN(text + 3, value, STR_CONV_MODE_RIGHT_ALIGN, 3);
-            windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, /*0*/10, 5, &windowId);
+            // TextIntoHealthboxObject below copies 2 tiles (16px); three digits
+            // at the 5px spacing requested above span [0,15), so the pen is 10.
+            windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, 10, 5, &windowId);
             spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum;
             TextIntoHealthboxObject((void *)(OBJ_VRAM0) + spriteTileNum * TILE_SIZE_4BPP + 0xA40, windowTileData, 2);
             RemoveWindowOnHealthbox(windowId);
@@ -1773,7 +1776,8 @@ static void UpdateSafariBallsTextOnHealthbox(u8 healthboxSpriteId)
     u32 windowId, spriteTileNum;
     u8 *windowTileData;
 
-    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gText_SafariBalls, 56, 3, &windowId);
+    // 6 + 2 tiles are copied below, i.e. the whole 8-tile (64px) scratch window.
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gText_SafariBalls, RTL_ANCHOR_EDGE(8 * 8), 3, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
     TextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x40) + spriteTileNum, windowTileData, 6);
     TextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x800) + spriteTileNum, windowTileData + 0xC0, 2);
@@ -1790,7 +1794,7 @@ static void UpdateLeftNoOfBallsTextOnHealthbox(u8 healthboxSpriteId)
     txtPtr = StringCopy(text, gText_HighlightRed_Left);
     ConvertIntToDecimalStringN(txtPtr, gNumSafariBalls, STR_CONV_MODE_LEFT_ALIGN, 2);
 
-    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, 39, 3, &windowId);
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, RTL_ANCHOR_EDGE(47), 3, &windowId);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
     SafariTextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x2C0) + spriteTileNum, windowTileData, 2);
     SafariTextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0xA00) + spriteTileNum, windowTileData + 0x40, 4);

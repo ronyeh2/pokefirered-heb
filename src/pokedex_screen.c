@@ -522,7 +522,9 @@ static const struct ListMenuTemplate sListMenuTemplate_OrderedListMenu = {
     .header_X = 0,
     // Ofir changed here
     //.item_X = 56,
-    .item_X = 112,
+    // The name column ends where the first type badge starts (see
+    // ItemPrintFunc_OrderedListMenu: caught icon at 0x28, type badge at 0x78).
+    .item_X = RTL_ANCHOR_EDGE(0x78),
     .cursor_X = 4,
     .upText_Y = 2,
     .cursorPal = 1,
@@ -2957,7 +2959,7 @@ void DexScreen_PrintMonFlavorText(u8 windowId, u16 species, u8 x, u8 y)
         // made short entries sit indented from the right edge and long ones
         // overhang on both sides.
         xCenter = length;
-        x = 232;
+        x = RTL_ANCHOR_EDGE(240);
 
         printerTemplate.x = x;
         printerTemplate.y = y;

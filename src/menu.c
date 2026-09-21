@@ -461,7 +461,7 @@ s8 Menu_ProcessInputNoWrapAround_other(void)
 void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs)
 {
     u8 i;
-    u16 anchor = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
+    u16 anchor = RTL_ANCHOR_WINDOW(windowId) - left;
 
     for (i = 0; i < itemCount; i++)
     {
@@ -475,7 +475,7 @@ void PrintTextArray(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 i
 void MultichoiceList_PrintItems(u8 windowId, u8 fontId, u8 left, u8 top, u8 lineHeight, u8 itemCount, const struct MenuAction *strs, u8 letterSpacing, u8 lineSpacing)
 {
     u8 i;
-    u16 anchor = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
+    u16 anchor = RTL_ANCHOR_WINDOW(windowId) - left;
 
     for (i = 0; i < itemCount; i++)
     {
@@ -508,7 +508,7 @@ void AddItemMenuActionTextPrinters(u8 windowId, u8 fontId, u8 left, u8 top, u8 l
     printer.lineSpacing = GetFontAttribute(fontId, FONTATTR_LINE_SPACING);
     // Ofir Changed this
     //printer.x = left;
-    printer.x = GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - left - 8;
+    printer.x = RTL_ANCHOR_WINDOW(windowId) - left;
     //printer.currentX = left;
     printer.currentX = printer.x;
     for (i = 0; i < itemCount; i++)
@@ -559,7 +559,7 @@ void CreateYesNoMenu(const struct WindowTemplate *window, u8 fontId, u8 left, u8
     textSubPrinter.fontId = fontId;
     // Ofir added this
     //textSubPrinter.x = GetMenuCursorDimensionByFont(fontId, 0) + left;
-    textSubPrinter.x = GetWindowAttribute(sYesNoWindowId, WINDOW_WIDTH) * 8 - GetMenuCursorDimensionByFont(fontId, 0) - left - 8;
+    textSubPrinter.x = RTL_ANCHOR_WINDOW(sYesNoWindowId) - GetMenuCursorDimensionByFont(fontId, 0) - left;
     textSubPrinter.y = top;
     textSubPrinter.currentX = textSubPrinter.x;
     textSubPrinter.currentY = textSubPrinter.y;
