@@ -22,7 +22,7 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "ותוכל לראות אותו חותך בכל זמן!$"
 
 SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
-    .string "{PLAYER} קיבל את מ”נ01\n"
+    .string "{PLAYER} קיבל את מ”נ10\n"
     .string "מהקפטן!$"
 
 SSAnne_CaptainsOffice_Text_ExplainCut::

@@ -7,7 +7,7 @@ SSAnne_2F_Room2_Text_BrooksDefeat::
     .string "אה, אני מרגיש צעיר שוב!$"
 
 SSAnne_2F_Room2_Text_BrooksPostBattle::
-    .string "לפני 15 שנה, הייתי\n"
+    .string "לפני 51 שנה, הייתי\n"
     .string "מנצח!$"
 
 SSAnne_2F_Room2_Text_DaleIntro::

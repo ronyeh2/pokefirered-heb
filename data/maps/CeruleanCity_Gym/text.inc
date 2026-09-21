@@ -8,7 +8,7 @@ CeruleanCity_Gym_Text_MistyIntro::
     .string "עם פוקימוני מים{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}!$"
 
 CeruleanCity_Gym_Text_ExplainTM03::
-    .string "מ”מ03 מלמד את\n"
+    .string "מ”מ30 מלמד את\n"
     .string "המהלך זרם מים!\p"
     .string "השתמש בו על פוקימונים ימיים!$"
 
@@ -26,7 +26,7 @@ CeruleanCity_Gym_Text_ExplainCascadeBadge::
 
 CeruleanCity_Gym_Text_ReceivedTM03FromMisty::
     .string "{PLAYER} קיבל\n"
-    .string "את מ”מ03 ממיסטי!$"
+    .string "את מ”מ30 ממיסטי!$"
 
 CeruleanCity_Gym_Text_BetterMakeRoomForThis::
     .string "פנה מקום בתיק\n"

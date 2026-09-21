@@ -11,11 +11,11 @@ Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale::
     .string "לא צריכה אותו יותר…$"
 
 Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl::
-    .string "{PLAYER} קיבל את מ”מ27\n"
+    .string "{PLAYER} קיבל את מ”מ72\n"
     .string "מהילדה הקטנה.$"
 
 Route12_NorthEntrance_2F_Text_ExplainTM27::
-    .string "מ”מ27 הוא מהלך שנקרא חזור…\p"
+    .string "מ”מ72 הוא מהלך שנקרא חזור…\p"
     .string "אם תתייחס לפוקימון שלך טוב,\n"
     .string "הוא יחזיר לך את האהבה על ידי עבודה\l"
     .string "הכי קשה שלו בקרב.$"

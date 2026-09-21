@@ -30,5 +30,5 @@ SSAnne_Deck_Text_TrevorDefeat::
     .string "פשוט הייתי רשלני!$"
 
 SSAnne_Deck_Text_TrevorPostBattle::
-    .string "אבא שלי אמר שיש 100 סוגי\n"
+    .string "אבא שלי אמר שיש 001 סוגי\n"
     .string "פוקימונים. אני חושב שיש יותר.$"

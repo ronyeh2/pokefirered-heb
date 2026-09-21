@@ -31,7 +31,7 @@ Route18_Text_JacobPostBattle::
     .string "פוקימונים.$"
 
 Route18_Text_RouteSign::
-    .string "שביל 18\n"
+    .string "שביל 81\n"
     .string "עיר סלדון - עיר פוקסיה$"
 
 Route18_Text_CyclingRoadSign::

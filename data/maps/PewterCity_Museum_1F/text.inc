@@ -1,13 +1,13 @@
 PewterCity_Museum_1F_Text_Its50YForChildsTicket::
     .string "כן, כן.\n"
-    .string "המחיר הוא ¥50 לכרטיס ילד.\p"
+    .string "המחיר הוא ¥05 לכרטיס ילד.\p"
     .string "היית רוצה להיכנס?$"
 
 PewterCity_Museum_1F_Text_ComeAgain::
     .string "חזור שוב!$"
 
 PewterCity_Museum_1F_Text_Right50YThankYou::
-    .string "נכון, ¥50!\n"
+    .string "נכון, ¥05!\n"
     .string "תודה רבה!$"
 
 PewterCity_Museum_1F_Text_DontHaveEnoughMoney::

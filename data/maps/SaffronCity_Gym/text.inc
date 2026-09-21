@@ -23,7 +23,7 @@ SaffronCity_Gym_Text_SabrinaPostBattle::
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "תג הביצה מאפשר לפוקימונים\n"
-    .string "עד רמה 70 לציית לך.\p"
+    .string "עד רמה 07 לציית לך.\p"
     .string "פוקימונים חזקים יותר יהפכו לפראיים,\n"
     .string "ויגרמו להתעלם מהוראותיך בקרב.\p"
     .string "פשוט אל תעלה את הרמה של הפוקימונים שלך\n"
@@ -31,10 +31,10 @@ SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "חכה, בבקשה קח את ה-מ”מ הזה איתך.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
-    .string "{PLAYER} קיבל את מ”מ04 מסברינה.$"
+    .string "{PLAYER} קיבל את מ”מ40 מסברינה.$"
 
 SaffronCity_Gym_Text_ExplainTM04::
-    .string "TM04 הוא מחשבה שקטה.\p"
+    .string "מ”מ40 הוא מחשבה שקטה.\p"
     .string "זה גורם לפוקימון להתרכז\n"
     .string "ולהעלות את התקפה מיוחדת ואת הגנה מיוחדת.$"
 

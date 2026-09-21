@@ -32,12 +32,12 @@ FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
     .string "אה! קח גם את זה!$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
-    .string "{PLAYER} קיבל את מ”מ06$"
+    .string "{PLAYER} קיבל את מ”מ60$"
 
 FuchsiaCity_Gym_Text_KogaExplainTM06::
-    .string "מ”מ06 מכיל את\n"
+    .string "מ”מ60 מכיל את\n"
     .string "המהלך הרעלה!\p"
-    .string "זה מהלך סודי בן יותר מ-400 שנים!$"
+    .string "זה מהלך סודי בן יותר מ-004 שנים!$"
 
 FuchsiaCity_Gym_Text_MakeSpaceForThis::
     .string "פנה מקום בתיק,\n"

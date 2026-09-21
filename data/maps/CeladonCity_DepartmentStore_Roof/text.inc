@@ -69,12 +69,12 @@ Text_ReceivedItemFromLittleGirl::
     .string "מהילדה הקטנה.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
-    .string "ממ16 מכיל את המהלך מסך אור.\p"
+    .string "ממ61 מכיל את המהלך מסך אור.\p"
     .string "זה מהלך שמחליש את היוכלת המיוחדת של\n"
     .string "היריב שלך.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
-    .string "ממ20 מכיל את המהלך מיגון.\p"
+    .string "ממ02 מכיל את המהלך מיגון.\p"
     .string "זה מהלך שמונע מהשפעות רעות כמו רעל\n"
     .string "מלפגוע בפוקימונים שלך.$"
 

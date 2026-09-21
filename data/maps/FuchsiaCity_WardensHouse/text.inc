@@ -26,10 +26,10 @@ FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
     .string "להעניק לך משהו עבור הטרחה.\p$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
-    .string "{PLAYER} קיבל את מ”נ04!$"
+    .string "{PLAYER} קיבל את מ”נ40!$"
 
 FuchsiaCity_WardensHouse_Text_ExplainStrength::
-    .string "פקח: מ”נ04 מכיל\n"
+    .string "פקח: מ”נ40 מכיל\n"
     .string "את המהלך עוצמה!\p"
     .string "זה מאפשר לפוקימון להזיז סלעים\l"
     .string "כאשר אתה מחוץ לקרב.\p"

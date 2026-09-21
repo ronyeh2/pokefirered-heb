@@ -34,11 +34,11 @@ ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
 
 ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
     .string "{PLAYER} קיבל\n"
-    .string "מ”מ72!$"
+    .string "מ”מ62!$"
 
 ViridianCity_Gym_Text_ExplainTM26::
-    .string "מ”מ72 הוא בולען!\n"
-    .string "הוא יעלף פוקימון במכה אחת!\p"
+    .string "מ”מ62 מכיל את רעש אדמה!\n"
+    .string "מתקפה עוצמתית שגורמת לרעידה אדירה!\p"
     .string "הכנתי את זה בזמן שהייתי מנהל\l"
     .string "המכון כאן, לפני יותר מדי זמן...$"
 

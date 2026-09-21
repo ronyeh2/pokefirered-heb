@@ -38,7 +38,7 @@ PokedexRating_Text_LessThan50::
 	.string "מטבע קמע. וודא שאתה מקבל אותו!$"
 
 PokedexRating_Text_LessThan60::
-	.string "אה, סוף סוף עברת את ה-50\n"
+	.string "אה, סוף סוף עברת את ה-05\n"
 	.string "מינים!\p"
 	.string "נתתי לאחד מהעוזרים שלי\n"
 	.string "חולק נסיון. וודא שאתה מקבל אותו!$"
@@ -61,7 +61,7 @@ PokedexRating_Text_LessThan100::
 	.string "זה בטח היה קשה לעשות!$"
 
 PokedexRating_Text_LessThan110::
-	.string "סוף סוף הגעת ל-100 מינים!\n"
+	.string "סוף סוף הגעת ל-001 מינים!\n"
 	.string "לא מאמין כמה טוב אתה!$"
 
 PokedexRating_Text_LessThan120::

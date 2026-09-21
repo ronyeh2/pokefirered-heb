@@ -10,11 +10,11 @@ SafariZone_SecretHouse_Text_CongratsYouveWon::
     .string "זכית!$"
 
 SafariZone_SecretHouse_Text_ReceivedHM03FromAttendant::
-    .string "{PLAYER} קיבל את מ”נ03\n"
+    .string "{PLAYER} קיבל את מ”נ30\n"
     .string "מהמאבטח!$"
 
 SafariZone_SecretHouse_Text_ExplainSurf::
-    .string "מ”נ03 זה גלישה.\p"
+    .string "מ”נ30 זה גלישה.\p"
     .string "הפוקימון יוכל לשוט איתך\n"
     .string "על פני המים עם זה.\p"
     .string "וה-מ”נ הזה לא בזבזני, אז\n"

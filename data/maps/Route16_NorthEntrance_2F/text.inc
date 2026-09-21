@@ -19,13 +19,13 @@ Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40::
     .string "שלום! זוכר אותי?\n"
     .string "אני אחד מהעוזרים של פרופ' אוק.\p"
     .string "אם הפוקידע שלך מכיל נתונים\n"
-    .string "מלאים על 40 מינים, אני אמור להעניק\l"
+    .string "מלאים על 04 מינים, אני אמור להעניק\l"
     .string "לך פרס.\p"
     .string "פרופ' אוק הפקיד אותי עם\n"
     .string "מטבע הקמע עבורך.\p"
     .string "אז, {PLAYER}, הרשה לי לשאול אותך.\p"
     .string "האם אספת נתונים לפחות על\n"
-    .string "40 סוגי פוקימונים?$"
+    .string "04 סוגי פוקימונים?$"
 
 Route16_NorthEntrance_2F_Text_GreatHereYouGo::
     .string "מעולה! לכדת או החזקת\n"

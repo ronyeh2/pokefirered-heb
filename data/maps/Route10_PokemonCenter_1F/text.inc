@@ -6,7 +6,7 @@ Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
 
 Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
     .string "נוגט הוא חסר תועלת לגמרי.\n"
-    .string "אז מכרתי אותו ב-¥5000.$"
+    .string "אז מכרתי אותו ב-¥0005.$"
 
 Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
     .string "שמעתי שרוחות רפאים רודפות\n"

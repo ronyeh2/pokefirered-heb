@@ -101,7 +101,7 @@ Route12_Text_AndrewPostBattle::
     .string "אבל, כמה שהם חלשים.$"
 
 Route12_Text_RouteSign::
-    .string "דרך 12\n"
+    .string "דרך 21\n"
     .string "צפון לעיר לאבנדר$"
 
 Route12_Text_SportfishingArea::

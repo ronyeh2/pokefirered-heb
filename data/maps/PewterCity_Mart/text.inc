@@ -1,7 +1,7 @@
 PewterCity_Mart_Text_BoughtWeirdFishFromShadyGuy::
     .string "איזה זקן מפוקפק סחף אותי לקנות\n"
     .string "את הפוקימון הדג המוזר הזה!\p"
-    .string "הוא ממש חלש וזה עלה לי ¥500!$"
+    .string "הוא ממש חלש וזה עלה לי ¥005!$"
 
 PewterCity_Mart_Text_GoodThingsIfRaiseMonsDiligently::
     .string "דברים טובים יכולים לקרות אם תגדל\n"

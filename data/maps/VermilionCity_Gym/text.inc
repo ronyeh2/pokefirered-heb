@@ -23,11 +23,11 @@ VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "קח את זה!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
-    .string "{PLAYER} קיבל את מ”מ34\n"
+    .string "{PLAYER} קיבל את מ”מ43\n"
     .string "מ-לוטננט סרג'!$"
 
 VermilionCity_Gym_Text_ExplainTM34::
-    .string "מ”מ34 מכיל את גל רעם!\p"
+    .string "מ”מ43 מכיל את גל רעם!\p"
     .string "תלמד אותו לפוקימון חשמלי!$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::

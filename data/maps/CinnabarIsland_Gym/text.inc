@@ -179,7 +179,7 @@ CinnabarIsland_Gym_Text_QuizQuestion5::
     .string "הם לא זהים?$"
 
 CinnabarIsland_Gym_Text_QuizQuestion6::
-    .string "מ“מ28 מכיל את המהלך חופרבראש?$"
+    .string "מ“מ82 מכיל את המהלך חופרבראש?$"
 
 CinnabarIsland_Gym_Text_CorrectGoOnThrough::
     .string "אתה צודק!\p"

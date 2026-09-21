@@ -27,7 +27,7 @@ PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
     .string "נראית לי כמו סתם אבן רגילה.$"
 
 PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
-    .string "20 ביולי, 1969!\p"
+    .string "02 ביולי, 9691!\p"
     .string "בני האדם דרכו לראשונה על\n"
     .string "הירח ביום הזה.\p"
     .string "קניתי טלוויזיה צבעונית רק כדי\n"

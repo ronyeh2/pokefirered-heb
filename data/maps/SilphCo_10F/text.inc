@@ -1,5 +1,5 @@
 SilphCo_10F_Text_GruntIntro::
-    .string "ברוך הבא לקומה 10!\n"
+    .string "ברוך הבא לקומה 01!\n"
     .string "איזה טוב מצידך להצטרף אלי!$"
 
 SilphCo_10F_Text_GruntDefeat::
@@ -29,4 +29,4 @@ SilphCo_10F_Text_KeepMeCryingASecret::
 
 SilphCo_10F_Text_FloorSign::
     .string "ארגון סילף. משרד ראשי\n"
-    .string "קומה 10$"
+    .string "קומה 01$"

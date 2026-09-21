@@ -75,7 +75,7 @@ Route16_Text_CyclingRoadSign::
     .string "דרך האופניים$"
 
 Route16_Text_RouteSign::
-    .string "נתיב 16\n"
+    .string "נתיב 61\n"
     .string "מעיר סלדון לעיר פוקסיה$"
 
 Route16_Text_JedIntro::

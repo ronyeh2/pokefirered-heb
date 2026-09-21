@@ -21,7 +21,7 @@ RockTunnel_1F_Text_OliverDefeat::
     .string "לאן אני הולך?$"
 
 RockTunnel_1F_Text_OliverPostBattle::
-    .string "הפוקימון הישן בנתיב 12\n"
+    .string "הפוקימון הישן בנתיב 21\n"
     .string "כפה עלי לקחת את הסיבוב הזה.$"
 
 RockTunnel_1F_Text_LucasIntro::

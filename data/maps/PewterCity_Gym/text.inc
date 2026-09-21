@@ -34,7 +34,7 @@ PewterCity_Gym_Text_TakeThisWithYou::
     .string "קח את זה איתך.$"
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
-    .string "{PLAYER} קיבל את מ“מ39\n"
+    .string "{PLAYER} קיבל את מ“מ93\n"
     .string "מברוק.$"
 
 PewterCity_Gym_Text_ExplainTM39::
@@ -46,7 +46,7 @@ PewterCity_Gym_Text_ExplainTM39::
     .string "לכן, כאשר אתה משתמש באחד, בחר את\n"
     .string "הפוקימון בקפידה.\p"
     .string "בכל מקרה…\n"
-    .string "מ“מ39 מכיל את מהלך קבר אבן.\p"
+    .string "מ“מ93 מכיל את מהלך קבר אבן.\p"
     .string "הוא משליך סלעים על היריב ומוריד\n"
     .string "את מהירותו.$"
 

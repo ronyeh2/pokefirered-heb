@@ -27,6 +27,6 @@ PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle::
     .string "בג'ונגל.$"
 
 PokemonMansion_1F_Text_ChristenedDiscoveredMonMew::
-    .string "יומן: 10 ביולי\n"
+    .string "יומן: 01 ביולי\n"
     .string "קראנו לפוקימון החדש\l"
     .string "שהתגלה, מייו.$"

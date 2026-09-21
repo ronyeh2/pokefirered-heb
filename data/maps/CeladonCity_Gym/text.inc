@@ -34,10 +34,10 @@ CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
     .string "{PLAYER} קיבל\n"
-    .string "את מ“מ19 מאריקה.$"
+    .string "את מ“מ91 מאריקה.$"
 
 CeladonCity_Gym_Text_ExplainTM19::
-    .string "מ”מ19 מכיל את\n"
+    .string "מ”מ91 מכיל את\n"
     .string "המהלך יניקת על.\p"
     .string "הפוקימון יונק נ”פ\n"
     .string "מהפוקימון היריב, כך שחצי מהנזק\l"

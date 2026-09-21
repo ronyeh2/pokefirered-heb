@@ -60,7 +60,7 @@ SilphCo_5F_Text_PorygonFirstVRMon::
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
     .string "זה דיווח פוקימון!\p"
-    .string "אושר מעל 350 טכניקות פוקימון\n"
+    .string "אושר מעל 053 טכניקות פוקימון\n"
     .string "המאושרות.$"
 
 SilphCo_5F_Text_SomeMonsEvolveWhenTraded::

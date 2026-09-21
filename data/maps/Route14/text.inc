@@ -121,7 +121,7 @@ Route14_Text_MalikPostBattle::
     .string "אחד על אחד!$"
 
 Route14_Text_RouteSign::
-    .string "נתיב 14\n"
+    .string "נתיב 41\n"
     .string "מערבה אל עיר פוקסיה$"
 
 Route14_Text_KiriIntro::

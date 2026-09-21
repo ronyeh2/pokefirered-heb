@@ -5,11 +5,11 @@ Route16_House_Text_FoundMySecretRetreat::
     .string "אני אפצה אותך בזה!$"
 
 Route16_House_Text_ReceivedHM02FromGirl::
-    .string "{PLAYER} קיבל/ה את מ”נ02\n"
+    .string "{PLAYER} קיבל/ה את מ”נ20\n"
     .string "מהילדה.$"
 
 Route16_House_Text_ExplainHM02::
-    .string "מ”נ02 הוא תעופה.\n"
+    .string "מ”נ20 הוא תעופה.\n"
     .string "זו תנועה נוחה במיוחד.\p"
     .string "בבקשה, תעשה בזה שימוש טוב.$"
 

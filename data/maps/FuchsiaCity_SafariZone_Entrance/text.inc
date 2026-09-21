@@ -3,19 +3,19 @@ FuchsiaCity_SafariZone_Entrance_Text_WelcomeToSafariZone::
     .string "לאזור הספארי!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PlaySafariGameFor500::
-    .string "עבור רק 500¥\n"
+    .string "עבור רק 005¥\n"
     .string "אתה יכול לתפוס כמה פוקימונים שרק\l"
     .string "תרצה בפארק!\p"
     .string "האם תרצה להצטרף למצוד?{}$"
 
 FuchsiaCity_SafariZone_Entrance_Text_ThatllBe500WeOnlyUseSpecialBalls::
-    .string "זה 500¥\n"
+    .string "זה 005¥\n"
     .string "בבקשה!\p"
     .string "אנחנו משתמשים בפוקיבול מיוחד כאן.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PlayerReceived30SafariBalls::
     .string "{PLAYER} קיבל\n"
-    .string "30 כדורי ספארי!$"
+    .string "03 כדורי ספארי!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_CallYouOnPAWhenYouRunOut::
     .string "אנחנו נכרוז\n"

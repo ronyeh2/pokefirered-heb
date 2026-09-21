@@ -26,7 +26,7 @@ Route3_Text_BenPostBattle::
     .string "אתה משתמש במחשב של מרכז\n"
     .string "הפוקימון לאחסון הפוקימונים שלך?\p"
     .string "כל תיבה יכולה להכיל עד\n"
-    .string "30 פוקימונים.$"
+    .string "03 פוקימונים.$"
 
 Route3_Text_JaniceIntro::
     .string "סלח לי!\n"

@@ -117,7 +117,7 @@ Route17_Text_PressBToStayInPlace::
     .string "כשאתה על מדרון.$"
 
 Route17_Text_RouteSign::
-    .string "דרך 17\n"
+    .string "דרך 71\n"
     .string "עיר סלדון - עיר פוקסיה$"
 
 Route17_Text_DontThrowGameThrowBalls::

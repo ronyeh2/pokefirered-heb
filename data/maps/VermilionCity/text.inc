@@ -33,7 +33,7 @@ VermilionCity_Text_CitySign::
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "הודעה!\p"
-    .string "ייתכן שדרך 12 חסומה על ידי\n"
+    .string "ייתכן שדרך 21 חסומה על ידי\n"
     .string "פוקימון ישן.\p"
     .string "עיקוף דרך מערת רוק לעיר לבנדר.\p"
     .string "משטרת ורמיליון$"
@@ -100,13 +100,13 @@ VermilionCity_Text_BoardSeagallopFerry::
 VermilionCity_Text_Seagallop10Departing::
     .string "בסדר, הכול מסודר לך\n"
     .string "לעלות למעבורת מיוחדת.\p"
-    .string "מעבורת סיגאלופ המהירה 10 תצא\n"
+    .string "מעבורת סיגאלופ המהירה 01 תצא\n"
     .string "מיידית.$"
 
 VermilionCity_Text_Seagallop12Departing::
     .string "בסדר, הכול מסודר לך\n"
     .string "לעלות למעבורת מיוחדת.\p"
-    .string "מעבורת סיגאלופ המהירה 12 תצא\n"
+    .string "מעבורת סיגאלופ המהירה 21 תצא\n"
     .string "מיידית.$"
 
 VermilionCity_Text_Route2AideHasPackageForYou::

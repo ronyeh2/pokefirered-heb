@@ -114,7 +114,7 @@ Route19_Text_ConniePostBattle::
     .string "שהוא ישמור עליי יבשה.$"
 
 Route19_Text_RouteSign::
-    .string "נתיב מים 19\n"
+    .string "נתיב מים 91\n"
     .string "פוקסיה - איי הקצף$"
 
 Route19_Text_LiaIntro::

@@ -15,19 +15,19 @@ Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
     .string "איש: שלום שם, ילד!\n"
     .string "יש לי עסקה מיוחדת בשבילך!\p"
     .string "אתן לך את הפוקימון הסודי\n"
-    .string "מג'יקארפ רק ב¥500!\p"
+    .string "מג'יקארפ רק ב¥005!\p"
     .string "אז, תקנה את זה, נכון?$"
 
 Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500::
     .string "איש: שלום שם, מתוקה!\n"
     .string "יש לי עסקה מיוחדת בשבילך!\p"
     .string "אתן לך את הפוקימון הסודי\n"
-    .string "מג'יקארפ רק ב¥500!\p"
+    .string "מג'יקארפ רק ב¥005!\p"
     .string "אז, תקני את זה, נכון?$"
 
 Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
     .string "{PLAYER} שילם סכום\n"
-    .string "שערורייתי של ¥500 וקנה\n"
+    .string "שערורייתי של ¥005 וקנה\n"
     .string "את המג'יקארפ…$"
 
 Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::

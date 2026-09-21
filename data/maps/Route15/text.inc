@@ -117,7 +117,7 @@ Route15_Text_YazminPostBattle::
     .string "אלך להתאמן עם אנשים חלשים יותר.$"
 
 Route15_Text_RouteSign::
-    .string "נתיב 15\n"
+    .string "נתיב 51\n"
     .string "מערבה לעיר פוקסיה$"
 
 Route15_Text_MyaIntro::

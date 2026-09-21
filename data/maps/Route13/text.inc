@@ -123,5 +123,5 @@ Route13_Text_SelectToSwitchItems::
     .string "בחלון הפריטים.$"
 
 Route13_Text_RouteSign::
-    .string "דרך 13\n"
+    .string "דרך 31\n"
     .string "צפונה אל גשר השקט$"
