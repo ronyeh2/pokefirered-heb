@@ -886,7 +886,8 @@ gText_PkmnFainted3::
 	.string "$"
 
 Text_WelcomeWantToHealPkmn::
-	.string "ברוכים הבאים למרכז הפוקימונים שלנו!\p"
+	.string "ברוכים הבאים למרכז הפוקימונים\n"
+	.string "שלנו!\p"
 	.string "האם תרצה שאני ארפא את\n"
 	.string "הפוקימונים שלך לבריאות מושלמת?$"
 

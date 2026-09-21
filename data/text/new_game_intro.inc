@@ -178,11 +178,10 @@ gPikachuIntro_Text_Page2::
 
 gPikachuIntro_Text_Page3::
     .string "אנחנו מקווים שתוך כדי ההרפתקה שלך\n"
-    .string "תתחבר לכל מיני אנשים ותרגיש את\n"
-    .string "עצמך משתפר. זו המטרה הכי גדולה שלנו..\n"
-    .string "\n"
-    .string "תלחץ על כפתור A\n"
-    .string "ובוא נתחיל בהרפתקה!!$"
+    .string "תתחבר לכל מיני אנשים ותרגיש את\l"
+    .string "עצמך משתפר. זו המטרה הכי גדולה\l"
+    .string "שלנו.. תלחץ על כפתור A ובוא נתחיל\l"
+    .string "בהרפתקה!!$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
     .string "שלום!\n"

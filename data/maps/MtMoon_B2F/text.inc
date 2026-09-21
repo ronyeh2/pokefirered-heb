@@ -32,7 +32,7 @@ MtMoon_B2F_Text_Grunt1Defeat::
 
 MtMoon_B2F_Text_Grunt1PostBattle::
     .string "עשית אותי עצבני!\n"
-    .string "צוות רוקט יכניס אותך לרשימה\n"
+    .string "צוות רוקט יכניס אותך לרשימה\l"
     .string "השחורה!$"
 
 MtMoon_B2F_Text_Grunt2Intro::

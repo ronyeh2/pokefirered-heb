@@ -8,7 +8,8 @@ Route25_Text_JoeyDefeat::
 Route25_Text_JoeyPostBattle::
     .string "לכל הפוקימונים יש חולשות.\n"
     .string "אפילו לחזקים ביותר.\p"
-    .string "זו הסיבה שעדיף לגדל פוקימונים מסוגים שונים.$"
+    .string "זו הסיבה שעדיף לגדל פוקימונים\n"
+    .string "מסוגים שונים.$"
 
 Route25_Text_DanIntro::
     .string "אבא לקח אותי למסיבה נהדרת על\n"
@@ -54,8 +55,8 @@ Route25_Text_ChadPostBattle::
     .string "זו טקטיקה טובה.$"
 
 Route25_Text_HaleyIntro::
-    .string "לחברה שלי יש הרבה פוקימונים חמודים.\n"
-    .string "אני כל כך מקנא!$"
+    .string "לחברה שלי יש הרבה פוקימונים\n"
+    .string "חמודים. אני כל כך מקנא!$"
 
 Route25_Text_HaleyDefeat::
     .string "אני לא כל כך מקנא!$"
@@ -85,7 +86,8 @@ Route25_Text_NobDefeat::
 
 Route25_Text_NobPostBattle::
     .string "הפוקמניאק בהחלט עומד בשמו.\p"
-    .string "האוסף שלו כולל מינים נדירים רבים של פוקימון.$"
+    .string "האוסף שלו כולל מינים נדירים רבים\n"
+    .string "של פוקימון.$"
 
 Route25_Text_WayneIntro::
     .string "אתה הולך לראות את ביל?\n"
@@ -95,7 +97,8 @@ Route25_Text_WayneDefeat::
     .string "אתה משהו.$"
 
 Route25_Text_WaynePostBattle::
-    .string "המסלול שמתחת הוא קיצור דרך לעיר סרוליאן.$"
+    .string "המסלול שמתחת הוא קיצור דרך לעיר\n"
+    .string "סרוליאן.$"
 
 Route25_Text_SeaCottageSign::
     .string "קוטג' ימי\n"

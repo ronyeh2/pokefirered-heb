@@ -61,8 +61,8 @@ Route16_Text_RubenDefeat::
     .string "אל תרגיז אותי!$"
 
 Route16_Text_RubenPostBattle::
-    .string "אני נהנה להטריד אנשים עם הפוקימונים\n"
-    .string "המסריחים שלי.\p"
+    .string "אני נהנה להטריד אנשים עם\n"
+    .string "הפוקימונים המסריחים שלי.\p"
     .string "הם מעולים בלגרום לאנשים להיבהל.\n"
     .string "והם גם נושכים.$"
 

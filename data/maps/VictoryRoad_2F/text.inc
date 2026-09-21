@@ -1,6 +1,6 @@
 VictoryRoad_2F_Text_DawsonIntro::
-    .string "אם אתה יכול לעבור כאן,\n"
-    .string "אתה יכול ללכת לפגוש את רבעיית העילית.$"
+    .string "אם אתה יכול לעבור כאן, אתה יכול\n"
+    .string "ללכת לפגוש את רבעיית העילית.$"
 
 VictoryRoad_2F_Text_DawsonDefeat::
     .string "לא!\n"

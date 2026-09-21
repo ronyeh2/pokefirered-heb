@@ -26,7 +26,7 @@ FuchsiaCity_House2_Text_YouHaveNoRoomForGift::
 
 FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons::
     .string "דייג זה דרך חיים!\n"
-    .string "עם החכה הישנה הזו בטח הצלחת לתפוס\n"
+    .string "עם החכה הישנה הזו בטח הצלחת לתפוס\l"
     .string "רק מג'יקארפ נכון?\p"
-    .string "עם החכה הטובה אתה יכול לתפוס פוקימונים\n"
-    .string "הרבה יותר טובים.$"
+    .string "עם החכה הטובה אתה יכול לתפוס\n"
+    .string "פוקימונים הרבה יותר טובים.$"

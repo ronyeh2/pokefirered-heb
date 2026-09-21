@@ -1,6 +1,6 @@
 CeruleanCity_House4_Text_NothingEntertaining::
-    .string "אוף…\n"
-    .string "יותר מידי זמן פנוי ופחות מידי לעשות…\p"
+    .string "אוף… יותר מידי זמן פנוי ופחות מידי\n"
+    .string "לעשות…\p"
     .string "אין שום דבר מעניין בשום מקום?$"
 
 CeruleanCity_House4_Text_NewNewsInformativeHaveThis::
@@ -26,8 +26,8 @@ CeruleanCity_House4_Text_IncredibleNewsHaveBerries::
     .string "קח קצת פירות יער!$"
 
 CeruleanCity_House4_Text_WishCouldShareNewsWithOthers::
-    .string "זה ממש בזבוז לא לחלוק את החדשות האלה\n"
-    .string "עם אנשים אחרים…\p"
+    .string "זה ממש בזבוז לא לחלוק את החדשות\n"
+    .string "האלה עם אנשים אחרים…\p"
     .string "הלוואי והייתי יכול לספר למישהו…\n"
     .string "לגרום לעוד אנשים לדעת…$"
 
@@ -42,14 +42,15 @@ CeruleanCity_House4_Text_MagnificentNewsSpreadHaveBerries::
     .string "אני מאמין שפיסת החדשות הזו נהנת\n"
     .string "מאוד לעבור לעוד אנשים.\p"
     .string "כן, אני בטוח!\p"
-    .string "תחשיב את זה כאות תודה ממני ומהחדשות\p"
+    .string "תחשיב את זה כאות תודה ממני\n"
+    .string "ומהחדשות\p"
     .string "אתן לך יותר פירות יער ממה\n"
     .string "שאני בדרך כלל נותן.$"
 
 CeruleanCity_House4_Text_EnjoyingMyselfWithAllSortsOfNews::
     .string "אני נהנה מכל מיני סוגים של חדשות\p"
-    .string "כן, אני מרוצה!\n"
-    .string "אני לא אהיה משועמם יותר לתקופה ארוכה.$"
+    .string "כן, אני מרוצה! אני לא אהיה משועמם\n"
+    .string "יותר לתקופה ארוכה.$"
 
 CeruleanCity_House4_Text_YourBerryPouchIsFull::
     .string "המ, נראה שתיק פירות היער שלך מלא\n"

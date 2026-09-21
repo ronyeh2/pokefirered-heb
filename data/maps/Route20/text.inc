@@ -6,8 +6,8 @@ Route20_Text_BarryDefeat::
     .string "השפריץ!$"
 
 Route20_Text_BarryPostBattle::
-    .string "הלוואי שיכולתי לרכוב על הפוקימון שלי.\n"
-    .string "אני בטוח שאתה לא עייף.$"
+    .string "הלוואי שיכולתי לרכוב על הפוקימון\n"
+    .string "שלי. אני בטוח שאתה לא עייף.$"
 
 Route20_Text_ShirleyIntro::
     .string "האיים הימיים הם מפלט שקט.\n"

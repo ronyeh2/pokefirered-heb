@@ -115,7 +115,7 @@ SilphCo_7F_Text_RivalIntro::
 
 SilphCo_7F_Text_RivalDefeat::
     .string "אה, לא!\n"
-    .string "אז אתה מוכן לבוס\n"
+    .string "אז אתה מוכן לבוס\l"
     .string "של צוות רוקט!$"
 
 SilphCo_7F_Text_RivalVictory::
@@ -128,7 +128,8 @@ SilphCo_7F_Text_RivalPostBattle::
     .string "ובכן, {PLAYER}!\n"
     .string "אני עולה וממשיך!\p"
     .string "אני בודק את הפוקידקס שלי, ואני\n"
-    .string "מתחיל לראות מה חזק ואיך הם מתפתחים!\p"
+    .string "מתחיל לראות מה חזק ואיך הם\l"
+    .string "מתפתחים!\p"
     .string "אני גאון או לא?\p"
     .string "אני הולך לליגה של פוקימון כדי\n"
     .string "להעיף את הארבעה האליטה.\p"

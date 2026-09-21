@@ -70,13 +70,13 @@ Text_ReceivedItemFromLittleGirl::
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM16::
     .string "ממ61 מכיל את המהלך מסך אור.\p"
-    .string "זה מהלך שמחליש את היוכלת המיוחדת של\n"
-    .string "היריב שלך.$"
+    .string "זה מהלך שמחליש את היוכלת המיוחדת\n"
+    .string "של היריב שלך.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM20::
     .string "ממ02 מכיל את המהלך מיגון.\p"
-    .string "זה מהלך שמונע מהשפעות רעות כמו רעל\n"
-    .string "מלפגוע בפוקימונים שלך.$"
+    .string "זה מהלך שמונע מהשפעות רעות כמו\n"
+    .string "רעל מלפגוע בפוקימונים שלך.$"
 
 CeladonCity_DepartmentStore_Roof_Text_ExplainTM33::
     .string "ממ33 מכיל את המהלך שיקוף.\p"

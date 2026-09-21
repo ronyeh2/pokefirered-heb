@@ -32,7 +32,7 @@ MtMoon_1F_Text_MiriamDefeat::
 
 MtMoon_1F_Text_MiriamPostBattle::
     .string "איך יוצאים מכאן?\n"
-    .string "זה כל כך גדול, אני עלולה ללכת\n"
+    .string "זה כל כך גדול, אני עלולה ללכת\l"
     .string "לאיבוד.$"
 
 MtMoon_1F_Text_JovanIntro::
@@ -48,7 +48,7 @@ MtMoon_1F_Text_JovanPostBattle::
 
 MtMoon_1F_Text_IrisIntro::
     .string "מה?\n"
-    .string "אני מחכה לחברים שלי שימצאו\n"
+    .string "אני מחכה לחברים שלי שימצאו\l"
     .string "אותי כאן.$"
 
 MtMoon_1F_Text_IrisDefeat::
@@ -78,7 +78,7 @@ MtMoon_1F_Text_RobbyDefeat::
 
 MtMoon_1F_Text_RobbyPostBattle::
     .string "זובאט זה פוקימון קשוח!\n"
-    .string "אבל אם תתפוס אחד, תוכל לסמוך\n"
+    .string "אבל אם תתפוס אחד, תוכל לסמוך\l"
     .string "עליו.$"
 
 MtMoon_1F_Text_ZubatIsABloodsucker::

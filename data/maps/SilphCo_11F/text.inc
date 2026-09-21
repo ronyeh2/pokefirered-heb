@@ -36,7 +36,7 @@ SilphCo_11F_Text_YouHaveNoRoomForThis::
 
 SilphCo_11F_Text_ThanksForRescuingUs::
     .string "מזכירה: תודה שהצלת אותנו\n"
-    .string "כולנו, מהנשיא ועד לאחרים,\n"
+    .string "כולנו, מהנשיא ועד לאחרים,\l"
     .string "חייבים לך תודה.$"
 
 SilphCo_11F_Text_GiovanniIntro::
@@ -80,8 +80,8 @@ SilphCo_11F_Text_Grunt1Defeat::
     .string "חוסלתי!$"
 
 SilphCo_11F_Text_Grunt1PostBattle::
-    .string "שמור על צעדיך…\n"
-    .string "הבוס שלי אוהב את הפוקימונים שלו קשים!$"
+    .string "שמור על צעדיך… הבוס שלי אוהב את\n"
+    .string "הפוקימונים שלו קשים!$"
 
 SilphCo_11F_Text_MonitorHasMonsOnIt::
     .string "למסך יש פוקימונים עליו!$"

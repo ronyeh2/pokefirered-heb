@@ -24,10 +24,12 @@ SaffronCity_Gym_Text_SabrinaPostBattle::
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "תג הביצה מאפשר לפוקימונים\n"
     .string "עד רמה 07 לציית לך.\p"
-    .string "פוקימונים חזקים יותר יהפכו לפראיים,\n"
-    .string "ויגרמו להתעלם מהוראותיך בקרב.\p"
-    .string "פשוט אל תעלה את הרמה של הפוקימונים שלך\n"
-    .string "יותר מדי כדי למנוע את הבעיה הזאת.\p"
+    .string "פוקימונים חזקים יותר יהפכו\n"
+    .string "לפראיים, ויגרמו להתעלם מהוראותיך\l"
+    .string "בקרב.\p"
+    .string "פשוט אל תעלה את הרמה של\n"
+    .string "הפוקימונים שלך יותר מדי כדי למנוע\l"
+    .string "את הבעיה הזאת.\p"
     .string "חכה, בבקשה קח את ה-מ”מ הזה איתך.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
@@ -35,8 +37,8 @@ SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
 
 SaffronCity_Gym_Text_ExplainTM04::
     .string "מ”מ40 הוא מחשבה שקטה.\p"
-    .string "זה גורם לפוקימון להתרכז\n"
-    .string "ולהעלות את התקפה מיוחדת ואת הגנה מיוחדת.$"
+    .string "זה גורם לפוקימון להתרכז ולהעלות\n"
+    .string "את התקפה מיוחדת ואת הגנה מיוחדת.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems::
     .string "התיק שלך מלא בפריטים אחרים.$"
@@ -108,10 +110,12 @@ SaffronCity_Gym_Text_CameronDefeat::
     .string "או! הובסתי!$"
 
 SaffronCity_Gym_Text_CameronPostBattle::
-    .string "היו שני מכוני פוקימונים פעם בסאפרון.\p"
+    .string "היו שני מכוני פוקימונים פעם\n"
+    .string "בסאפרון.\p"
     .string "הדוג'ו של הלוחמים שליד איבד\n"
     .string "את מעמדו כמכון, אבל.\p"
-    .string "פשוט חיסלנו אותם כשהחלטנו על מכון אחד.$"
+    .string "פשוט חיסלנו אותם כשהחלטנו על מכון\n"
+    .string "אחד.$"
 
 SaffronCity_Gym_Text_PrestonIntro::
     .string "מכון הפוקימונים בסאפרון מפורסם\n"

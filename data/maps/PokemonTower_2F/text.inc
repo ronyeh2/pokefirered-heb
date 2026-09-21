@@ -22,8 +22,8 @@ PokemonTower_2F_Text_RivalVictory::
 PokemonTower_2F_Text_RivalPostBattle::
     .string "איך מתקדם הפוקידקס שלך?\n"
     .string "זה עתה תפסתי קיובון!\p"
-    .string "אני לא מצליח למצוא את המרוואק הגדול.\n"
-    .string "איפה הם יכולים להיות?\p"
+    .string "אני לא מצליח למצוא את המרוואק\n"
+    .string "הגדול. איפה הם יכולים להיות?\p"
     .string "אני בטוח שלא נשארו כאלה!\p"
     .string "טוב, אני חייב ללכת.\n"
     .string "יש לי הרבה להשיג,\l"

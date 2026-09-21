@@ -50,12 +50,12 @@ FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone::
 FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone::
     .string "באזור הספארי יש\n"
     .string "4 אזורים.\p"
-    .string "בכל אזור יש זנים שונים של\l"
+    .string "בכל אזור יש זנים שונים של\n"
     .string "פוקימונים. השתמש בכדורי הספארי\l"
     .string "כדי לתפוס אותם!\p"
     .string "כשנגמר לך הזמן או כשאוזלים לך\l"
     .string "הכדורים, המשחק שלך נגמר!\p"
-    .string "לפני שאתה הולך, פנה מקום בתא\l"
+    .string "לפני שאתה הולך, פנה מקום בתא\n"
     .string "הפוקימונים במחשב\l"
     .string "לפוקימונים חדשים!$"
 

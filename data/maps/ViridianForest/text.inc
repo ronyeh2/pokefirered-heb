@@ -77,10 +77,9 @@ ViridianForest_Text_UseAntidoteForPoison::
     .string "בפוקיוסק!$"
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex::
-    .string "טיפים למאמנים"
-    .string "אם תיצור קשר דרך המחשב עם פרופ'\l"
-    .string "אוק, הוא ייתן לך ציון על הפוקדקס\l"
-    .string "שלך!$"
+    .string "טיפים למאמניםאם תיצור קשר דרך\n"
+    .string "המחשב עם פרופ' אוק, הוא ייתן לך\l"
+    .string "ציון על הפוקדקס שלך!$"
 
 ViridianForest_Text_CantCatchOwnedMons::
     .string "טיפים למאמנים\p"

@@ -39,11 +39,12 @@ Route21_South_Text_ClaudeDefeat::
 
 Route21_South_Text_ClaudePostBattle::
 	.string "איזה באסה, לא תפסתי כלום.\n"
-	.string "אולי המקום הזה בכלל בריכה\n"
+	.string "אולי המקום הזה בכלל בריכה\l"
 	.string "ענקית או משהו?$"
 
 Route21_South_Text_NolanIntro::
-	.string "תשמור לי על חברה עד שיהיה לי תפיסה.$"
+	.string "תשמור לי על חברה עד שיהיה לי\n"
+	.string "תפיסה.$"
 
 Route21_South_Text_NolanDefeat::
 	.string "זה לפחות שרף קצת זמן.$"

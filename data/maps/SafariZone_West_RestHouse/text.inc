@@ -7,7 +7,7 @@ SafariZone_West_Text_KogaPatrolsSafariEverySoOften::
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::
     .string "השלכת אבנים על פוקימונים עשויה\n"
-    .string "לגרום להם לברוח, אבל הם יהיו\n"
+    .string "לגרום להם לברוח, אבל הם יהיו\l"
     .string "קל יותר לתפוס.$"
 
 SafariZone_West_Text_BaitMakesMonStickAround::

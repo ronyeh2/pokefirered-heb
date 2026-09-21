@@ -1378,7 +1378,8 @@ PokemonJournal_Text_SpecialFeatureBrock::
 	.string "כתבה מיוחדת: מכון פיוטר\n"
 	.string "מנהיג ברוק!\p"
 	.string "ברוק לעתים רחוקות צוחק, אך אומרים\n"
-	.string "שהוא לא מסוגל להפסיק אם הוא מתחיל.$"
+	.string "שהוא לא מסוגל להפסיק אם הוא\l"
+	.string "מתחיל.$"
 
 PokemonJournal_Text_SpecialFeatureMisty::
 	.string "עיתון פוקימון\p"
@@ -1393,8 +1394,8 @@ PokemonJournal_Text_SpecialFeatureLtSurge::
 	.string "מנהיג סגן סרג'!\p"
 	.string "שמועות אומרות שסגן סרג' היה\n"
 	.string "טייס בזמן שהיה בביתו באמריקה.\p"
-	.string "הוא השתמש בחשמל שנוצר\n"
-	.string "על ידי פוקימונים כדי להפעיל את מטוסו.$"
+	.string "הוא השתמש בחשמל שנוצר על ידי\n"
+	.string "פוקימונים כדי להפעיל את מטוסו.$"
 
 PokemonJournal_Text_SpecialFeatureErika::
 	.string "עיתון פוקימון\p"

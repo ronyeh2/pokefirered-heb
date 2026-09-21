@@ -1,7 +1,7 @@
 CeladonCity_GameCorner_Text_TryPokemonPrinter::
 	.string "זוהי מדפסת פוקימון!\p"
-	.string "היא יכולה להדפיס תמונה של הפוקימון שלך\n"
-	.string "על גב כרטיס המאמן שלך.\p"
+	.string "היא יכולה להדפיס תמונה של הפוקימון\n"
+	.string "שלך על גב כרטיס המאמן שלך.\p"
 	.string "זה עולה רק ¥05.\n"
 	.string "תרצה לנסות?$"
 

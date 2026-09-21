@@ -17,8 +17,8 @@ PokedexRating_Text_LessThan10::
 
 PokedexRating_Text_LessThan20::
 	.string "נראה שאתה בכיוון הנכון!\p"
-	.string "נתתי לאחד מהעוזרים שלי את\n"
-	.string "המכונה הנסתרת הבזק. וודא שאתה מקבל אותה!$"
+	.string "נתתי לאחד מהעוזרים שלי את המכונה\n"
+	.string "הנסתרת הבזק. וודא שאתה מקבל אותה!$"
 
 PokedexRating_Text_LessThan30::
 	.string "הפוקדקס שלך עדיין יכול להיות\n"

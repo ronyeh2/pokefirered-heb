@@ -91,7 +91,8 @@ Route9_Text_AlanPostBattle::
     .string "אנחנו תמיד צוחקים!$"
 
 Route9_Text_ConnerIntro::
-    .string "צא, הפוקימונים החרקיים המעולים שלי!$"
+    .string "צא, הפוקימונים החרקיים המעולים\n"
+    .string "שלי!$"
 
 Route9_Text_ConnerDefeat::
     .string "החרקים שלי…$"

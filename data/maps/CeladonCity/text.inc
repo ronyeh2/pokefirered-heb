@@ -52,7 +52,7 @@ CeladonCity_Text_DeptStoreSign::
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
     .string "טיפים למאמנים\p"
-    .string "הפריט הגנה מיוחדת מגן על הפוקימון\l"
+    .string "הפריט הגנה מיוחדת מגן על הפוקימון\n"
     .string "שלך מפני מתקפות מיוחדות, כמו\l"
     .string "אש ומים!\p"
     .string "קנה לך כאלה בכל-בו אביב!$"
@@ -110,6 +110,6 @@ CeladonCity_Text_ScaldedTongueOnTea::
 CeladonCity_Text_MyTrustedPalPoliwrath::
     .string "זה ידידי הטוב,\n"
     .string "פוליראת'!\p"
-    .string "הוא היה פעם פוליוורל! הוא התפתח\l"
+    .string "הוא היה פעם פוליוורל! הוא התפתח\n"
     .string "לפוליראת' כשהשתמשתי\l"
     .string "באבן מים עליו!$"

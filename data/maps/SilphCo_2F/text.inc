@@ -28,7 +28,8 @@ SilphCo_2F_Text_Grunt1Defeat::
     .string "קשה!$"
 
 SilphCo_2F_Text_Grunt1PostBattle::
-    .string "האריחים בצורת יהלום הם בלוקי השתגרות.\p"
+    .string "האריחים בצורת יהלום הם בלוקי\n"
+    .string "השתגרות.\p"
     .string "הם מעבירי אנשים בבניין הזה\n"
     .string "ההייטק.$"
 

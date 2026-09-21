@@ -94,7 +94,7 @@ Text_PolishedWindow::
 
 Text_BeautifulSkyWindow::
     .string "מחוץ לחלון…\n"
-    .string "השמיים נראים יפהפיים בצורה\n"
+    .string "השמיים נראים יפהפיים בצורה\l"
     .string "מדהימה.$"
 
 Text_BlinkingLights::

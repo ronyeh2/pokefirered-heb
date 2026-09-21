@@ -7,8 +7,9 @@ Route1_Text_WorkAtPokeMartTakeSample::
     .string "הנה, קח!$"
 
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
-    .string "בבקשה, תבואו לראות אותנו אם אתם צריכים\n"
-    .string "פוקיבולים כדי לתפוס פוקימונים.$"
+    .string "בבקשה, תבואו לראות אותנו אם אתם\n"
+    .string "צריכים פוקיבולים כדי לתפוס\l"
+    .string "פוקימונים.$"
 
 Route1_Text_PutPotionAway::
     .string "{PLAYER} שם את ה-תרופה בכיס\n"

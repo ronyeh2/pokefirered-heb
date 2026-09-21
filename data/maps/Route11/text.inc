@@ -77,8 +77,8 @@ Route11_Text_YasuIntro::
     .string "אני מתאמן כל בוקר.$"
 
 Route11_Text_YasuDefeat::
-    .string "אוי!\n"
-    .string "הפוקימונים שלי צריכים להיות יותר חזקים!$"
+    .string "אוי! הפוקימונים שלי צריכים להיות\n"
+    .string "יותר חזקים!$"
 
 Route11_Text_YasuPostBattle::
     .string "יש פוקימון שמנמן שיורד\n"
@@ -105,8 +105,8 @@ Route11_Text_DaveDefeat::
     .string "תודה, ולהתראות!$"
 
 Route11_Text_DavePostBattle::
-    .string "צ'ח…\n"
-    .string "אני צריך למצוא פוקימונים יותר חזקים!$"
+    .string "צ'ח… אני צריך למצוא פוקימונים יותר\n"
+    .string "חזקים!$"
 
 Route11_Text_DiglettsCave::
     .string "מערת דיגלט$"

@@ -5,6 +5,6 @@ SaffronCity_Mart_Text_MaxRepelMoreEffectiveThanSuper::
     .string "יותר מסופר ריפל.$"
 
 SaffronCity_Mart_Text_ReviveIsCostly::
-    .string "שיקויה הקמה לתחייה הוא יקר,\l"
-	.string "אבל הוא מחזיר פוקימונים\n"
+    .string "שיקויה הקמה לתחייה הוא יקר,\n"
+    .string "אבל הוא מחזיר פוקימונים\l"
     .string "מעולפים לחיים!$"

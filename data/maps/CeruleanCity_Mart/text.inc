@@ -1,7 +1,7 @@
 CeruleanCity_Mart_Text_RepelWorksOnWeakMons::
     .string "השתמש בדוחה כדי\n"
     .string "להרחיק חרקים ופוקימונים חלשים.\p"
-    .string "שים את הפוקימונים הכי חזקים שלך\l"
+    .string "שים את הפוקימונים הכי חזקים שלך\n"
     .string "בראש הרשימה בשביל התוצאות\l"
     .string "הכי טובות!$"
 

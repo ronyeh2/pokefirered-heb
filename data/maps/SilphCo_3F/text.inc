@@ -25,8 +25,8 @@ SilphCo_3F_Text_JoseDefeat::
 
 SilphCo_3F_Text_JosePostBattle::
     .string "חפ…\p"
-    .string "צוות רוקט אמרו לי שאם אני אעזור להם\n"
-    .string "הם יתנו לי ללמוד על פוקימון.$"
+    .string "צוות רוקט אמרו לי שאם אני אעזור\n"
+    .string "להם הם יתנו לי ללמוד על פוקימון.$"
 
 SilphCo_3F_Text_FloorSign::
     .string "ארגון סילף. משרד ראשי\n"

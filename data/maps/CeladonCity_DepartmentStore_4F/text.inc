@@ -5,7 +5,7 @@ CeladonCity_DepartmentStore_4F_Text_GettingPokeDollAsPresent::
 CeladonCity_DepartmentStore_4F_Text_CanRunAwayWithPokeDoll::
     .string "שמעתי עובדה\n"
     .string "שימושית.\p"
-    .string "אפשר לברוח מקרבות מול פוקימונים\l"
+    .string "אפשר לברוח מקרבות מול פוקימונים\n"
     .string "פראים אם מסיחים את דעתם בעזרת\l"
     .string "בובת פוקימון!$"
 

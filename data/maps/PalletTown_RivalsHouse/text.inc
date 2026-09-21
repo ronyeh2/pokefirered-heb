@@ -46,8 +46,8 @@ PalletTown_RivalsHouse_Text_LikeMeToGroomMon::
     .string "תרצה שאטפח אחד מהם?$"
 
 PalletTown_RivalsHouse_Text_DontNeedAnyGrooming::
-    .string "אתה לא רוצה שאטפח את הפוקימונים שלך?\n"
-    .string "בסדר, בוא רק נשתה תה.$"
+    .string "אתה לא רוצה שאטפח את הפוקימונים\n"
+    .string "שלך? בסדר, בוא רק נשתה תה.$"
 
 PalletTown_RivalsHouse_Text_GroomWhichOne::
     .string "איזה פוקימון תרצה שאטפח עבורך?$"
@@ -73,8 +73,8 @@ PalletTown_RivalsHouse_Text_CantGroomAnEgg::
     .string "לטפח ביצה, רק פוקימונים.$"
 
 PalletTown_RivalsHouse_Text_MayISeeFirstMon::
-    .string "דייזי: הפוקימונים שלך ילמדו לאהוב אותך\n"
-    .string "אם תגדל אותם באהבה.\p"
+    .string "דייזי: הפוקימונים שלך ילמדו לאהוב\n"
+    .string "אותך אם תגדל אותם באהבה.\p"
     .string "לדוגמא, {PLAYER}, אני יכולה לראות את\n"
     .string "הפוקימון הראשון שלך?$"
 

@@ -35,14 +35,15 @@ RockTunnel_B1F_Text_CooperPostBattle::
     .string "אפשר לקבל אותו?$"
 
 RockTunnel_B1F_Text_SteveIntro::
-    .string "אה… אתה יודע על קוספליי של פוקימונים?\n"
+    .string "אה… אתה יודע על קוספליי של\n"
+    .string "פוקימונים?"
 
 RockTunnel_B1F_Text_SteveDefeat::
     .string "טוב, זהו.$"
 
 RockTunnel_B1F_Text_StevePostBattle::
-    .string "קוספליי של פוקימונים זה להתחפש לפוקימונים\n"
-    .string "לכיף.\p"
+    .string "קוספליי של פוקימונים זה להתחפש\n"
+    .string "לפוקימונים לכיף.\p"
     .string "קלאפרי היא פוקימון פופולרי.$"
 
 RockTunnel_B1F_Text_AllenIntro::
@@ -76,8 +77,8 @@ RockTunnel_B1F_Text_EricDefeat::
     .string "שיגרתי אותה!$"
 
 RockTunnel_B1F_Text_EricPostBattle::
-    .string "אני אגדל את הפוקימונים שלי כדי להביס\n"
-    .string "את שלך, ילד.$"
+    .string "אני אגדל את הפוקימונים שלי כדי\n"
+    .string "להביס את שלך, ילד.$"
 
 RockTunnel_B1F_Text_WinstonIntro::
     .string "אני מצייר תמונות של פוקימונים\n"

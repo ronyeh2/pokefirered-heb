@@ -8,7 +8,7 @@ Text_SnorlaxWokeUp::
 
 Text_SnorlaxReturnedToMountains::
     .string "סנורלאקס נרגע.\n"
-    .string "הוא פיהק יקום ענק…\n"
+    .string "הוא פיהק יקום ענק…\l"
     .string "וחזר להרים.$"
 
 Text_WantToUsePokeFlute::
@@ -49,12 +49,12 @@ Route12_Text_JustinDefeat::
 
 Route12_Text_JustinPostBattle::
     .string "הייתי יכול לגרום לפוקימון שלי\n"
-    .string "להתפתח עם Mאבן ירח.\n"
+    .string "להתפתח עם Mאבן ירח.\l"
     .string "הייתי מנצח אז, אני בטוח.$"
 
 Route12_Text_LucaIntro::
     .string "חשמל זה ההתמחות שלי.\n"
-    .string "אני לא מבין כלום בפוקימונים\n"
+    .string "אני לא מבין כלום בפוקימונים\l"
     .string "מהים, למרות.$"
 
 Route12_Text_LucaDefeat::
@@ -72,13 +72,13 @@ Route12_Text_HankDefeat::
 
 Route12_Text_HankPostBattle::
     .string "אני מניח שאתה טוב במה שאתה אוהב.\n"
-    .string "טוב, ניצחת אותי בפוקימונים,\n"
+    .string "טוב, ניצחת אותי בפוקימונים,\l"
     .string "אבל אתה לא טוב ממני בדיג.$"
 
 Route12_Text_ElliotIntro::
-    .string "אני אוהב לדוג, אל תבין אותי לא נכון.\n"
-    .string "אבל יהיה טוב אם היה לי גם יותר\n"
-    .string "עבודה.$"
+    .string "אני אוהב לדוג, אל תבין אותי לא\n"
+    .string "נכון. אבל יהיה טוב אם היה לי גם\l"
+    .string "יותר עבודה.$"
 
 Route12_Text_ElliotDefeat::
     .string "זה לא קל…$"
@@ -89,7 +89,7 @@ Route12_Text_ElliotPostBattle::
 
 Route12_Text_AndrewIntro::
     .string "מה יש לדוג?\n"
-    .string "אף פעם לא יודע מה אתה יכול\n"
+    .string "אף פעם לא יודע מה אתה יכול\l"
     .string "לתפוס!$"
 
 Route12_Text_AndrewDefeat::
@@ -97,7 +97,7 @@ Route12_Text_AndrewDefeat::
 
 Route12_Text_AndrewPostBattle::
     .string "מה, מגיקארפ?\n"
-    .string "אני תופס אותם כל הזמן, ברור.\n"
+    .string "אני תופס אותם כל הזמן, ברור.\l"
     .string "אבל, כמה שהם חלשים.$"
 
 Route12_Text_RouteSign::
@@ -121,7 +121,7 @@ Route12_Text_JesPostBattle::
 
 Route12_Text_JesNotEnoughMons::
     .string "ג'ס: גיה ואני, נישאר יחד לנצח.\n"
-    .string "לא נלחם עד שיהיה לך\n"
+    .string "לא נלחם עד שיהיה לך\l"
     .string "שני פוקימונים משלך.$"
 
 Route12_Text_GiaIntro::
@@ -137,5 +137,5 @@ Route12_Text_GiaPostBattle::
 
 Route12_Text_GiaNotEnoughMons::
     .string "גיה: אני לא יכולה להילחם\n"
-    .string "בלי ג'ס שלי!\n"
+    .string "בלי ג'ס שלי!\l"
     .string "לא היה לך עוד פוקימון?$"

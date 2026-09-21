@@ -41,7 +41,8 @@ Text_MegaPunchTaught::
     .string "עכשיו, אנחנו חברים בדרך של\n"
     .string "אגרוף!\p"
     .string "אתה צריך ללכת לפני שיראה אותך\n"
-    .string "השוטה שמאמין רק בבעיטות הטיפשיות שלו שם.$"
+    .string "השוטה שמאמין רק בבעיטות הטיפשיות\l"
+    .string "שלו שם.$"
 
 Text_MegaKickTeach::
     .string "בעיטה של עוצמה פראית!\p"
@@ -63,7 +64,8 @@ Text_MegaKickTaught::
     .string "עכשיו, אנחנו בני ברית בדרך\n"
     .string "של בעיטה!\p"
     .string "אתה צריך לרוץ לפני שיראה אותך\n"
-    .string "השוטה שמאמין רק באגרופים הפשוטים שלו שם.$"
+    .string "השוטה שמאמין רק באגרופים הפשוטים\l"
+    .string "שלו שם.$"
 
 Route4_Text_PeopleLikeAndRespectBrock::
     .string "וואו, זה תג הסלע!\n"

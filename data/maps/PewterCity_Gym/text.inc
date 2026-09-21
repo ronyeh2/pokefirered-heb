@@ -91,7 +91,7 @@ PewterCity_Gym_Text_LetsGetHappening::
 
 PewterCity_Gym_Text_TryDifferentPartyOrders::
     .string "הפוקימון הראשון בקרב הוא זה\n"
-    .string "שנמצא בצד שמאל של רשימת\n"
+    .string "שנמצא בצד שמאל של רשימת\l"
     .string "הפוקימונים.\p"
     .string "על ידי שינוי הסדר, ייתכן שתשיג\n"
     .string "יתרון על היריב שלך.\p"

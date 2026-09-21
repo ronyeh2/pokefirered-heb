@@ -2,7 +2,7 @@ Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
     .string "בסדר, סדר שש פוקבולים\n"
     .string "בחגורה שלי…\p"
     .string "כן, זה יעשה את זה.\n"
-    .string "מקסימום, אתה\n"
+    .string "מקסימום, אתה\l"
     .string "יכול להיות עם שישה פוקימונים.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
@@ -27,7 +27,7 @@ Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500::
 
 Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
     .string "{PLAYER} שילם סכום\n"
-    .string "שערורייתי של ¥005 וקנה\n"
+    .string "שערורייתי של ¥005 וקנה\l"
     .string "את המג'יקארפ…$"
 
 Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::

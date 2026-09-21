@@ -39,7 +39,8 @@ ViridianCity_School_Text_NotebookFourthPage::
     .string "הפוקימון היא פשוטה.\p"
     .string "היא להביס את שמונת המאמנים\n"
     .string "הבכירים של אולמות הפוקימון.\p"
-    .string "עשה זאת כדי לזכות בזכות להתמודד עם...\p"
+    .string "עשה זאת כדי לזכות בזכות להתמודד\n"
+    .string "עם...\p"
     .string "ארבעת האליטה של ליגת הפוקימון!$"
 
 ViridianCity_School_Text_TurnThePage::
@@ -67,8 +68,8 @@ ViridianCity_School_Text_ExplainSleep::
 ViridianCity_School_Text_ExplainBurn::
     .string "כווייה מפחיתה את כוח ההתקפה.\n"
     .string "היא גם גורמת לאובדן HP מתמשך.\p"
-    .string "כווייה נשארת לאחר הקרב.\n"
-    .string "השתמש במשחה לכוויות כדי לרפא כווייה.$"
+    .string "כווייה נשארת לאחר הקרב. השתמש\n"
+    .string "במשחה לכוויות כדי לרפא כווייה.$"
 
 ViridianCity_School_Text_ExplainPoison::
     .string "כשהפוקימון מורעל, הבריאות שלו\n"

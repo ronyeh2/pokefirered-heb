@@ -11,8 +11,8 @@ CeruleanCity_House1_Text_HaveJustTheThing::
     .string "בדיוק בשבילך.$"
 
 CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner::
-    .string "יש משהו חדש בקומה השנייה של\n"
-    .string "מרכזי פוקימון, זה נמצא בפינה הישירה.\p"
+    .string "יש משהו חדש בקומה השנייה של מרכזי\n"
+    .string "פוקימון, זה נמצא בפינה הישירה.\p"
     .string "הם התקינו מכונה על חוטית\n"
     .string "שטוחנת פירות יער.\p"
     .string "פה אתה נכנס לתמונה.\p"

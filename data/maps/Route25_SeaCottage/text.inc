@@ -48,7 +48,8 @@ Route25_SeaCottage_Text_NoPleaseBeautiful::
 Route25_SeaCottage_Text_ThanksBudTakeThis::
     .string "ביל: יי הא!\n"
     .string "תודה, חבר! אני חייב לך אחת!\p"
-    .string "אז, באת לראות את האוסף פוקימון שלי?\p"
+    .string "אז, באת לראות את האוסף פוקימון\n"
+    .string "שלי?\p"
     .string "לא?\n"
     .string "זה מאכזב.\p"
     .string "אני חייב להודות לך...\n"
@@ -57,7 +58,8 @@ Route25_SeaCottage_Text_ThanksBudTakeThis::
 Route25_SeaCottage_Text_ThanksLadyTakeThis::
     .string "ביל: יי הא!\n"
     .string "תודה, גברת! אני חייב לך אחת!\p"
-    .string "אז, באת לראות את האוסף פוקימון שלי?\p"
+    .string "אז, באת לראות את האוסף פוקימון\n"
+    .string "שלי?\p"
     .string "לא?\n"
     .string "זה מאכזב.\p"
     .string "אני חייב להודות לך...\n"
@@ -70,8 +72,10 @@ Route25_SeaCottage_Text_YouveGotTooMuchStuff::
     .string "יש לך יותר מדי דברים!$"
 
 Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
-    .string "ספינת השייט ס.ס. אן נמצאת בעיר ורמיליון.\p"
-    .string "שמעתי שיש שם הרבה מאמנים על הסיפון, גם כן.\p"
+    .string "ספינת השייט ס.ס. אן נמצאת בעיר\n"
+    .string "ורמיליון.\p"
+    .string "שמעתי שיש שם הרבה מאמנים על\n"
+    .string "הסיפון, גם כן.\p"
     .string "הם הזמינו אותי למסיבה שלהם, אבל\n"
     .string "אני לא סובל מסיבות מפוארות.\p"
     .string "למה שלא תלך במקומי?\n"

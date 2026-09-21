@@ -28,7 +28,7 @@ PalletTown_PlayersHouse_1F_Text_MovieOnTVFourBoysOnRailroad::
 
 PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad::
     .string "יש סרט בטלוויזיה.\n"
-    .string "ילדה עם צמות הולכת על דרך.\n"
+    .string "ילדה עם צמות הולכת על דרך.\l"
     .string "שבנויה מאבנים צהובות.\p"
     .string "אני גם צריכה ללכת.$"
 

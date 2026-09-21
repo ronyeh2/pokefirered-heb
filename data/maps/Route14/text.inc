@@ -45,7 +45,7 @@ Route14_Text_MarlonDefeat::
 
 Route14_Text_MarlonPostBattle::
     .string "הפוקימונים המעופפים הם אהבתי\n"
-    .string "היחידה. אני לא רוצה לגדל שום דבר\n"
+    .string "היחידה. אני לא רוצה לגדל שום דבר\l"
     .string "אחר.$"
 
 Route14_Text_DonaldIntro::

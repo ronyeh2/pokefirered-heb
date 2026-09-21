@@ -24,8 +24,8 @@ Route15_Text_BeckyPostBattle::
     .string "כל כך מכוערים ורעים!$"
 
 Route15_Text_EdwinIntro::
-    .string "כשאני שורק, אני יכול לזמן פוקימונים\n"
-    .string "מעופפים.$"
+    .string "כשאני שורק, אני יכול לזמן\n"
+    .string "פוקימונים מעופפים.$"
 
 Route15_Text_EdwinDefeat::
     .string "אוי!\n"

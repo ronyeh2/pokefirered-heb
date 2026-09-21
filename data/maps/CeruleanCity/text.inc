@@ -18,7 +18,7 @@ CeruleanCity_Text_OhRightLittlePresentAsFavor::
 CeruleanCity_Text_RivalPostBattle::
     .string "{RIVAL}: היי,\n"
     .string "נחש מה עשיתי?\p"
-    .string "הלכתי לבית של ביל ושכנעתי אותו\l"
+    .string "הלכתי לבית של ביל ושכנעתי אותו\n"
     .string "להראות לי את הפוקימונים\l"
     .string "הנדירים שלו!\p"
     .string "זה מילא לי הרבה דפים בפוקדקס!\p"

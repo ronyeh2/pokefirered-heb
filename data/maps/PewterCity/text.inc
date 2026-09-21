@@ -29,7 +29,7 @@ PewterCity_Text_ClefairyCameFromMoon::
 PewterCity_Text_BrockOnlySeriousTrainerHere::
     .string "אין כאן הרבה מאמני\n"
     .string "פוקימון רציניים!\p"
-    .string "כולם כאן, כאילו, אספני חרקים וזה.\l"
+    .string "כולם כאן, כאילו, אספני חרקים וזה.\n"
     .string "אבל ברוק ממכון פיוטר ממש חזק\l"
     .string "בקטע של אימון!$"
 
@@ -77,7 +77,7 @@ PewterCity_Text_TrainerTipsEarningEXP::
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "שימו לב!\p"
-    .string "כנופיית גנבים נצפתה גונבת\l"
+    .string "כנופיית גנבים נצפתה גונבת\n"
     .string "מאובנים מהר הירח!\l"
     .string "אם יש בידיכם מידע שיסייע לתפוס את\l"
     .string "הגנבים, פנו למשטרת פיוטר!$"

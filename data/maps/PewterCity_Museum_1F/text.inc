@@ -46,7 +46,7 @@ PewterCity_Museum_1F_Text_WantYouToGetAmberExamined::
     .string "אני חושב שהחתיכת אמבר הזו\n"
     .string "מכילה DNA של פוקימון!\p"
     .string "זו תהיה פריצת דרך מדעית מדהימה\n"
-    .string "אם ניתן יהיה להחיות פוקימונים\n"
+    .string "אם ניתן יהיה להחיות פוקימונים\l"
     .string "מהאמבר הזה.\p"
     .string "אבל, הקולגות שלי פשוט מתעלמים\n"
     .string "ממה שיש לי להגיד.\p"

@@ -4,7 +4,7 @@ SafariZone_West_Text_RestHouse::
 SafariZone_West_Text_PleaseFindWardensLostTeeth::
     .string "הודעת בקשה\p"
     .string "בבקשה תמצא את\n"
-    .string "השיניים הזהובות\n"
+    .string "השיניים הזהובות\l"
     .string "האבודות של שומר הספארי.\l"
     .string "הן כאן איפשהו.\p"
     .string "פרס מוצע!\n"

@@ -89,7 +89,7 @@ Route8_Text_RichDefeat::
 
 Route8_Text_RichPostBattle::
     .string "לשחק משחקים ופוקימונים זה כמו\n"
-    .string "לאכול בוטנים! אני פשוט לא יכול\n"
+    .string "לאכול בוטנים! אני פשוט לא יכול\l"
     .string "להפסיק!$"
 
 Route8_Text_JuliaIntro::

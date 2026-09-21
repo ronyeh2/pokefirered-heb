@@ -45,11 +45,12 @@ ViridianCity_Text_ThisIsPrivateProperty::
 ViridianCity_Text_ThatWasEducationalTakeThis::
     .string "הא!\n"
     .string "כנראה שנרדמתי קצת בשמש.\p"
-    .string "היה לי חלום על דראוזי שאוכל\l"
+    .string "היה לי חלום על דראוזי שאוכל\n"
     .string "את החלום שלי. מה זה?\l"
     .string "מאיפה הגיע המ”מ הזה?\p"
     .string "זה מפחיד! הנה, אתה יכול\l"
-    .string "לקבל את המ”מ הזה.\p$"
+    .string "לקבל את המ”מ הזה.\p"
+    .string "$"
 
 ViridianCity_Text_ShowYouHowToCatchMons::
     .string "הה, סוף סוף שתיתי\n"
@@ -99,7 +100,7 @@ ViridianCity_Text_CatchMonsForEasierBattles::
 
 ViridianCity_Text_MovesLimitedByPP::
     .string "טיפים למאמנים\p"
-    .string "המהלכים של פוקימונים מוגבלים\l"
+    .string "המהלכים של פוקימונים מוגבלים\n"
     .string "בנקודות הכוח שלהם, או בקיצור\l"
     .string "נ”כ.\p"
     .string "כדי לשחזר נ”כ, רפא את הפוקימון\l"

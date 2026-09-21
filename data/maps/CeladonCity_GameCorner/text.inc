@@ -1,6 +1,6 @@
 CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
     .string "ברוך הבא!\p"
-    .string "אם תרצה להחליף את האסימונים שלך\l"
+    .string "אם תרצה להחליף את האסימונים שלך\n"
     .string "בפרסים נפלאים, תוכל לעשות זאת\l"
     .string "בבניין הצמוד.$"
 
@@ -60,7 +60,7 @@ CeladonCity_GameCorner_Text_GymGuyAdvice::
     .string "יו!\p"
     .string "יש לך דברים יותר טובים לעשות,\l"
     .string "אלופצ'יק!\p"
-    .string "בראש מכון סלדון עומדת המנהיגה\l"
+    .string "בראש מכון סלדון עומדת המנהיגה\n"
     .string "אריקה! היא משתמשת בפוקימונים מסוג\l"
     .string "דשא!\p"
     .string "היא אמנם נראית כנועה, אבל מראה\l"

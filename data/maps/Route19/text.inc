@@ -127,7 +127,7 @@ Route19_Text_LiaDefeat::
 
 Route19_Text_LiaPostBattle::
     .string "ליאה: יש לך אח קטן?\n"
-    .string "אני מקווה שאתה מלמד אותו\n"
+    .string "אני מקווה שאתה מלמד אותו\l"
     .string "דברים טובים.$"
 
 Route19_Text_LiaNotEnoughMons::

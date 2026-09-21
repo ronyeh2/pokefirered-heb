@@ -77,7 +77,8 @@ Pokedude_Text_ButterfreeDoubleResistsGrass::
 	.string "...וגם גורמת רק חצי מהנזק\n"
 	.string "על פוקימון מסוג מעופף.\p"
 	.string "לכן, באטרפרי, בתור פוקימון\n"
-	.string "חרק/מעופף, מקבל רק רבע מהנזק הרגיל.$"
+	.string "חרק/מעופף, מקבל רק רבע מהנזק\l"
+	.string "הרגיל.$"
 
 Pokedude_Text_ButterfreeGoodAgainstOddish::
 	.string "אודיש הוא פוקימון מסוג\n"

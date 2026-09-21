@@ -51,8 +51,8 @@ CeruleanCity_House1_Text_ObeyLv70RockSmash::
     .string "07 יצייתו לך.\p"
     .string "מרמה 07 ומעלה לא תוכל להשתלט\l"
     .string "עליהם!\p"
-    .string "בנוסף תוכל להשתמש במהלך “ריסוק סלע”\n"
-    .string "מחוץ לקרב$"
+    .string "בנוסף תוכל להשתמש במהלך “ריסוק\n"
+    .string "סלע” מחוץ לקרב$"
 
 CeruleanCity_House1_Text_SpStatsWaterfall::
     .string "נתון ההתקפה\n"

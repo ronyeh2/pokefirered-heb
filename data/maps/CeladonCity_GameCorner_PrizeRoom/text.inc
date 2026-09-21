@@ -11,7 +11,8 @@ CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired::
     .string "נחוץ בשביל זה ארנק לאסימונים…$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes::
-    .string "אנחנו מחליפים את האסימונים שלך בפרסים.$"
+    .string "אנחנו מחליפים את האסימונים שלך\n"
+    .string "בפרסים.$"
 
 CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize::
     .string "איזה פרס תרצה?$"

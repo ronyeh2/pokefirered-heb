@@ -50,8 +50,8 @@ FuchsiaCity_WardensHouse_Text_ThanksLassieGiveYouSomething::
     .string "את מצילה חיים אמיתית!\p"
     .string "אף אחד לא הבין מילה\n"
     .string "ממה שאמרתי, לא אחד!\p"
-    .string "הייתי כל כך מבויש להראות את הפנים שלי\n"
-    .string "במשרד, אפילו.\p"
+    .string "הייתי כל כך מבויש להראות את הפנים\n"
+    .string "שלי במשרד, אפילו.\p"
     .string "תן לי לתת לך משהו על העזרה שלך.$"
 
 

@@ -9,5 +9,6 @@ CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
 
 CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike::
     .string "אם רק היו לי אופניים, הייתי יכול\n"
-    .string "הייתי יכול לנסוע דרך שביל האופניים!$"
+    .string "הייתי יכול לנסוע דרך שביל\l"
+    .string "האופניים!$"
 

@@ -9,7 +9,7 @@ CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked::
 CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom::
     .string "אתה יכול לבטל\n"
     .string "התפתחות.\p"
-    .string "כאשר פוקימון מתפתח, אתה יכול\l"
+    .string "כאשר פוקימון מתפתח, אתה יכול\n"
     .string "לעברוק את ההתפתחות ולהשאיר\l"
     .string "אותו כמו שהוא.$"
 

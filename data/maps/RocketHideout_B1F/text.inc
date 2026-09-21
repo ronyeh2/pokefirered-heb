@@ -38,8 +38,8 @@ RocketHideout_B1F_Text_Grunt4Defeat::
     .string "זה לא יעבוד!$"
 
 RocketHideout_B1F_Text_Grunt4PostBattle::
-    .string "בסדר, אני אדבר...\n"
-    .string "קח את המעלית כדי לראות את הבוס שלי.$"
+    .string "בסדר, אני אדבר... קח את המעלית כדי\n"
+    .string "לראות את הבוס שלי.$"
 
 RocketHideout_B1F_Text_Grunt5Intro::
     .string "האם הלכת לאיבוד, עכבר קטן?$"
