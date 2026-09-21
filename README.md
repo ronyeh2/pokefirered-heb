@@ -25,9 +25,9 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
     party menu, the option menu, the help system, the Game Corner, the player's PC, the diploma,
     the Safari Zone, and the save and clock dialogues.
   - What has *not* been verified is everything behind the link cable and wireless adapter —
-    trading, Union Room, Berry Crush, the Dodrio game, Mystery Gift and Easy Chat — plus a few
-    single-player screens this save could not set up: the Day Care level readout, the item PC's
-    quantity prompt, mail and the credits. The layout work was done for all of them.
+    trading, Union Room, Berry Crush, the Dodrio game, Mystery Gift and Easy Chat — plus three
+    single-player screens no test save could set up: mail, the credits, and the Day Care level
+    menu. The layout work was done for all of them.
   - Braille, the Latin chat keyboard and the Japanese upstream leftovers are untranslated by
     design.
 - **Contributions:**

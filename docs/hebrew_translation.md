@@ -376,9 +376,16 @@ the option menu, the help system, the Game Corner prize lists and coin box, the 
 clear-save-data screen, Mystery Gift's top menu, the diploma, the slot machine, the Safari Zone,
 and the save and clock dialogues.
 
-Not verified, because this save could not reach it: the Day Care level readout (needs a
-deposited Pokémon), the item PC's withdraw-quantity window (needs items in storage), mail, and
-the credits. Their layout was mirrored the same way as the rest.
+Checked on a real playthrough save (Victory Road, eight badges): the Day Care deposit flow, the
+naming screen via the Name Rater, the Hall of Fame ceremony and its player-info page, the
+department store elevator, the item PC and the player's PC menus.
+
+Still not seen render: **mail** (needs a Pokémon holding some — the test save's mailbox is
+empty), the **credits** (needs the Elite Four beaten; `CB2_Credits` will not start cold), and the
+**Day Care level menu**, which `ShowDaycareLevelMenu` never brought on screen in either build —
+it behaves identically on the release before this one, so it is not a regression, but nobody has
+watched it draw. `daycare.c` prints the nickname at `x = 8` and the level at the window's right
+edge, which cannot both be right.
 
 Not verified, because single-player cannot reach it at all: everything behind the link cable and
 wireless adapter — trading, Union Room, Berry Crush, the Dodrio berry game, Mystery Gift and
@@ -390,14 +397,35 @@ Still untranslated by design: the braille text in `data/text/braille.inc` (its o
 Latin chat keyboard rows in `src/keyboard_text.c`, the Japanese upstream leftovers, and blocks
 marked `@ Unused`.
 
-**What is left.** `audit.py` now covers the strings defined in C as well as those in `data/`, so
-the gap that hid the move relearner's `x = 1` is closed. Three things it still cannot see:
+**What is left.** `audit.py` now covers the strings defined in C as well as those in `data/`, but
+"covers" means one specific thing: a printer call whose `x` is a literal. That is 138 of the call
+sites. It is not most of them.
 
-- **74 printer sites whose string is a runtime buffer** — a nickname, an Easy Chat phrase, a
-  Wonder Card field. `printers.py` lists them when run with `SHOW_UNRESOLVED=1`. Their `x` was
-  mirrored by hand; none has been watched render with a worst-case value in it.
-- **Strings whose Hebrew has a different number of digit runs from its English original.**
-  `numbers.py` skips those rather than guess which run is which.
+- **157 printer calls compute their `x`** — from a parameter, a measured width, a struct field —
+  and nothing checks those. (A further 70 compute it through an `RTL_ANCHOR_*` helper and are
+  right by construction.) This is the same shape of gap as the one that hid the move relearner,
+  one level up, and it is where the remaining bugs are: the item PC was found this way, not by a
+  tool. Its whole screen printed through a local wrapper that takes `x` as a parameter, so every
+  call passed upstream's left inset and every item showed one glyph.
+- **Six printer entry points are not scanned at all**: `AddTextPrinterParameterized2` (44 calls —
+  it has no `x` and prints from the window origin), `AddTextPrinterToWindow1` (27),
+  `AddTextPrinter` (18), `AddTextPrinterAndCreateWindowOnHealthbox` (14),
+  `AddTextPrinterDiffStyle` (3), `AddTextPrinterForMessage` (3).
+- **A `ListMenuTemplate`'s `item_X` is a left inset too**, and it is set by assignment rather than
+  passed to a printer, so no check sees it. `item_menu.c`, `berry_pouch.c`, `fame_checker.c` and
+  `field_specials.c` mirror theirs; `daycare.c` (8) and `learn_move.c` (8) still do not. Grep
+  `item_X` before trusting a list screen.
+- **Only the left edge is tested.** A run whose first glyph starts past the window's right edge
+  is not caught — that is why the healthbox level label loses its ר.
+- **74 printer sites hold a runtime buffer** — a nickname, an Easy Chat phrase, a Wonder Card
+  field. `SHOW_UNRESOLVED=1 python3 tools/hebrew/printers.py` lists them. Their `x` was mirrored
+  by hand; none has been watched render with a worst-case value in it.
+- **`numbers.py` cannot see a single digit in the wrong place.** It compares digit *runs* against
+  English and skips runs of one character, because a single digit cannot be reversed. It
+  therefore said nothing about `gText_2F` being `"ק2"` where `gText_2F_2` was `"2ק"` — same two
+  characters, opposite order on screen. It also skips a string whose Hebrew has a different
+  number of runs from its English original (44 such strings carry a number; all were checked by
+  hand and are correct).
 - **Latin text.** There is no bidi pass, so any Latin run inside a Hebrew string renders
   backwards — a save made before the species names were translated shows `DRAZIRAHC` in the
   party list. New games are unaffected because the names are Hebrew; old saves and
