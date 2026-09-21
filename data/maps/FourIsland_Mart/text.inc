@@ -1,16 +1,16 @@
 FourIsland_Mart_Text_LoreleiGrewUpOnThisIsland::
-    .string "We've had a great and powerful\n"
-    .string "TRAINER grow up on this island.\p"
-    .string "I bet even you'd know her.\n"
-    .string "It's LORELEI of the ELITE FOUR!\p"
-    .string "When LORELEI was just a tyke,\n"
-    .string "I taught her about POKéMON.$"
+    .string "באי הזה גדלה מאמנת גדולה\n"
+    .string "וחזקה מאוד.\p"
+    .string "אני מתערב שגם אתה מכיר אותה.\n"
+    .string "זו לורליי מהרביעייה העילית!\p"
+    .string "כשלורליי הייתה קטנטונת,\n"
+    .string "אני לימדתי אותה על פוקימון.$"
 
 FourIsland_Mart_Text_IcefallCaveIsFrigid::
-    .string "The SEVII ISLANDS are in a warm\n"
-    .string "region overall.\p"
-    .string "But there is one exception you\n"
-    .string "need to know about.\p"
-    .string "The ICEFALL CAVE is frigid because\n"
-    .string "of the POKéMON that live in it.$"
+    .string "איי סווי נמצאים באזור\n"
+    .string "חם בדרך כלל.\p"
+    .string "אבל יש חריג אחד שכדאי\n"
+    .string "שתדע עליו.\p"
+    .string "מערת מפל הקרח קפואה בגלל\n"
+    .string "הפוקימונים שחיים בתוכה.$"
 
