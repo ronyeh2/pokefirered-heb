@@ -61,3 +61,13 @@ prefabs.json
 .vscode/*.*
 *.js
 *.sym
+
+# Python bytecode from tools/hebrew
+__pycache__/
+*.pyc
+
+# tools/hebrew/emu build output and local test saves
+tools/hebrew/emu/runner
+tools/hebrew/emu/*.sav
+tools/hebrew/emu/out*/
+tools/hebrew/emu/crosscore

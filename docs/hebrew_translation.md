@@ -84,6 +84,66 @@ start menu and both trainer-card faces pixel-for-pixel identically. Cores differ
 only in colour post-processing (and in pixel format - normalise to RGB565 before
 diffing frames, or XRGB8888 cores will look different when they are not).
 
+## Measuring a line
+
+Do not count characters, and do not sum glyph widths. Both under-measure, the
+build says nothing, and the line quietly clips in game. Use
+`tools/hebrew/textwidth.py`, which models what the renderer does:
+
+```python
+import sys; sys.path.insert(0, "tools/hebrew")
+import textwidth as T
+T.overhang("שלום עולם")        # px outside the dialogue box; <= 0 means it fits
+T.overhang(line, pen=T.PEN_ITEM_DESC)
+T.help_width(line)             # the help system's separate renderer
+```
+
+Two things a naive sum gets wrong.
+
+**A wide letter costs an extra pixel.** `src/text.c:877` subtracts one more pixel
+after each of `א ב ד ה ח ט מ ס ע פ ש ת ם ף` when the *next* character is not
+`י`, `ו` or `ן`. A line of 30 `ת` is 210px, not 180px. This one pixel per letter
+is why 64 lines that looked comfortably inside the box were in fact clipping.
+
+**The budget is not the window width.** A printer's `x` is where the first glyph
+is blitted, and the pen then walks left, so a run occupies
+`[x - (total - firstGlyphWidth), x + firstGlyphWidth)`. A line therefore fits
+when `total - firstGlyphWidth <= x`, which is a few pixels more generous than
+`total <= x`. Getting this wrong in the strict direction is harmless; getting it
+wrong the other way loses a glyph.
+
+| Window | Size | Pen | Fits when |
+| --- | --- | --- | --- |
+| Overworld dialogue box | 26 tiles / 208px | 200 | `total - first <= 200` |
+| Battle message box | 28 tiles / 224px | 216 | `total - first <= 216` |
+| Item description pane | 25 tiles / 200px | 192 | `total - first <= 192` |
+| Help system main panel | 208px | 208, right edge | `help_width <= 208` |
+| Safari ball label (healthbox) | 64px strip | 58 | `total - first <= 58` |
+| Safari ball count (healthbox) | 48px strip | 43 | `total - first <= 43` |
+
+The healthbox rows are the trap worth remembering: those scratch windows are
+8 tiles wide but only *part* of each is copied into sprite VRAM, so the usable
+strip is narrower than the window. Count the tiles the `TextIntoHealthboxObject`
+calls actually copy, not the window's width.
+
+**`{MIN_LETTER_SPACING n}` is the escape hatch for a strip that is too narrow.**
+`FONT_SMALL` is forced to a 6px minimum in `src/text_printer.c:90`; prefixing a
+string with `{MIN_LETTER_SPACING 5}` brings it back to the glyphs' own widths.
+It can only pad a glyph *out*, never make one narrower, so it buys at most 1px
+per character. Both Safari healthbox strings need it.
+
+**Runtime substitutions have to be budgeted.** `{PLAYER}` and `{RIVAL}` can each
+reach `PLAYER_NAME_LENGTH` = 7 glyphs and `{STR_VAR_n}` up to 8-10. Wrap for the
+maximum or the line clips only for players with long names -- which is exactly
+the kind of bug that never shows up in testing. `textwidth.py` does this for you
+with `placeholders=True`.
+
+**The two renderers do not agree.** `HelpSystemRenderText()` uses a hard 4px
+space, applies no wide-letter padding, and *drops* a glyph that would cross the
+panel's left edge instead of clipping it. So help-system text measures narrower
+than the same words in a dialogue box, and overflows there lose whole letters
+rather than slivers.
+
 ## Rules for editing text
 
 1. **Every `.string` block ends with `$`.** A missing terminator produces no build error and runs
@@ -94,8 +154,10 @@ diffing frames, or XRGB8888 cores will look different when they are not).
 3. **Keep the same line structure.** `\n` = next line, `\l` = scroll up one line and continue,
    `\p` = wait for A then clear the box. Dropping a `\p` merges two message boxes; dropping a `\n`
    runs a line off the edge.
-4. **Budget about 28–30 Hebrew characters per line.** A dialogue box is ~208px and Hebrew glyphs are
-   6–7px. Hebrew that is longer than the English must be rewritten shorter, not allowed to overflow.
+4. **Measure every line you touch** with `tools/hebrew/audit.py` — see *Measuring a line*
+   above. As a rough guide a dialogue line holds 28–30 Hebrew characters, but the real budget
+   depends on which letters they are, so do not trust the count. Hebrew that is longer than the
+   English must be rewritten shorter, not allowed to overflow.
 5. **Only characters in `charmap.txt` are legal.** There is no straight double quote — use the curly
    `”`. Use the single ellipsis character `…`, not three periods.
 6. **Never rename a label.** The `Foo_Text_Bar::` symbols are referenced by scripts; renaming one
@@ -131,11 +193,18 @@ or widens a struct that is instantiated as a global array **will fail to link**.
 
 ```bash
 make -j$(sysctl -n hw.ncpu)          # must succeed
+python3 tools/hebrew/audit.py        # must print clean; exits non-zero otherwise
 ```
 
-The build catches illegal characters, assembly syntax errors and array overflows. It does **not**
-catch a missing `$`, a dropped control code, a renamed label or a wrongly-ordered number — check
-those by reading your diff.
+The build catches illegal characters, assembly syntax errors and array overflows. `audit.py`
+catches the five things it cannot: a line outside its window, a line that only clips once a
+player name is filled in, an item description wider than its pane, a help-system line that
+loses letters, and a block with no `$` terminator. If a line it flags cannot be re-wrapped,
+`python3 tools/hebrew/rewrap.py --apply` moves the line breaks for you and reports anything
+that needs shortening instead.
+
+Neither catches a dropped control code, a renamed label or a wrongly-ordered number — read
+your diff for those.
 
 For terminology, follow what the already-translated files use rather than coining new wording;
 `rg` for a proper noun before inventing a spelling for it.
@@ -181,3 +250,58 @@ diff before.txt after.txt              # must be empty
 
 An empty diff means no RAM symbol moved. If EWRAM or IWRAM usage changed at all in
 `--print-memory-usage`, something moved and the diff will show you what.
+
+## Testing in an emulator
+
+Reading the source is not enough — most of the defects fixed in this fork were only visible on
+screen, and several confident static readings of `src/text.c` turned out to be wrong. A headless
+emulator driven by a script, taking screenshots, is the tool that settles arguments.
+
+`tools/hebrew/emu/` is that harness, and [its README](../tools/hebrew/emu/README.md) is the
+full guide: how to build it, the script language, a worked Safari journey, the ruler technique
+for measuring a width you are unsure of, and the five pitfalls that cost real time. The short
+version:
+
+```bash
+make -C tools/hebrew/emu MGBA=/path/to/your/mgba/checkout
+python3 tools/hebrew/emu/journey.py out 1 63 safari.txt 16 16
+```
+
+- `runner` boots the ROM with a save and takes `<frames> <keys>`, `shot`, `read` and `w8/w16/w32`
+  lines on stdin. `journey.py` wraps it to warp to a map first.
+- **FireRed relocates its save blocks**, so `gSaveBlock1Ptr` at `0x03005008` changes value when a
+  map loads. Read it *after* the warp — `journey.py` replays the prefix twice to do this. Poking
+  the pre-warp address writes into memory that now belongs to something else, which looks
+  convincingly like a crashing map.
+- **A savestate does not survive a rebuild**, and a held A button skips a page. Both produce
+  plausible nonsense rather than an error.
+- **When a width calculation is in doubt, print a ruler** — put two strings of known width on the
+  two lines of one page and read off the inked columns. That is how the wide-letter rule above
+  was confirmed after three rounds of plausible-but-wrong arithmetic. Restore the string
+  afterwards and check `git diff`.
+- `crosscore` runs the same script through the mGBA, VBA-M, VBA-Next, gpSP and Mednafen libretro
+  cores. All five render identically, which is expected — the framebuffer is 240x160 in hardware
+  and the ROM positions its own text — but it is cheap to re-confirm.
+
+## Where to continue
+
+Reachable in single-player and verified on screen: the overworld, dialogue and signs, the
+start menu, bag and item descriptions, the Pokédex, the Pokémon Storage System, shops, the
+trainer card, the Fame Checker, the Hall of Fame, the battle HUD including the healthbox
+level and HP, the Safari Zone, and the save and clock dialogues.
+
+Not verified, because single-player cannot reach it: everything behind the link cable and
+wireless adapter — trading, Union Room, Berry Crush, the Dodrio berry game, Mystery Gift and
+the Easy Chat system. Their centring maths was mirrored the same way as the rest, but nobody
+has seen it render. If you have two emulator instances linked, those screens are the first
+place to look.
+
+Still untranslated by design: the braille text in `data/text/braille.inc` (its own font), the
+Latin chat keyboard rows in `src/keyboard_text.c`, the Japanese upstream leftovers, and blocks
+marked `@ Unused`.
+
+One known cosmetic wart: the menu cursor `▶` still points right, away from the Hebrew label it
+marks, in every list menu. It is consistent everywhere, so it reads as a convention rather than
+a bug, but mirroring the glyph would be an improvement. The cursor's *position* is deliberately
+left where upstream put it — several callers pass a left inset of 0 and moving the cursor clips
+the first glyph of every entry.

@@ -1,0 +1,28 @@
+# Cold boot to the overworld from a battery save.
+# Deliberately over-provisioned: START/A three times gets past the title and
+# CONTINUE however many frames the intro happens to take, and the B presses
+# dismiss anything left open. Frame counts are generous on purpose -- a
+# too-short wait silently leaves you on the previous screen.
+600 -
+20 START
+60 -
+20 A
+90 -
+20 START
+60 -
+20 A
+90 -
+20 START
+60 -
+20 A
+90 -
+20 B
+100 -
+20 B
+100 -
+20 B
+100 -
+20 B
+100 -
+20 B
+250 -
