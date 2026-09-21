@@ -424,6 +424,11 @@ sites. It is not most of them.
   passed to a printer, so no check sees it. `item_menu.c`, `berry_pouch.c`, `fame_checker.c`,
   `field_specials.c`, `item_pc.c` and `daycare.c` mirror theirs; `learn_move.c` (8) still does
   not. Grep `item_X` before trusting a list screen.
+- **A cursor can sit on top of the text without either one clipping.** A menu window is sized for
+  its text plus one cursor cell; if the mirrored anchor also subtracts that cell, the run ends up
+  inside it, and redrawing the cursor erases the glyph underneath for good. Nothing measures this,
+  because nothing is outside its window. It cost Nurse Joy the ן of כן. When a menu's last letter
+  goes missing, check what the cursor is drawn over before assuming a width problem.
 - **Only the left edge is tested.** A run whose first glyph starts past the window's right edge
   is not caught — that is why the healthbox level label loses its ר.
 - **74 printer sites hold a runtime buffer** — a nickname, an Easy Chat phrase, a Wonder Card
