@@ -733,12 +733,18 @@ static void DrawVerticalMultichoiceMenu(u8 left, u8 top, u8 mcId, u8 ignoreBpres
         height = GetMCWindowHeight(count);
         windowId = CreateWindowFromRect(left, top, width, height);
         SetStdWindowBorderStyle(windowId, FALSE);
+        // The 8 upstream passes here is the gap it leaves for the cursor on the
+        // LEFT of the text. MultichoiceList_PrintItems anchors right-to-left and
+        // subtracts it from the window's right edge instead, which walks the run
+        // 8px further left -- into the cursor's own cell, since the window is
+        // only sized for one of them. The cursor still sits on the left, so the
+        // text belongs flush against the right edge: no inset.
         if (mcId == MULTICHOICE_GAME_CORNER_TMPRIZES
          || mcId == MULTICHOICE_BIKE_SHOP
          || mcId == MULTICHOICE_GAME_CORNER_BATTLE_ITEM_PRIZES)
-            MultichoiceList_PrintItems(windowId, FONT_NORMAL, 8, 2, 14, count, list, 0, 2);
+            MultichoiceList_PrintItems(windowId, FONT_NORMAL, 0, 2, 14, count, list, 0, 2);
         else
-            MultichoiceList_PrintItems(windowId, FONT_NORMAL, 8, 2, 14, count, list, 0, 2);
+            MultichoiceList_PrintItems(windowId, FONT_NORMAL, 0, 2, 14, count, list, 0, 2);
         Menu_InitCursor(windowId, FONT_NORMAL, 0, 2, 14, count, initPos);
         CreateMCMenuInputHandlerTask(ignoreBpress, count, windowId, mcId);
         ScheduleBgCopyTilemapToVram(0);
