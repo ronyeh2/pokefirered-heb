@@ -84,8 +84,8 @@ DayCare_Text_ComeAgain::
 
 DayCare_Text_GoodToSeeYou::
 	.string "הא, הנה אתה!\n"
-	.string "טוב לראות אותך\p"
-	.string "הפוקימון שלך מסתדר פב מצויין$"
+	.string "טוב לראות אותך.\p"
+	.string "הפוקימון שלך מסתדר פה מצויין.$"
 
 DayCare_Text_YourMonHasGrownXLevels::
 	.string "{STR_VAR_1} עלה {STR_VAR_2} רמות.$"
