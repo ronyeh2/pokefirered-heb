@@ -1,19 +1,18 @@
 ThreeIsland_PokemonCenter_1F_Text_PCNetworkCanLinkWithKanto::
-    .string "Hey, did you hear the news?\p"
-    .string "The PC network here can now link\n"
-    .string "with PCs in KANTO.\p"
-    .string "I don't know how that came about,\n"
-    .string "but it's fantastic!$"
+    .string "היי, שמעת את החדשות?\p"
+    .string "רשת המחשבים כאן יכולה\n"
+    .string "עכשיו להתחבר לאלה שבקאנטו.\p"
+    .string "אני לא יודע איך זה קרה,\n"
+    .string "אבל זה פנטסטי!$"
 
 ThreeIsland_PokemonCenter_1F_Text_ImpossibleToSurfBetweenIslands::
-    .string "It's impossible to SURF between the\n"
-    .string "islands around these parts.\p"
-    .string "The tides are too fast and\n"
-    .string "treacherous.$"
+    .string "אי אפשר לגלוש בין האיים\n"
+    .string "באזורים האלה.\p"
+    .string "הזרמים מהירים ומסוכנים\n"
+    .string "מדי.$"
 
 ThreeIsland_PokemonCenter_1F_Text_AlwaysBerriesInBerryForest::
-    .string "Let's crush BERRIES!\n"
-    .string "…That'd be wasting BERRIES?\p"
-    .string "You can always find some BERRIES\n"
-    .string "on the ground in BERRY FOREST.$"
-
+    .string "בואו נמעך פירות יער!\n"
+    .string "…זה בזבוז של פירות?\p"
+    .string "תמיד אפשר למצוא פירות\n"
+    .string "על הקרקע ביער הפירות.$"

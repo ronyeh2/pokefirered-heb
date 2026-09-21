@@ -1,101 +1,100 @@
 ThreeIsland_BondBridge_Text_NikkiIntro::
-    .string "The salty tang of the sea…\n"
-    .string "It tickles my heart.$"
+    .string "הריח המלוח של הים…\n"
+    .string "הוא מדגדג לי בלב.$"
 
 ThreeIsland_BondBridge_Text_NikkiDefeat::
-    .string "…Sniff, sniff…\n"
-    .string "Something smells unpleasant…$"
+    .string "…מרחרחת, מרחרחת…\n"
+    .string "משהו מריח לא נעים…$"
 
 ThreeIsland_BondBridge_Text_NikkiPostBattle::
-    .string "Perhaps that reek is your sweaty\n"
-    .string "POKéMON's body odor…$"
+    .string "אולי הצחנה הזאת היא ריח\n"
+    .string "הזיעה של הפוקימון שלך…$"
 
 ThreeIsland_BondBridge_Text_VioletIntro::
-    .string "Where are you off to in such\n"
-    .string "a hurry?$"
+    .string "לאן אתה ממהר\n"
+    .string "כל כך?$"
 
 ThreeIsland_BondBridge_Text_VioletDefeat::
-    .string "You're raising some wonderful\n"
-    .string "POKéMON.$"
+    .string "אתה מגדל פוקימונים\n"
+    .string "נהדרים.$"
 
 ThreeIsland_BondBridge_Text_VioletPostBattle::
-    .string "If you keep going this way, you'll\n"
-    .string "eventually reach BERRY FOREST.$"
+    .string "אם תמשיך בדרך הזאת,\n"
+    .string "תגיע בסוף ליער הפירות.$"
 
 ThreeIsland_BondBridge_Text_AmiraIntro::
-    .string "My mommy said that I can't swim\n"
-    .string "without my float ring.$"
+    .string "אמא שלי אמרה שאני לא\n"
+    .string "יכולה לשחות בלי גלגל ההצלה.$"
 
 ThreeIsland_BondBridge_Text_AmiraDefeat::
-    .string "Waaah!\n"
-    .string "Waaah!$"
+    .string "וואאאה!\n"
+    .string "וואאאה!$"
 
 ThreeIsland_BondBridge_Text_AmiraPostBattle::
-    .string "This year, I'm going to finally\n"
-    .string "learn how to swim!$"
+    .string "השנה אני סוף סוף הולכת\n"
+    .string "ללמוד לשחות!$"
 
 ThreeIsland_BondBridge_Text_AlexisIntro::
-    .string "Yay, yay!\n"
-    .string "POKéMON!$"
+    .string "יש, יש!\n"
+    .string "פוקימון!$"
 
 ThreeIsland_BondBridge_Text_AlexisDefeat::
-    .string "What happens now?$"
+    .string "מה קורה עכשיו?$"
 
 ThreeIsland_BondBridge_Text_AlexisPostBattle::
-    .string "Did I just win?\n"
-    .string "Or did I lose?$"
+    .string "ניצחתי עכשיו?\n"
+    .string "או שהפסדתי?$"
 
 ThreeIsland_BondBridge_Text_TishaIntro::
-    .string "Oh, no, don't come here!\n"
-    .string "Please, stay away from me!$"
+    .string "אוי לא, אל תתקרב לכאן!\n"
+    .string "בבקשה, תתרחק ממני!$"
 
 ThreeIsland_BondBridge_Text_TishaDefeat::
-    .string "Okay, you've won!\n"
-    .string "Now will you please go away?$"
+    .string "טוב, ניצחת!\n"
+    .string "עכשיו תוכל בבקשה ללכת?$"
 
 ThreeIsland_BondBridge_Text_TishaPostBattle::
-    .string "A POKéMON bit through my \n"
-    .string "swimsuit.\p"
-    .string "I can't get out of the water!$"
+    .string "פוקימון נגס לי\n"
+    .string "בבגד הים שלי.\p"
+    .string "אני לא יכולה לצאת מהמים!$"
 
 ThreeIsland_BondBridge_Text_JoyIntro::
-    .string "JOY: We'll teach you what our\n"
-    .string "favorite POKéMON is!$"
+    .string "ג'וי: נלמד אותך מה הפוקימון\n"
+    .string "האהוב עלינו!$"
 
 ThreeIsland_BondBridge_Text_JoyDefeat::
-    .string "JOY: Ohh…\n"
-    .string "MEG!$"
+    .string "ג'וי: אוהה…\n"
+    .string "מג!$"
 
 ThreeIsland_BondBridge_Text_JoyPostBattle::
-    .string "JOY: Wasn't that fun?\n"
-    .string "I hope we can battle again!$"
+    .string "ג'וי: היה כיף, נכון?\n"
+    .string "אני מקווה שנילחם שוב!$"
 
 ThreeIsland_BondBridge_Text_JoyNotEnoughMons::
-    .string "JOY: I really want to battle with\n"
-    .string "MEG.\p"
-    .string "One POKéMON isn't enough.$"
+    .string "ג'וי: אני ממש רוצה להילחם\n"
+    .string "יחד עם מג.\p"
+    .string "פוקימון אחד זה לא מספיק.$"
 
 ThreeIsland_BondBridge_Text_MegIntro::
-    .string "MEG: We'll show you our favorite\n"
-    .string "POKéMON.$"
+    .string "מג: נראה לך מה הפוקימון\n"
+    .string "האהוב עלינו.$"
 
 ThreeIsland_BondBridge_Text_MegDefeat::
-    .string "MEG: Ohh…\n"
-    .string "JOY!$"
+    .string "מג: אוהה…\n"
+    .string "ג'וי!$"
 
 ThreeIsland_BondBridge_Text_MegPostBattle::
-    .string "MEG: JOY, wasn't that fun?$"
+    .string "מג: ג'וי, היה כיף, נכון?$"
 
 ThreeIsland_BondBridge_Text_MegNotEnoughMons::
-    .string "MEG: I want to battle together\n"
-    .string "with JOY.\p"
-    .string "One POKéMON isn't enough.$"
+    .string "מג: אני רוצה להילחם יחד\n"
+    .string "עם ג'וי.\p"
+    .string "פוקימון אחד זה לא מספיק.$"
 
 ThreeIsland_BondBridge_Text_BerryForestAhead::
-    .string "BERRY FOREST AHEAD$"
+    .string "יער הפירות לפניך$"
 
 ThreeIsland_BondBridge_Text_BondBridgeSign::
-    .string "BOND BRIDGE\n"
-    .string "Please be quiet when crossing.\p"
-    .string "BERRY FOREST AHEAD$"
-
+    .string "גשר בונד\n"
+    .string "נא לשמור על השקט במעבר.\p"
+    .string "יער הפירות לפניך$"
