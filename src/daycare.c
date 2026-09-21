@@ -110,7 +110,9 @@ static const struct ListMenuTemplate sDaycareListMenuLevelTemplate =
     .maxShowed = 3,
     .windowId = 0,
     .header_X = 2,
-    .item_X = 8,
+    // The "EXIT" row of the same window, mirrored the same way as the two
+    // printers above (17 tiles wide, so RTL_MIRROR(17 * 8, 8)).
+    .item_X = 17 * 8 - 8 - 8,
     .cursor_X = 0,
     .upText_Y = 0,
     .cursorPal = 2,
@@ -1461,7 +1463,11 @@ static void DaycarePrintMonNickname(struct DayCare *daycare, u8 windowId, u32 da
 
     DayCare_GetBoxMonNickname(&daycare->mons[daycareSlotId].mon, nickname);
     AppendMonGenderSymbol(nickname, &daycare->mons[daycareSlotId].mon);
-    DaycareAddTextPrinter(windowId, nickname, 8, y);
+    // RTL: upstream puts the nickname in the left column and the level in the
+    // right one; right-to-left swaps them, so the nickname is anchored one
+    // glyph cell inside this window's right edge. Left at 8 it showed a single
+    // glyph -- the pen walks leftwards and there are only 8px there to walk in.
+    DaycareAddTextPrinter(windowId, nickname, RTL_ANCHOR_WINDOW(windowId) - 8, y);
 }
 
 static void DaycarePrintMonLvl(struct DayCare *daycare, u8 windowId, u32 daycareSlotId, u32 y)
@@ -1479,9 +1485,12 @@ static void DaycarePrintMonLvl(struct DayCare *daycare, u8 windowId, u32 daycare
     level = GetLevelAfterDaycareSteps(&daycare->mons[daycareSlotId].mon, daycare->mons[daycareSlotId].steps);
     ConvertIntToDecimalStringN(intText, level, STR_CONV_MODE_LEFT_ALIGN, 3);
     StringAppend(lvlText, intText);
-    // RTL: the pen already walks leftwards, so subtracting the width again
-    // shifts the level off to the left. Anchor it on the 132px right edge.
-    x = RTL_ANCHOR_EDGE(132);
+    // The level is the other half of that swap: upstream right-aligns it so it
+    // ends at 132, whose mirror is a run starting 4px from this window's left
+    // edge. An RTL run is positioned by its far end, so the pen is that left
+    // edge plus the width the renderer will actually produce.
+    x = (GetWindowAttribute(windowId, WINDOW_WIDTH) * 8 - 132)
+        + GetStringWidthRTL(FONT_NORMAL_COPY_2, lvlText, 1);
     DaycareAddTextPrinter(windowId, lvlText, x, y);
 }
 

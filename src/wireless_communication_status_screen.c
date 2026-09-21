@@ -259,16 +259,18 @@ static void PrintHeaderTexts(void)
     FillWindowPixelBuffer(1, PIXEL_FILL(0));
     FillWindowPixelBuffer(2, PIXEL_FILL(0));
 
-    // Print title
-    width = 192 - GetStringWidth(FONT_NORMAL_COPY_2, sHeaderTexts[0], 0);
+    // Print title. RTL: centring a run that grows leftwards is (span + width) / 2.
+    width = 192 + GetStringWidthRTL(FONT_NORMAL_COPY_2, sHeaderTexts[0], 0);
     WCSS_AddTextPrinterParameterized(0, FONT_NORMAL_COPY_2, sHeaderTexts[0], width / 2, 6, COLOR_TITLE);
 
     // Print label for each group (excluding total)
     for (i = 0; i < NUM_GROUPTYPES - 1; i++)
-        WCSS_AddTextPrinterParameterized(1, FONT_NORMAL_COPY_2, sHeaderTexts[i + 1], 0, 30 * i + 10, COLOR_NORMAL);
+        // RTL: the labels sit against this window's right edge; at 0 each showed
+        // one glyph, because the pen walks leftwards out of the window.
+        WCSS_AddTextPrinterParameterized(1, FONT_NORMAL_COPY_2, sHeaderTexts[i + 1], RTL_ANCHOR_WINDOW(1), 30 * i + 10, COLOR_NORMAL);
 
     // Print label for total
-    WCSS_AddTextPrinterParameterized(1, FONT_NORMAL_COPY_2, sHeaderTexts[i + 1], 0, 30 * i + 10, COLOR_TOTAL);
+    WCSS_AddTextPrinterParameterized(1, FONT_NORMAL_COPY_2, sHeaderTexts[i + 1], RTL_ANCHOR_WINDOW(1), 30 * i + 10, COLOR_TOTAL);
 
     PutWindowTilemap(0);
     CopyWindowToVram(0, COPYWIN_GFX);
@@ -306,9 +308,9 @@ static void Task_WirelessCommunicationScreen(u8 taskId)
             {
                 ConvertIntToDecimalStringN(gStringVar4, sStatusScreen->groupCounts[i], STR_CONV_MODE_RIGHT_ALIGN, 2);
                 if (i != GROUPTYPE_TOTAL)
-                    WCSS_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_2, gStringVar4, 4, 30 * i + 10, COLOR_NORMAL);
+                    WCSS_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_2, gStringVar4, RTL_ANCHOR_WINDOW(2), 30 * i + 10, COLOR_NORMAL);
                 else
-                    WCSS_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_2, gStringVar4, 4, 100, COLOR_TOTAL);
+                    WCSS_AddTextPrinterParameterized(2, FONT_NORMAL_COPY_2, gStringVar4, RTL_ANCHOR_WINDOW(2), 100, COLOR_TOTAL);
             }
             PutWindowTilemap(2);
             CopyWindowToVram(2, COPYWIN_FULL);

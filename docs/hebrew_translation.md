@@ -380,12 +380,21 @@ Checked on a real playthrough save (Victory Road, eight badges): the Day Care de
 naming screen via the Name Rater, the Hall of Fame ceremony and its player-info page, the
 department store elevator, the item PC and the player's PC menus.
 
+Two of the link screens do open from a cold jump, and both are now checked: `CB2_LinkError`
+draws the comm-error text in full, and `CB2_InitWirelessCommunicationScreen` draws the wireless
+status board — which turned out to be showing one glyph per row and a truncated title, and is
+mirrored now. The rest (`CB2_PokemonJump`, `CB2_EasyChatScreen`, `CB2_TradeMenu`,
+`CB2_UnionRoomChatMain`) need a link session set up first and give a black screen cold.
+
 Still not seen render: **mail** (needs a Pokémon holding some — the test save's mailbox is
 empty), the **credits** (needs the Elite Four beaten; `CB2_Credits` will not start cold), and the
-**Day Care level menu**, which `ShowDaycareLevelMenu` never brought on screen in either build —
-it behaves identically on the release before this one, so it is not a regression, but nobody has
-watched it draw. `daycare.c` prints the nickname at `x = 8` and the level at the window's right
-edge, which cannot both be right.
+**Day Care level menu**. `ShowDaycareLevelMenu` is byte-identical to upstream and its window
+never appeared in this build or the release before it — the script blocks on `waitstate` with the
+message box still up and nothing drawn at the window's coordinates. Its two printers had the
+same half-mirrored layout the rest of this fork started with (nickname at a left inset of 8, level
+anchored on the right edge) and are swapped now, reasoned rather than watched: the two functions
+are static and reached only from that menu, and twelve other screens are pixel-identical across
+the change.
 
 Not verified, because single-player cannot reach it at all: everything behind the link cable and
 wireless adapter — trading, Union Room, Berry Crush, the Dodrio berry game, Mystery Gift and
@@ -412,9 +421,9 @@ sites. It is not most of them.
   `AddTextPrinter` (18), `AddTextPrinterAndCreateWindowOnHealthbox` (14),
   `AddTextPrinterDiffStyle` (3), `AddTextPrinterForMessage` (3).
 - **A `ListMenuTemplate`'s `item_X` is a left inset too**, and it is set by assignment rather than
-  passed to a printer, so no check sees it. `item_menu.c`, `berry_pouch.c`, `fame_checker.c` and
-  `field_specials.c` mirror theirs; `daycare.c` (8) and `learn_move.c` (8) still do not. Grep
-  `item_X` before trusting a list screen.
+  passed to a printer, so no check sees it. `item_menu.c`, `berry_pouch.c`, `fame_checker.c`,
+  `field_specials.c`, `item_pc.c` and `daycare.c` mirror theirs; `learn_move.c` (8) still does
+  not. Grep `item_X` before trusting a list screen.
 - **Only the left edge is tested.** A run whose first glyph starts past the window's right edge
   is not caught — that is why the healthbox level label loses its ר.
 - **74 printer sites hold a runtime buffer** — a nickname, an Easy Chat phrase, a Wonder Card
