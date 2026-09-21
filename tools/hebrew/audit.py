@@ -16,6 +16,7 @@ import io, json, os, re, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import textwidth as T
+import substitutions
 
 ROOT = T.ROOT
 LABEL = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)::", re.M)
@@ -49,12 +50,22 @@ def collect():
     return blocks
 
 
+# Script commands whose first argument is text for the overworld dialogue box.
+# giveitem_msg and friends are easy to miss: they wrap msgreceiveditem, so the
+# text goes to the same 26-tile window as a plain msgbox but the word "msgbox"
+# never appears. braillemessage is deliberately absent -- it uses its own font.
+DIALOGUE_COMMANDS = ("msgbox", "message", "giveitem_msg", "msgreceiveditem",
+                     "giveitem_msg_animated", "finditem_msg")
+
+
 def msgbox_labels():
     """Labels printed by a script into the overworld dialogue box."""
     used = set()
+    pattern = re.compile(r"\s*(?:%s)\s+([A-Za-z_][A-Za-z0-9_]*)"
+                         % "|".join(DIALOGUE_COMMANDS))
     for path in _script_files():
         for line in io.open(path, encoding="utf-8"):
-            m = re.match(r"\s*(?:msgbox|message)\s+([A-Za-z_][A-Za-z0-9_]*)", line)
+            m = pattern.match(line)
             if m:
                 used.add(m.group(1))
     return used
@@ -67,7 +78,13 @@ def lines_of(raw):
 
 
 def check_dialogue(blocks, msg):
-    """Lines in the 26-tile box, measured with and without substitutions."""
+    """Lines in the 26-tile box, measured with and without substitutions.
+
+    The second pass fills each {STR_VAR_n} with the widest thing that site can
+    actually produce -- see substitutions.py -- because a species name, a
+    nickname and an item name differ by 20px and measuring them all as the same
+    thing either condemns good lines or passes clipping ones.
+    """
     static, substituted = [], []
     for label, entries in blocks.items():
         if label not in msg:
@@ -79,7 +96,8 @@ def check_dialogue(blocks, msg):
                     static.append((o, rel, lineno, seg))
                     continue
                 if "{" in seg:
-                    o = T.overhang(seg, placeholders=True)
+                    filled, _ = substitutions.fill(seg, label, sys.modules[__name__])
+                    o = T.overhang(filled)
                     if o is not None and o > 0:
                         substituted.append((o, rel, lineno, seg))
     return sorted(static, reverse=True), sorted(substituted, reverse=True)
@@ -107,10 +125,13 @@ def check_items():
     items = doc["items"] if isinstance(doc, dict) and "items" in doc else doc
     bad = []
     for item in items:
-        for seg in lines_of(item.get("description") or ""):
+        # The Hebrew text lives under the keys the English original used --
+        # "english" and "description_english" -- because jsonproc emits those.
+        # Reading a "description" key silently measures nothing.
+        for seg in lines_of(item.get("description_english") or item.get("description") or ""):
             o = T.overhang(seg, pen=T.PEN_ITEM_DESC)
             if o is not None and o > 0:
-                bad.append((o, item.get("name", "?"), seg))
+                bad.append((o, item.get("english") or item.get("name", "?"), seg))
     return sorted(bad, reverse=True)
 
 

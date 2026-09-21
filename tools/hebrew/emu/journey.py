@@ -7,6 +7,10 @@ Boots the ROM with a save, warps to a map, then feeds SCRIPT to the runner.
 SCRIPT is runner input (see runner.c) with three substitutions available:
 
     @SB1@   gSaveBlock1Ptr's value, re-read AFTER the warp
+    @SB2@   gSaveBlock2Ptr's value, likewise (playerName is at its offset 0)
+
+Each accepts a hex offset -- @SB1+3A4C@ is rivalName, @SB2+0@ is playerName --
+because the runner itself has no address arithmetic.
     @FLG@   the FLAG_SYS_SAFARI_MODE byte, i.e. @SB1@ + 0xFE0
     @LOC@   gSaveBlock1Ptr->location, i.e. @SB1@ + 4
 
@@ -40,6 +44,7 @@ RUNNER = os.path.join(HERE, "runner")
 SAVE_TEMPLATE = os.environ.get("HEB_SAVE", os.path.join(HERE, "base.sav"))
 
 GSAVEBLOCK1PTR = 0x03005008        # unchanged from vanilla; see docs
+GSAVEBLOCK2PTR = 0x0300500C
 FLAGS_OFFSET = 0xEE0               # SaveBlock1.flags
 SAFARI_FLAG_BYTE = FLAGS_OFFSET + (0x800 >> 3)     # FLAG_SYS_SAFARI_MODE
 CB2_HOOK = 0x030030F4              # gMain.callback2
@@ -88,7 +93,8 @@ def main():
     load_map = symbol("CB2_LoadMap") | 1          # Thumb
 
     # Pass 1: where is SaveBlock1 before anything moves?
-    before = read32(run(outdir, boot + "read %08X 4\n" % GSAVEBLOCK1PTR), GSAVEBLOCK1PTR)
+    probe = run(outdir, boot + "read %08X 4\nread %08X 4\n" % (GSAVEBLOCK1PTR, GSAVEBLOCK2PTR))
+    before = read32(probe, GSAVEBLOCK1PTR)
 
     prefix = boot
     if pos:
@@ -100,13 +106,27 @@ def main():
                   before + 8, before + 10, CB2_HOOK, load_map))
 
     # Pass 2: the same prefix, replayed, to learn where it ended up.
-    after = read32(run(outdir, prefix + "read %08X 4\n" % GSAVEBLOCK1PTR), GSAVEBLOCK1PTR)
-    sys.stderr.write("SaveBlock1: %08X before the warp, %08X after\n" % (before, after))
+    post = run(outdir, prefix + "read %08X 4\nread %08X 4\n" % (GSAVEBLOCK1PTR, GSAVEBLOCK2PTR))
+    after = read32(post, GSAVEBLOCK1PTR)
+    sb2 = read32(post, GSAVEBLOCK2PTR)
+    sys.stderr.write("SaveBlock1: %08X before the warp, %08X after (SaveBlock2 %08X)\n"
+                     % (before, after, sb2))
 
     body = (open(script_path).read()
             .replace("@SB1@", "%08X" % after)
             .replace("@LOC@", "%08X" % (after + 4))
+            .replace("@SB2@", "%08X" % sb2)
             .replace("@FLG@", "%08X" % (after + SAFARI_FLAG_BYTE)))
+    # @SB1+3A4C@ / @SB2+0@ -- the runner has no address arithmetic, so resolve
+    # offsets here. An unsubstituted marker would parse as address 0 and poke
+    # silently into nowhere, so anything left over is a hard error.
+    bases = {"SB1": after, "SB2": sb2}
+    body = re.sub(r"@(SB[12])\+([0-9A-Fa-f]+)@",
+                  lambda m: "%08X" % (bases[m.group(1)] + int(m.group(2), 16)), body)
+    leftover = re.findall(r"@[A-Za-z0-9_+]+@", body)
+    if leftover:
+        raise SystemExit("unsubstituted marker(s) in %s: %s"
+                         % (script_path, sorted(set(leftover))))
     out = run(outdir, prefix + body)
     open(os.path.join(outdir, "run.log"), "w").write(out)
 

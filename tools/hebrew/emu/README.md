@@ -99,6 +99,51 @@ next one, so you screenshot a page later than you think you do. Two measurements
 history were wrong for exactly that reason, which is how a real rendering rule got mistaken for
 a non-existent one and back again.
 
+## Rendering many lines in one run
+
+Tempting, and there are three traps. All three produce output that looks like
+data rather than like a broken harness, which is what makes them expensive.
+
+**The expansion buffer is 1000 bytes.** `ShowFieldMessage` expands the *whole*
+string -- every `\p` page of it -- into `gStringVar4`, which is
+`EWRAM_DATA u8 gStringVar4[1000]` (src/string_util.c). A test label holding 400
+pages overflows it and the results are garbage that still looks like
+screenshots. Keep a test string well under 1000 bytes of expanded text, or feed
+one line at a time.
+
+**A sign message closes itself.** Wait long enough after opening one and it
+closes on its own, so the next A press re-opens it instead of advancing, and
+every capture after that is one page out of step. Counter-intuitively a *longer*
+wait is worse: 130 frames per page worked, 280 desynced the entire run. If the
+lines you are rendering are long enough to need more time than that, render them
+one at a time rather than paging.
+
+**`{STR_VAR_1}` alone is the reliable way to render arbitrary text.** Point a
+sign at a label whose entire content is `{STR_VAR_1}$`, then poke the line you
+want into `gStringVar1` before each A press. `gStringVar1`, `2` and `3` are
+adjacent, so a single write starting at `gStringVar1` has about 68 bytes before
+it would reach `gStringVar4` -- enough for any dialogue line. One build renders
+anything, with no paging and no buffer to overflow. Just remember the line you
+poke is a single line: if you need to see a real multi-line page as the player
+sees it, put the real page in the test label instead.
+
+## Measuring a screenshot
+
+Two things will quietly mislead you.
+
+The message box has a dark border, so a naive "count dark pixels in this row"
+picks up the frame at both edges and reports a 208px-wide line whatever the text
+is. Restrict the scan to the box interior.
+
+And a clipped glyph does not smear against the edge -- it **vanishes**.
+`currentX` is a `u8`, so when the pen walks past zero it wraps to about 250 and
+the glyph is blitted off the right of the window instead. So a clipped line's
+leftmost ink can sit comfortably inside the box while a word is missing
+entirely. Compare the rendered ink *span* against the predicted width rather
+than looking at where the line starts; a fully-rendered line matches within
+about 2px, or up to 8px when its extreme glyph is `.`, `…` or `!`, whose ink
+does not fill its cell.
+
 ## Printing a ruler
 
 When a width calculation is in doubt, stop calculating and measure. Temporarily point a sign's

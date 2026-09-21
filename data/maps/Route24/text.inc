@@ -3,7 +3,8 @@ Route24_Text_JustEarnedFabulousPrize::
     .string "שלנו! זכית בפרס מדהים!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
-    .string "{PLAYER} קיבל נאגט מהמאמן המסתורי!$"
+    .string "{PLAYER} קיבל נאגט מהמאמן\n"
+    .string "המסתורי!$"
 
 Route24_Text_YouDontHaveAnyRoom::
     .string "אין לך מקום נוסף!$"

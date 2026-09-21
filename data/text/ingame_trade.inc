@@ -16,7 +16,8 @@ Trade_Text_HeyThanks::
 	.string "היי, תודה!$"
 
 Trade_Text_IsntMyOldMonGreat::
-	.string "ה{STR_VAR_2} הישן שלי נהדר, נכון?$"
+	.string "ה{STR_VAR_2} הישן שלי נהדר,\n"
+	.string "נכון?$"
 
 Trade_Text_DoYouHaveMonWouldYouTradeForMon::
 	.string "שלום! במקרה יש לך\n"

@@ -27,8 +27,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain::
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_HandedFossilToWeirdDoctor::
     .string "אז! תמהר ותתן\n"
     .string "לי את זה!\p"
-    .string "{PLAYER} מסר את {STR_VAR_2}לדוקטור\n"
-    .string "המוזר!\p"
+    .string "{PLAYER} מסר את\n"
+    .string "{STR_VAR_2} לדוקטור המוזר!\p"
     .string "$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk::

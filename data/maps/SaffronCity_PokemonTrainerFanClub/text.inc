@@ -44,9 +44,9 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe::
     .string "אני מבין למה.\n"
     .string "אני יודע שאתה חזק.\p"
     .string "אבל, אתה יודע מה?\p"
-    .string "מאז שהפכתי למעריץ של {STR_VAR_1},\n"
-    .string "אני פשוט לא יכול להפסיק\l"
-    .string "להיות מעריץ.$"
+    .string "מאז שהפכתי למעריץ של\n"
+    .string "{STR_VAR_1}, אני פשוט לא יכול\l"
+    .string "להפסיק להיות מעריץ.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_TrainersCoolWhenBattling::
     .string "אני חושב שמאמנים כל כך מגניבים\n"
@@ -236,8 +236,9 @@ SaffronCity_PokemonTrainerFanClub_Text_ImLoneTrainerFan::
     .string "כולם הפכו לאוהדים שלך.\p"
     .string "אז אחרי כל מה שעברנו,\n"
     .string "אני האוהד היחיד של {STR_VAR_1}?\p"
-    .string "אה, להיות האוהד היחיד {STR_VAR_1}\n"
-    .string "זה הסגנון שלי, בכל מקרה.$"
+    .string "אה, להיות האוהד היחיד\n"
+    .string "{STR_VAR_1} זה הסגנון שלי, בכל\l"
+    .string "מקרה.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_AdoreWayYouBattle::
     .string "וואו, אלוהים!\n"

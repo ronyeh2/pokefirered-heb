@@ -98,16 +98,16 @@ DayCare_Text_TakeBackWhichMon::
 	.string "どっちの　ポケモンを　ひきとるかい？$"
 
 DayCare_Text_ItWillCostX::
-	.string "אם אתה רוצה את {STR_VAR_1} בחזרה,\n"
-	.string "זה יעלה ¥{STR_VAR_2}.$"
+	.string "אם אתה רוצה את {STR_VAR_1}\n"
+	.string "בחזרה, זה יעלה ¥{STR_VAR_2}.$"
 
 DayCare_Text_HeresYourMon::
 	.string "מצויין!\n"
 	.string "הנה הפוקימון שלך.$"
 
 DayCare_Text_TookBackMon::
-	.string "{PLAYER}לקח בחזרה את {STR_VAR_1}\n"
-	.string "ממנהלת מכון היום.$"
+	.string "{PLAYER} לקח בחזרה את\n"
+	.string "{STR_VAR_1} ממנהלת מכון היום.$"
 
 DayCare_Text_YouHaveJustOneMon::
 	.string "אוי, יש לך רק פוקימון\n"

@@ -34,8 +34,8 @@ Route5_PokemonDayCare_Text_ThankYouHeresMon::
     .string "הנה הפוקימון שלך.$"
 
 Route5_PokemonDayCare_Text_PlayerGotMonBack::
-    .string "{PLAYER} קיבל את {STR_VAR_1} בחזרה\n"
-    .string "מהאיש במעון היום.$"
+    .string "{PLAYER} קיבל את {STR_VAR_1}\n"
+    .string "בחזרה מהאיש במעון היום.$"
 
 Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou::
     .string "אה? יש לך רק פוקימון\n"
@@ -48,8 +48,8 @@ Route5_PokemonDayCare_Text_WhatWillYouBattleWith::
 Route5_PokemonDayCare_Text_MonHasGrownByXLevels::
     .string "{STR_VAR_1} שלך גדל הרבה.\n"
     .string "כן, הרבה, הייתי אומר.\p"
-    .string "תן לי לראות…\n"
-    .string "לפי הרמה, הוא גדל ב-{STR_VAR_2}.\p"
+    .string "תן לי לראות… לפי הרמה, הוא גדל\n"
+    .string "ב-{STR_VAR_2}.\p"
     .string "אני לא נהדר?$"
 
 Route5_PokemonDayCare_Text_YouveGotNoRoomForIt::

@@ -132,11 +132,21 @@ string with `{MIN_LETTER_SPACING 5}` brings it back to the glyphs' own widths.
 It can only pad a glyph *out*, never make one narrower, so it buys at most 1px
 per character. Both Safari healthbox strings need it.
 
-**Runtime substitutions have to be budgeted.** `{PLAYER}` and `{RIVAL}` can each
-reach `PLAYER_NAME_LENGTH` = 7 glyphs and `{STR_VAR_n}` up to 8-10. Wrap for the
-maximum or the line clips only for players with long names -- which is exactly
-the kind of bug that never shows up in testing. `textwidth.py` does this for you
-with `placeholders=True`.
+**Runtime substitutions have to be budgeted, per site.** `{PLAYER}` and
+`{RIVAL}` are 49px at worst -- 7 glyphs, `PLAYER_NAME_LENGTH`, of the widest
+Hebrew letter. (The naming keyboard also offers lowercase Latin, but every Latin
+glyph is a flat 6px with no wide-letter padding, so Hebrew wins.) `{STR_VAR_n}`
+is the harder one: a species name reaches 60px, a nickname 70, an item name 81,
+a fishing record about 50, a level counter 12. Measuring every site against the
+widest condemns lines that are fine; measuring against the narrowest ships lines
+that clip the moment a player uses a long nickname.
+
+`tools/hebrew/substitutions.py` resolves it per site -- scripts declare what
+they buffer and `call`ed subroutines are followed, and the sites filled from C
+(the day care, the fishing-record houses) are listed explicitly with the code
+that writes them. `audit.py` uses it automatically. Wrap for that maximum, or
+the line clips only for some players, which is exactly the bug that never shows
+up in testing.
 
 **The two renderers do not agree.** `HelpSystemRenderText()` uses a hard 4px
 space, applies no wide-letter padding, and *drops* a glyph that would cross the

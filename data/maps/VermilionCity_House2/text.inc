@@ -1,7 +1,8 @@
 VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon::
     .string "שלום!\n"
     .string "יש לך {STR_VAR_1}?\p"
-    .string "רוצה להחליף אותו ב-{STR_VAR_2} שלי?$"
+    .string "רוצה להחליף אותו ב-{STR_VAR_2}\n"
+    .string "שלי?$"
 
 VermilionCity_House2_Text_ThatsTooBad::
     .string "זה חבל.$"
