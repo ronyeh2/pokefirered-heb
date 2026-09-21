@@ -50,6 +50,40 @@ Single digits need no reversal. **Runtime** numbers substituted through `{STR_VA
 already reversed by `strrev()` inside `ConvertIntToDecimalStringN()` (`src/string_util.c`) — never
 hand-reverse a placeholder.
 
+## Placing text: the anchor rule
+
+`RenderText` decrements `currentX`, but `CopyGlyphToWindow` has already blitted
+the glyph **at** `currentX` and clips it at the window border. So a printer's `x`
+is the **first glyph's left edge**, not the string's right edge, and a run that
+should sit flush against a boundary starts one glyph cell (8px) short of it.
+That is why the 26-tile dialogue box prints at 200 rather than 208.
+
+Passing an upstream left inset straight through is the single most common way to
+break a Hebrew screen: the run walks off the left edge and only its first
+character or two stay inside the window. Use the helpers in `include/window.h`
+rather than a literal:
+
+```c
+RTL_ANCHOR_WINDOW(windowId)     // flush inside a window's right edge
+RTL_ANCHOR_EDGE(rightEdgePx)    // flush inside an arbitrary edge, for scratch
+                                // windows only partly copied out (healthbox)
+RTL_MIRROR(widthPx, ltrX)       // the mirror of an upstream left-aligned column
+```
+
+Two things that are *not* anchors but look like them:
+
+- Centring is `(box + width) / 2`, not `(box - width) / 2`.
+- Padding written to right-align a number in LTR now renders to the number's
+  **right**. Drop it; the pen already fixes the right edge.
+
+Layout is identical on every emulator. The GBA framebuffer is 240x160 in
+hardware and the text is positioned by the ROM's own code, so cores cannot
+differ. Verified by running the same ROM and save on mGBA, VBA-M, VBA-Next,
+gpSP and Mednafen: all five report `base 240x160, max 240x160` and render the
+start menu and both trainer-card faces pixel-for-pixel identically. Cores differ
+only in colour post-processing (and in pixel format - normalise to RGB565 before
+diffing frames, or XRGB8888 cores will look different when they are not).
+
 ## Rules for editing text
 
 1. **Every `.string` block ends with `$`.** A missing terminator produces no build error and runs
