@@ -85,7 +85,9 @@ void PrintMoneyAmountInMoneyBox(u8 windowId, int amount, u8 speed)
         *(txtPtr++) = 0;
 
     StringExpandPlaceholders(txtPtr, gText_PokedollarVar1);
-    AddTextPrinterParameterized(windowId, FONT_SMALL, gStringVar4, 64 - GetStringWidth(FONT_SMALL, gStringVar4, 0), 0xC, speed, NULL);
+    // RTL: x is the FIRST glyph's left edge, so flush against the right of this
+    // 8-tile (64px) box is 64 - 8. Anchoring at 64 puts that glyph outside it.
+    AddTextPrinterParameterized(windowId, FONT_SMALL, gStringVar4, 56, 0xC, speed, NULL);
 }
 
 void PrintMoneyAmount(u8 windowId, u8 x, u8 y, int amount, u8 speed)

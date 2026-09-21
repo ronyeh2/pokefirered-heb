@@ -46,7 +46,7 @@ static const struct PartyMenuBoxInfoRects sPartyBoxInfoRects[] =
             68/*24*/, 11, 40, 13, // Nickname
             64/*32*/, 20, 32,  8, // Level
             24/*64*/, 20,  8,  8, // Gender
-            35, 36, 24,  8, // HP
+            29, 36, 24,  8, // HP  (RTL: pen is the right edge, so this must clear the 24px "maxhp/" field at 53)
             53, 36, 24,  8, // Max HP
             24, 35, 48,  3  // HP bar
         },
@@ -61,7 +61,7 @@ static const struct PartyMenuBoxInfoRects sPartyBoxInfoRects[] =
              64/*22*/,  3, 40, 13, // Nickname
              60/*32*/, 12, 32,  8, // Level
              38/*64*/, 12,  8,  8, // Gender
-            99, 12, 24,  8, // HP
+            93, 12, 24,  8, // HP  (RTL: pen is the right edge, so this must clear the 24px "maxhp/" field at 117)
             117, 12, 24,  8, // Max HP
              88, 10, 48,  3  // HP bar
         }, 

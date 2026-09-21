@@ -1158,14 +1158,14 @@ static void DexScreen_InitGfxForTopMenu(void)
         */
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Seen, (sWindowTemplate_DexCounts.width * 8) - 15, 2, 0);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, (sWindowTemplate_DexCounts.width * 8) - 15 - 8, 13, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 52, 13, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenKanto, 19, 13, 2);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_National, (sWindowTemplate_DexCounts.width * 8) - 15 - 8, 24, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 52, 24, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numSeenNational, 19, 24, 2);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Owned, (sWindowTemplate_DexCounts.width * 8) - 15, 37, 0);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_Kanto, (sWindowTemplate_DexCounts.width * 8) - 15 - 8, 48, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 52, 48, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedKanto, 19, 48, 2);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_SMALL, gText_National, (sWindowTemplate_DexCounts.width * 8) - 15 -8, 59, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 52, 59, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 0, sPokedexScreenData->numOwnedNational, 19, 59, 2);
     }
     else
     {
@@ -1176,10 +1176,10 @@ static void DexScreen_InitGfxForTopMenu(void)
         // Ofir changed here
         //DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Seen, 0, 9, 0);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Seen, (sWindowTemplate_DexCounts.width * 8) - 15, 9, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numSeenKanto, 32, 21, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numSeenKanto, 40, 21, 2);
         //DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, 0, 37, 0);
         DexScreen_AddTextPrinterParameterized(sPokedexScreenData->dexCountsWindowId, FONT_NORMAL_COPY_1, gText_Owned, (sWindowTemplate_DexCounts.width * 8) - 15, 37, 0);
-        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedKanto, 32, 49, 2);
+        DexScreen_PrintNum3RightAlign(sPokedexScreenData->dexCountsWindowId, 1, sPokedexScreenData->numOwnedKanto, 40, 49, 2);
     }
     FillWindowPixelBuffer(0, PIXEL_FILL(15));
     DexScreen_PrintStringWithAlignment(gText_PokedexTableOfContents, TEXT_CENTER);
@@ -2216,11 +2216,14 @@ static void DexScreen_PrintNum3RightAlign(u8 windowId, u8 fontId, u16 num, u8 x,
     buff[1] = ((num %= 100) / 10) + CHAR_0;
     buff[2] = (num % 10) + CHAR_0;
     */
-    buff[2] = (num % 10) + CHAR_0;
-    buff[1] = ((num %= 10) / 10) + CHAR_0;
-    buff[0] = (num / 100) + CHAR_0;
+    // Digits go in reversed: the RTL renderer emits the buffer right-to-left,
+    // so writing the units first leaves the hundreds digit on the left. The
+    // leading zeros are therefore blanked from the end of the buffer.
+    buff[0] = (num % 10) + CHAR_0;
+    buff[1] = ((num / 10) % 10) + CHAR_0;
+    buff[2] = ((num / 100) % 10) + CHAR_0;
     buff[3] = EOS;
-    for (i = 0; i < 3; i++)
+    for (i = 2; i > 0; i--)
     {
         if (buff[i] != CHAR_0)
             break;
@@ -2760,6 +2763,8 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
     const u8 *labelText;
     u8 buffer[32];
     u8 i;
+    u8 j;
+    u8 t;
 
     species = SpeciesToNationalPokedexNum(species);
     height = gPokedexEntries[species].height;
@@ -2792,7 +2797,6 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
         buffer[i++] = inches / 10 + CHAR_0;
         buffer[i++] = inches % 10 + CHAR_0;
         buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
-        buffer[i++] = EOS;
     }
     else
     {
@@ -2802,6 +2806,15 @@ void DexScreen_PrintMonHeight(u8 windowId, u16 species, u8 x, u8 y)
         buffer[i++] = CHAR_QUESTION_MARK;
         buffer[i++] = CHAR_QUESTION_MARK;
         buffer[i++] = CHAR_DBL_QUOTE_RIGHT;
+    }
+
+    // The renderer draws the buffer right-to-left, so the measurement has to be
+    // stored reversed for it to read correctly on screen.
+    for (j = 4; j < 4 + (i - 4) / 2; j++)
+    {
+        t = buffer[j];
+        buffer[j] = buffer[i - 1 - (j - 4)];
+        buffer[i - 1 - (j - 4)] = t;
     }
 
     buffer[i++] = EOS;
@@ -2822,6 +2835,8 @@ void DexScreen_PrintMonWeight(u8 windowId, u16 species, u8 x, u8 y)
     u8 buffer[32];
     u8 i;
     u32 j;
+    u8 k;
+    u8 t;
 
     species = SpeciesToNationalPokedexNum(species);
     weight = gPokedexEntries[species].weight;
@@ -2835,7 +2850,7 @@ void DexScreen_PrintMonWeight(u8 windowId, u16 species, u8 x, u8 y)
 
     if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
     {
-        lbs = (weight * 100000) / 4536; // Convert to hundredths of lb
+        lbs = weight * 10; // hundredths of a kg (the dex stores hectograms) - the label is ק”ג
 
         // Round up to the nearest 0.1 lb
         if (lbs % 10 >= 5)
@@ -2890,6 +2905,15 @@ void DexScreen_PrintMonWeight(u8 windowId, u16 species, u8 x, u8 y)
         buffer[i++] = CHAR_PERIOD;
         buffer[i++] = CHAR_QUESTION_MARK;
     }
+
+    // Same reversal as the height field.
+    for (k = 3; k < 3 + (i - 3) / 2; k++)
+    {
+        t = buffer[k];
+        buffer[k] = buffer[i - 1 - (k - 3)];
+        buffer[i - 1 - (k - 3)] = t;
+    }
+
     buffer[i++] = CHAR_SPACE;
     buffer[i++] = EXT_CTRL_CODE_BEGIN;
     buffer[i++] = EXT_CTRL_CODE_MIN_LETTER_SPACING;

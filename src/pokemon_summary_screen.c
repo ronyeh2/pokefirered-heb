@@ -2145,8 +2145,11 @@ static void BufferMonInfo(void)
         CopyItemName(heldItem, sMonSummaryScreen->summary.itemNameStrBuf);
 }
 
-#define GetNumberRightAlign63(x) (63 - StringLength((x)) * 6)
-#define GetNumberRightAlign27(x) (27 - StringLength((x)) * 6)
+// RTL: a printer's x is the string's RIGHT edge and the pen moves left, so
+// right-aligning at column 63 / 27 is that column itself. Subtracting the
+// string length (the LTR form) pushed short values right and clipped long ones.
+#define GetNumberRightAlign63(x) ((void)(x), 63)
+#define GetNumberRightAlign27(x) ((void)(x), 27)
 
 static void BufferMonSkills(void)
 {

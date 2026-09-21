@@ -652,9 +652,9 @@ static void PrintPlayTime(void)
     /*ptr = ConvertIntToDecimalStringN(strbuf, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr++ = CHAR_COLON;
     ConvertIntToDecimalStringN(ptr, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);*/
-    ptr = ConvertIntToDecimalStringN(strbuf, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEFT_ALIGN, 3);
+    ptr = ConvertIntToDecimalStringN(strbuf, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
     *ptr++ = CHAR_COLON;
-    ConvertIntToDecimalStringN(ptr, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(ptr, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     AddTextPrinterParameterized3(MAIN_MENU_WINDOW_CONTINUE, FONT_NORMAL, 62, 34, sTextColor2, -1, strbuf);
 }
 
