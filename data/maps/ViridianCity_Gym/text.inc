@@ -2,7 +2,7 @@ ViridianCity_Gym_Text_GiovanniIntro::
     .string "פואהאהא! זה\n"
     .string "המחבוא שלי!\p"
     .string "תכננתי להחיות את צוות רוקט כאן!\p"
-    .string "אבל, אתה תפסת אותי שוב!\l"
+    .string "אבל, אתה תפסת אותי שוב!\n"
     .string "כך יהיה! הפעם אני מסיר את כל\l"
     .string "המעברוקים!\p"
     .string "פעם נוספת, אתה תתמודד מול\l"
@@ -38,7 +38,7 @@ ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
 
 ViridianCity_Gym_Text_ExplainTM26::
     .string "מ”מ62 מכיל את רעש אדמה!\n"
-    .string "מתקפה עוצמתית שגורמת לרעידה אדירה!\p"
+    .string "מתקפה עוצמתית שגורמת לרעידת אדמה!\p"
     .string "הכנתי את זה בזמן שהייתי מנהל\l"
     .string "המכון כאן, לפני יותר מדי זמן...$"
 

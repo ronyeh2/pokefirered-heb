@@ -56,7 +56,7 @@ Help_Text_PlayingForFirstTime::
     .string "אני משחק לראשונה. עזרה!$"
 
 Help_Text_WhatShouldIBeDoing::
-    .string "מה אמור אני לעשות?$"
+    .string "מה אני אמור לעשות?$"
 
 Help_Text_CantGetOutOfRoom::
     .string "אני לא יכול לצאת מחדר!$"

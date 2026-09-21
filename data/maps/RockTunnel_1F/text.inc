@@ -42,7 +42,7 @@ RockTunnel_1F_Text_AshtonDefeat::
     .string "המשחק נגמר!$"
 
 RockTunnel_1F_Text_AshtonPostBattle::
-    .string "טוב, אני אקבל ZUBAT בדרך!$"
+    .string "טוב, אני אקבל זובאט בדרך!$"
 
 RockTunnel_1F_Text_LeahIntro::
     .string "איי!\p"
@@ -52,7 +52,7 @@ RockTunnel_1F_Text_LeahDefeat::
     .string "היה יותר מדי חושך…$"
 
 RockTunnel_1F_Text_LeahPostBattle::
-    .string "ראיתי MACHOP במערה הזו.$"
+    .string "ראיתי מאצ'ופ במערה הזו.$"
 
 RockTunnel_1F_Text_DanaIntro::
     .string "הגעתי עד כאן בחיפוש אחרי\n"

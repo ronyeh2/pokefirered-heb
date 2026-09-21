@@ -45,7 +45,8 @@ SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe::
     .string "אני יודע שאתה חזק.\p"
     .string "אבל, אתה יודע מה?\p"
     .string "מאז שהפכתי למעריץ של {STR_VAR_1},\n"
-    .string "אני פשוט לא יכול להפסיק להיות מעריץ.$"
+    .string "אני פשוט לא יכול להפסיק\l"
+    .string "להיות מעריץ.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_TrainersCoolWhenBattling::
     .string "אני חושב שמאמנים כל כך מגניבים\n"
@@ -164,7 +165,7 @@ SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay::
     .string "מעניין אם אוכל להפוך\n"
     .string "למאמן מגניב ביום אחד!\p"
     .string "המאמן הזה {PLAYER} בטח מגניב.\n"
-    .string "אולי יום אחד אני אוכל להיות\n"
+    .string "אולי יום אחד אני אוכל להיות\l"
     .string "כמו {PLAYER}!\p"
     .string "אני אצטרך לפתח לעצמי\n"
     .string "סגנון!$"
@@ -183,8 +184,8 @@ SaffronCity_PokemonTrainerFanClub_Text_CoolTrainerLikeYou::
     .string "כמוך, {PLAYER}!\p"
     .string "אתה פוקימון מעניין!\p"
     .string "אם אתה יוכל\n"
-    .string "להתאמן כמוני, יום אחד אתה\n"
-    .string "יהיה כוכב!\n"
+    .string "להתאמן כמוני, יום אחד אתה\l"
+    .string "יהיה כוכב!\l"
     .string "אני באמת מאמין בזה!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_MySisterIsInYourFanClub::
@@ -198,7 +199,7 @@ SaffronCity_PokemonTrainerFanClub_Text_TooAfraidToSayAnything::
     .string "אני כל כך מתרגש\n"
     .string "שאני לא יכול לדבר!\p"
     .string "אבל אני מאמין בך,\n"
-    .string "{PLAYER}!\n"
+    .string "{PLAYER}!\l"
     .string "אתה חזק ומגניב!\p"
     .string "אף פעם לא נוותר לך!$"
 
@@ -219,13 +220,15 @@ SaffronCity_PokemonTrainerFanClub_Text_TheWayYouBattleIsCool::
 SaffronCity_PokemonTrainerFanClub_Text_ImOnlyOneLeftOfYourFans::
     .string "היי, {PLAYER}!\p"
     .string "נראה שאני האוהד האחרון שלך.\p"
-    .string "אבל, אתה יודע, אני אוהב להיות האוהד היחיד… זה פחות מלחיץ.\p"
+    .string "אבל, אתה יודע, אני אוהב להיות\n"
+    .string "האוהד היחיד… זה פחות מלחיץ.\p"
     .string "תמשיך ככה!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_LoveWayTrainerTalks::
     .string "{STR_VAR_1} מגניב, אה?\n"
     .string "אני אוהב את הדרך שהוא מדבר.\p"
-    .string "הייתי באמת נהנה לפגוש אותו באופן אישי פעם.$"
+    .string "הייתי באמת נהנה לפגוש אותו באופן\n"
+    .string "אישי פעם.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_ImLoneTrainerFan::
     .string "האה, אתה מאמין בזה?\n"
@@ -246,8 +249,8 @@ SaffronCity_PokemonTrainerFanClub_Text_AdoreWayYouBattle::
 SaffronCity_PokemonTrainerFanClub_Text_ImYourNumberOneFan::
     .string "וואו, אלוהים!\n"
     .string "אם לא {PLAYER}!\p"
-    .string "זה כל כך מאכזב… realizתי\n"
-    .string "אני האוהד מספר אחד והיחיד שלך!\p"
+    .string "זה כל כך מאכזב… הבנתי\n"
+    .string "שאני האוהד מספר אחד והיחיד שלך!\p"
     .string "ובכן, אי אפשר לעזור!\n"
     .string "אני לפחות אתמוך בך!\p"
     .string "חיים, חיים, {PLAYER}!$"
@@ -260,9 +263,9 @@ SaffronCity_PokemonTrainerFanClub_Text_TrainerHasBeenOnFire::
 SaffronCity_PokemonTrainerFanClub_Text_EveryoneTalksAboutYou::
     .string "היי, שלום!\n"
     .string "אם לא {PLAYER}!\p"
-    .string "לately, כולם מדברים רק עליך.\p"
+    .string "לאחרונה, כולם מדברים רק עליך.\p"
     .string "אני מרגיש בודד כי אני\n"
-    .string "מעPrefer {STR_VAR_1}.$"
+    .string "מעדיף את {STR_VAR_1}.$"
 
 SaffronCity_PokemonTrainerFanClub_Text_YouReallyAreAmazing::
     .string "מדהים!\n"
@@ -304,7 +307,8 @@ SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingYourFan::
     .string "ככה…\p"
     .string "אבל אני לא אתן לזה לעצור אותי\n"
     .string "מלהיות האוהד שלך!\p"
-    .string "אני לא יכול להפסיק להיות האוהד שלך!$"
+    .string "אני לא יכול להפסיק להיות האוהד\n"
+    .string "שלך!$"
 
 SaffronCity_PokemonTrainerFanClub_Text_OnlyMasterHasMyRespect::
     .string "היי! יש רק מאמן אחד\n"

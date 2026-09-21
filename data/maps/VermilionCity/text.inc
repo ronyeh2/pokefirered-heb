@@ -7,8 +7,8 @@ VermilionCity_Text_DidYouSeeSSAnneInHarbor::
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
     .string "אז הס.ס. אן הפליגה?\p"
-    .string "היא תחזור לורמיליון בערך בתקופה הזו\n"
-    .string "בשנה הבאה.$"
+    .string "היא תחזור לורמיליון בערך בתקופה\n"
+    .string "הזו בשנה הבאה.$"
 
 VermilionCity_Text_BuildingOnThisLand::
     .string "אני מקים בניין על השטח הזה.\n"
@@ -81,7 +81,7 @@ VermilionCity_Text_Seagallop7Departing::
     .string "מיידית.$"
 
 VermilionCity_Text_BoardSeagallopRainbowPass::
-    .string "אה, יש לך את כרטיס המעבר קשת.\p"
+    .string "אה, יש לך את כרטיס הקשת.\p"
     .string "רוצה לעלות למעבורת סיגאלופ?$"
 
 VermilionCity_Text_OhMysticTicketTakeYouToNavelRock::

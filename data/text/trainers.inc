@@ -6,7 +6,7 @@ VSSeeker_Text_BatteryNotChargedNeedXSteps::
 VSSeeker_Text_NoTrainersWithinRange::
 	.string "אין מאמנים בטווח שיכולים\n"
 	.string "להילחם...\p"
-	.string "מכשיר ה-VS SEEKER כובה.{PAUSE_UNTIL_PRESS}$"
+	.string "גלאי הקרב כובה.{PAUSE_UNTIL_PRESS}$"
 
 VSSeeker_Text_TrainersNotReady::
 	.string "נראה שהמאמנים האחרים\n"
@@ -103,7 +103,8 @@ Route8_Text_AndreaRematchIntro::
 
 Route8_Text_MeganRematchIntro::
 	.string "אולי אנחנו נראים מטופשים כשאנחנו\n"
-	.string "עומדים ככה, אבל אני עדיין יכולה להילחם.$"
+	.string "עומדים ככה, אבל אני עדיין יכולה\l"
+	.string "להילחם.$"
 
 Route8_Text_RichRematchIntro::
 	.string "אני משוטט, משחק ומשתולל!\n"
@@ -163,7 +164,8 @@ Route9_Text_AlanRematchIntro::
 	.string "אני אנצח הפעם!$"
 
 Route9_Text_ConnerRematchIntro::
-	.string "קדימה נצחו, פוקימוני החרק הסופר שלי!$"
+	.string "קדימה נצחו, פוקימוני החרק הסופר\n"
+	.string "שלי!$"
 
 Route10_Text_MarkRematchIntro::
 	.string "וואו, באת לפה שוב?\n"
@@ -258,9 +260,9 @@ Route12_Text_HankRematchIntro::
 	.string "סיבוב נוסף, קרב!$"
 
 Route12_Text_ElliotRematchIntro::
-	.string "אני אוהב דיג, אל תבין אותי לא נכון.\n"
-	.string "אבל, הלוואי שהיה לי יותר עבודה...\l"
-	.string "...קשה לוותר על דיג!$"
+	.string "אני אוהב דיג, אל תבין אותי לא\n"
+	.string "נכון. אבל, הלוואי שהיה לי יותר\l"
+	.string "עבודה... ...קשה לוותר על דיג!$"
 
 Route12_Text_AndrewRematchIntro::
 	.string "מה דג?\p"
@@ -549,8 +551,8 @@ Route19_Text_ConnieRematchIntro::
 Route19_Text_LiaRematchIntro::
 	.string "ליה: אתה יודע שאחי בדיוק\n"
 	.string "הפך למאמן, נכון?\p"
-	.string "אני רוצה לעשות אותו טוב יותר, אז אני\n"
-	.string "צריכה את עזרתך שוב.$"
+	.string "אני רוצה לעשות אותו טוב יותר, אז\n"
+	.string "אני צריכה את עזרתך שוב.$"
 
 Route19_Text_LucRematchIntro::
 	.string "לוק: אחותי הגדולה לימדה אותי הכל\n"
@@ -632,8 +634,8 @@ Route21_South_Text_NolanRematchIntro::
 	.string "תעשה לי חברה עד שאתפוס משהו.$"
 
 Route21_North_Text_LilRematchIntro::
-	.string "ליל: הא? קרב שוב?\n"
-	.string "איאן, אתה לא יכול לעשות את זה לבד?$"
+	.string "ליל: הא? קרב שוב? איאן, אתה לא\n"
+	.string "יכול לעשות את זה לבד?$"
 
 Route21_North_Text_IanRematchIntro::
 	.string "איאן: אחותי עדיין עצלנית.\n"
@@ -662,8 +664,8 @@ Route25_Text_ChadRematchIntro::
 	.string "ידעתי שאצטרך להילחם בך שוב!$"
 
 Route25_Text_HaleyRematchIntro::
-	.string "לחברה שלי יש הרבה פוקימונים חמודים.\n"
-	.string "אני כל כך מקנאה!$"
+	.string "לחברה שלי יש הרבה פוקימונים\n"
+	.string "חמודים. אני כל כך מקנאה!$"
 
 Route25_Text_FranklinRematchIntro::
 	.string "רק התאמנתי על הר מון,\n"
@@ -742,8 +744,8 @@ OneIsland_KindleRoad_Text_SheaRematchIntro::
 	.string "שלוש פעמים!$"
 
 OneIsland_KindleRoad_Text_HughRematchIntro::
-	.string "תתלבש מתאים לקרב!\n"
-	.string "תוריד את הבגדים הקלילים האלה, אמרתי!$"
+	.string "תתלבש מתאים לקרב! תוריד את הבגדים\n"
+	.string "הקלילים האלה, אמרתי!$"
 
 OneIsland_KindleRoad_Text_BryceRematchIntro::
 	.string "אתה יודע, הכל טעים\n"
@@ -804,8 +806,8 @@ FiveIsland_ResortGorgeous_Text_CelinaRematchIntro::
 	.string "בבקשה תצא מטווח הראייה שלי!$"
 
 FiveIsland_ResortGorgeous_Text_RaynaRematchIntro::
-	.string "לא התקדמתי בכלל...\n"
-	.string "אני עדיין לא מצליחה למצוא את הזווית הנכונה...$"
+	.string "לא התקדמתי בכלל... אני עדיין לא\n"
+	.string "מצליחה למצוא את הזווית הנכונה...$"
 
 FiveIsland_ResortGorgeous_Text_JackiRematchIntro::
 	.string "אוה, אתה תיתן לי עוד\n"
@@ -864,8 +866,8 @@ SixIsland_OutcastIsland_Text_GebRematchIntro::
 
 SixIsland_GreenPath_Text_JaclynRematchIntro::
 	.string "...הא?\p"
-	.string "אני מדמיינת את הבית שלי, אבל טלפורט\n"
-	.string "תמיד מביא אותי לכאן!$"
+	.string "אני מדמיינת את הבית שלי, אבל\n"
+	.string "טלפורט תמיד מביא אותי לכאן!$"
 
 SixIsland_WaterPath_Text_RoseRematchIntro::
 	.string "או, שלום.\n"
