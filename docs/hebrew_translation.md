@@ -18,6 +18,33 @@ Plain ASCII is untouched — `A`–`Z` at `0xBB`–`0xD4`, `a`–`z` at `0xD5`�
 **Write Hebrew in normal logical order**, exactly as you would type it. Do not reverse words and do
 not reverse strings. The renderer handles direction.
 
+## Numbers
+
+The renderer draws a string glyph by glyph from right to left, so the source's *first* character
+ends up furthest right. A number written the way you read it therefore comes out backwards: the
+Game Corner charged `081` coins for an Abra because the source said `180`.
+
+**Literal numbers in text must be written backwards.** `052 steps` is what puts `250 steps` on
+screen; `TM01` is written `מ”מ 10`.
+
+Numbers built at runtime are already handled — `ConvertIntToDecimalStringN` ends in a `strrev`, so
+a level, a price or an ID prints the right way round on its own. The same goes for the Pokédex
+height and weight fields, which reverse their own buffers after formatting.
+
+Nothing about a literal on its own says which way round it is, so this cannot be eyeballed.
+`tools/hebrew/numbers.py` compares every string against the same string in English upstream,
+matched by identifier or by label, and reports any digit run that is still in English order:
+
+```bash
+git clone --depth 1 --filter=blob:none --sparse https://github.com/pret/pokefirered /tmp/pokefirered-en
+git -C /tmp/pokefirered-en sparse-checkout set src data
+python3 tools/hebrew/numbers.py          # report
+python3 tools/hebrew/numbers.py --fix    # reverse them in place
+```
+
+It skips any string whose Hebrew has a different count of digit runs from its English original,
+because matching those by position would be guesswork — re-read those by hand.
+
 ## How right-to-left actually works
 
 There is no bidi algorithm. RTL exists because the renderer walks *backwards*:
@@ -69,6 +96,15 @@ RTL_ANCHOR_EDGE(rightEdgePx)    // flush inside an arbitrary edge, for scratch
                                 // windows only partly copied out (healthbox)
 RTL_MIRROR(widthPx, ltrX)       // the mirror of an upstream left-aligned column
 ```
+
+`tools/hebrew/printers.py` checks this automatically. For a right-to-left print the pen budget
+*is* `x` — the first glyph is blitted at `x` and the pen walks left — so a run needs
+`total - firstGlyph` pixels to its left and the test needs to know nothing about the window. It
+resolves the string argument of every `AddTextPrinterParameterized*` call that has a literal `x`,
+including arrays indexed at runtime and `gStringVar4` traced back to whatever filled it, and
+reports the ones that cannot fit. It found 39 unmirrored sites, among them the party menu's field
+move description, the Pokédex's egg-hatch text, the Game Corner coin box and the clear-save-data
+screen.
 
 Two things that are *not* anchors but look like them:
 
@@ -204,17 +240,18 @@ or widens a struct that is instantiated as a global array **will fail to link**.
 ```bash
 make -j$(sysctl -n hw.ncpu)          # must succeed
 python3 tools/hebrew/audit.py        # must print clean; exits non-zero otherwise
+python3 tools/hebrew/numbers.py      # needs an English checkout, see Numbers above
 ```
 
 The build catches illegal characters, assembly syntax errors and array overflows. `audit.py`
-catches the five things it cannot: a line outside its window, a line that only clips once a
-player name is filled in, an item description wider than its pane, a help-system line that
-loses letters, and a block with no `$` terminator. If a line it flags cannot be re-wrapped,
-`python3 tools/hebrew/rewrap.py --apply` moves the line breaks for you and reports anything
-that needs shortening instead.
+catches what it cannot: a line outside its window, a line that only clips once a player name is
+filled in, an item description wider than its pane, a move description wider than the summary
+panel, battle text wider than the battle box, a help-system line that loses letters, a printer
+whose `x` cannot hold the string it prints, and a block with no `$` terminator. If a line it
+flags cannot be re-wrapped, `python3 tools/hebrew/rewrap.py --apply` moves the line breaks for
+you and reports anything that needs shortening instead.
 
-Neither catches a dropped control code, a renamed label or a wrongly-ordered number — read
-your diff for those.
+Neither catches a dropped control code or a renamed label — read your diff for those.
 
 For terminology, follow what the already-translated files use rather than coining new wording;
 `rg` for a proper noun before inventing a spelling for it.
@@ -289,6 +326,18 @@ python3 tools/hebrew/emu/journey.py out 1 63 safari.txt 16 16
   two lines of one page and read off the inked columns. That is how the wide-letter rule above
   was confirmed after three rounds of plausible-but-wrong arithmetic. Restore the string
   afterwards and check `git diff`.
+- **A screen you cannot walk to is still testable.** `screen.py` boots to the overworld and then
+  writes a function's address into `gMain.callback2`, which drops you straight into it:
+
+  ```bash
+  printf '260 -\nshot a\n' > plain.txt
+  python3 tools/hebrew/emu/screen.py out CB2_SaveClearScreen_Init plain.txt
+  ```
+
+  That works for any callback that sets itself up from scratch — `CB2_SaveClearScreen_Init`,
+  `CB2_InitMysteryGift`, `CB2_InitHofPC`, `CB2_ShowDiploma`, `CB2_InitSlotMachine`. One that
+  expects an argument or a pre-filled static (`CB2_InitTrainerCard`, `CB2_InitMailView`) gives a
+  black screenshot instead of an error; reach those through the menus.
 - `crosscore` runs the same script through the mGBA, VBA-M, VBA-Next, gpSP and Mednafen libretro
   cores. All five render identically, which is expected — the framebuffer is 240x160 in hardware
   and the ROM positions its own text — but it is cheap to re-confirm.
@@ -296,11 +345,18 @@ python3 tools/hebrew/emu/journey.py out 1 63 safari.txt 16 16
 ## Where to continue
 
 Reachable in single-player and verified on screen: the overworld, dialogue and signs, the
-start menu, bag and item descriptions, the Pokédex, the Pokémon Storage System, shops, the
-trainer card, the Fame Checker, the Hall of Fame, the battle HUD including the healthbox
-level and HP, the Safari Zone, and the save and clock dialogues.
+start menu, bag and item descriptions, the Pokédex list and entry pages, the Pokémon Storage
+System, shops, the trainer card, the Fame Checker, the Hall of Fame viewer, the battle HUD and
+battle menus, the move relearner and summary screen, the party menu's field-move descriptions,
+the option menu, the help system, the Game Corner prize lists and coin box, the player's PC, the
+clear-save-data screen, Mystery Gift's top menu, the diploma, the slot machine, the Safari Zone,
+and the save and clock dialogues.
 
-Not verified, because single-player cannot reach it: everything behind the link cable and
+Not verified, because this save could not reach it: the Day Care level readout (needs a
+deposited Pokémon), the item PC's withdraw-quantity window (needs items in storage), mail, and
+the credits. Their layout was mirrored the same way as the rest.
+
+Not verified, because single-player cannot reach it at all: everything behind the link cable and
 wireless adapter — trading, Union Room, Berry Crush, the Dodrio berry game, Mystery Gift and
 the Easy Chat system. Their centring maths was mirrored the same way as the rest, but nobody
 has seen it render. If you have two emulator instances linked, those screens are the first
@@ -310,21 +366,20 @@ Still untranslated by design: the braille text in `data/text/braille.inc` (its o
 Latin chat keyboard rows in `src/keyboard_text.c`, the Japanese upstream leftovers, and blocks
 marked `@ Unused`.
 
-**A known remaining gap.** `audit.py` covers the strings in `data/`, the item and move
-descriptions, and the help panel. It does not cover the ~1900 Hebrew strings defined in C
-(`src/strings.c` alone has about a thousand), because each goes to a window whose geometry is
-decided at its call site. A cheap way to find suspects: grep for `AddTextPrinterParameterized*`
-calls with a literal `x` of 8 or less. Under RTL a small `x` puts the *first* glyph against the
-left border and walks the rest of the string out of the window, so it is almost always an
-upstream left inset that was never mirrored. There are about 150 such calls; most are in the
-link-cable screens nobody can reach in single-player, but that is exactly how the move
-relearner's description bug survived -- `src/learn_move.c` printed it at `x = 1`, byte-identical
-to upstream, while the printers on either side of it had been mirrored. Check each against its
-window's width before assuming it is deliberate; a small `x` is correct for a genuinely narrow
-field.
+**What is left.** `audit.py` now covers the strings defined in C as well as those in `data/`, so
+the gap that hid the move relearner's `x = 1` is closed. Three things it still cannot see:
 
-One known cosmetic wart: the menu cursor `▶` still points right, away from the Hebrew label it
-marks, in every list menu. It is consistent everywhere, so it reads as a convention rather than
-a bug, but mirroring the glyph would be an improvement. The cursor's *position* is deliberately
-left where upstream put it — several callers pass a left inset of 0 and moving the cursor clips
-the first glyph of every entry.
+- **74 printer sites whose string is a runtime buffer** — a nickname, an Easy Chat phrase, a
+  Wonder Card field. `printers.py` lists them when run with `SHOW_UNRESOLVED=1`. Their `x` was
+  mirrored by hand; none has been watched render with a worst-case value in it.
+- **Strings whose Hebrew has a different number of digit runs from its English original.**
+  `numbers.py` skips those rather than guess which run is which.
+- **Latin text.** There is no bidi pass, so any Latin run inside a Hebrew string renders
+  backwards — a save made before the species names were translated shows `DRAZIRAHC` in the
+  party list. New games are unaffected because the names are Hebrew; old saves and
+  player-chosen Latin nicknames are not fixable without a real bidi implementation.
+
+One thing that looks wrong in a diff but is right on screen: the menu cursor `▶` sits to the
+*left* of a right-aligned Hebrew entry, which is where it has to be — it points rightwards, into
+the text. Its position is deliberately left where upstream put it; several callers pass a left
+inset of 0, and moving the cursor clips the first glyph of every entry.

@@ -3,12 +3,20 @@
 
     python3 tools/hebrew/audit.py
 
-Reports four classes of defect the build cannot catch:
+Reports the classes of defect the build cannot catch:
 
   * lines whose left edge falls outside the dialogue box
   * lines that clip once a player name or {STR_VAR_n} is substituted
   * item descriptions wider than their pane
+  * move descriptions wider than the summary screen's panel
+  * battle text wider than the battle box
+  * AddTextPrinter* call sites whose x cannot hold the string they print --
+    an x of 0 or 2 is an upstream left inset that was never mirrored, and
+    under RTL it leaves one glyph against the border and drops the rest
   * text blocks with no $ terminator, which run on into the next label
+
+Number order is checked separately, by tools/hebrew/numbers.py: it needs a
+checkout of the English pokefirered to compare against.
 
 Exits non-zero if anything is found, so it can gate a commit.
 """
@@ -17,6 +25,7 @@ import io, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import textwidth as T
 import substitutions
+import printers
 
 ROOT = T.ROOT
 LABEL = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)::", re.M)
@@ -138,6 +147,25 @@ def check_move_descriptions():
     return sorted(bad, reverse=True)
 
 
+def check_battle_box():
+    """B_WIN_MSG is 28 tiles, so the battle box has 16px more than the
+    overworld one -- and battle text is assembled from these strings."""
+    path = os.path.join(ROOT, "src/battle_message.c")
+    if not os.path.exists(path):
+        return []
+    text = io.open(path, encoding="utf-8").read()
+    defn = re.compile(r'\b([A-Za-z_][A-Za-z0-9_]*)\s*\[\s*\]\s*=\s*_\(((?:\s*"(?:[^"\\]|\\.)*"\s*)+)\)')
+    lit = re.compile(r'"((?:[^"\\]|\\.)*)"')
+    bad = []
+    for m in defn.finditer(text):
+        body = "".join(lit.findall(m.group(2)))
+        for seg in lines_of(body):
+            o = T.overhang(seg, pen=T.PEN_BATTLE_BOX)
+            if o is not None and o > 0:
+                bad.append((o, m.group(1), seg))
+    return sorted(bad, reverse=True)
+
+
 def check_items():
     path = os.path.join(ROOT, "src/data/items.json")
     if not os.path.exists(path):
@@ -193,6 +221,12 @@ def main():
             lambda r: "+%dpx %s  %s" % r)
     section("move descriptions outside the summary panel", check_move_descriptions(),
             lambda r: "+%dpx %s  %s" % r)
+    section("battle text outside the battle box", check_battle_box(),
+            lambda r: "+%dpx %s  %s" % r)
+    printer_rows, unresolved = printers.find()
+    section("printer call sites whose x cannot hold the string", printer_rows,
+            lambda r: "+%dpx %s:%d  x=%d  %s  %s" % r)
+    print("%-52s %d (runtime buffers)" % ("   printer sites with an unresolvable string", unresolved))
     section("text blocks with no $ terminator", unterminated,
             lambda r: "%s:%d  %s%s" % (r[0], r[1], r[2], "" if r[3] else "  (not via msgbox)"))
     return 1 if problems else 0

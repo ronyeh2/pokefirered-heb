@@ -19,12 +19,15 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
 
 - **State of the translation:**
   - Every screen reachable in single-player has been checked on screen, not just in the source:
-    the overworld and dialogue, the start menu, bag and item descriptions, the Pokédex, the
-    Pokémon Storage System, shops, the trainer card, the Fame Checker, the Hall of Fame, the
-    battle HUD, the Safari Zone, and the save and clock dialogues.
+    the overworld and dialogue, the start menu, bag and item descriptions, the Pokédex list and
+    entry pages, the Pokémon Storage System, shops, the trainer card, the Fame Checker, the Hall
+    of Fame viewer, the battle HUD and battle menus, the summary screen and move relearner, the
+    party menu, the option menu, the help system, the Game Corner, the player's PC, the diploma,
+    the Safari Zone, and the save and clock dialogues.
   - What has *not* been verified is everything behind the link cable and wireless adapter —
-    trading, Union Room, Berry Crush, the Dodrio game, Mystery Gift and Easy Chat. The layout
-    work was done, but single-player cannot reach those screens to look at them.
+    trading, Union Room, Berry Crush, the Dodrio game, Mystery Gift and Easy Chat — plus a few
+    single-player screens this save could not set up: the Day Care level readout, the item PC's
+    quantity prompt, mail and the credits. The layout work was done for all of them.
   - Braille, the Latin chat keyboard and the Japanese upstream leftovers are untranslated by
     design.
 - **Contributions:**
@@ -36,9 +39,11 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
     multi-digit numbers have to be typed backwards, and a line's width is not what counting
     characters suggests.
   - Before committing text changes, run `python3 tools/hebrew/audit.py`. It checks every string
-    against the window that actually prints it and exits non-zero on anything that would clip or
-    run into the next message — none of which the build itself catches.
-    `python3 tools/hebrew/rewrap.py --apply` fixes the line breaks it reports.
+    against the window that actually prints it — including the ~1900 defined in C — and exits
+    non-zero on anything that would clip or run into the next message, none of which the build
+    itself catches. `python3 tools/hebrew/rewrap.py --apply` fixes the line breaks it reports,
+    and `python3 tools/hebrew/numbers.py` checks that literal numbers are stored backwards, by
+    comparing them against the English original.
 - **Building on macOS:**
   - See the [macOS section of INSTALL.md](INSTALL.md#macos). Use agbcc; Homebrew's
     `arm-none-eabi-gcc` ships without newlib and cannot build the modern target.
