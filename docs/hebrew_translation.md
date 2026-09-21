@@ -342,6 +342,30 @@ python3 tools/hebrew/emu/journey.py out 1 63 safari.txt 16 16
   cores. All five render identically, which is expected — the framebuffer is 240x160 in hardware
   and the ROM positions its own text — but it is cheap to re-confirm.
 
+## Save files and save states
+
+**A battery save (`.sav` / `.srm`) survives a rebuild. A save state does not.**
+
+The save file is data: the save block layout is untouched here, so the same file loads on any
+build of this fork and on English FireRed. Verified in both directions on a real playthrough —
+loaded, played, saved in-game and reloaded, on the current ROM and on the previous release.
+
+A save state is the console's RAM and CPU registers, with no ROM in it. It resumes execution at
+whatever address the program counter held, and every commit that changes code moves those
+addresses. A state taken on one build therefore resets to the copyright screen within ten frames
+on another — seen, not assumed: six states that run fine on `4322252…` all reset on the build
+after it.
+
+So: **tell players to save in-game before switching ROM builds.** If someone still has states
+tied to an older build, the ROM for that build is reproducible — `git checkout <that commit> &&
+make` gives the same SHA-1 — so they can resume the state there, save in-game, and carry the
+battery save forward.
+
+To inspect a state without RetroArch: `tools/hebrew/emu/unstate.py` unwraps RetroArch's RZIP and
+RASTATE containers down to the raw core blob, and `crosscore`'s `state <blob>` command hands it
+to `retro_unserialize`. The blob has to come from the same core, which `SERIALIZE size=` on
+startup tells you — VBA-M's is 723,452 bytes, mGBA's 528,448.
+
 ## Where to continue
 
 Reachable in single-player and verified on screen: the overworld, dialogue and signs, the

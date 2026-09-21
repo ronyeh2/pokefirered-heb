@@ -89,6 +89,8 @@ typedef bool (*fn_load)(const struct retro_game_info*);
 typedef void (*fn_avinfo)(struct retro_system_av_info*);
 typedef void* (*fn_memdata)(unsigned);
 typedef size_t (*fn_memsize)(unsigned);
+typedef size_t (*fn_szfn)(void);
+typedef bool (*fn_unser)(const void*, size_t);
 typedef void (*fn_setport)(unsigned,unsigned);
 
 #define SYM(T,n) T n = (T)dlsym(h, #n); if (!n) { fprintf(stderr,"missing %s\n", #n); return 1; }
@@ -108,6 +110,8 @@ int main(int argc, char **argv) {
     SYM(fn_void,     retro_run)
     SYM(fn_memdata,  retro_get_memory_data)
     SYM(fn_memsize,  retro_get_memory_size)
+    SYM(fn_szfn,     retro_serialize_size)
+    SYM(fn_unser,    retro_unserialize)
     fn_setport retro_set_controller_port_device = (fn_setport)dlsym(h, "retro_set_controller_port_device");
 
     retro_set_environment(envcb);
@@ -131,6 +135,7 @@ int main(int argc, char **argv) {
         av.geometry.base_width, av.geometry.base_height,
         av.geometry.max_width, av.geometry.max_height,
         av.geometry.aspect_ratio, av.timing.fps, g_fmt);
+    fprintf(stderr,"SERIALIZE size=%zu\n", retro_serialize_size());
 
     if (argc > 4) {
         void *sram = retro_get_memory_data(MEM_SAVE_RAM);
@@ -143,10 +148,10 @@ int main(int argc, char **argv) {
         } else fprintf(stderr,"SAVE skipped (sram=%p size=%zu)\n", sram, ssz);
     }
 
-    char line[256]; long total = 0;
+    char line[1024]; long total = 0;
     while (fgets(line,sizeof line,stdin)) {
-        char a[64]={0}, b[64]={0};
-        if (sscanf(line,"%63s %63s",a,b) < 1) continue;
+        char a[64]={0}, b[768]={0};
+        if (sscanf(line,"%63s %767s",a,b) < 1) continue;
         if (!strcmp(a,"shot")) {
             char p[512]; snprintf(p,sizeof p,"%s/%s.raw", argv[3], b[0]?b:"shot");
             FILE *o = fopen(p,"wb"); if (!o) return 1;
@@ -168,6 +173,23 @@ int main(int argc, char **argv) {
             }
             fclose(o);
             fprintf(stderr,"shot %s @%ld (%ux%u)\n", b, total, g_w, g_h);
+            continue;
+        }
+        if (!strcmp(a,"state")) {
+            // A libretro save state is CPU registers plus RAM, with no ROM in
+            // it, so it only makes sense against the build it was taken from.
+            // Feed it a raw (already RZIP-decompressed) blob.
+            FILE *st = fopen(b,"rb");
+            if (!st) { fprintf(stderr,"STATE open failed %s\n", b); return 1; }
+            fseek(st,0,SEEK_END); long ssz2 = ftell(st); fseek(st,0,SEEK_SET);
+            void *buf = malloc(ssz2);
+            if (fread(buf,1,ssz2,st) != (size_t)ssz2) return 1;
+            fclose(st);
+            size_t want = retro_serialize_size();
+            bool ok = retro_unserialize(buf, (size_t)ssz2);
+            fprintf(stderr,"STATE %s %ld bytes (core wants %zu): %s\n",
+                    b, ssz2, want, ok ? "accepted" : "REJECTED");
+            free(buf);
             continue;
         }
         long n = atol(a);
