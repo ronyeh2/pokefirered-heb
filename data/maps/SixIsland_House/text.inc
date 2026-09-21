@@ -1,7 +1,7 @@
 SixIsland_House_Text_GoodPlaceForNatureAndHistory::
-    .string "There's nothing that young people'd\n"
-    .string "find exciting here on this island.\p"
-    .string "But, this is a good place in terms\n"
-    .string "of nature and history.\p"
-    .string "Relax and enjoy your stay.$"
+    .string "אין כאן באי שום דבר שצעירים\n"
+    .string "ימצאו בו עניין.\p"
+    .string "אבל מבחינת טבע והיסטוריה,\n"
+    .string "זה מקום נהדר.\p"
+    .string "תירגע ותיהנה מהשהות שלך.$"
 

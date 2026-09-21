@@ -1,87 +1,87 @@
 SixIsland_RuinValley_Text_CantFigureOutHowToGetInside::
-    .string "I can't figure out how I'm supposed\n"
-    .string "to get inside.$"
+    .string "אני לא מצליח להבין איך\n"
+    .string "נכנסים לשם.$"
 
 SixIsland_RuinValley_Text_IFoundThisPlace::
-    .string "Let me tell you, I found this\n"
-    .string "place.\p"
-    .string "Don't look so envious, will you?$"
+    .string "שתדע לך, אני מצאתי את\n"
+    .string "המקום הזה.\p"
+    .string "אל תסתכל עליי בקנאה, טוב?$"
 
 SixIsland_RuinValley_Text_CheckDoorMoreThoroughly::
-    .string "The door doesn't budge at all.\n"
-    .string "Check it more thoroughly?$"
+    .string "הדלת לא זזה בכלל.\n"
+    .string "לבדוק אותה ביסודיות?$"
 
 SixIsland_RuinValley_Text_LeftDoorAlone::
-    .string "{PLAYER} left the door alone.$"
+    .string "{PLAYER} הניח לדלת.$"
 
 SixIsland_RuinValley_Text_SeveralDotsOnTheDoor::
-    .string "On closer inspection, there are\n"
-    .string "several dots on the door…$"
+    .string "במבט מקרוב, יש כמה\n"
+    .string "נקודות על הדלת…$"
 
 SixIsland_RuinValley_Text_DoorIsOpen::
-    .string "The door is open.$"
+    .string "הדלת נפתחה.$"
 
 SixIsland_RuinValley_Text_StanlyIntro::
-    .string "There appear to be many secrets\n"
-    .string "still unsolved in this world.$"
+    .string "נראה שיש עוד הרבה סודות\n"
+    .string "לא פתורים בעולם הזה.$"
 
 SixIsland_RuinValley_Text_StanlyDefeat::
-    .string "Hmm…$"
+    .string "הממ…$"
 
 SixIsland_RuinValley_Text_StanlyPostBattle::
-    .string "I suggest to you that you, too,\n"
-    .string "give a thought to the secrets and\l"
-    .string "mysteries of our world once a day.$"
+    .string "אני ממליץ שגם אתה תחשוב\n"
+    .string "פעם ביום על הסודות\l"
+    .string "והתעלומות של העולם שלנו.$"
 
 SixIsland_RuinValley_Text_FosterIntro::
-    .string "I'm curious, what compelled you to\n"
-    .string "come here?$"
+    .string "מעניין אותי, מה גרם לך\n"
+    .string "לבוא לכאן?$"
 
 SixIsland_RuinValley_Text_FosterDefeat::
-    .string "It's been so long since I battled,\n"
-    .string "my instincts are off.$"
+    .string "עבר כל כך הרבה זמן מאז\n"
+    .string "שנלחמתי, החושים שלי קהו.$"
 
 SixIsland_RuinValley_Text_FosterPostBattle::
-    .string "There are several ruins on the\n"
-    .string "SEVII ISLANDS.\p"
-    .string "The majority of them date back\n"
-    .string "a long way.$"
+    .string "יש כמה חורבות\n"
+    .string "באיי סבי.\p"
+    .string "רובן מתוארכות לתקופה\n"
+    .string "רחוקה מאוד.$"
 
 SixIsland_RuinValley_Text_LarryIntro::
-    .string "It's been said that there are\n"
-    .string "mysterious stones on this island.\p"
-    .string "I suspect it has something to do\n"
-    .string "with the ruins here.$"
+    .string "אומרים שיש אבנים מסתוריות\n"
+    .string "באי הזה.\p"
+    .string "אני חושד שזה קשור\n"
+    .string "לחורבות שכאן.$"
 
 SixIsland_RuinValley_Text_LarryDefeat::
-    .string "Oh, interesting.$"
+    .string "אה, מעניין.$"
 
 SixIsland_RuinValley_Text_LarryPostBattle::
-    .string "Those ruins over there…\p"
-    .string "I haven't had any luck in finding\n"
-    .string "how I can get inside.$"
+    .string "החורבות ההן שם…\p"
+    .string "לא הצלחתי למצוא שום דרך\n"
+    .string "להיכנס פנימה.$"
 
 SixIsland_RuinValley_Text_DarylIntro::
-    .string "A battle with you, so high up!$"
+    .string "קרב איתך, כל כך גבוה למעלה!$"
 
 SixIsland_RuinValley_Text_DarylDefeat::
-    .string "Oh, the heartbreak of losing so\n"
-    .string "easily to you!$"
+    .string "אוי, כמה כואב להפסיד לך\n"
+    .string "כל כך בקלות!$"
 
 SixIsland_RuinValley_Text_DarylPostBattle::
-    .string "Experience the joy of climbing!$"
+    .string "תחווה את השמחה שבטיפוס!$"
 
 SixIsland_RuinValley_Text_HectorIntro::
-    .string "I'm pretty familiar with the land\n"
-    .string "around these parts.$"
+    .string "אני מכיר די טוב את השטח\n"
+    .string "באזור הזה.$"
 
 SixIsland_RuinValley_Text_HectorDefeat::
-    .string "You don't need to be so pushy.\n"
-    .string "I'll be happy to tell you.$"
+    .string "אתה לא צריך ללחוץ עליי ככה.\n"
+    .string "אני אשמח לספר לך.$"
 
 SixIsland_RuinValley_Text_HectorPostBattle::
-    .string "The door to the ruins…\n"
-    .string "It has these strange patterns\l"
-    .string "engraved on the outside.\p"
-    .string "I don't know what they mean,\n"
-    .string "though.$"
+    .string "הדלת של החורבות…\n"
+    .string "יש עליה תבניות מוזרות\l"
+    .string "חרוטות מבחוץ.\p"
+    .string "אבל אני לא יודע\n"
+    .string "מה הן אומרות.$"
