@@ -486,7 +486,9 @@ static void PrintTotalRecord(struct LinkBattleRecords * records)
     }
 
     StringExpandPlaceholders(gStringVar4, gString_BattleRecords_TotalRecord);
-    AddTextPrinterParameterized4(0, FONT_NORMAL, 12, 24, 0, 2, sTextColor, 0, gStringVar4);
+    // RTL: mirror the 12px margin to the right edge of the 0xD8-wide window,
+    // otherwise the pen starts at 12 and only the first two glyphs fit.
+    AddTextPrinterParameterized4(0, FONT_NORMAL, 0xD8 - 12, 24, 0, 2, sTextColor, 0, gStringVar4);
 }
 
 static void PrintOpponentBattleRecord(struct LinkBattleRecord * record, u8 y)
@@ -496,7 +498,7 @@ static void PrintOpponentBattleRecord(struct LinkBattleRecord * record, u8 y)
 
     if (record->wins == 0 && record->losses == 0 && record->draws == 0)
     {
-        AddTextPrinterParameterized4(0, FONT_NORMAL, 0, y, 0, 2, sTextColor, 0, gString_BattleRecords_7Dashes);
+        AddTextPrinterParameterized4(0, FONT_NORMAL, 0x2A, y, 0, 2, sTextColor, 0, gString_BattleRecords_7Dashes);
         for (i = 0; i < 3; i++)
         {
             if (i == 0)
@@ -514,13 +516,13 @@ static void PrintOpponentBattleRecord(struct LinkBattleRecord * record, u8 y)
         {
             if (i == 0)
             {
-                x = 0;
+                x = 0x2A;
                 StringFillWithTerminator(gStringVar1, PLAYER_NAME_LENGTH + 1);
                 StringCopyN(gStringVar1, record->name, PLAYER_NAME_LENGTH);
             }
             else if (i == 1)
             {
-                x = 0x54;
+                x = 0xB4;
                 ConvertIntToDecimalStringN(gStringVar1, record->wins, STR_CONV_MODE_RIGHT_ALIGN, 4);
             }
             else if (i == 2)
@@ -530,7 +532,7 @@ static void PrintOpponentBattleRecord(struct LinkBattleRecord * record, u8 y)
             }
             else
             {
-                x = 0xB4;
+                x = 0x54;
                 ConvertIntToDecimalStringN(gStringVar1, record->draws, STR_CONV_MODE_RIGHT_ALIGN, 4);
             }
             AddTextPrinterParameterized4(0, FONT_NORMAL, x, y, 0, 2, sTextColor, 0, gStringVar1);
@@ -548,7 +550,9 @@ static void PrintBattleRecords(void)
     left = 0xD0 - GetStringWidth(FONT_NORMAL, gStringVar4, -1);
     AddTextPrinterParameterized4(0, FONT_NORMAL, left / 2, 4, 0, 2, sTextColor, 0, gStringVar4);
     PrintTotalRecord(&gSaveBlock2Ptr->linkBattleRecords);
-    AddTextPrinterParameterized4(0, FONT_NORMAL, 0x54, 0x30, 0, 2, sTextColor, 0, gString_BattleRecords_ColumnHeaders);
+    // RTL: anchor on the RIGHTMOST value column; the {CLEAR_TO} stops in the string
+    // then walk leftwards onto 0x84 and 0x54, so each header lands on its own column.
+    AddTextPrinterParameterized4(0, FONT_NORMAL, 0xB4, 0x30, 0, 2, sTextColor, 0, gString_BattleRecords_ColumnHeaders);
     for (i = 0; i < LINK_B_RECORDS_COUNT; i++)
         PrintOpponentBattleRecord(&gSaveBlock2Ptr->linkBattleRecords.entries[i], 0x3D + 14 * i);
     CommitWindow(0);
