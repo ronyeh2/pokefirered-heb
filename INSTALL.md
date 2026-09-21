@@ -253,44 +253,80 @@ Note that the directory **must exist** in Windows. If you want to store pokefire
 If this works, then proceed to [Installation](#installation). Otherwise, ask for help on Discord or IRC (see [README.md](README.md)).
 
 ## macOS
-1. If the Xcode Command Line Tools are not installed, download the tools [here](https://developer.apple.com/xcode/resources/), open your Terminal, and run the following command:
+
+<details>
+    <summary><i><strong>Apple Silicon note</strong></i></summary>
+
+>   Older versions of this guide said Homebrew and libpng had to be installed under Rosetta on
+>   Apple Silicon. That is no longer true — Homebrew is native on `arm64` and installs to
+>   `/opt/homebrew`. The commands below assume that prefix; on an Intel Mac substitute
+>   `/usr/local`.
+</details>
+
+1. If the Xcode Command Line Tools are not installed, run:
 
     ```bash
     xcode-select --install
     ```
 
-2.  - If libpng is **not installed**, then go to [Installing libpng (macOS)](#installing-libpng-macos).
-- If devkitARM is **not installed**, then go to [Installing devkitARM (macOS)](#installing-devkitarm-macos).
-- Otherwise, **open the Terminal** and go to [Choosing where to store pokefirered (macOS)](#choosing-where-to-store-pokefirered-macos)
+2. If Homebrew is not installed, install [Homebrew](https://brew.sh/).
 
-### Installing libpng (macOS)
-<details>
-    <summary><i>Note for advanced users...</i></summary>
-
->   This guide installs libpng via Homebrew as it is the easiest method, however advanced users can install libpng through other means if they so desire.
-</details>
-<details>
-    <summary><i><strong>Note for Apple Silicon (M1) Mac users...</strong></i></summary>
-
->   Currently, Homebrew and libng must be installed via Rosetta on Apple Silicon Macs. Before continuing, create a [Terminal shell profile with Rosetta](https://www.astroworldcreations.com/blog/apple-silicon-and-legacy-command-line-software). Be sure to run the commands corresponding to Apple Silicon (M1).
-</details>
-
-1. Open the Terminal.
-2. If Homebrew is not installed, then install [Homebrew](https://brew.sh/) by following the instructions on the website.
-3. Run the following command to install libpng.
+3. Install the host-tool dependencies and the ARM assembler/linker:
 
     ```bash
-    brew install libpng # Intel Macs
-    /usr/local/bin/brew install libpng # Apple Silicon (M1) Macs
+    brew install libpng pkg-config arm-none-eabi-binutils
     ```
-   libpng is now installed.
 
-   Continue to [Installing devkitARM (macOS)](#installing-devkitarm-macos) if **devkitARM is not installed**, otherwise, go to [Choosing where to store pokefirered (macOS)](#choosing-where-to-store-pokefirered-macos).
+   `libpng` is needed by `gbagfx` and `rsfont`, `pkg-config` by `rsfont`, and
+   `arm-none-eabi-binutils` provides the `as`, `ld` and `objcopy` that the build shells out to.
+
+4. Homebrew does not put its headers on the default compiler search path, so the host tools fail
+   with `fatal error: 'png.h' file not found` unless you export these. Add them to your shell
+   profile or set them in the shell you build from:
+
+    ```bash
+    export CPATH=/opt/homebrew/include
+    export LIBRARY_PATH=/opt/homebrew/lib
+    ```
+
+5. Choose the compiler. **agbcc is the recommended path on macOS** — it ships its own headers and
+   libc, so it needs nothing else:
+   - [agbcc (recommended)](#installing-agbcc-macos)
+   - [devkitARM](#installing-devkitarm-macos), only needed for `make modern`
+
+<details>
+    <summary><i><strong>Why not just `brew install arm-none-eabi-gcc`?</strong></i></summary>
+
+>   Homebrew's `arm-none-eabi-gcc` is a bare compiler with **no newlib**: there is no `string.h`
+>   and no `libc.a`. `make modern` fails on the first C file with
+>   `fatal error: string.h: No such file or directory`. Use agbcc, or install devkitARM, which
+>   bundles newlib.
+</details>
+
+### Installing agbcc (macOS)
+
+From the directory where you keep your decomps, next to the `pokefirered-heb` folder:
+
+```bash
+git clone https://github.com/pret/agbcc
+cd agbcc
+./build.sh
+./install.sh ../pokefirered-heb
+cd ..
+```
+
+`install.sh` copies the compiler into `pokefirered-heb/tools/agbcc`, which is gitignored. You only
+need to do this once per clone.
+
+Now go to [Build pokefirered](#build-pokefirered).
 
 ### Installing devkitARM (macOS)
-1. Download the `devkitpro-pacman-installer.pkg` package from [here](https://github.com/devkitPro/pacman/releases).
-2. Open the package to install devkitPro pacman.
-3. In the Terminal, run the following commands to install devkitARM:
+
+Only needed if you want `make modern`. The agbcc build above does not use it.
+
+1. Download the `devkitpro-pacman-installer.pkg` package from
+   [here](https://github.com/devkitPro/pacman/releases) and open it to install devkitPro pacman.
+2. In the Terminal, run:
 
     ```bash
     sudo dkp-pacman -Sy
@@ -298,21 +334,18 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
     sudo dkp-pacman -S devkitarm-rules
     ```
 
-   The command with gba-dev will ask for the selection of packages to install. Just press Enter to install all of them, followed by entering Y to proceed with the installation.
+   `gba-dev` asks which packages to install; press Enter to accept all, then `Y` to proceed.
 
-4. After the tools are installed, devkitARM must now be made accessible from anywhere by the system. To do so, run the following commands:
+3. Make devkitARM visible to the build:
 
     ```bash
-    export DEVKITPRO=/opt/devkitpro
-    echo "export DEVKITPRO=$DEVKITPRO" >> ~/.bashrc # Intel Macs
-    echo "export DEVKITPRO=$DEVKITPRO" >> ~/.zshrc # Apple Silicon (M1) Macs
-    export DEVKITARM=$DEVKITPRO/devkitARM
-    echo "export DEVKITARM=$DEVKITARM" >> ~/.bashrc # Intel Macs
-    echo "export DEVKITARM=$DEVKITARM" >> ~/.zshrc # Apple Silicon (M1) Macs
-
-    echo "if [ -f ~/.bashrc ]; then . ~/.bashrc; fi" >> ~/.bash_profile # Intel Macs
-    echo "if [ -f ~/.zshrc ]; then . ~/.zshrc; fi" >> ~/.zprofile # Apple Silicon (M1) Macs
+    echo 'export DEVKITPRO=/opt/devkitpro'        >> ~/.zshrc
+    echo 'export DEVKITARM=$DEVKITPRO/devkitARM'  >> ~/.zshrc
+    echo 'export PATH=$DEVKITPRO/tools/bin:$PATH' >> ~/.zshrc
+    exec zsh
     ```
+
+   (Use `~/.bashrc` instead of `~/.zshrc` if your shell is bash.)
 
 ### Choosing where to store pokefirered (macOS)
 At this point, you can choose a folder to store pokefirered into. If you're okay with storing pokefirered in the user folder, then proceed to [Installation](#installation). Otherwise, you'll need to account for where pokefirered is stored when changing directory to the pokefirered folder.

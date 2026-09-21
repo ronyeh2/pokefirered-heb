@@ -21,6 +21,18 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
   - The translation is ongoing. Some screens may still be incorrectly formatted, and some text may be untranslated or incorrectly translated.
 - **Contributions:**
   - Issues and pull requests are welcome! Please note that this is a personal project done in my free time, so I can't guarantee when I'll be able to address them.
+- **Translating:**
+  - See [docs/hebrew_translation.md](docs/hebrew_translation.md) for how Hebrew and right-to-left
+    rendering work in this fork, and the rules to follow when editing text. Reading it first will
+    save you from the two traps everyone hits: there is more than one text renderer, and literal
+    multi-digit numbers have to be typed backwards.
+- **Building on macOS:**
+  - See the [macOS section of INSTALL.md](INSTALL.md#macos). Use agbcc; Homebrew's
+    `arm-none-eabi-gcc` ships without newlib and cannot build the modern target.
+- **Cheat codes still work:**
+  - This fork does not move anything in RAM, so GameShark / Action Replay / CodeBreaker
+    codes written for English FireRed (BPRE) work unchanged. See
+    [RAM layout and cheat codes](docs/hebrew_translation.md#ram-layout-and-cheat-codes).
 
 ## Credits
 
