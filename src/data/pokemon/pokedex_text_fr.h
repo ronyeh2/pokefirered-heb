@@ -182,7 +182,7 @@ const u8 gPikachuPokedexTextUnused[] = _("");
 
 const u8 gRaichuPokedexText[] = _(
     "המטענים החשמליים שלו יכולים להגיע\n"
-    "ל-100,000 וולט. מגע לא זהיר יכול לגרום\n"
+    "ל-000,001 וולט. מגע לא זהיר יכול לגרום\n"
     "אפילו לפיל הודי להתעלף.");
 
 const u8 gRaichuPokedexTextUnused[] = _("");
@@ -253,7 +253,7 @@ const u8 gClefairyPokedexTextUnused[] = _("");
 const u8 gClefablePokedexText[] = _(
     "יש לו חוש שמיעה חד. הוא יכול\n"
     "לשמוע בקלות סיכה נופלת כמעט\n"
-    "1,100 מטרים משם.");
+    "001,1 מטרים משם.");
 
 const u8 gClefablePokedexTextUnused[] = _("");
 
@@ -267,7 +267,7 @@ const u8 gVulpixPokedexTextUnused[] = _("");
 const u8 gNinetalesPokedexText[] = _(
     "יש לו תשעה זנבות ארוכים ופרווה\n"
     "שנוצצת בזהב. אומרים שהוא חי\n"
-    "1,000 שנים.");
+    "000,1 שנים.");
 
 const u8 gNinetalesPokedexTextUnused[] = _("");
 
@@ -440,7 +440,7 @@ const u8 gPoliwrathPokedexText[] = _(
 const u8 gPoliwrathPokedexTextUnused[] = _("");
 
 const u8 gAbraPokedexText[] = _(
-    "הוא ישן 18 שעות ביום. הוא משתמש במגוון\n"
+    "הוא ישן 81 שעות ביום. הוא משתמש במגוון\n"
     "כוחות חוץ-חושיים אפילו\n"
     "בזמן שהוא ישן.");
 
@@ -463,7 +463,7 @@ const u8 gAlakazamPokedexTextUnused[] = _("");
 const u8 gMachopPokedexText[] = _(
     "כל גופו מורכב משרירים.\n"
     "למרות שהוא בגודל של ילד\n"
-    "אנושי, הוא יכול להרים 100 מבוגרים.");
+    "אנושי, הוא יכול להרים 001 מבוגרים.");
 
 const u8 gMachopPokedexTextUnused[] = _("");
 
@@ -476,7 +476,7 @@ const u8 gMachokePokedexTextUnused[] = _("");
 
 const u8 gMachampPokedexText[] = _(
     "ארבע זרועותיו המפותחות היטב יכולות\n"
-    "לשחרר מטח של 1,000 אגרופים בתוך\n"
+    "לשחרר מטח של 000,1 אגרופים בתוך\n"
     "שתי שניות בלבד.");
 
 const u8 gMachampPokedexTextUnused[] = _("");
@@ -510,7 +510,7 @@ const u8 gTentacoolPokedexText[] = _(
 const u8 gTentacoolPokedexTextUnused[] = _("");
 
 const u8 gTentacruelPokedexText[] = _(
-    "יש לו 80 זרועות שנעות בחופשיות.\n"
+    "יש לו 08 זרועות שנעות בחופשיות.\n"
     "הן יכולות לעקוץ, לגרום להרעלה\n"
     "וכאב חד ודוקר.");
 
@@ -589,7 +589,7 @@ const u8 gFarfetchdPokedexTextUnused[] = _("");
 const u8 gDoduoPokedexText[] = _(
     "פוקימון דו-ראשי שהתגלה\n"
     "כמוטציה פתאומית. הוא רץ בקצב\n"
-    "של מעל 60 מייל בשעה.");
+    "של מעל 06 מייל בשעה.");
 
 const u8 gDoduoPokedexTextUnused[] = _("");
 
@@ -603,7 +603,7 @@ const u8 gDodrioPokedexTextUnused[] = _("");
 const u8 gSeelPokedexText[] = _(
     "מכוסה בפרווה כחולה בהירה, עורו\n"
     "עבה וקשוח. הוא פעיל בקור מקפיא\n"
-    "של מינוס 40 מעלות פרנהייט.");
+    "של מינוס 04 מעלות פרנהייט.");
 
 const u8 gSeelPokedexTextUnused[] = _("");
 
@@ -666,7 +666,7 @@ const u8 gGengarPokedexTextUnused[] = _("");
 const u8 gOnixPokedexText[] = _(
     "הוא בדרך כלל חי מתחת לאדמה. הוא מחפש\n"
     "מזון תוך כדי קידוח דרכו באדמה\n"
-    "במהירות של 50 מייל בשעה.");
+    "במהירות של 05 מייל בשעה.");
 
 const u8 gOnixPokedexTextUnused[] = _("");
 
@@ -693,7 +693,7 @@ const u8 gKrabbyPokedexTextUnused[] = _("");
 
 const u8 gKinglerPokedexText[] = _(
     "הצבת הגדולה והקשה שלו יש כוח\n"
-    "של 10,000 כוח סוס. עם זאת, בגלל\n"
+    "של 000,01 כוח סוס. עם זאת, בגלל\n"
     "גודלה, קשה להזיז אותה.");
 
 const u8 gKinglerPokedexTextUnused[] = _("");
@@ -967,7 +967,7 @@ const u8 gPorygonPokedexTextUnused[] = _("");
 const u8 gOmanytePokedexText[] = _(
     "פוקימון פרהיסטורי שחי בים\n"
     "הקדמוני, הוא שוחה על ידי פיתול\n"
-    "10 זרועותיו.");
+    "01 זרועותיו.");
 
 const u8 gOmanytePokedexTextUnused[] = _("");
 
@@ -1044,7 +1044,7 @@ const u8 gDragonairPokedexTextUnused[] = _("");
 const u8 gDragonitePokedexText[] = _(
     "הוא יכול לעוף למרות מבנה גופו הגדול\n"
     "והמגושם. הוא מקיף את כדור הארץ בתוך\n"
-    "16 שעות בלבד.");
+    "61 שעות בלבד.");
 
 const u8 gDragonitePokedexTextUnused[] = _("");
 
@@ -1153,7 +1153,7 @@ const u8 gHoothootPokedexTextUnused[] = _("");
 
 const u8 gNoctowlPokedexText[] = _(
     "כשהוא צריך לחשוב, הוא מסובב את ראשו\n"
-    "ב-180 מעלות כדי לחדד את כוחו\n"
+    "ב-081 מעלות כדי לחדד את כוחו\n"
     "האינטלקטואלי.");
 
 const u8 gNoctowlPokedexTextUnused[] = _("");
@@ -1355,7 +1355,7 @@ const u8 gSunfloraPokedexText[] = _(
 const u8 gSunfloraPokedexTextUnused[] = _("");
 
 const u8 gYanmaPokedexText[] = _(
-    "עיניו הגדולות יכולות לסרוק 360 מעלות.\n"
+    "עיניו הגדולות יכולות לסרוק 063 מעלות.\n"
     "הוא מביט בכל הכיוונים כדי לחפש\n"
     "חרקים כטרף שלו.");
 
@@ -1461,7 +1461,7 @@ const u8 gGligarPokedexTextUnused[] = _("");
 
 const u8 gSteelixPokedexText[] = _(
     "אומרים שאם אוניקס חי למעלה מ-\n"
-    "100 שנה, ההרכב שלו משתנה והופך\n"
+    "001 שנה, ההרכב שלו משתנה והופך\n"
     "להיות דמוי יהלום.");
 
 const u8 gSteelixPokedexTextUnused[] = _("");
@@ -1685,7 +1685,7 @@ const u8 gElekidPokedexTextUnused[] = _("");
 
 const u8 gMagbyPokedexText[] = _(
     "הוא נמצא במכתשים געשיים. חום גופו\n"
-    "עולה על 1,100 מעלות פרנהייט,\n"
+    "עולה על 001,1 מעלות פרנהייט,\n"
     "אז אל תזלזל בו.");
 
 const u8 gMagbyPokedexTextUnused[] = _("");
@@ -1860,7 +1860,7 @@ const u8 gZigzagoonPokedexTextUnused[] = _("");
 
 const u8 gLinoonePokedexText[] = _(
     "כשהוא רץ בקו ישר, הוא יכול להגיע\n"
-    "ל-60 מייל בשעה. עם זאת, יש לו\n"
+    "ל-06 מייל בשעה. עם זאת, יש לו\n"
     "קושי עם דרכים מפותלות.");
 
 const u8 gLinoonePokedexTextUnused[] = _("");
@@ -1945,7 +1945,7 @@ const u8 gShiftryPokedexTextUnused[] = _("");
 const u8 gTaillowPokedexText[] = _(
     "הוא לא אוהב עונות קרות. הם נודדים\n"
     "לארצות אחרות בחיפוש אחר חום, עפים\n"
-    "מעל 180 מייל ביום.");
+    "מעל 081 מייל ביום.");
 
 const u8 gTaillowPokedexTextUnused[] = _("");
 
@@ -2020,7 +2020,7 @@ const u8 gBreloomPokedexText[] = _(
 const u8 gBreloomPokedexTextUnused[] = _("");
 
 const u8 gSlakothPokedexText[] = _(
-    "הוא ישן 20 שעות בכל יום. לגרום\n"
+    "הוא ישן 02 שעות בכל יום. לגרום\n"
     "לאלה שרואים אותו להיות מנומנמים היא אחת\n"
     "מיכולותיו.");
 
@@ -2091,7 +2091,7 @@ const u8 gMakuhitaPokedexTextUnused[] = _("");
 
 const u8 gHariyamaPokedexText[] = _(
     "הוא רוקע על האדמה כדי לבנות כוח.\n"
-    "הוא יכול לשלוח משאית של 10 טון מעופפת עם\n"
+    "הוא יכול לשלוח משאית של 01 טון מעופפת עם\n"
     "אגרוף יד ישרה.");
 
 const u8 gHariyamaPokedexTextUnused[] = _("");
@@ -2329,7 +2329,7 @@ const u8 gFlygonPokedexTextUnused[] = _("");
 
 const u8 gCacneaPokedexText[] = _(
     "הוא מעדיף סביבות קשות כמו\n"
-    "מדבריות. הוא יכול לשרוד 30 יום על\n"
+    "מדבריות. הוא יכול לשרוד 03 יום על\n"
     "מים שאגורים בגופו.");
 
 const u8 gCacneaPokedexTextUnused[] = _("");
@@ -2426,7 +2426,7 @@ const u8 gClaydolPokedexText[] = _(
 const u8 gClaydolPokedexTextUnused[] = _("");
 
 const u8 gLileepPokedexText[] = _(
-    "הוא נכחד לפני כ-100 מיליון\n"
+    "הוא נכחד לפני כ-001 מיליון\n"
     "שנה. הוא שוחזר ממאובן\n"
     "באמצעות טכניקות מתקדמות.");
 
@@ -2540,7 +2540,7 @@ const u8 gWynautPokedexTextUnused[] = _("");
 const u8 gSnoruntPokedexText[] = _(
     "אומרים שבית שביקר בו\n"
     "סנורנט ישגשג. הוא יכול לעמוד\n"
-    "בקור של מינוס 150 מעלות פרנהייט.");
+    "בקור של מינוס 051 מעלות פרנהייט.");
 
 const u8 gSnoruntPokedexTextUnused[] = _("");
 
@@ -2594,7 +2594,7 @@ const u8 gGorebyssPokedexText[] = _(
 const u8 gGorebyssPokedexTextUnused[] = _("");
 
 const u8 gRelicanthPokedexText[] = _(
-    "הוא נשאר ללא שינוי במשך 100\n"
+    "הוא נשאר ללא שינוי במשך 001\n"
     "מיליון שנים. הוא התגלה\n"
     "במהלך חקר מעמקי הים.");
 

@@ -187,12 +187,12 @@ const u8 DecorDesc_SAND_ORNAMENT[] = _(
         "נוגעים בו.");
 
 const u8 DecorDesc_SILVER_SHIELD[] = _(
-    "הוענק עבור 50\n"
+    "הוענק עבור 05\n"
         "ניצחונות רצופים\n"
         "במגדל הקרב.");
 
 const u8 DecorDesc_GOLD_SHIELD[] = _(
-    "הוענק עבור 100\n"
+    "הוענק עבור 001\n"
         "ניצחונות רצופים\n"
         "במגדל הקרב.");
 
