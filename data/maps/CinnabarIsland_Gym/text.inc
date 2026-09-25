@@ -30,8 +30,8 @@ CinnabarIsland_Gym_Text_BlainePostBattle::
     .string "מ”מ83 מכיל\n"
     .string "את המתקפה אש מתפרצת!\p"
     .string "למד פוקימון אש את המתקפה הזו!\p"
-    .string "היא תתאים נביל לצ'רמיליון או\l"
-    .string "לפוניטה!$"
+    .string "וולפיקס או צ'רמיליון יתאימו\l"
+    .string "למהלך הזה!$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "פנה מקום בשביל\n"
