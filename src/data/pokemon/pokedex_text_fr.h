@@ -42,7 +42,7 @@ const u8 gCharmeleonPokedexTextUnused[] = _("");
 
 const u8 gCharizardPokedexText[] = _(
     "כנפיו יכולות לשאת פוקימון זה קרוב\n"
-    "לגובה של 1,400 מטר. הוא נושף\n"
+    "לגובה של 004,1 מטר. הוא נושף\n"
     "אש בטמפרטורות גבוהות מאוד.");
 
 const u8 gCharizardPokedexTextUnused[] = _("");
@@ -120,7 +120,7 @@ const u8 gPidgeyPokedexTextUnused[] = _("");
 const u8 gPidgeottoPokedexText[] = _(
     "הטפרים ברגליו מפותחים היטב.\n"
     "הוא יכול לשאת טרף כמו אקזגקיוט\n"
-    "לקן שלו למרחק של 100 ק.");
+    "לקן שלו למרחק של 001 ק.");
 
 const u8 gPidgeottoPokedexTextUnused[] = _("");
 
@@ -294,14 +294,14 @@ const u8 gZubatPokedexTextUnused[] = _("");
 
 const u8 gGolbatPokedexText[] = _(
     "הוא נועץ את טרפו עם ניבים\n"
-    "חדים כמחט ושואב יותר מ-300 מיליליטר\n"
+    "חדים כמחט ושואב יותר מ-003 מיליליטר\n"
     "דם בלגימה אחת.");
 
 const u8 gGolbatPokedexTextUnused[] = _("");
 
 const u8 gOddishPokedexText[] = _(
     "שמו המדעי הוא ”אודיום ונדרוס”.\n"
-    "בלילה, אומרים שהוא הולך כמעט 300\n"
+    "בלילה, אומרים שהוא הולך כמעט 003\n"
     "מטרים על שני שורשיו.");
 
 const u8 gOddishPokedexTextUnused[] = _("");
@@ -545,7 +545,7 @@ const u8 gPonytaPokedexText[] = _(
 const u8 gPonytaPokedexTextUnused[] = _("");
 
 const u8 gRapidashPokedexText[] = _(
-    "הוא יכול לדהור במהירות שיא של 240\n"
+    "הוא יכול לדהור במהירות שיא של 042\n"
     "קמ”ש. הוא יכול לרוץ מהר כמו רכבת\n"
     "מהירה בזמן שהוא בוער.");
 
@@ -883,7 +883,7 @@ const u8 gElectabuzzPokedexTextUnused[] = _("");
 const u8 gMagmarPokedexText[] = _(
     "נמצא ליד פתח הר געש.\n"
     "טמפרטורת גופו של יורק האש הזה היא\n"
-    "כמעט 1,200 מעלות צלזיוס.");
+    "כמעט 002,1 מעלות צלזיוס.");
 
 const u8 gMagmarPokedexTextUnused[] = _("");
 
@@ -953,7 +953,7 @@ const u8 gJolteonPokedexTextUnused[] = _("");
 const u8 gFlareonPokedexText[] = _(
     "יש לו שק להבה בתוך גופו. אחרי\n"
     "שאיפה עמוקה, הוא נושף להבות של\n"
-    "כמעט 1,700 מעלות צלזיוס.");
+    "כמעט 007,1 מעלות צלזיוס.");
 
 const u8 gFlareonPokedexTextUnused[] = _("");
 
@@ -1000,7 +1000,7 @@ const u8 gAerodactylPokedexText[] = _(
 const u8 gAerodactylPokedexTextUnused[] = _("");
 
 const u8 gSnorlaxPokedexText[] = _(
-    "הוא לא מרוצה אלא אם כן הוא אוכל מעל 400\n"
+    "הוא לא מרוצה אלא אם כן הוא אוכל מעל 004\n"
     "ק”ג של מזון בכל יום. כשהוא מסיים\n"
     "לאכול, הוא הולך מיד לישון.");
 
@@ -2265,7 +2265,7 @@ const u8 gWailordPokedexText[] = _(
 const u8 gWailordPokedexTextUnused[] = _("");
 
 const u8 gNumelPokedexText[] = _(
-    "מגמה בחום של כמעט 1,200 מעלות צלזיוס\n"
+    "מגמה בחום של כמעט 002,1 מעלות צלזיוס\n"
     "זורמת דרך גופו. כשהוא מתקרר,\n"
     "המגמה מתקשה ומאטה אותו.");
 

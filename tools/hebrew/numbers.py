@@ -82,6 +82,49 @@ def _items(root):
     return out
 
 
+def looks_forward(run):
+    """True if a digit run reads like a number nobody reversed.
+
+    Only reachable for runs the English cannot settle -- a converted value, a
+    rewritten sentence, a string with no counterpart. A stored run is supposed
+    to be backwards, so a thousands comma belongs three from the LEFT (004,1)
+    and a round number keeps its zero at the front (042). The opposite of both
+    is a number somebody typed the way they read it.
+    """
+    digits = run.replace(",", "")
+    if len(digits) < 2 or run == run[::-1]:
+        return False
+    if "," in run:
+        return len(run.split(",")[0]) <= 2
+    return run.endswith("0") and not run.startswith("0")
+
+
+# TM and HM numbers are two digits with the machine's letters in front, and the
+# low ones legitimately end in a zero once stored backwards (TM06 is "\u05de\u201d\u05de60"),
+# so they trip looks_forward() every time. Match them and leave them alone.
+TM_NUMBER = re.compile(r"\u05de\u201d[\u05de\u05e0]\s*([0-9]{2})")
+
+
+def suspects(heb, en):
+    """name -> [runs] that decisions() cannot judge and that read forwards."""
+    out = {}
+    for name, (hs, _, _) in heb.items():
+        if not HEB.search(hs):
+            continue
+        machine = set(TM_NUMBER.findall(hs))
+        hr = [r for r in runs(hs) if r not in machine]
+        er = runs(en[name][0]) if name in en else None
+        found = []
+        for i, a in enumerate(hr):
+            if er is not None and len(er) == len(hr) and (a == er[i] or a == er[i][::-1]):
+                continue        # decisions() already settled this one
+            if looks_forward(a):
+                found.append(a)
+        if found:
+            out[name] = found
+    return out
+
+
 def decisions(heb, en):
     """name -> set of run indices that are still in English order."""
     out = {}
@@ -197,13 +240,26 @@ def main():
         raise SystemExit("no English checkout at %s -- see this file's docstring" % en_root)
 
     n = 0
+    flagged = 0
+    for loader in (_c_defs, _inc_defs, _items):
+        heb, en = loader(ROOT), loader(en_root)
+        for name, found in sorted(suspects(heb, en).items()):
+            body, path, line = heb[name]
+            print("SUSPECT %-38s %-30s %s" % (
+                "%s:%s" % (os.path.relpath(str(path), ROOT), line), name[:30],
+                " ".join(found)))
+            flagged += 1
+    if flagged:
+        print("%d string%s whose number the English cannot settle and that reads forwards\n"
+              % (flagged, "" if flagged == 1 else "s"))
+
     for loader in (_c_defs, _inc_defs):
         heb, en = loader(ROOT), loader(en_root)
         n += fix_c_and_inc(heb, decisions(heb, en), fix)
     heb, en = _items(ROOT), _items(en_root)
     n += fix_items(heb, decisions(heb, en), fix)
     print("\n%d string%s with a number still in English order" % (n, "" if n == 1 else "s"))
-    return 1 if n and not fix else 0
+    return 1 if (n or flagged) and not fix else 0
 
 
 if __name__ == "__main__":

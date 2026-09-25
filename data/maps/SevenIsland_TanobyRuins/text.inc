@@ -8,7 +8,7 @@ SevenIsland_TanobyRuins_Text_BrandonDefeat::
 
 SevenIsland_TanobyRuins_Text_BrandonPostBattle::
     .string "חורבות טאנובי הן בנות\n"
-    .string "0051 שנה לפחות.\p"
+    .string "005,1 שנה לפחות.\p"
     .string "אבל זו תעלומה גדולה\n"
     .string "למה בכלל בנו אותן.$"
 
