@@ -3,7 +3,7 @@ Route11_EastEntrance_1F_Text_BagIsFull::
     .string "{PLAYER}{KUN}の　バッグ\n"
     .string "いっぱい　みたい　だね$"
 
-    Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::
+Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::
     .string "אתה לא חושב שזה קשה\n"
 	  .string "לחשוב על שמות טובים לפוקימון?\p"
     .string "במיוחד אם תפסתם הרבה מהם?\n"

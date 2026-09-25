@@ -91,7 +91,7 @@ VermilionCity_Text_OhMysticTicketTakeYouToNavelRock::
     .string "עת.$"
 
 VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland::
-    .string "וואו! זה כרטיס אורורה!\n"
+    .string "וואו! זה כרטיס הזוהר!\n"
     .string "זה נדיר מאוד.\p"
     .string "נשמח לקחת אותך ל-אי הנולד בכל\n"
     .string "עת.$"

@@ -1,6 +1,6 @@
 CinnabarIsland_Mart_Text_DontTheyHaveXAttack::
-    .string "אין להם X\n"
-    .string "התקפה? זה מעולה לקרבות!$"
+    .string "אין להם התקפת X?\n"
+    .string "זה מעולה לקרבות!$"
 
 CinnabarIsland_Mart_Text_ExtraItemsNeverHurt::
     .string "זה אף פעם לא מזיק\n"

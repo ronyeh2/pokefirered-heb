@@ -145,6 +145,6 @@ CeladonCity_GameCorner_Text_SomeonesKeys::
 CeladonCity_GameCorner_Text_CoinCaseIsRequired::
     .string "נחוץ בשביל זה ארנק לאסימונים…$"
 	
-	CeladonCity_GameCorner_Text_SlotMachineWantToPlay::
+CeladonCity_GameCorner_Text_SlotMachineWantToPlay::
     .string "מכונת מזל!\n"
     .string "רוצה לשחק?$"

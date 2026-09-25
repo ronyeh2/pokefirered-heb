@@ -24,13 +24,13 @@ Text_MimicTeach::
     .string "בשבילי?\n"
     .string "תודה!\p"
     .string "אתה יודע מה?\n"
-    .string "אני יכולה ללמד את המהלך 'חיקוי'.$"
+    .string "אני יכולה ללמד את המהלך 'חקיינות'.$"
 
 Text_MimicDeclined::
-    .string "אתה לא אוהב את 'חיקוי'? $"
+    .string "אתה לא אוהב את 'חקיינות'?$"
 
 Text_MimicWhichMon::
-    .string "אני ממש אוהבת 'חיקוי'!\n"
+    .string "אני ממש אוהבת 'חקיינות'!\n"
     .string "איזה פוקימון הולך ללמוד אותו?$"
 
 Text_MimicTaughtMale::

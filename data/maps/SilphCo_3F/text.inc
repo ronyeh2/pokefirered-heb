@@ -14,7 +14,7 @@ SilphCo_3F_Text_GruntDefeat::
 
 SilphCo_3F_Text_GruntPostBattle::
     .string "רמז? אפשר לפתוח דלתות עם\n"
-    .string "כרטיס כרטיס!$"
+    .string "כרטיס גישה!$"
 
 SilphCo_3F_Text_JoseIntro::
     .string "אני תומך בצוות רוקט יותר\n"

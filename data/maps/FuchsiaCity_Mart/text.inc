@@ -4,7 +4,7 @@ FuchsiaCity_Mart_Text_DontTheyHaveSafariZonePennants::
     .string "מה לגבי קלפים או לוחות שנה?$"
 
 FuchsiaCity_Mart_Text_DidYouTryXSpeed::
-    .string "ניסית X מהירות?\n"
+    .string "ניסית מהירות X?\n"
     .string "זה מגביר את המהירות של\l"
     .string "הפוקימון שלך בקרב!$"
 

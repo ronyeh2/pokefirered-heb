@@ -449,7 +449,7 @@ const u8 gAbraPokedexTextUnused[] = _("");
 const u8 gKadabraPokedexText[] = _(
     "זה קרה בוקר אחד - ילד עם\n"
     "כוחות חוץ-חושיים התעורר במיטה\n"
-    "והפך לקדאברה.");
+    "והפך לקדברה.");
 
 const u8 gKadabraPokedexTextUnused[] = _("");
 
@@ -559,9 +559,9 @@ const u8 gSlowpokePokedexText[] = _(
 const u8 gSlowpokePokedexTextUnused[] = _("");
 
 const u8 gSlowbroPokedexText[] = _(
-    "כאשר סלואופוק יצא לצוד בים,\n"
+    "כאשר סלופוק יצא לצוד בים,\n"
     "הזנב שלו ננשך על ידי שלדר. זה\n"
-    "גרם לו להתפתח לסלואוברו.");
+    "גרם לו להתפתח לסלוברו.");
 
 const u8 gSlowbroPokedexTextUnused[] = _("");
 
@@ -1398,7 +1398,7 @@ const u8 gMurkrowPokedexTextUnused[] = _("");
 
 const u8 gSlowkingPokedexText[] = _(
     "כאשר ראשו ננשך, רעלים חדרו\n"
-    "לראשו של סלואופוק ושחררו\n"
+    "לראשו של סלופוק ושחררו\n"
     "כוח יוצא דופן.");
 
 const u8 gSlowkingPokedexTextUnused[] = _("");
