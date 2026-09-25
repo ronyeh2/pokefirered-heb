@@ -315,7 +315,8 @@ const u8 gText_MoveToWhere[] = _("להזיז לאן?");
 const u8 gText_TeachWhichPokemon[] = _("ללמד איזה פוקימון?");
 const u8 gText_UseOnWhichPokemon[] = _("להשתמש על איזה פוקימון?");
 const u8 gText_GiveToWhichPokemon[] = _("לתת לאיזה פוקימון?");
-const u8 gText_DoWhatWithPokemon[] = _("מה מה לעשות?");
+// 16-tile window, so the pen is 120 -- "מה לעשות עם הפוקימון?" needs 126 and loses its first word.
+const u8 gText_DoWhatWithPokemon[] = _("מה לעשות איתו?");
 const u8 gText_NothingToCut[] = _("אין מה לחתוך.");
 const u8 gText_CantSurfHere[] = _("אין גלישה כאן!");
 const u8 gText_AlreadySurfing[] = _("אתה כבר גולש.");

@@ -2512,8 +2512,10 @@ void DisplayPartyMenuStdMessage(u32 stringId)
         }
         DrawStdFrameWithCustomTileAndPalette(*windowPtr, FALSE, 0x58, 15);
         StringExpandPlaceholders(gStringVar4, sActionStringTable[stringId]);
-        // Ofir Changed here
-        AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, 0+140, 2, 0, 0);
+        // Ofir Changed here -- but 140 is one number for five windows: these
+        // templates run from 15 tiles to 21, so a fixed pen sits outside the
+        // narrow ones and the opening word is clipped off their right edge.
+        AddTextPrinterParameterized(*windowPtr, FONT_NORMAL, gStringVar4, RTL_ANCHOR_WINDOW(*windowPtr), 2, 0, 0);
         ScheduleBgCopyTilemapToVram(2);
     }
 }

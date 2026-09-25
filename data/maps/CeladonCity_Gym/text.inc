@@ -10,7 +10,7 @@ CeladonCity_Gym_Text_ErikaIntro::
     .string "מסוג דשא.\p"
     .string "אה, אני מצטערת, לא היה לי מושג\l"
     .string "שרצית לאתגר אותי.\p"
-    .string "בסדר גמור, אך אני לא אפסיד.$"
+    .string "בסדר גמור, אך אני לא אפסיד.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
 
 CeladonCity_Gym_Text_ErikaDefeat::
     .string "הו!\n"

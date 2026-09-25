@@ -116,7 +116,7 @@ ViridianCity_Gym_Text_TakashiPostBattle::
 
 ViridianCity_Gym_Text_ColeIntro::
     .string "הפוקימון שלך ישתפן\n"
-    .string "ברגע שאצליף בו בו השוט שלי!$"
+    .string "ברגע שאצליף בו בשוט שלי!$"
 
 ViridianCity_Gym_Text_ColeDefeat::
     .string "יאוץ'!\n"

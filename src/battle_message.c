@@ -276,7 +276,9 @@ static const u8 sText_PkmnRaisedFirePowerWith[] = _("ה{B_DEF_ABILITY} של {B_D
 static const u8 sText_PkmnAnchorsItselfWith[] = _("{B_DEF_NAME_WITH_PREFIX} מעגן את\nעצמו עם {B_DEF_ABILITY}!");
 static const u8 sText_PkmnCutsAttackWith[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nהוריד את ההתקפה!");
 static const u8 sText_PkmnPreventsStatLossWith[] = _("ה{B_SCR_ACTIVE_ABILITY} של {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nמונע ירידת סטטוס!");
-static const u8 sText_PkmnHurtsWith[] = _("ה{B_ATK_ABILITY} של {B_ATK_NAME_WITH_PREFIX}\nפגע ב{B_DEF_NAME_WITH_PREFIX}!");
+// The defender's ability hurts the attacker (Rough Skin and friends); the
+// Hebrew had the two the other way round and credited the wrong Pokemon.
+static const u8 sText_PkmnHurtsWith[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nפגע ב{B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnTraced[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} עקב אחר\n{B_BUFF2} של {B_BUFF1}!");
 static const u8 sText_PkmnsXPreventsBurns[] = _("ה{B_EFF_ABILITY} של {B_EFF_NAME_WITH_PREFIX}\nמונע כוויות!");
 static const u8 sText_PkmnsXBlocksY[] = _("ה{B_DEF_ABILITY} של {B_DEF_NAME_WITH_PREFIX}\nחוסם את {B_CURRENT_MOVE}!");
