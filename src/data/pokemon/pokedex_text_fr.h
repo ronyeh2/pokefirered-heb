@@ -1566,7 +1566,7 @@ const u8 gCorsolaPokedexTextUnused[] = _("");
 
 const u8 gRemoraidPokedexText[] = _(
     "באמצעות סנפיר הגב שלו כרפידת יניקה, הוא\n"
-    "נצמד לתחתית של מנטין כדי\n"
+    "נצמד לתחתית של מנטיין כדי\n"
     "לאסוף שאריות.");
 
 const u8 gRemoraidPokedexTextUnused[] = _("");
@@ -1930,7 +1930,7 @@ const u8 gSeedotPokedexTextUnused[] = _("");
 
 const u8 gNuzleafPokedexText[] = _(
     "הם חיים בחורים שנקדחו בעצים גדולים.\n"
-    "הצליל של חליל העשב של נוזליף ממלא\n"
+    "הצליל של חליל העשב של נאזליף ממלא\n"
     "את השומעים באימה.");
 
 const u8 gNuzleafPokedexTextUnused[] = _("");
@@ -2105,7 +2105,7 @@ const u8 gAzurillPokedexTextUnused[] = _("");
 
 const u8 gNosepassPokedexText[] = _(
     "האף המגנטי שלו פונה תמיד\n"
-    "צפונה. מטיילים בודקים את נוזפס כדי\n"
+    "צפונה. מטיילים בודקים את נוזפאס כדי\n"
     "לקבל את כיוונם.");
 
 const u8 gNosepassPokedexTextUnused[] = _("");

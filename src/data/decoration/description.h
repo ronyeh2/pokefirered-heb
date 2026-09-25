@@ -343,12 +343,12 @@ const u8 DecorDesc_LONG_POSTER[] = _(
 const u8 DecorDesc_SEA_POSTER[] = _(
     "פוסטר גדול עם\n"
         "הדפס של\n"
-        "רליקנת.");
+        "רליקנת'.");
 
 const u8 DecorDesc_SKY_POSTER[] = _(
     "פוסטר גדול עם\n"
         "הדפס של\n"
-        "ווינגל.");
+        "וינגול.");
 
 const u8 DecorDesc_KISS_POSTER[] = _(
     "פוסטר גדול עם\n"
@@ -366,7 +366,7 @@ const u8 DecorDesc_PIKACHU_DOLL[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_MARILL_DOLL[] = _(
-    "בובת מאריל.\n"
+    "בובת מריל.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
@@ -376,7 +376,7 @@ const u8 DecorDesc_TOGEPI_DOLL[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_CYNDAQUIL_DOLL[] = _(
-    "בובת סינדאקוויל.\n"
+    "בובת סינדקוויל.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
@@ -431,12 +431,12 @@ const u8 DecorDesc_MUDKIP_DOLL[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_DUSKULL_DOLL[] = _(
-    "בובת דסקול.\n"
+    "בובת דסקל.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
 const u8 DecorDesc_WYNAUT_DOLL[] = _(
-    "בובת וויינאוט.\n"
+    "בובת ויינוט.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
@@ -461,12 +461,12 @@ const u8 DecorDesc_SKITTY_DOLL[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_SWABLU_DOLL[] = _(
-    "בובת סוואבלו.\n"
+    "בובת סוובלו.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
 const u8 DecorDesc_GULPIN_DOLL[] = _(
-    "בובת גולפין.\n"
+    "בובת גאלפין.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
@@ -486,7 +486,7 @@ const u8 DecorDesc_PIKA_CUSHION[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_ROUND_CUSHION[] = _(
-    "כרית מאריל.\n"
+    "כרית מריל.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
@@ -506,7 +506,7 @@ const u8 DecorDesc_SPIN_CUSHION[] = _(
         "או שולחן.");
 
 const u8 DecorDesc_DIAMOND_CUSHION[] = _(
-    "כרית סאבלאיי.\n"
+    "כרית סייבלאיי.\n"
         "שים אותה על שטיח\n"
         "או שולחן.");
 
