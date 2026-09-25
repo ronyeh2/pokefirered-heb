@@ -68,7 +68,7 @@ Pokedude_Text_ShiftingUsesTurn::
 	.string "עכשיו, זה התור של היריב.$"
 
 Pokedude_Text_ButterfreeDoubleResistsGrass::
-	.string "באטרפרי הוא פוקימון מסוג\n"
+	.string "בטרפרי הוא פוקימון מסוג\n"
 	.string "חרק/מעופף.\p"
 	.string "נגד פוקימון זה, התקפה\n"
 	.string "מסוג דשא...\p"
@@ -76,7 +76,7 @@ Pokedude_Text_ButterfreeDoubleResistsGrass::
 	.string "על פוקימון מסוג חרק...\p"
 	.string "...וגם גורמת רק חצי מהנזק\n"
 	.string "על פוקימון מסוג מעופף.\p"
-	.string "לכן, באטרפרי, בתור פוקימון\n"
+	.string "לכן, בטרפרי, בתור פוקימון\n"
 	.string "חרק/מעופף, מקבל רק רבע מהנזק\l"
 	.string "הרגיל.$"
 

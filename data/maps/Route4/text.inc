@@ -1,6 +1,6 @@
 Route4_Text_TrippedOverGeodude::
     .string "איי! מעדתי על פוקימון סלעי,\n"
-    .string "גיאודוד!$"
+    .string "ג'יאודוד!$"
 
 Route4_Text_CrissyIntro::
     .string "באתי להר הירח בחיפוש אחר\n"

@@ -10,6 +10,6 @@ SafariZone_East_Text_PrizeInDeepestPartOfSafariZone::
 
 SafariZone_East_Text_MyEeveeEvolvedIntoFlareon::
     .string "ה-איבי שלי התפתח ל-\n"
-    .string "פלאירון.\p"
+    .string "פלייריאון.\p"
     .string "אבל, ה-איבי של חבר הפך ל-\n"
     .string "ואפוריון. תוהה למה?$"

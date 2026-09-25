@@ -18,7 +18,7 @@ Route19_Text_ReeceDefeat::
     .string "זה קריר!$"
 
 Route19_Text_ReecePostBattle::
-    .string "תיזהר מ-טנטאקורל.\n"
+    .string "תיזהר מ-טנטקול.\n"
     .string "העקיצה שלהם מאוד כואבת.$"
 
 Route19_Text_MatthewIntro::
@@ -109,8 +109,8 @@ Route19_Text_ConnieDefeat::
 
 Route19_Text_ConniePostBattle::
     .string "אם הייתי רוכבת על פוקימון בים,\n"
-    .string "הייתי רוצה שיהיה זה לאפרס.\p"
-    .string "לאפרס כל כך גדול, אני חושבת\n"
+    .string "הייתי רוצה שיהיה זה לפרס.\p"
+    .string "לפרס כל כך גדול, אני חושבת\n"
     .string "שהוא ישמור עליי יבשה.$"
 
 Route19_Text_RouteSign::

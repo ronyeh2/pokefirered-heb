@@ -79,7 +79,7 @@ SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemaleJP::
     .string "ものまね　しゅみ　なんだ　もん！$"
 
 SaffronCity_CopycatsHouse_2F_Text_Doduo::
-    .string "דואו: גיייח!\p"
+    .string "דודו: גיייח!\p"
     .string "מראה יפה, תסתכלי עלי,\n"
     .string "תראי כמה יפה אני יכול להיות!$"
 

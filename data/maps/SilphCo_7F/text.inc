@@ -6,15 +6,15 @@ SilphCo_7F_Text_HaveMonForSavingUs::
     .string "כדי להציל אותנו.$"
 
 SilphCo_7F_Text_ObtainedLaprasFromEmployee::
-    .string "{PLAYER} קיבל לאפרס\n"
+    .string "{PLAYER} קיבל לפרס\n"
     .string "מעובד סילף!$"
 
 SilphCo_7F_Text_ExplainLapras::
-    .string "זה לאפרס.\n"
+    .string "זה לפרס.\n"
     .string "הוא פוקימון חכם מאוד.\p"
     .string "שמנו אותו במעבדה שלנו, אבל הוא\n"
     .string "יהיה הרבה יותר טוב איתך.\p"
-    .string "אני חושב שתהיה מאמן טוב ללאפרס!\p"
+    .string "אני חושב שתהיה מאמן טוב ללפרס!\p"
     .string "הוא שוחה מצוין.\n"
     .string "הוא ייקח אותך על המים!$"
 

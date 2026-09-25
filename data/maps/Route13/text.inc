@@ -3,7 +3,7 @@ Route13_Text_SebastianIntro::
     .string "להילחם איתך!$"
 
 Route13_Text_SebastianDefeat::
-    .string "הצמד פידג'י ופידג'וטו שלי\n"
+    .string "הצמד פידג'י ופידג'יוטו שלי\n"
     .string "הפסיד?$"
 
 Route13_Text_SebastianPostBattle::
@@ -110,7 +110,7 @@ Route13_Text_RobertDefeat::
 
 Route13_Text_RobertPostBattle::
     .string "הלוואי שיכולתי לעוף כמו פידג'י\n"
-    .string "ופידג'וטו…$"
+    .string "ופידג'יוטו…$"
 
 Route13_Text_LookToLeftOfThatPost::
     .string "טיפים למאמנים\p"

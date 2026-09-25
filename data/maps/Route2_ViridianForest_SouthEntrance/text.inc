@@ -4,6 +4,6 @@ Route2_ViridianForest_SouthEntrance_Text_ForestIsMaze::
     .string "היזהר שלא תתבלבל.$"
 
 Route2_ViridianForest_SouthEntrance_Text_RattataHasWickedBite::
-    .string "ראטטה אולי קטן, אבל אל תזלזל\n"
+    .string "רטטה אולי קטן, אבל אל תזלזל\n"
     .string "בנשיכה האכזרית שלו.\p"
     .string "תפסת כבר אחד?$"

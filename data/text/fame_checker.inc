@@ -514,7 +514,7 @@ gFameCheckerFlavorText_Bill3:: @ 0x81AF998
 	.string "{FONT_MALE}{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}ביל הוא פוקימניאק, אז הוא אוהב\n"
 	.string "כל סוג.\p"
 	.string "כנראה, הראשון שהוא תפס\n"
-	.string "היה אברא.$"
+	.string "היה אברה.$"
 
 gFameCheckerFlavorText_Bill4:: @ 0x81AFA20
 	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}משפחה וחברים?\p"

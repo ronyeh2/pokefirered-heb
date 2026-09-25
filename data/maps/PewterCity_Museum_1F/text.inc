@@ -74,7 +74,7 @@ PewterCity_Museum_1F_Text_BeautifulPieceOfAmber::
     .string "זהב שקוף.$"
 
 PewterCity_Museum_1F_Text_AerodactylFossil::
-    .string "מאובן של אירודקטיל\n"
+    .string "מאובן של אירודקטייל\n"
     .string "פוקימון פרימיטיבי ונדיר.$"
 
 PewterCity_Museum_1F_Text_KabutopsFossil::

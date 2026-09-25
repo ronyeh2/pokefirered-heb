@@ -3,11 +3,11 @@ Route12_Text_MonSprawledOutInSlumber::
     .string "בשינה עמוקה ונוחה.$"
 
 Text_SnorlaxWokeUp::
-    .string "סנורלאקס התעורר!\n"
+    .string "סנורלקס התעורר!\n"
     .string "הוא תקף בזעם עצבני!$"
 
 Text_SnorlaxReturnedToMountains::
-    .string "סנורלאקס נרגע.\n"
+    .string "סנורלקס נרגע.\n"
     .string "הוא פיהק יקום ענק…\l"
     .string "וחזר להרים.$"
 
@@ -96,7 +96,7 @@ Route12_Text_AndrewDefeat::
     .string "החמצתי את זה!$"
 
 Route12_Text_AndrewPostBattle::
-    .string "מה, מגיקארפ?\n"
+    .string "מה, מג'יקארפ?\n"
     .string "אני תופס אותם כל הזמן, ברור.\l"
     .string "אבל, כמה שהם חלשים.$"
 

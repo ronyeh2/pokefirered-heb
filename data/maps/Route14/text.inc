@@ -60,7 +60,7 @@ Route14_Text_DonaldPostBattle::
     .string "ובכן, ציפורי האימים הן הפוקימונים\n"
     .string "האגדיים.\p"
     .string "יש שלושה מהם: ארטיקונו,\n"
-    .string "זאפדוס ומולטארס.$"
+    .string "זאפדוס ומולטרס.$"
 
 Route14_Text_BennyIntro::
     .string "אני לא בקטע, אבל בסדר.\n"

@@ -14,12 +14,12 @@ PokemonTower_1F_Text_ComeToPayRespectsGirl::
 
 PokemonTower_1F_Text_CameToPrayForDepartedClefairy::
     .string "באתי להתפלל עבור\n"
-    .string "הקלפיירי האהוב שלי.\p"
+    .string "הקלפרי האהוב שלי.\p"
     .string "סניף!\n"
     .string "אני מוצף בדמעות…$"
 
 PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
-    .string "הגראולית שלי…\n"
+    .string "הגראולית' שלי…\n"
     .string "למה מתת?$"
 
 PokemonTower_1F_Text_SenseSpiritsUpToMischief::

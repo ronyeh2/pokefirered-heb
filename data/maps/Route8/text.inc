@@ -64,7 +64,7 @@ Route8_Text_AndreaDefeat::
     .string "מייייייאו!$"
 
 Route8_Text_AndreaPostBattle::
-    .string "אני חושבת שפידג'י וראטטה גם\n"
+    .string "אני חושבת שפידג'י ורטטה גם\n"
     .string "חמודים!$"
 
 Route8_Text_MeganIntro::
@@ -98,10 +98,10 @@ Route8_Text_JuliaIntro::
 
 Route8_Text_JuliaDefeat::
     .string "תפסיק!\p"
-    .string "אל תהיה כל כך מרושע כלפי קלפירי!$"
+    .string "אל תהיה כל כך מרושע כלפי קלפרי!$"
 
 Route8_Text_JuliaPostBattle::
-    .string "קראתי שקלפירי מתפתח כשנחשף\n"
+    .string "קראתי שקלפרי מתפתח כשנחשף\n"
     .string "לאבן ירח.\p"
     .string "קראתי את זה בעיתון פוקימון.\n"
     .string "מעניין אם זה נכון?$"

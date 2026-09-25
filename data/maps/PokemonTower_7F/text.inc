@@ -41,7 +41,7 @@ PokemonTower_7F_Text_MrFujiThankYouFollowMe::
     .string "החופשי.\p"
     .string "באתי להרגיע את רוחה של\n"
     .string "אמא של קיובון.\p"
-    .string "אני חושב שרוחו של מרוואק\n"
+    .string "אני חושב שרוחו של מארוואק\n"
     .string "סוף סוף עזבה אותנו.\p"
     .string "אני חייב להודות לך על הדאגה\n"
     .string "האכפתית שלך.\p"

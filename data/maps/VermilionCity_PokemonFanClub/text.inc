@@ -37,7 +37,7 @@ VermilionCity_PokemonFanClub_Text_DidYouComeToHearAboutMyMons::
 VermilionCity_PokemonFanClub_Text_ChairmansStory::
     .string "טוב!\n"
     .string "אז תקשיב!\p"
-    .string "הראפידאש האהוב עליי…\p"
+    .string "הרפידאש האהוב עליי…\p"
     .string "הוא…חמוד…נפלא…חכם…\n"
     .string "וגם…מדהים…אתה חושב כך?…\l"
     .string "אה כן…זה…מדהים…\l"

@@ -98,8 +98,8 @@ Route8_Text_LeslieRematchIntro::
 	.string "שפוקימונים כיפיים גם.$"
 
 Route8_Text_AndreaRematchIntro::
-	.string "מייאו ופרסיאן כל כך חמודים,\n"
-	.string "מייאו, מייאו, מייאו!$"
+	.string "מיאו ופרסיאן כל כך חמודים,\n"
+	.string "מיאו, מיאו, מיאו!$"
 
 Route8_Text_MeganRematchIntro::
 	.string "אולי אנחנו נראים מטופשים כשאנחנו\n"

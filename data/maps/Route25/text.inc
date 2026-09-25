@@ -63,7 +63,7 @@ Route25_Text_HaleyDefeat::
 
 Route25_Text_HaleyPostBattle::
     .string "הגעת מהר מון?\n"
-    .string "אפשר לקבל קלפיירי?$"
+    .string "אפשר לקבל קלפרי?$"
 
 Route25_Text_FranklinIntro::
     .string "הרגע ירדתי מהר מון,\n"
