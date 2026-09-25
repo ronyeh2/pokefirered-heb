@@ -21,7 +21,7 @@ CeladonCity_Restaurant_Text_TakeThisImBusted::
     .string "הפסדתי כל מה שהיה לי!\p"
     .string "סיימתי עם ההימורים. מהיום\l"
     .string "אני הולך בדרך הישר!\p"
-    .string "קח! אני לא צריך את זה יותר!\p$"
+    .string "קח! אני לא צריך את זה יותר!$"
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
     .string "{PLAYER} קיבל\n"

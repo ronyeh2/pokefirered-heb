@@ -48,7 +48,7 @@ CeladonCity_DepartmentStore_Roof_Text_FloorSign::
 
 CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave::
     .string "מכונת משקאות!\n"
-    .string "הנה התפריט!\p$"
+    .string "הנה התפריט!$"
 
 CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney::
     .string "אופס, אין מספיק\n"

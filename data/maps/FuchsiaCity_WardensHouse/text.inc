@@ -17,13 +17,13 @@ FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden::
 
 FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth::
     .string "הפקח הכניס את\n"
-    .string "את השיניים לפה!\p$"
+    .string "את השיניים לפה!$"
 
 FuchsiaCity_WardensHouse_Text_ThanksSonGiveYouSomething::
     .string "פקח: תודה, ילד!\n"
     .string "אף אחד לא הבין אף מילה שאמרתי.\p"
     .string "לא יכולתי לעבוד ככה. הרשה לי\l"
-    .string "להעניק לך משהו עבור הטרחה.\p$"
+    .string "להעניק לך משהו עבור הטרחה.$"
 
 FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden::
     .string "{PLAYER} קיבל את מ”נ40!$"

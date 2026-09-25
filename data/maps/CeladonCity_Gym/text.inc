@@ -16,7 +16,7 @@ CeladonCity_Gym_Text_ErikaDefeat::
     .string "הו!\n"
     .string "אני מודה בתבוסתי.\p"
     .string "אתה חזק להפליא.\p"
-    .string "עלי להעניק לך את תג הקשת בענן.\p$"
+    .string "עלי להעניק לך את תג הקשת בענן.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
     .string "אתה אוסף מידע על\n"
@@ -53,7 +53,7 @@ _CeladonGymBattleText2::
 
 CeladonCity_Gym_Text_KayDefeat::
     .string "אתה אלים\n"
-    .string "מדי!\p$"
+    .string "מדי!$"
 
 CeladonCity_Gym_Text_KayPostBattle::
     .string "פיכס!\n"
@@ -65,7 +65,7 @@ CeladonCity_Gym_Text_BridgetIntro::
 
 CeladonCity_Gym_Text_BridgetDefeat::
     .string "האיפור\n"
-    .string "שלי!\p$"
+    .string "שלי!$"
 
 CeladonCity_Gym_Text_BridgetPostBattle::
     .string "פוקימונים מסוג דשא\n"
@@ -79,7 +79,7 @@ CeladonCity_Gym_Text_TinaIntro::
 
 CeladonCity_Gym_Text_TinaDefeat::
     .string "אני\n"
-    .string "המומה!\p$"
+    .string "המומה!$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
     .string "אה, לא הצצת?\n"
@@ -91,7 +91,7 @@ CeladonCity_Gym_Text_TamiaIntro::
     .string "כל כך קל לגדל אותם!$"
 
 CeladonCity_Gym_Text_TamiaDefeat::
-    .string "לא!\p$"
+    .string "לא!$"
 
 CeladonCity_Gym_Text_TamiaPostBattle::
     .string "במכון הזה, אנחנו\n"
@@ -104,7 +104,7 @@ CeladonCity_Gym_Text_LisaIntro::
 
 CeladonCity_Gym_Text_LisaDefeat::
     .string "אוח!\n"
-    .string "אתה!\p$"
+    .string "אתה!$"
 
 CeladonCity_Gym_Text_LisaPostBattle::
     .string "המנהיגה שלנו,\n"
@@ -117,7 +117,7 @@ CeladonCity_Gym_Text_LoriIntro::
 
 CeladonCity_Gym_Text_LoriDefeat::
     .string "הו!\n"
-    .string "ממש נפלא!\p$"
+    .string "ממש נפלא!$"
 
 CeladonCity_Gym_Text_LoriPostBattle::
     .string "יש לי בליינד\n"
@@ -130,7 +130,7 @@ CeladonCity_Gym_Text_MaryIntro::
 
 CeladonCity_Gym_Text_MaryDefeat::
     .string "אה!\n"
-    .string "הובסתי!\p$"
+    .string "הובסתי!$"
 
 CeladonCity_Gym_Text_MaryPostBattle::
     .string "לא הבאתי את\n"

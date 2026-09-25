@@ -97,7 +97,7 @@ Text_SoftboiledTeach::
     .string "אבל מעולם לא היתה לנו הזדמנות\l"
     .string "לפטפט!\p"
     .string "הנה שי קטן על שעצרת כדי לדבר\l"
-    .string "איתי!\p$"
+    .string "איתי!$"
 	
 CeladonCity_Text_ScaldedTongueOnTea::
     .string "אייי, אוו…\n"

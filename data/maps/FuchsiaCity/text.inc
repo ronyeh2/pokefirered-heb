@@ -39,33 +39,35 @@ FuchsiaCity_Text_GymSign::
     .string "מאסטר הנינג'ה הרעיל.$"
 
 FuchsiaCity_Text_ChanseySign::
-    .string "שם: בת מזל\p"
-    .string "לתפוס אחת כזו זה עניין של מזל.\p$"
+    .string "שם: צ'נסי\p"
+    .string "לתפוס אחת כזו זה עניין של מזל.$"
 
 FuchsiaCity_Text_VoltorbSign::
     .string "שם: וולטורב\p"
-    .string "נראה ממש כמו פוקיבול.\p$"
+    .string "נראה ממש כמו פוקיבול.$"
 
 FuchsiaCity_Text_KangaskhanSign::
     .string "שם: קנגסקאן\p"
-    .string "ימון אמהיפוק שמגדלת את\l"
-    .string "צאצאיה בתוך כיס בבטן שלה.\p$"
+    .string "פוקימון אמהי שמגדלת את\l"
+    .string "צאצאיה בתוך כיס בבטן שלה.$"
 
 FuchsiaCity_Text_SlowpokeSign::
     .string "שם: סלופוק\p"
-    .string "חביב ומאוד איטי.\p$"
+    .string "חביב ומאוד איטי.$"
 
 FuchsiaCity_Text_LaprasSign::
     .string "שם: לפרס\p"
-    .string "ידוע גם כמלך הימים.\p$"
+    .string "ידוע גם כמלך הימים.$"
 
 FuchsiaCity_Text_OmanyteSign::
     .string "שם: אומנייט\p"
-    .string "ימון ששוחזרפוק ממאובן\p$"
+    .string "פוקימון נדיר ביותר\l"
+    .string "ששוחזר ממאובן.$"
 
 FuchsiaCity_Text_KabutoSign::
     .string "שם: קאבוטו\p"
-    .string "ימון ששוחזרפוק ממאובן\p$"
+    .string "פוקימון נדיר ביותר\l"
+    .string "ששוחזר ממאובן.$"
 
 FuchsiaCity_Text_Ellipsis::
     .string "...$"

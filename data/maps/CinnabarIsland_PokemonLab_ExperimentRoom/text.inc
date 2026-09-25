@@ -3,7 +3,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe::
     .string "אני דוקטור חשוב!\p"
     .string "אני חוקר כאן מאובני פוקימון\l"
     .string "נדירים!\p"
-    .string "אתה! יש לך מאובן בשבילי?\p$"
+    .string "אתה! יש לך מאובן בשבילי?$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_NoIsTooBad::
     .string "לא! חבל!$"
@@ -15,7 +15,7 @@ _Lab4Text_75dd0::
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife::
     .string "איפה היית?\p"
     .string "המאובן שלך חזר בחזרה לחיים!\p"
-    .string "זה היה {STR_VAR_1} כמו שחשבתי!\p$"
+    .string "זה היה {STR_VAR_1} כמו שחשבתי!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain::
     .string "הו! זה {STR_VAR_2}!\p"

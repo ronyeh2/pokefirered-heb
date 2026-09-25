@@ -52,7 +52,7 @@ ViridianCity_Gym_Text_YujiIntro::
 
 ViridianCity_Gym_Text_YujiDefeat::
     .string "נגמר\n"
-    .string "לי הדלק!\p$"
+    .string "לי הדלק!$"
 
 ViridianCity_Gym_Text_YujiPostBattle::
     .string "אתה צריך אנרגיה\n"
@@ -63,7 +63,7 @@ ViridianCity_Gym_Text_AtsushiIntro::
     .string "בונה בתוכי זעם!$"
 
 ViridianCity_Gym_Text_AtsushiDefeat::
-    .string "ווארג!\p$"
+    .string "ווארג!$"
 
 ViridianCity_Gym_Text_AtsushiPostBattle::
     .string "אני עדיין לא\n"
@@ -75,7 +75,7 @@ ViridianCity_Gym_Text_JasonIntro::
 
 ViridianCity_Gym_Text_JasonDefeat::
     .string "אתם\n"
-    .string "בהרמוניה מושלמת!\p$"
+    .string "בהרמוניה מושלמת!$"
 
 ViridianCity_Gym_Text_JasonPostBattle::
     .string "אתה יודע\n"
@@ -86,7 +86,7 @@ ViridianCity_Gym_Text_KiyoIntro::
     .string "הלחימה הטובה ביותר!$"
 
 ViridianCity_Gym_Text_KiyoDefeat::
-    .string "אפצ'י!\p$"
+    .string "אפצ'י!$"
 
 ViridianCity_Gym_Text_KiyoPostBattle::
     .string "אילו רק הפוקימונים\n"
@@ -98,7 +98,7 @@ ViridianCity_Gym_Text_WarrenIntro::
 
 ViridianCity_Gym_Text_WarrenDefeat::
     .string "איבדתי\n"
-    .string "אחיזה!\p$"
+    .string "אחיזה!$"
 
 ViridianCity_Gym_Text_WarrenPostBattle::
     .string "המנהל יגער בי!$"
@@ -108,7 +108,7 @@ ViridianCity_Gym_Text_TakashiIntro::
     .string "גורלך טמון בי!$"
 
 ViridianCity_Gym_Text_TakashiDefeat::
-    .string "איה!\p$"
+    .string "איה!$"
 
 ViridianCity_Gym_Text_TakashiPostBattle::
     .string "ליגת הפוקימונים?\n"
@@ -120,7 +120,7 @@ ViridianCity_Gym_Text_ColeIntro::
 
 ViridianCity_Gym_Text_ColeDefeat::
     .string "יאוץ'!\n"
-    .string "הצלפת!\p$"
+    .string "הצלפת!$"
 
 ViridianCity_Gym_Text_ColePostBattle::
     .string "חכה! סתם הייתי\n"
@@ -132,7 +132,7 @@ ViridianCity_Gym_Text_SamuelIntro::
     .string "שלנו חזר!$"
 
 ViridianCity_Gym_Text_SamuelDefeat::
-    .string "הובסתי?\p$"
+    .string "הובסתי?$"
 
 ViridianCity_Gym_Text_SamuelPostBattle::
     .string "אתה יכול להמשיך\n"

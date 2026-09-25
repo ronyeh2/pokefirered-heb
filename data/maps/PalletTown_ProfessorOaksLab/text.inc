@@ -36,11 +36,11 @@ PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
 PalletTown_ProfessorOaksLab_Text_RivalDefeat::
     .string "מה???\n"
     .string "אני לא מאמין! בחרתי את הפוקימון\l"
-    .string "הלא נכון!\p$"
+    .string "הלא נכון!$"
 
 Text_RivalVictory::
     .string "{RIVAL}: כן! אני\n"
-    .string "מדהים או מה?\p$"
+    .string "מדהים או מה?$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
     .string "{RIVAL}: בסדר!\n"
@@ -108,7 +108,7 @@ PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
     .string "זה פוקימון\n"
-    .string "מלא מרץ!\p$"
+    .string "מלא מרץ!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
     .string "{PLAYER} קיבל את {STR_VAR_1}\n"

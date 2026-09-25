@@ -43,7 +43,7 @@ CinnabarIsland_Gym_Text_ErikIntro::
 
 CinnabarIsland_Gym_Text_ErikDefeat::
     .string "יו!\n"
-    .string "חם, חם, חם!\p$"
+    .string "חם, חם, חם!$"
 
 CinnabarIsland_Gym_Text_ErikPostBattle::
     .string "אש,\n"
@@ -56,7 +56,7 @@ CinnabarIsland_Gym_Text_QuinnIntro::
 
 CinnabarIsland_Gym_Text_QuinnDefeat::
     .string "אני\n"
-    .string "נכנע!\p$"
+    .string "נכנע!$"
 
 CinnabarIsland_Gym_Text_QuinnPostBattle::
     .string "אני לא יכול\n"
@@ -69,7 +69,7 @@ CinnabarIsland_Gym_Text_AveryIntro::
 
 CinnabarIsland_Gym_Text_AveryDefeat::
     .string "ואא!\n"
-    .string "הלמידה שלי לא הייתה טובה מספיק!\p$"
+    .string "הלמידה שלי לא הייתה טובה מספיק!$"
 
 CinnabarIsland_Gym_Text_AveryPostBattle::
     .string "התיאוריות שלי\n"
@@ -81,7 +81,7 @@ CinnabarIsland_Gym_Text_RamonIntro::
 
 CinnabarIsland_Gym_Text_RamonDefeat::
     .string "אתה לוהט\n"
-    .string "מדי!\p$"
+    .string "מדי!$"
 
 CinnabarIsland_Gym_Text_RamonPostBattle::
     .string "הלוואי והיה\n"
@@ -92,7 +92,7 @@ CinnabarIsland_Gym_Text_DerekIntro::
     .string "נהפך למאמן!$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
-    .string "או!\p$"
+    .string "או!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
     .string "כשבליין היה אבוד\n"
@@ -107,7 +107,7 @@ CinnabarIsland_Gym_Text_DustyIntro::
 
 CinnabarIsland_Gym_Text_DustyDefeat::
     .string "אווץ'!\n"
-    .string "עשית לי כויה!\p$"
+    .string "עשית לי כויה!$"
 
 CinnabarIsland_Gym_Text_DustyPostBattle::
     .string "מעריצי פוקימוני אש\n"
@@ -120,7 +120,7 @@ CinnabarIsland_Gym_Text_ZacIntro::
 
 CinnabarIsland_Gym_Text_ZacDefeat::
     .string "הו!\n"
-    .string "חוסלתי!\p$"
+    .string "חוסלתי!$"
 
 CinnabarIsland_Gym_Text_ZacPostBattle::
     .string "מים מנצח אש!\n"

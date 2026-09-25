@@ -9,11 +9,11 @@ CeruleanCity_Text_RivalIntro::
 
 CeruleanCity_Text_RivalDefeat::
     .string "היי!\n"
-    .string "תרגיע! כבר ניצחת אותי!\p$"
+    .string "תרגיע! כבר ניצחת אותי!$"
 
 CeruleanCity_Text_OhRightLittlePresentAsFavor::
     .string "פחה!\n"
-    .string "אתה לא משתווה לגאונות שלי!\p$"
+    .string "אתה לא משתווה לגאונות שלי!$"
 
 CeruleanCity_Text_RivalPostBattle::
     .string "{RIVAL}: היי,\n"
@@ -52,11 +52,11 @@ CeruleanCity_Text_MakeRoomForThisCantRun::
 
 CeruleanCity_Text_GruntDefeat::
     .string "תפסיק!\n"
-    .string "אני נכנע! אני אעזוב בשקט!\p$"
+    .string "אני נכנע! אני אעזוב בשקט!$"
 
 CeruleanCity_Text_OkayIllReturnStolenTM::
     .string "בסדר! אני אחזיר\n"
-    .string "את המ”מ שגנבתי!\p$"
+    .string "את המ”מ שגנבתי!$"
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
     .string "גם אתה מאמן?\n"

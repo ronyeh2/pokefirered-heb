@@ -1,7 +1,7 @@
 Text_CounterTeach::
     .string "אה, היי! סוף-סוף\n"
     .string "סיימתי לשחק בפוקימון!\p"
-    .string "עוד לא סיימת? אולי זה יעזור!\p$"
+    .string "עוד לא סיימת? אולי זה יעזור!$"
 
 CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
     .string "כשפוקימון נתפס, הוא מקבל מספר\n"

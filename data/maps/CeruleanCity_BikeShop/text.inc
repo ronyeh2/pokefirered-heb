@@ -1,19 +1,19 @@
 CeruleanCity_BikeShop_Text_WelcomeToBikeShop::
     .string "שלום! ברוך הבא\n"
     .string "לחנות האופניים.\p"
-    .string "יש לנו זוג אופניים בדיוק בשבילך!\p$"
+    .string "יש לנו זוג אופניים בדיוק בשבילך!$"
 
 CeruleanCity_BikeShop_Text_ShinyNewBicycle::
     .string "אלה אופניים ממש שווים!$"
 
 CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
     .string "אני מצטער, אבל\n"
-    .string "אין לך מספיק כסף!\p$"
+    .string "אין לך מספיק כסף!$"
 
 CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
     .string "זה...\p"
     .string "שובר לאופניים!\p"
-    .string "בסדר! הנה לך!\p$"
+    .string "בסדר! הנה לך!$"
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
     .string "{PLAYER} החליף את\n"

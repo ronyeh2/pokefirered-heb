@@ -9,7 +9,7 @@ ViridianForest_Text_RickIntro::
 
 ViridianForest_Text_RickDefeat::
     .string "לא!\n"
-    .string "קטרפי לא טוב מספיק!\p$"
+    .string "קטרפי לא טוב מספיק!$"
 
 ViridianForest_Text_RickPostBattle::
     .string "ששש! אתה תבריח\n"
@@ -21,7 +21,7 @@ ViridianForest_Text_DougIntro::
 
 ViridianForest_Text_DougDefeat::
     .string "אע?\n"
-    .string "נגמרו לי הפוקימונים!\p$"
+    .string "נגמרו לי הפוקימונים!$"
 
 ViridianForest_Text_DougPostBattle::
     .string "לעזאזל! אני הולך\n"
@@ -32,7 +32,7 @@ ViridianForest_Text_SammyIntro::
     .string "לאן אתה ממהר?$"
 
 ViridianForest_Text_SammyDefeat::
-    .string "ויתרתי! אתה טוב!\p$"
+    .string "ויתרתי! אתה טוב!$"
 
 ViridianForest_Text_SammyPostBattle::
     .string "לפעמים אתה יכול\n"

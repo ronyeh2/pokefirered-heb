@@ -39,7 +39,7 @@ CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
     .string "המזל השונות יש סיכויים שונים.$"
 
 CeladonCity_GameCorner_Text_DoYouWantToPlay::
-    .string "ילד, רוצה לשחק?\p$"
+    .string "ילד, רוצה לשחק?$"
 
 CeladonCity_GameCorner_Text_Received10CoinsFromMan::
     .string "{PLAYER} קיבל\n"
@@ -78,7 +78,7 @@ CeladonCity_GameCorner_Text_SoEasyToGetHooked::
 
 CeladonCity_GameCorner_Text_WantSomeCoins::
     .string "מה הולך? רוצה קצת\n"
-    .string "אסימונים?\p$"
+    .string "אסימונים?$"
 
 CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy::
     .string "{PLAYER} קיבל\n"
@@ -96,7 +96,7 @@ CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant::
 CeladonCity_GameCorner_Text_HereAreSomeCoinsShoo::
     .string "רגע, מה? אתה מסיח\n"
     .string "את דעתי! קח כמה אסימונים ו'סתלק!\l"
-    .string "קישטה!\p$"
+    .string "קישטה!$"
 
 CeladonCity_GameCorner_Text_Received20CoinsFromMan::
     .string "{PLAYER} קיבל\n"
@@ -115,7 +115,7 @@ CeladonCity_GameCorner_Text_GruntIntro::
     .string "הזה! 'סתלק מכאן, או ש!$"
 
 CeladonCity_GameCorner_Text_GruntDefeat::
-    .string "אוף!\p$"
+    .string "אוף!$"
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
     .string "המחבוא שלנו עלול\n"

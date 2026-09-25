@@ -45,7 +45,7 @@ CeruleanCity_Gym_Text_DianaIntro::
     .string "מיסטי יכולה לחכות!$"
 
 CeruleanCity_Gym_Text_DianaDefeat::
-    .string "כיסחת אותי!\p$"
+    .string "כיסחת אותי!$"
 
 _CeruleanGymAfterBattleText1::
     .string "צריך להילחם נגד\n"
@@ -58,7 +58,7 @@ CeruleanCity_Gym_Text_LuisIntro::
 
 CeruleanCity_Gym_Text_LuisDefeat::
     .string "אין\n"
-    .string "מצב!\p$"
+    .string "מצב!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle::
     .string "מיסטי רק ממשיכה\n"
