@@ -157,6 +157,23 @@ void SaveTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
 void RestoreTextColors(u8 *fgColor, u8 *bgColor, u8 *shadowColor);
 void DecompressGlyphTile(const u16 *src, u16 *dest);
 u8 GetLastTextColor(u8 colorType);
+#ifdef RTL_CLIP_REPORT
+#define RTL_CLIP_REPORTS 24
+
+struct RtlClipReport
+{
+    u32 currentChar;
+    u8 x;
+    u8 currentX;
+    u8 windowId;
+    u8 fontId;
+    u8 windowWidth;
+};
+
+extern struct RtlClipReport gRtlClipReports[RTL_CLIP_REPORTS];
+extern u16 gRtlClipReportCount;
+#endif
+
 void CopyGlyphToWindow(struct TextPrinter *x);
 void ClearTextSpan(struct TextPrinter *textPrinter, u32 width);
 

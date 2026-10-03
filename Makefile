@@ -77,6 +77,14 @@ INCLUDE_SCANINC_ARGS := $(INCLUDE_DIRS:%=-I %)
 
 O_LEVEL ?= 2
 CPPFLAGS := $(INCLUDE_CPP_ARGS) -Wno-trigraphs -D$(GAME_VERSION) -DREVISION=$(GAME_REVISION) -D$(GAME_LANGUAGE) -DMODERN=$(MODERN)
+
+# make RTL_CLIP_REPORT=1 builds a diagnostic ROM that records glyphs blitted
+# outside their window -- how a right-to-left pen that has walked off the left
+# edge fails, since the u8 pen wraps and the letter is simply never drawn.
+# tools/hebrew/emu/cliptour.py walks screens against it. Never ship this build.
+ifeq ($(RTL_CLIP_REPORT),1)
+  CPPFLAGS += -DRTL_CLIP_REPORT
+endif
 ifeq ($(MODERN),0)
   CPPFLAGS += -I tools/agbcc/include -I tools/agbcc -nostdinc -undef
   CC1 := tools/agbcc/bin/agbcc$(EXE)

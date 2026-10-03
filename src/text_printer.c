@@ -239,11 +239,40 @@ u8 GetLastTextColor(u8 colorType)
     }                                                                                                                                        \
 }
 
+#ifdef RTL_CLIP_REPORT
+// Diagnostic build only (make RTL_CLIP_REPORT=1). A right-to-left pen that has
+// walked past the left edge wraps the u8 currentX to ~250, so the glyph is
+// blitted outside the window and silently lost -- the failure looks like a
+// missing letter, not a clipped one, and nothing static sees it. Record the
+// first few so a scripted tour can report which screens do it.
+EWRAM_DATA struct RtlClipReport gRtlClipReports[RTL_CLIP_REPORTS];
+EWRAM_DATA u16 gRtlClipReportCount;
+
+static void NoteGlyphOutsideWindow(struct TextPrinter *textPrinter)
+{
+    if (gRtlClipReportCount < RTL_CLIP_REPORTS)
+    {
+        gRtlClipReports[gRtlClipReportCount].currentChar = (u32)textPrinter->printerTemplate.currentChar;
+        gRtlClipReports[gRtlClipReportCount].x = textPrinter->printerTemplate.x;
+        gRtlClipReports[gRtlClipReportCount].currentX = textPrinter->printerTemplate.currentX;
+        gRtlClipReports[gRtlClipReportCount].windowId = textPrinter->printerTemplate.windowId;
+        gRtlClipReports[gRtlClipReportCount].fontId = textPrinter->printerTemplate.fontId;
+        gRtlClipReports[gRtlClipReportCount].windowWidth = gWindows[textPrinter->printerTemplate.windowId].window.width;
+    }
+    gRtlClipReportCount++;
+}
+#endif
+
 void CopyGlyphToWindow(struct TextPrinter *textPrinter)
 {
     int glyphWidth, glyphHeight;
     u8 sizeType;
-    
+
+#ifdef RTL_CLIP_REPORT
+    if (textPrinter->printerTemplate.currentX >= gWindows[textPrinter->printerTemplate.windowId].window.width * 8)
+        NoteGlyphOutsideWindow(textPrinter);
+#endif
+
     if (gWindows[textPrinter->printerTemplate.windowId].window.width * 8 - textPrinter->printerTemplate.currentX < gGlyphInfo.width)
         glyphWidth = gWindows[textPrinter->printerTemplate.windowId].window.width * 8 - textPrinter->printerTemplate.currentX;
     else

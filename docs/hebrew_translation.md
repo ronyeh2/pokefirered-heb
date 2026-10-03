@@ -31,6 +31,14 @@ Numbers built at runtime are already handled — `ConvertIntToDecimalStringN` en
 a level, a price or an ID prints the right way round on its own. The same goes for the Pokédex
 height and weight fields, which reverse their own buffers after formatting.
 
+**Numbers joined into one field reverse as a group.** Each `ConvertIntToDecimalStringN` fixes
+its own digits, but the printer still draws the finished string right to left, so whichever field
+was appended *first* ends up rightmost. The trainer card built its Hall of Fame time hours-first
+and so reported a 40:36:45 debut as `45:36:40` — three correct numbers in the wrong three places,
+which no digit-order check can see because every run is already the right way round. Append the
+fields in the order opposite to the one they are read in, and a right-aligned pad goes on the
+field that is appended last, where it lands at the left of the run.
+
 Nothing about a literal on its own says which way round it is, so this cannot be eyeballed.
 `tools/hebrew/numbers.py` compares every string against the same string in English upstream,
 matched by identifier or by label, and reports any digit run that is still in English order:
@@ -430,7 +438,40 @@ sites. It is not most of them.
   because nothing is outside its window. It cost Nurse Joy the ן of כן. When a menu's last letter
   goes missing, check what the cursor is drawn over before assuming a width problem.
 - **Only the left edge is tested.** A run whose first glyph starts past the window's right edge
-  is not caught — that is why the healthbox level label loses its ר.
+  is not caught, and neither is one the window renders in full but the caller then copies only
+  part of. Both shapes were still live: the TM mart reuses a narrower window 5 than the regular
+  mart, so a pen of 190 put the first words of every TM description off the right of a 144px
+  window; and the healthbox prints the 12px רמה glyph into a 64px scratch window but hands only
+  24px of it to the sprite, which cut the ר. Grep a window id before trusting a constant pen —
+  the same number can be right in one layout and off-window in another.
+- **Two sweeps now run over the anchors themselves**, because the string-based check could
+  never see a pen that is wrong for every string. `tools/hebrew/anchors.py` flags a literal pen
+  that starts past its own window's right edge, or that is too small to hold any run at all —
+  upstream's left inset, left behind. And `make RTL_CLIP_REPORT=1` builds a ROM that records
+  every glyph blitted outside its window, which `tools/hebrew/emu/cliptour.py` reads back after
+  walking a screen; a `clip <label>` line in the script attributes what it finds. That is what
+  caught the trainer card. Neither replaces looking: the Pokédex, party, summary, bag, TM case,
+  help system, Fame Checker, town map, Hall of Fame PC, PC menu and diploma all report nothing,
+  which is evidence about one failure mode and not about the screen being right.
+- **`GetStringWidth` is blind to both things that widen a Hebrew run.** `text_printer.c`
+  forces a 6px minimum letter spacing on `FONT_SMALL`, and `text.c` adds a pixel after a wide
+  letter; neither shows up in a measurement unless the string carries a
+  `{MIN_LETTER_SPACING}` of its own, and `GetStringWidthRTL` only models the second. A pen
+  measured the naive way is short by a pixel per glyph plus one per wide letter, and an RTL run
+  spends that error walking off the *left* edge, where the u8 pen wraps and the glyph is not
+  drawn at all — so the symptom is a missing letter, not a clipped one. That is what ate the ז
+  of אלקטאבאז in the battle healthbox, and the ♂ after every name there: the old pen measured
+  the nickname alone, so the gender symbol was never budgeted for. Measure the string that is
+  actually printed, and make it state its own spacing. `mystery_gift_menu.c` still measures
+  `FONT_SMALL` the naive way.
+- **A nickname wider than 56px cannot fit the healthbox at any pen.** Seven tiles reach the
+  sprite; 31 species-name-and-gender combinations are wider than that, so they sit flush right
+  and lose their tail. Shortening the name is the only fix.
+- **The healthbox level field is 3px short of holding רמה and three digits.** 24px reach the
+  sprite, the glyph needs 12 and three 5px digits need 15, and the tile beyond holds the box's
+  right border, so it cannot grow. Levels below 100 use two digit cells and the label is whole;
+  at 100 — the only three-digit level — the glyph goes back to a pen of 15 and loses its ר, on
+  the grounds that a wrong number is worse than a short label.
 - **74 printer sites hold a runtime buffer** — a nickname, an Easy Chat phrase, a Wonder Card
   field. `SHOW_UNRESOLVED=1 python3 tools/hebrew/printers.py` lists them. Their `x` was mirrored
   by hand; none has been watched render with a worst-case value in it.
