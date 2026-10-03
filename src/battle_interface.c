@@ -763,7 +763,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     u8 text[16] = _("{LV_2}");
     u8 lvl_str[16];
     u8 color[3];
-    u32 xPos;
+    u32 xPos, lvlX;
     u8 *objVram;
 
     // Ofir changed here
@@ -771,10 +771,19 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     lvl_str[0] = EXT_CTRL_CODE_BEGIN;
     lvl_str[1] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
     lvl_str[2] = 5;
-    ConvertIntToDecimalStringN(lvl_str + 3, lvl, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    // Left-aligned, so a short level writes no padding cells. The pen walks
+    // left, and a padding cell there would land at a negative x that the u8
+    // pen wraps to ~250, i.e. outside the window.
+    ConvertIntToDecimalStringN(lvl_str + 3, lvl, STR_CONV_MODE_LEFT_ALIGN, 3);
     //xPos = 5 * (3 - (objVram - (text + 2)));
-    // 3 tiles (24px) are copied: digits take [0,15), the Lv glyph the rest.
-    xPos = 10;
+    // 3 tiles (24px) reach the sprite, and the "רמה" glyph is 12 of them, so it
+    // has to start at 12 to be drawn whole -- which leaves 12px for digits that
+    // are 5px each. Two digits fit; the third would need 3px the healthbox does
+    // not have, the tile beyond holding its right border. So a level of 100 --
+    // the only three-digit level -- keeps the old pen and gives up the glyph's
+    // first letter rather than the number's first digit.
+    lvlX = (lvl < 100) ? 12 : 15;
+    xPos = lvlX - 5;
 
     // windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(text, xPos, 3, &windowId);
     windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(lvl_str, xPos, 3, &windowId);
@@ -783,7 +792,7 @@ static void UpdateLvlInHealthbox(u8 healthboxSpriteId, u8 lvl)
     color[1] = 1;
     color[2] = 3;
     // we have to do this because the lvl is not showing up in the correctly unless we print it separately
-    AddTextPrinterParameterized4(windowId, FONT_NORMAL, 15, 3, 0, 0, color, -1, text);
+    AddTextPrinterParameterized4(windowId, FONT_NORMAL, lvlX, 3, 0, 0, color, -1, text);
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
 
     if (GetBattlerSide(gSprites[healthboxSpriteId].sBattlerId) == B_SIDE_PLAYER)
@@ -1514,8 +1523,17 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
     u8 *windowTileData;
     u16 species;
     u8 gender;
+    s32 nickX;
 
-    ptr = StringCopy(gDisplayedStringBattle, sText_HealthboxNickname);
+    // text_printer.c forces a 6px minimum spacing on FONT_SMALL and text.c adds
+    // a pixel after a wide Hebrew letter. GetStringWidth models neither unless
+    // the string asks for the spacing itself, so saying it out loud here changes
+    // nothing on screen and makes the measurement below agree with the pen.
+    ptr = gDisplayedStringBattle;
+    *ptr++ = EXT_CTRL_CODE_BEGIN;
+    *ptr++ = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+    *ptr++ = 6;
+    ptr = StringCopy(ptr, sText_HealthboxNickname);
     GetMonData(mon, MON_DATA_NICKNAME, nickname);
     StringGet_Nickname(nickname);
     ptr = StringCopy(ptr, nickname);
@@ -1538,27 +1556,33 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
     default:
         *ptr++ = TEXT_DYNAMIC_COLOR_2;
         *ptr++ = EOS;
-        // Ofir Changed here
-        //windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0, 3, &windowId);
-        windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0 + GetStringWidth(FONT_SMALL, nickname, -1)+6, 3, &windowId);
         break;
     case MON_MALE:
         *ptr++ = TEXT_DYNAMIC_COLOR_2;
         *ptr++ = CHAR_MALE;
         *ptr++ = EOS;
-        // Ofir Changed here
-        //windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0, 3, &windowId);
-        windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0 + GetStringWidth(FONT_SMALL, nickname, -1)+6, 3, &windowId);
         break;
     case MON_FEMALE:
         *ptr++ = TEXT_DYNAMIC_COLOR_1;
         *ptr++ = CHAR_FEMALE;
         *ptr++ = EOS;
-        // Ofir Changed here
-        //windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0, 3, &windowId);
-        windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0 + GetStringWidth(FONT_SMALL, nickname, -1)+6, 3, &windowId);
         break;
     }
+
+    // Ofir Changed here
+    //windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, 0, 3, &windowId);
+    // The pen is where the FIRST glyph is blitted and the run then walks left, so
+    // it has to carry the whole string: measuring only the nickname, and without
+    // the spacing above, left the pen a pixel per glyph short and the tail of a
+    // long name at a negative x -- which the u8 pen wraps clean out of the window
+    // rather than clipping, so the letter is simply absent. Measured whole, the
+    // last glyph lands on column 1; 7 tiles (56px) reach the sprite, so a name
+    // too wide for them sits flush right instead and loses its tail, which is all
+    // any pen can do with it.
+    nickX = GetStringWidthRTL(FONT_SMALL, gDisplayedStringBattle, 0) - 5;
+    if (nickX > 7 * 8 - 5)
+        nickX = 7 * 8 - 5;
+    windowTileData = AddTextPrinterAndCreateWindowOnHealthbox(gDisplayedStringBattle, nickX, 3, &windowId);
 
     spriteTileNum = gSprites[healthboxSpriteId].oam.tileNum * TILE_SIZE_4BPP;
 

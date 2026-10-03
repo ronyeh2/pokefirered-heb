@@ -2064,8 +2064,11 @@ static void Task_DrawDungeonMapPreviewFlavorText(u8 taskId)
         // Draw text
         if (sDungeonMapPreview->timer > 25)
         {
-            AddTextPrinterParameterized3(WIN_MAP_PREVIEW, FONT_NORMAL, 4, 0, sTextColor_Green, -1, GetDungeonName(GetDungeonMapsecUnderCursor()));
-            AddTextPrinterParameterized3(WIN_MAP_PREVIEW, FONT_NORMAL, 2, 14, sTextColor_White, -1, GetDungeonFlavorText(GetDungeonMapsecUnderCursor()));
+            // Upstream's left insets, which under RTL are where the FIRST glyph
+            // goes: the name and the whole description walked off the left of
+            // this 25-tile window and only a glyph or two of each was drawn.
+            AddTextPrinterParameterized3(WIN_MAP_PREVIEW, FONT_NORMAL, RTL_ANCHOR_WINDOW(WIN_MAP_PREVIEW), 0, sTextColor_Green, -1, GetDungeonName(GetDungeonMapsecUnderCursor()));
+            AddTextPrinterParameterized3(WIN_MAP_PREVIEW, FONT_NORMAL, RTL_ANCHOR_WINDOW(WIN_MAP_PREVIEW), 14, sTextColor_White, -1, GetDungeonFlavorText(GetDungeonMapsecUnderCursor()));
             CopyWindowToVram(WIN_MAP_PREVIEW, COPYWIN_FULL);
             sDungeonMapPreview->drawState++;
         }

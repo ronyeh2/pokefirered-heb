@@ -4577,10 +4577,15 @@ static void ShowMoveSelectWindow(u8 slot)
     for (i = 0; i < MAX_MON_MOVES; ++i)
     {
         move = GetMonData(&gPlayerParty[slot], MON_DATA_MOVE1 + i);
+        // DisplaySelectionWindow returns early for this window type, so its
+        // mirrored pen never reached here and the move names kept upstream's
+        // left inset -- which under RTL is where the FIRST glyph goes, leaving
+        // room for one more before the pen walks off the window. The cursor sits
+        // at column 0, well left of the widest move name at this anchor.
         AddTextPrinterParameterized(windowId,
                                     fontId,
                                     gMoveNames[move],
-                                    GetFontAttribute(fontId, FONTATTR_MAX_LETTER_WIDTH) + GetFontAttribute(fontId, FONTATTR_LETTER_SPACING),
+                                    RTL_ANCHOR_WINDOW(windowId),
                                     (i * 16) + 2,
                                     TEXT_SKIP_DRAW,
                                     NULL);

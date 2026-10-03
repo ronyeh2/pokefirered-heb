@@ -1214,7 +1214,9 @@ static void PrintTextOnWin0Colorized(u16 row, u8 *str, u8 colorIdx)
     color[1] = colorIdx * 2 + 2;
     color[2] = colorIdx * 2 + 3;
     FillWindowPixelRect(0, PIXEL_FILL(1), 0, row * 15, 168, 15);
-    AddTextPrinterParameterized3(0, FONT_NORMAL, 0, row * 15, color, TEXT_SKIP_DRAW, str);
+    // Upstream's left inset; under RTL the pen is the run's right edge, so a
+    // chat line drew one glyph and wrapped. Link-only, so reasoned, not seen.
+    AddTextPrinterParameterized3(0, FONT_NORMAL, RTL_ANCHOR_WINDOW(0), row * 15, color, TEXT_SKIP_DRAW, str);
 }
 
 static void ResetGpuBgState(void)

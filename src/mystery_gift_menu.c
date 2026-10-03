@@ -528,7 +528,9 @@ void AddTextPrinterToWindow1(const u8 *str)
 {
     StringExpandPlaceholders(gStringVar4, str);
     FillWindowPixelBuffer(1, 0x11);
-    AddTextPrinterParameterized4(1, FONT_NORMAL, 0, 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
+    // Upstream's left inset. Under RTL that is where the first glyph goes, so
+    // the message drew one letter and the pen wrapped out of the window.
+    AddTextPrinterParameterized4(1, FONT_NORMAL, RTL_ANCHOR_WINDOW(1), 2, 0, 2, sMG_Ereader_TextColor_2, 0, gStringVar4);
     DrawTextBorderOuter(1, 0x001, 15);
     PutWindowTilemap(1);
     CopyWindowToVram(1, COPYWIN_FULL);

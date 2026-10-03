@@ -598,7 +598,10 @@ static void BuyMenuPrintItemDescriptionAndShowItemIcon(s32 item, bool8 onInit, s
         LoadTmHmNameInMart(item);
         // Ofir changed here
         //BuyMenuPrint(5, FONT_NORMAL, description, 2, 3, 1, 0, 0, 0);
-        BuyMenuPrint(5, FONT_NORMAL, description, 190, 3, 1, 0, 0, 0);
+        // The TM layout gives window 5 only 18 tiles, not the 25 the regular
+        // layout has, so the 190 the regular branch uses starts the pen past
+        // the right edge and the first words of every line are never drawn.
+        BuyMenuPrint(5, FONT_NORMAL, description, RTL_ANCHOR_WINDOW(5), 3, 1, 0, 0, 0);
     }
 }
 
@@ -631,14 +634,14 @@ static void LoadTmHmNameInMart(s32 item)
         ConvertIntToDecimalStringN(gStringVar1, item - ITEM_DEVON_SCOPE, 2, 2);
         StringCopy(gStringVar4, gText_NumberClear01);
         StringAppend(gStringVar4, gStringVar1);
-        BuyMenuPrint(6, FONT_SMALL, gStringVar4, 0, 0, 0, 0, TEXT_SKIP_DRAW, 1);
+        BuyMenuPrint(6, FONT_SMALL, gStringVar4, RTL_ANCHOR_WINDOW(6), 0, 0, 0, TEXT_SKIP_DRAW, 1);
         StringCopy(gStringVar4, gMoveNames[ItemIdToBattleMoveId(item)]);
-        BuyMenuPrint(6, FONT_NORMAL, gStringVar4, 0, 0x10, 0, 0, 0, 1);
+        BuyMenuPrint(6, FONT_NORMAL, gStringVar4, RTL_ANCHOR_WINDOW(6), 0x10, 0, 0, 0, 1);
     }
     else
     {
-        BuyMenuPrint(6, FONT_SMALL, gText_ThreeHyphens, 0, 0, 0, 0, TEXT_SKIP_DRAW, 1);
-        BuyMenuPrint(6, FONT_NORMAL, gText_SevenHyphens, 0, 0x10, 0, 0, 0, 1);
+        BuyMenuPrint(6, FONT_SMALL, gText_ThreeHyphens, RTL_ANCHOR_WINDOW(6), 0, 0, 0, TEXT_SKIP_DRAW, 1);
+        BuyMenuPrint(6, FONT_NORMAL, gText_SevenHyphens, RTL_ANCHOR_WINDOW(6), 0x10, 0, 0, 0, 1);
     }
 }
 

@@ -1321,14 +1321,21 @@ static void BufferHofDebutTime(void)
 
     if (sTrainerCardDataPtr->hasHofResult)
     {
-        ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.hofDebutHours, STR_CONV_MODE_RIGHT_ALIGN, 3);
+        // ConvertIntToDecimalStringN reverses each number on its own, and the
+        // printer then draws the whole string right to left, so the field
+        // appended FIRST ends up rightmost. Appending hours first therefore put
+        // them where the seconds belong: a card recording 40:36:45 read
+        // 45:36:40. Appended the other way round the three fields land in the
+        // order they are meant to be read, and the hours keep their right-
+        // aligned pad, which now falls at the left of the run where it belongs.
+        ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.hofDebutSeconds, STR_CONV_MODE_LEADING_ZEROS, 2);
         txtPtr = StringCopy(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], buffer);
         StringAppendN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], gText_Colon2, 2);
         ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.hofDebutMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
         StringAppendN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], buffer, 3);
         StringAppendN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], gText_Colon2, 2);
-        ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.hofDebutSeconds, STR_CONV_MODE_LEADING_ZEROS, 2);
-        StringAppendN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], buffer, 3);
+        ConvertIntToDecimalStringN(buffer, sTrainerCardDataPtr->trainerCard.rse.hofDebutHours, STR_CONV_MODE_RIGHT_ALIGN, 3);
+        StringAppendN(sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME], buffer, 4);
     }
 }
 
@@ -1337,7 +1344,11 @@ static void PrintHofDebutTimeOnCard(void)
     if (sTrainerCardDataPtr->hasHofResult)
     {
         AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], sTrainerCardHofDebutXPositions[sTrainerCardDataPtr->cardType], 35, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_HallOfFameDebut);
-        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], RTL_MIRROR(TRAINER_CARD_WIN_W, 164), 35, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME]);
+        // "999:59:59" is 52px and the pen is its right edge, so a pen of 44 left
+        // the run two pixels over the window's left edge -- where the u8 pen
+        // wraps and the digit is not drawn at all. The label beside it starts at
+        // 82, so there is room to anchor the time on 80.
+        AddTextPrinterParameterized3(1, sTrainerCardFontIds[1], RTL_ANCHOR_EDGE(80), 35, sTrainerCardStatColors, TEXT_SKIP_DRAW, sTrainerCardDataPtr->strings[TRAINER_CARD_STRING_HOF_TIME]);
     }
 }
 
