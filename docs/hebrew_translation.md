@@ -444,6 +444,13 @@ sites. It is not most of them.
   window; and the healthbox prints the 12px רמה glyph into a 64px scratch window but hands only
   24px of it to the sprite, which cut the ר. Grep a window id before trusting a constant pen —
   the same number can be right in one layout and off-window in another.
+- **A rev0 engine assumption that only English satisfies.** `make` builds the rev 0 ROM, so
+  every `#if REVISION == 0` branch is what ships. One of them ends the Pokédex category copy on
+  a *space*, which is safe only where a category is a single word; the Hebrew ones are two, so
+  131 of the 387 entries lost their second word — `ציפור קטנה` printed as `ציפור`. rev1 changed
+  that terminator to `EOS` and this fork now takes rev1's version unconditionally. Worth
+  grepping the other `REVISION` branches before assuming they are equally harmless here: a fix
+  Game Freak made for their own text is not necessarily optional for a translation.
 - **Two sweeps now run over the anchors themselves**, because the string-based check could
   never see a pen that is wrong for every string. `tools/hebrew/anchors.py` flags a literal pen
   that starts past its own window's right edge, or that is too small to hold any run at all —

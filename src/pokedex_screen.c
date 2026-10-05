@@ -2716,24 +2716,38 @@ void DexScreen_DexPageZoomEffectFrame(u8 bg, u8 scale)
     FillBgTilemapBufferRect_Palette0(bg, 2, left + 1, divY + 1, width, top + height - divY);
 }
 
+// "פוקימון" renders 35px wide at the 5px spacing both runs on this line ask
+// for, so its leftmost ink sits 30px to the left of the pen; the category is
+// anchored two pixels clear of that. Measured rather than taken from
+// GetStringWidth, which models neither the spacing the printer forces on
+// FONT_SMALL nor the pixel text.c adds after a wide Hebrew letter.
+#define DEX_CATEGORY_GAP 37
+
 void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
 {
     u8 * categoryName;
-    u8 index, categoryStr[12];
+    u8 index, categoryStr[16];
 
     species = SpeciesToNationalPokedexNum(species);
 
     categoryName = (u8 *)gPokedexEntries[species].categoryName;
+    // A category is 11 glyphs at most, and at FONT_SMALL's forced 6px spacing
+    // the longest of them does not fit beside פוקימון in a 13-tile window. At 5
+    // every one of the 270 does, with the letters a pixel tighter.
+    categoryStr[0] = EXT_CTRL_CODE_BEGIN;
+    categoryStr[1] = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+    categoryStr[2] = 5;
     index = 0;
     if (DexScreen_GetSetPokedexFlag(species, FLAG_GET_CAUGHT, FALSE))
     {
-#if REVISION == 0
-        while ((categoryName[index] != CHAR_SPACE) && (index < 11))
-#else
+        // rev0 ends this copy on a space, which is only safe where a category is
+        // a single word. The Hebrew ones are two, so 131 of the 387 entries lost
+        // their second word -- ציפור קטנה printed as ציפור. This is rev1's
+        // terminator: it ends on the string's own, and the array's zero fill
+        // after it keeps a short name from running on.
         while ((categoryName[index] != EOS) && (index < 11))
-#endif
         {
-            categoryStr[index] = categoryName[index];
+            categoryStr[3 + index] = categoryName[index];
             index++;
         }
     }
@@ -2741,19 +2755,19 @@ void DexScreen_PrintMonCategory(u8 windowId, u16 species, u8 x, u8 y)
     {
         while (index < 11)
         {
-            categoryStr[index] = CHAR_QUESTION_MARK;
+            categoryStr[3 + index] = CHAR_QUESTION_MARK;
             index++;
         }
     }
 
-    categoryStr[index] = EOS;
+    categoryStr[3 + index] = EOS;
 
     // Ofir changed here
     //DexScreen_AddTextPrinterParameterized(windowId, FONT_SMALL, categoryStr, x, y, 0);
     DexScreen_AddTextPrinterParameterized(windowId, FONT_SMALL, gText_PokedexPokemon, x, y, 0);
 
     //x += GetStringWidth(FONT_SMALL, categoryStr, 0);
-    x -= (GetStringWidth(FONT_SMALL, gText_PokedexPokemon, 0) + 8);
+    x -= DEX_CATEGORY_GAP;
     //DexScreen_AddTextPrinterParameterized(windowId, FONT_SMALL, gText_PokedexPokemon, x, y, 0);
     DexScreen_AddTextPrinterParameterized(windowId, FONT_SMALL, categoryStr, x, y, 0);
 }
@@ -3022,10 +3036,13 @@ static u8 DexScreen_DrawMonDexPage(bool8 justRegistered)
     //DexScreen_PrintMonHeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 0, 36);
     //DexScreen_PrintMonWeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 0, 48);
     //DexScreen_DrawMonFootprint(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 88, 40);
-    DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[1], FONT_NORMAL, gSpeciesNames[sPokedexScreenData->dexSpecies], 88, 8, 0);
-    DexScreen_PrintMonCategory(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 88, 24);
-    DexScreen_PrintMonHeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 88, 36);
-    DexScreen_PrintMonWeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 88, 48);
+    // 92, not 88: the window is 13 tiles and the block had left ten pixels of it
+    // unused on the right. The category needs four of them, and all four lines
+    // move together so they stay on one edge.
+    DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[1], FONT_NORMAL, gSpeciesNames[sPokedexScreenData->dexSpecies], 92, 8, 0);
+    DexScreen_PrintMonCategory(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 92, 24);
+    DexScreen_PrintMonHeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 92, 36);
+    DexScreen_PrintMonWeight(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 92, 48);
     DexScreen_DrawMonFootprint(sPokedexScreenData->windowIds[1], sPokedexScreenData->dexSpecies, 0, 40);
     PutWindowTilemap(sPokedexScreenData->windowIds[1]);
     CopyWindowToVram(sPokedexScreenData->windowIds[1], COPYWIN_GFX);
