@@ -132,8 +132,8 @@ sha1sum pokefirered.gba         # Linux
 | | |
 | --- | --- |
 | `pokefirered.gba` | 16,777,216 bytes |
-| SHA-1 | `1f792be097a81f78818fa75c0bd5798255fe5bd4` |
-| SHA-256 | `f36c0bb1fb0704c46c03fb2819ecaf4da2e302befa224f916d68ee7f394e87c5` |
+| SHA-1 | `992cff78419167373a2de143d99b15d8f08fdf93` |
+| SHA-256 | `a5eb2ce6b865afb0463824dde9b173ec05268d1a399e66ae6d1e2873f076da71` |
 
 A different hash means a different build, not necessarily a broken one — check you are on the
 tag above, and that `make` finished without errors.
