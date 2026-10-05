@@ -1477,11 +1477,13 @@ static void DaycarePrintMonLvl(struct DayCare *daycare, u8 windowId, u32 daycare
     u8 lvlText[12];
     u8 intText[8];
 
-#if REVISION == 0
-    strcpy((char *)lvlText, (const char *)gText_Lv);
-#else
+    // rev0 uses strcpy here, which ends on a 0x00 -- a byte a game string does
+    // not carry, since its terminator is EOS and 0x00 is a space. gText_Lv is
+    // three bytes with nothing padding it, so the copy ran on through the TM and
+    // HM labels after it: 51 bytes into a 12-byte stack buffer. rev1 replaced it
+    // with StringCopy, which stops on the EOS, and that is taken here whatever
+    // revision is being built.
     StringCopy(lvlText, gText_Lv);
-#endif
     level = GetLevelAfterDaycareSteps(&daycare->mons[daycareSlotId].mon, daycare->mons[daycareSlotId].steps);
     ConvertIntToDecimalStringN(intText, level, STR_CONV_MODE_LEFT_ALIGN, 3);
     StringAppend(lvlText, intText);
