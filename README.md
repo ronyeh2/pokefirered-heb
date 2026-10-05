@@ -1,106 +1,64 @@
-# Pokémon FireRed and LeafGreen
+# Pokémon FireRed in Hebrew
 
-This is a decompilation of English Pokémon FireRed and LeafGreen.
+A full Hebrew translation of Pokémon FireRed, playable start to finish. The game's text is
+translated and its text engine was rewritten to lay Hebrew out right to left — every menu, box
+and label, not just the dialogue.
 
-It builds the following ROM images:
+| | |
+|---|---|
+| ![](screenshots/battle_menu.png) | ![](screenshots/battle_moves.png) |
+| ![](screenshots/bag.png) | ![](screenshots/shop.png) |
 
-* [**pokefirered.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1616) `sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`
-* [**pokeleafgreen.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1617) `sha1: 574fa542ffebb14be69902d1d36f1ec0a4afd71e`
-* [**pokefirered_rev1.gba**](https://datomatic.no-intro.org/?page=show_record&s=23&n=1672) `sha1: dd5945db9b930750cb39d00c84da8571feebf417`
-* [**pokeleafgreen_rev1.gba**](https://datomatic.no-intro.org/index.php?page=show_record&s=23&n=1668) `sha1: 7862c67bdecbe21d1d69ce082ce34327e1c6ed5e`
+## Getting it
 
-To set up the repository, see [INSTALL.md](INSTALL.md).
-
-For contacts and other pret projects, see [pret.github.io](https://pret.github.io/).
-
-## About this Fork
-
-This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefirered), aiming to translate Pokémon FireRed and LeafGreen to be fully playable in **Hebrew**.
-
-- **State of the translation:**
-  - Every screen reachable in single-player has been checked on screen, not just in the source:
-    the overworld and dialogue, the start menu, bag and item descriptions, the Pokédex list and
-    entry pages, the Pokémon Storage System, shops, the trainer card, the Fame Checker, the Hall
-    of Fame viewer, the battle HUD and battle menus, the summary screen and move relearner, the
-    party menu, the option menu, the help system, the Game Corner, the player's PC, the diploma,
-    the Safari Zone, and the save and clock dialogues.
-  - What has *not* been verified is everything behind the link cable and wireless adapter —
-    trading, Union Room, Berry Crush, the Dodrio game, Mystery Gift and Easy Chat — plus three
-    single-player screens no test save could set up: mail, the credits, and the Day Care level
-    menu. The layout work was done for all of them.
-  - Braille, the Latin chat keyboard and the Japanese upstream leftovers are untranslated by
-    design.
-- **Contributions:**
-  - Issues and pull requests are welcome! Please note that this is a personal project done in my free time, so I can't guarantee when I'll be able to address them.
-- **Translating:**
-  - See [docs/hebrew_translation.md](docs/hebrew_translation.md) for how Hebrew and right-to-left
-    rendering work in this fork, and the rules to follow when editing text. Reading it first will
-    save you from the traps everyone hits: there is more than one text renderer, literal
-    multi-digit numbers have to be typed backwards, and a line's width is not what counting
-    characters suggests.
-  - Before committing text changes, run `python3 tools/hebrew/audit.py`. It checks every string
-    against the window that actually prints it — including the ~1900 defined in C — and exits
-    non-zero on anything that would clip or run into the next message, none of which the build
-    itself catches. `python3 tools/hebrew/rewrap.py --apply` fixes the line breaks it reports,
-    and `python3 tools/hebrew/numbers.py` checks that literal numbers are stored backwards, by
-    comparing them against the English original.
-- **Building on macOS:**
-  - See the [macOS section of INSTALL.md](INSTALL.md#macos). Use agbcc; Homebrew's
-    `arm-none-eabi-gcc` ships without newlib and cannot build the modern target.
-- **Cheat codes still work:**
-  - This fork does not move anything in RAM, so GameShark / Action Replay / CodeBreaker
-    codes written for English FireRed (BPRE) work unchanged. See
-    [RAM layout and cheat codes](docs/hebrew_translation.md#ram-layout-and-cheat-codes).
-
-## Getting the ROM
-
-Two ways. Either apply the patch attached to the
-[latest release](https://github.com/ronyeh2/pokefirered-heb/releases/latest), or build the whole
-thing from this source — both end at the same ROM, whose SHA-1 the release records.
-
-### Patch (`pokefirered-heb.bps`)
-
-The patch carries the translation rather than the game, so it needs a FireRed **rev 0** ROM to
-apply to: `sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`. You do not have to go looking for
-one — the decomp builds that from source too, which is what a decompilation is for. Set the
-toolchain up as in step 1 and 2 below, then:
+**One command**, if you have a FireRed **rev 0** ROM (`sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`):
 
 ```bash
-git worktree add --detach ../base d61f95945      # the commit before the Hebrew work began
-cp -R tools/agbcc ../base/tools/agbcc
-make -C ../base                                  # -> sha1 41cb23d8...
-python3 tools/hebrew/bps.py apply ../base/pokefirered.gba pokefirered-heb.bps pokefirered-heb.gba
+python3 tools/hebrew/getrom.py path/to/firered.gba
 ```
 
-[Floating IPS](https://www.romhacking.net/utilities/1040/),
-[beat](https://www.romhacking.net/utilities/893/) and the online BPS patchers apply it just as
-well. The patch refuses any base but the right one, and checks its own result.
+That needs nothing but Python. It fetches the patch from the latest release, applies it, and
+writes `pokefirered-heb.gba`. The patch refuses any base but the right one and checks its own
+result, so if it finishes you have the right ROM.
 
-### Build the whole thing
-
-
-### 1. Install the toolchain (once per machine)
-
-<details open>
-<summary><strong>macOS</strong> — full detail in <a href="INSTALL.md#macos">INSTALL.md</a></summary>
+**No FireRed ROM?** A decompilation builds its own, so you do not have to find one — the commit
+before the Hebrew work began is still English FireRed:
 
 ```bash
-xcode-select --install                                        # if not already installed
-brew install libpng pkg-config arm-none-eabi-binutils          # needs https://brew.sh
-export CPATH=/opt/homebrew/include                             # /usr/local on an Intel Mac
+python3 tools/hebrew/getrom.py --build-base
+```
+
+That one needs the toolchain below, and a few minutes. Or skip the patch entirely and build this
+fork directly with `make`, which lands at the same ROM.
+
+The patch, `pokefirered-heb.bps`, is attached to the
+[latest release](https://github.com/ronyeh2/pokefirered-heb/releases/latest) if you would rather
+apply it with [Floating IPS](https://www.romhacking.net/utilities/1040/),
+[beat](https://www.romhacking.net/utilities/893/) or an online patcher. Every release records the
+SHA-1 of the ROM it produces, so you can always check what you ended up with.
+
+## Building from source
+
+Three steps, once per machine.
+
+<details open>
+<summary><strong>macOS</strong> — detail in <a href="INSTALL.md#macos">INSTALL.md</a></summary>
+
+```bash
+xcode-select --install                                   # if not already installed
+brew install libpng pkg-config arm-none-eabi-binutils     # needs https://brew.sh
+export CPATH=/opt/homebrew/include                        # /usr/local on an Intel Mac
 export LIBRARY_PATH=/opt/homebrew/lib
 ```
 
-Those two `export`s are not optional: Homebrew keeps its headers off the default search path, so
-without them the build stops at `fatal error: 'png.h' file not found`. Put them in your shell
-profile or set them in the shell you build from.
-
-Do **not** `brew install arm-none-eabi-gcc` — Homebrew's copy ships without newlib. agbcc, below,
-brings its own.
+Those two `export`s are not optional — without them the build stops at
+`fatal error: 'png.h' file not found`, which looks like a broken repository and is the first
+thing anyone hits on a Mac. Do **not** `brew install arm-none-eabi-gcc`; Homebrew's copy ships
+without newlib. agbcc, below, brings its own.
 </details>
 
 <details>
-<summary><strong>Linux</strong> (Debian/Ubuntu) — full detail in <a href="INSTALL.md#linux">INSTALL.md</a></summary>
+<summary><strong>Linux</strong> (Debian/Ubuntu) — detail in <a href="INSTALL.md#linux">INSTALL.md</a></summary>
 
 ```bash
 sudo apt install build-essential binutils-arm-none-eabi git libpng-dev pkg-config
@@ -108,89 +66,103 @@ sudo apt install build-essential binutils-arm-none-eabi git libpng-dev pkg-confi
 </details>
 
 <details>
-<summary><strong>Windows</strong> — full detail in <a href="INSTALL.md#windows-1011-wsl1">INSTALL.md</a></summary>
+<summary><strong>Windows</strong> — detail in <a href="INSTALL.md#windows-1011-wsl1">INSTALL.md</a></summary>
 
-Build inside WSL rather than natively. Install
-[WSL](https://learn.microsoft.com/windows/wsl/install), pick Ubuntu, then follow the Linux
-instructions above inside it. msys2 and Cygwin also work and are covered in
+Build inside [WSL](https://learn.microsoft.com/windows/wsl/install) rather than natively: install
+it, pick Ubuntu, and follow the Linux line above. msys2 and Cygwin also work and are covered in
 [INSTALL.md](INSTALL.md#windows-msys2).
 </details>
 
-### 2. Install agbcc (once per clone)
-
-The compiler this build uses is [pret/agbcc](https://github.com/pret/agbcc). It installs itself
-into `tools/agbcc/`, which is gitignored:
+Then the compiler, [pret/agbcc](https://github.com/pret/agbcc), which installs itself into
+`tools/agbcc/`:
 
 ```bash
 git clone https://github.com/ronyeh2/pokefirered-heb.git
 git clone https://github.com/pret/agbcc
-cd agbcc
-./build.sh
-./install.sh ../pokefirered-heb
-cd ..
+cd agbcc && ./build.sh && ./install.sh ../pokefirered-heb && cd ..
 ```
 
-### 3. Build
+And build:
 
 ```bash
 cd pokefirered-heb
-git checkout firered-v1.0
 make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu)
+sha1sum pokefirered.gba        # shasum on macOS
 ```
 
-`firered-v1.0` is the tag of the [latest release](https://github.com/ronyeh2/pokefirered-heb/releases/latest);
-omit the `git checkout` to build the tip of the branch instead.
+`make` builds FireRed rev 0, the only target the Hebrew text and layout have been built and
+checked against. `make leafgreen`, `make firered_rev1` and `make leafgreen_rev1` survive from
+upstream and still compile, but nothing in them has been looked at here.
 
-### 4. Check what you built
+## Playing it
 
-The ROM lands at `pokefirered.gba` in the repository root:
+Any GBA emulator — [mGBA](https://mgba.io/), [VBA-M](https://vba-m.com/), a
+[RetroArch](https://www.retroarch.com/) core. Text layout is decided by the ROM's own code, so it
+renders identically on all of them.
+
+A battery save (`.sav`/`.srm`) carries across builds of this fork; the save-block layout is
+untouched. **A save state does not** — it holds CPU registers against code addresses a new build
+has moved. Save in-game before switching ROMs.
+
+Cheat codes for English FireRed (BPRE) — GameShark, Action Replay, CodeBreaker — work unchanged.
+Nothing has moved in RAM; see
+[RAM layout and cheat codes](docs/hebrew_translation.md#ram-layout-and-cheat-codes).
+
+## State of the translation
+
+Every screen reachable in single-player has been checked **on screen**, not just in the source:
+the overworld and dialogue, the start menu, the bag and item descriptions, the Pokédex list and
+entry pages, the Pokémon Storage System, shops, the trainer card, the Fame Checker, the Hall of
+Fame viewer, the battle HUD and battle menus, the summary screen and move relearner, the party
+menu, the options menu, the help system, the Game Corner, the player's PC, the diploma, the
+Safari Zone, and the save and clock dialogues.
+
+Not verified: everything behind the link cable and wireless adapter — trading, the Union Room,
+Berry Crush, the Dodrio game, Mystery Gift's card screens and Easy Chat — plus mail, the credits
+and the Day Care level menu, which no test save could bring up. The layout work was done for all
+of them.
+
+Latin text inside a Hebrew string still renders backwards; there is no bidi pass. A new game is
+unaffected because the names are Hebrew, but a save made before the species names were translated
+shows `DRAZIRAHC` in the party list, and a player-chosen Latin nickname always will. Braille, the
+Latin chat keyboard and the Japanese leftovers from upstream are untranslated by design.
+
+## Contributing
+
+Issues and pull requests are welcome. This is a personal project done in spare time, so there is
+no promise about when they get looked at.
+
+**If you are editing text, read
+[docs/hebrew_translation.md](docs/hebrew_translation.md) first.** It documents how right-to-left
+works here and the traps everyone hits: there is more than one text renderer, literal
+multi-digit numbers have to be typed backwards, and a line's width is not what counting
+characters suggests.
+
+Before committing text changes:
 
 ```bash
-shasum pokefirered.gba          # macOS
-sha1sum pokefirered.gba         # Linux
+python3 tools/hebrew/audit.py     # every string against the window that prints it
+python3 tools/hebrew/anchors.py   # printer anchors that were never mirrored
+python3 tools/hebrew/numbers.py   # literal numbers, against the English original
 ```
 
-| | |
-| --- | --- |
-| `pokefirered.gba` | 16,777,216 bytes |
-| SHA-1 | `01816e6f078b8b6ab82670b1d8ac3c887d310239` |
-| SHA-256 | `7cca97bcbe44174344629091b1b284e274b2f2f37775d53f52e52adf322fa57f` |
+`audit.py` exits non-zero on anything that would clip or run into the next message, none of which
+the build itself catches; `tools/hebrew/rewrap.py --apply` fixes the line breaks it reports. The
+emulator harness in `tools/hebrew/emu/` is what the screenshots come from, and
+`make RTL_CLIP_REPORT=1` builds a ROM that reports glyphs drawn outside their window.
 
-A different hash means a different build, not necessarily a broken one — check you are on the
-tag above, and that `make` finished without errors.
+## About this fork
 
-### 5. Play it
+A fork of [pret/pokefirered](https://github.com/pret/pokefirered), which is a decompilation of
+the English game — the code here is theirs, rearranged to read Hebrew. Upstream's own
+documentation lives in [INSTALL.md](INSTALL.md), and the pret projects are at
+[pret.github.io](https://pret.github.io/).
 
-Any GBA emulator runs it: [mGBA](https://mgba.io/) (recommended),
-[VBA-M](https://vba-m.com/), or a [RetroArch](https://www.retroarch.com/) core. Text layout is
-decided by the ROM's own code, so it renders identically on all of them.
-
-Your battery save (`.sav`/`.srm`) carries across builds of this fork. A **save state does not** —
-it stores CPU registers against code addresses a new build has moved, so save in-game before
-switching ROMs.
-
-### Other targets
-
-`make` builds FireRed rev 0, which is the only target the Hebrew text and layout have been built
-and checked against. The Makefile still carries `make leafgreen`, `make firered_rev1` and
-`make leafgreen_rev1` from upstream; those build, but nothing in them has been verified here.
+No ROM is distributed here. The patch contains the translation; the game it patches is Nintendo's
+and you bring your own, or build it from source as above.
 
 ## Credits
 
-A special thanks to the team behind [Nog-Frog/pokered](https://github.com/Nog-Frog/pokered) — a lot of the early translation work for this project was inspired by (and in some cases taken from) their Hebrew translation of Pokémon Red/Blue. Their efforts and resources were invaluable in getting this project started.
-
-## Screenshots
-
-<!-- Add screenshots below. Example: -->
-
-| battle menu| battle moves |
-|---------------------|---------------------|
-| ![](screenshots/battle_menu.png) | ![](screenshots/battle_moves.png) |
-
-| bag | shop |
-|---------------------|---------------------|
-| ![](screenshots/bag.png) | ![](screenshots/shop.png) |
-
-| pokecenter |
-|---------------------|
-| ![](screenshots/pokecenter.png) |
+Thanks to the team behind [Nog-Frog/pokered](https://github.com/Nog-Frog/pokered) — a lot of the
+early translation work here was inspired by, and in places taken from, their Hebrew translation
+of Pokémon Red/Blue. Their work is what got this started.

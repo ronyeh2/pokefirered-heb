@@ -71,3 +71,4 @@ tools/hebrew/emu/runner
 tools/hebrew/emu/*.sav
 tools/hebrew/emu/out*/
 tools/hebrew/emu/crosscore
+*.bps
