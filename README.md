@@ -54,9 +54,30 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
 
 ## Getting the ROM
 
-There is no `.gba` in this repository — you build it from this source. It takes a few minutes,
-and the result is byte-for-byte the ROM whose SHA-1 the release records, so you can check you
-got the right one.
+Two ways. Either apply the patch attached to the
+[latest release](https://github.com/ronyeh2/pokefirered-heb/releases/latest), or build the whole
+thing from this source — both end at the same ROM, whose SHA-1 the release records.
+
+### Patch (`pokefirered-heb.bps`)
+
+The patch carries the translation rather than the game, so it needs a FireRed **rev 0** ROM to
+apply to: `sha1: 41cb23d8dccc8ebd7c649cd8fbb58eeace6e2fdc`. You do not have to go looking for
+one — the decomp builds that from source too, which is what a decompilation is for. Set the
+toolchain up as in step 1 and 2 below, then:
+
+```bash
+git worktree add --detach ../base d61f95945      # the commit before the Hebrew work began
+cp -R tools/agbcc ../base/tools/agbcc
+make -C ../base                                  # -> sha1 41cb23d8...
+python3 tools/hebrew/bps.py apply ../base/pokefirered.gba pokefirered-heb.bps pokefirered-heb.gba
+```
+
+[Floating IPS](https://www.romhacking.net/utilities/1040/),
+[beat](https://www.romhacking.net/utilities/893/) and the online BPS patchers apply it just as
+well. The patch refuses any base but the right one, and checks its own result.
+
+### Build the whole thing
+
 
 ### 1. Install the toolchain (once per machine)
 
