@@ -54,23 +54,105 @@ This repository is a fork of [pret/pokefirered](https://github.com/pret/pokefire
 
 ## Getting the ROM
 
-There is no ROM in this repository or in its releases, and there will not be: a built
-`pokefirered.gba` contains Nintendo's game — its graphics, music, maps and original text —
-so distributing one would be distributing their copyrighted work. This is the same reason
-[pret](https://pret.github.io/) never ships ROMs.
+There is no `.gba` in this repository — you build it from this source. It takes a few minutes,
+and the result is byte-for-byte the ROM whose SHA-1 the release records, so you can check you
+got the right one.
 
-Build it yourself; it takes a couple of minutes:
+### 1. Install the toolchain (once per machine)
+
+<details open>
+<summary><strong>macOS</strong> — full detail in <a href="INSTALL.md#macos">INSTALL.md</a></summary>
+
+```bash
+xcode-select --install                                        # if not already installed
+brew install libpng pkg-config arm-none-eabi-binutils          # needs https://brew.sh
+export CPATH=/opt/homebrew/include                             # /usr/local on an Intel Mac
+export LIBRARY_PATH=/opt/homebrew/lib
+```
+
+Those two `export`s are not optional: Homebrew keeps its headers off the default search path, so
+without them the build stops at `fatal error: 'png.h' file not found`. Put them in your shell
+profile or set them in the shell you build from.
+
+Do **not** `brew install arm-none-eabi-gcc` — Homebrew's copy ships without newlib. agbcc, below,
+brings its own.
+</details>
+
+<details>
+<summary><strong>Linux</strong> (Debian/Ubuntu) — full detail in <a href="INSTALL.md#linux">INSTALL.md</a></summary>
+
+```bash
+sudo apt install build-essential binutils-arm-none-eabi git libpng-dev pkg-config
+```
+</details>
+
+<details>
+<summary><strong>Windows</strong> — full detail in <a href="INSTALL.md#windows-1011-wsl1">INSTALL.md</a></summary>
+
+Build inside WSL rather than natively. Install
+[WSL](https://learn.microsoft.com/windows/wsl/install), pick Ubuntu, then follow the Linux
+instructions above inside it. msys2 and Cygwin also work and are covered in
+[INSTALL.md](INSTALL.md#windows-msys2).
+</details>
+
+### 2. Install agbcc (once per clone)
+
+The compiler this build uses is [pret/agbcc](https://github.com/pret/agbcc). It installs itself
+into `tools/agbcc/`, which is gitignored:
 
 ```bash
 git clone https://github.com/ronyeh2/pokefirered-heb.git
+git clone https://github.com/pret/agbcc
+cd agbcc
+./build.sh
+./install.sh ../pokefirered-heb
+cd ..
+```
+
+### 3. Build
+
+```bash
 cd pokefirered-heb
-# see INSTALL.md for the toolchain (agbcc + devkitARM's binutils)
+git checkout firered-v1.0
 make -j$(nproc 2>/dev/null || sysctl -n hw.ncpu)
 ```
 
-Each release records the SHA-1 of the ROM that commit produces, so you can confirm your
-build matches. Any GBA emulator will run it — the layout is decided by the ROM's own code,
-so it renders identically on mGBA, VBA-M, VBA-Next, gpSP and Mednafen.
+`firered-v1.0` is the tag of the [latest release](https://github.com/ronyeh2/pokefirered-heb/releases/latest);
+omit the `git checkout` to build the tip of the branch instead.
+
+### 4. Check what you built
+
+The ROM lands at `pokefirered.gba` in the repository root:
+
+```bash
+shasum pokefirered.gba          # macOS
+sha1sum pokefirered.gba         # Linux
+```
+
+| | |
+| --- | --- |
+| `pokefirered.gba` | 16,777,216 bytes |
+| SHA-1 | `1f792be097a81f78818fa75c0bd5798255fe5bd4` |
+| SHA-256 | `f36c0bb1fb0704c46c03fb2819ecaf4da2e302befa224f916d68ee7f394e87c5` |
+
+A different hash means a different build, not necessarily a broken one — check you are on the
+tag above, and that `make` finished without errors.
+
+### 5. Play it
+
+Any GBA emulator runs it: [mGBA](https://mgba.io/) (recommended),
+[VBA-M](https://vba-m.com/), or a [RetroArch](https://www.retroarch.com/) core. Text layout is
+decided by the ROM's own code, so it renders identically on all of them.
+
+Your battery save (`.sav`/`.srm`) carries across builds of this fork. A **save state does not** —
+it stores CPU registers against code addresses a new build has moved, so save in-game before
+switching ROMs.
+
+### Other targets
+
+`make` builds FireRed rev 0, which is the only target the Hebrew text and layout have been built
+and checked against. The Makefile still carries `make leafgreen`, `make firered_rev1` and
+`make leafgreen_rev1` from upstream; those build, but nothing in them has been verified here.
 
 ## Credits
 
