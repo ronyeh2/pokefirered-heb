@@ -106,7 +106,9 @@ u8 MailboxPC_InitListMenu(struct PlayerPCItemPageStruct * playerPcStruct)
     gMultiuseListMenuTemplate.totalItems = playerPcStruct->count + 1;
     gMultiuseListMenuTemplate.windowId = sWindowIds[1];
     gMultiuseListMenuTemplate.header_X = 0;
-    gMultiuseListMenuTemplate.item_X = GetMenuCursorDimensionByFont(FONT_NORMAL, 0);
+    // Upstream's left inset, which under RTL is the row's first glyph. The
+    // cursor keeps column 0; the titles run leftwards from the far edge.
+    gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_WINDOW(sWindowIds[1]);
     gMultiuseListMenuTemplate.cursor_X = 0;
     gMultiuseListMenuTemplate.lettersSpacing = 0;
     gMultiuseListMenuTemplate.itemVerticalPadding = 2;

@@ -770,6 +770,11 @@ static void MoveRelearnerInitListMenuBuffersEtc(void)
     sMoveRelearner->listMenuItems[i].label = gFameCheckerText_Cancel;
     sMoveRelearner->listMenuItems[i].index = 0xFE;
     gMultiuseListMenuTemplate = sMoveRelearnerListMenuTemplate;
+    // The template still carries upstream's left inset in item_X, which under
+    // RTL is where a row's FIRST glyph goes -- the widest move name is 69px and
+    // this window is 10 tiles, so mirrored onto the far edge every one of them
+    // clears the cursor at column 0 with room over.
+    gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_WINDOW(gMultiuseListMenuTemplate.windowId);
     gMultiuseListMenuTemplate.items = sMoveRelearner->listMenuItems;
     gMultiuseListMenuTemplate.totalItems = count + 1;
 }

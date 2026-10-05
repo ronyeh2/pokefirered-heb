@@ -98,6 +98,13 @@ u32 DoMysteryGiftListMenu(const struct WindowTemplate *windowTemplate, const str
         }
         gMultiuseListMenuTemplate = *listMenuTemplate;
         gMultiuseListMenuTemplate.windowId = sMysteryGiftLinkMenu.windowId;
+        // All five callers still carry upstream's left inset in item_X, which
+        // under RTL is where a row's FIRST glyph goes: each option drew a letter
+        // or two and the pen wrapped off the window. The caller sizes the window
+        // to its widest option, so the inset is mirrored onto the far edge here,
+        // which covers every one of them. cursor_X stays 0, where the cursor
+        // belongs once the text is right-aligned.
+        gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_WINDOW(sMysteryGiftLinkMenu.windowId);
         sMysteryGiftLinkMenu.listTaskId = ListMenuInit(&gMultiuseListMenuTemplate, 0, 0);
         CopyWindowToVram(sMysteryGiftLinkMenu.windowId, COPYWIN_MAP);
         sMysteryGiftLinkMenu.state = 1;
