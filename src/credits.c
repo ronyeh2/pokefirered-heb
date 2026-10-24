@@ -865,7 +865,10 @@ static s32 RollCredits(void)
             
         }
         sCreditsMgr->timer = 360;
-        AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL_COPY_1, 0x08, 0x29, 1, 2, sTextColor_Header, 0, TITLE_TEXT);
+        // Upstream's left inset. The two scrolling columns below were mirrored
+        // but this one was missed, so the staff title drew a glyph and the pen
+        // wrapped off the window.
+        AddTextPrinterParameterized4(sCreditsMgr->windowId, FONT_NORMAL_COPY_1, RTL_ANCHOR_WINDOW(sCreditsMgr->windowId) - 8, 0x29, 1, 2, sTextColor_Header, 0, TITLE_TEXT);
         sCreditsMgr->mainseqno = CREDITSSCENE_WAIT_TITLE_STAFF;
         return 0;
     case CREDITSSCENE_WAIT_TITLE_STAFF:
