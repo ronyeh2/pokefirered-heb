@@ -19,7 +19,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_4 = {
 	.prize = TTPRIZE_WHITE_HERB,
 	.trainers = {
 	    {
-			.name = _("COLE"),
+			.name = _("קול"),
 			.facilityClass = FACILITY_CLASS_YOUNGSTER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_AHAHA, EC_WORD_YOU_RE, EC_WORD_NOT, EC_WORD_GOING, EC_WORD_ANYWHERE, EC_WORD_EXCL},
@@ -174,7 +174,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_7 = {
 	.prize = TTPRIZE_DRAGON_SCALE,
 	.trainers = {
 	    {
-			.name = _("JAC"),
+			.name = _("ג'ק"),
 			.facilityClass = FACILITY_CLASS_BURGLAR,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_A, EC_MOVE2(THIEF), EC_WORD_EXCL, EC_WORD_GIVE_ME, EC_WORD_SOMETHING},
@@ -329,7 +329,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_Unused = {
 	.prize = TTPRIZE_IRON,
 	.trainers = {
 	    {
-			.name = _("MILY"),
+			.name = _("מילי"),
 			.facilityClass = FACILITY_CLASS_PSYCHIC_F,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_LOOK, EC_WORD_AT, EC_WORD_MY, EC_WORD_POKEMON, EC_MOVE2(SUPERPOWER), EC_WORD_EXCL},
@@ -484,7 +484,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_5 = {
 	.prize = TTPRIZE_CHOICE_BAND,
 	.trainers = {
 	    {
-			.name = _("JOS & ANNE"),
+			.name = _("ג'וס ואן"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_I, EC_WORD_CAN_T, EC_WORD_LOSE, EC_WORD_TO, EC_WORD_YOU, EC_WORD_HERE},
@@ -627,7 +627,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_5 = {
 			}
 		},
 		{
-			.name = _("JOS & ANNE"),
+			.name = _("ג'וס ואן"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_HERE_GOES, EC_WORD_EXCL_EXCL, EC_WORD_GET, EC_WORD_READY, EC_WORD_TO, EC_WORD_LOSE},
@@ -781,7 +781,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_6 = {
 	.prize = TTPRIZE_CALCIUM,
 	.trainers = {
 	    {
-			.name = _("EMY & ALEK"),
+			.name = _("אמי ואלק"),
 			.facilityClass = FACILITY_CLASS_YOUNG_COUPLE,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_SO, EC_WORD_LOST, EC_WORD_IN, EC_WORD_LOVEY_DOVEY, EC_WORD_HAPPINESS},
@@ -924,7 +924,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_6 = {
 			}
 		},
 		{
-			.name = _("EMY & ALEK"),
+			.name = _("אמי ואלק"),
 			.facilityClass = FACILITY_CLASS_YOUNG_COUPLE,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_GIDDY, EC_WORD_WITH, EC_WORD_LOVEY_DOVEY, EC_WORD_JOY, EC_WORD_EXCL_EXCL},
@@ -1078,7 +1078,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_2 = {
 	.prize = TTPRIZE_HP_UP,
 	.trainers = {
 	    {
-			.name = _("JO & HALEY"),
+			.name = _("ג'ו והיילי"),
 			.facilityClass = FACILITY_CLASS_CRUSH_KIN,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_WE_RE, EC_WORD_USING, EC_WORD_THAT, EC_WORD_STRATEGY, EC_WORD_OKAY, EC_WORD_QUES},
@@ -1221,7 +1221,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_2 = {
 			}
 		},
 		{
-			.name = _("JO & HALEY"),
+			.name = _("ג'ו והיילי"),
 			.facilityClass = FACILITY_CLASS_CRUSH_KIN,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_YOU, EC_WORD_YOU, EC_WORD_YOU, EC_WORD_BETTER, EC_WORD_NOT, EC_WORD_WIN},
@@ -1375,7 +1375,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
 	.prize = TTPRIZE_METAL_COAT,
 	.trainers = {
 	    {
-			.name = _("JORDY"),
+			.name = _("ג'ורדי"),
 			.facilityClass = FACILITY_CLASS_BIKER,
 			.textColor = 3,
 			.speechBefore = {EC_WORD_DON_T, EC_WORD_MAKE, EC_WORD_ME, EC_WORD_GIGGLE, EC_WORD_YOU, EC_WORD_PUSHOVER},
@@ -1518,7 +1518,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
 			}
 		},
 		{
-			.name = _("ERNEST"),
+			.name = _("ארנסט"),
 			.facilityClass = FACILITY_CLASS_BIKER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_IT_S, EC_WORD_SLEEP, EC_WORD_TIME, EC_WORD_FOR, EC_WORD_CHILDREN, EC_WORD_EXCL},
@@ -1661,7 +1661,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_1 = {
 			}
 		},
 		{
-			.name = _("GABRIEL"),
+			.name = _("גבריאל"),
 			.facilityClass = FACILITY_CLASS_CUE_BALL,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_YAHOO, EC_WORD_EXCL, EC_WORD_HERE_I_COME, EC_WORD_TO, EC_WORD_SWARM, EC_WORD_YOU},
@@ -1814,7 +1814,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_2 = {
 	.prize = TTPRIZE_UP_GRADE,
 	.trainers = {
 	    {
-			.name = _("MIKE"),
+			.name = _("מייק"),
 			.facilityClass = FACILITY_CLASS_HIKER,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_MY, EC_WORD_POKEMON, EC_WORD_ARE, EC_WORD_FULL, EC_WORD_OF, EC_WORD_POWER},
@@ -1957,7 +1957,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_2 = {
 			}
 		},
 		{
-			.name = _("REBECCA"),
+			.name = _("רבקה"),
 			.facilityClass = FACILITY_CLASS_CRUSH_GIRL,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_I, EC_WORD_WILL, EC_WORD_WIN, EC_WORD_EXCL_EXCL, 0xFFFF, 0xFFFF},
@@ -2100,7 +2100,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_2 = {
 			}
 		},
 		{
-			.name = _("NICOLAS"),
+			.name = _("ניקולס"),
 			.facilityClass = FACILITY_CLASS_BLACK_BELT,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_THIS, EC_WORD_IS, EC_WORD_WHERE, EC_WORD_YOU, EC_WORD_STOP, EC_WORD_EXCL},
@@ -2253,7 +2253,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_5 = {
 	.prize = TTPRIZE_HP_UP,
 	.trainers = {
 	    {
-			.name = _("JOEY"),
+			.name = _("ג'ואי"),
 			.facilityClass = FACILITY_CLASS_CAMPER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_MY, EC_WORD_POKEMON, EC_WORD_ARE, EC_WORD_SCARY, EC_WORD_STRONG, EC_WORD_EXCL},
@@ -2408,7 +2408,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_8 = {
 	.prize = TTPRIZE_METAL_COAT,
 	.trainers = {
 	    {
-			.name = _("LILY"),
+			.name = _("לילי"),
 			.facilityClass = FACILITY_CLASS_PKMN_BREEDER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I, EC_WORD_WANT, EC_WORD_SOMETHING, EC_WORD_IN, EC_MOVE(RETURN), EC_WORD_EXCL},
@@ -2563,7 +2563,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_2 = {
 	.prize = TTPRIZE_UP_GRADE,
 	.trainers = {
 	    {
-			.name = _("BRANDON"),
+			.name = _("ברנדון"),
 			.facilityClass = FACILITY_CLASS_BUG_CATCHER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_POISON, EC_WORD_IS, EC_WORD_JUST, EC_WORD_SO, EC_WORD_AWFUL, EC_WORD_ISN_T_IT_QUES},
@@ -2718,7 +2718,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_3 = {
 	.prize = TTPRIZE_IRON,
 	.trainers = {
 	    {
-			.name = _("RIC & RENE"),
+			.name = _("ריק ורנה"),
 			.facilityClass = FACILITY_CLASS_CRUSH_KIN,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_MY, EC_WORD_BIG, EC_WORD_BROTHER, EC_WORD_IS, EC_WORD_REALLY, EC_WORD_AWESOME},
@@ -2861,7 +2861,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_3 = {
 			}
 		},
 		{
-			.name = _("RIC & RENE"),
+			.name = _("ריק ורנה"),
 			.facilityClass = FACILITY_CLASS_CRUSH_KIN,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_REALLY, EC_WORD_AWESOME, EC_WORD_EXCL, 0xFFFF, 0xFFFF},
@@ -3015,7 +3015,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_1 = {
 	.prize = TTPRIZE_DRAGON_SCALE,
 	.trainers = {
 	    {
-			.name = _("JEN & KIRA"),
+			.name = _("ג'ן וקירה"),
 			.facilityClass = FACILITY_CLASS_TWINS,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_TRY, EC_WORD_HARD, EC_WORD_EXCL},
@@ -3158,7 +3158,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_1 = {
 			}
 		},
 		{
-			.name = _("JEN & KIRA"),
+			.name = _("ג'ן וקירה"),
 			.facilityClass = FACILITY_CLASS_TWINS,
 			.textColor = 3,
 			.speechBefore = {EC_WORD_LET_S, EC_WORD_TRY, EC_WORD_HARD, EC_WORD_EXCL, 0xFFFF, 0xFFFF},
@@ -3312,7 +3312,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_4 = {
 	.prize = TTPRIZE_MENTAL_HERB,
 	.trainers = {
 	    {
-			.name = _("ISAC & MAG"),
+			.name = _("אייזק ומג"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_OUR, EC_MOVE(EARTHQUAKE), EC_WORD_WILL, EC_WORD_MAKE, EC_WORD_YOU, EC_WORD_SHAKY},
@@ -3455,7 +3455,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_4 = {
 			}
 		},
 		{
-			.name = _("ISAC & MAG"),
+			.name = _("אייזק ומג"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_MY, EC_WORD_POKEMON, EC_WORD_DOESN_T, EC_WORD_GET, EC_WORD_ALL, EC_WORD_SHAKY},
@@ -3609,7 +3609,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
 	.prize = TTPRIZE_BRIGHT_POWDER,
 	.trainers = {
 	    {
-			.name = _("CHELSEA"),
+			.name = _("צ'לסי"),
 			.facilityClass = FACILITY_CLASS_PKMN_RANGER_F,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_THE, EC_WORD_GREEN, EC_WORD_WORLD, EC_WORD_IS, EC_WORD_IMPORTANT, EC_WORD_ISN_T_IT_QUES},
@@ -3752,7 +3752,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
 			}
 		},
 		{
-			.name = _("TRENTON"),
+			.name = _("טרנטון"),
 			.facilityClass = FACILITY_CLASS_PKMN_RANGER_M,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_I, EC_MOVE2(PROTECT), EC_WORD_THE, EC_WORD_GREAT, EC_WORD_GREEN, EC_WORD_WORLD},
@@ -3895,7 +3895,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
 			}
 		},
 		{
-			.name = _("ALBERT"),
+			.name = _("אלברט"),
 			.facilityClass = FACILITY_CLASS_COOLTRAINER_M,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_LET_S, EC_WORD_HAVE, EC_WORD_AN, EC_WORD_EXCITING, EC_WORD_TIME, EC_WORD_HERE},
@@ -4048,7 +4048,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_3 = {
 	.prize = TTPRIZE_CALCIUM,
 	.trainers = {
 	    {
-			.name = _("CAMRYN"),
+			.name = _("קמרין"),
 			.facilityClass = FACILITY_CLASS_PICNICKER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_LET_S, EC_WORD_BATTLE, EC_WORD_I, EC_WORD_WON_T, EC_WORD_LOSE, EC_WORD_EXCL},
@@ -4191,7 +4191,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_3 = {
 			}
 		},
 		{
-			.name = _("NATALIA"),
+			.name = _("נטליה"),
 			.facilityClass = FACILITY_CLASS_AROMA_LADY,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_THIS, EC_MOVE(SWEET_SCENT), EC_WORD_YOU, EC_WORD_LIKE, EC_WORD_IT, EC_WORD_QUES},
@@ -4334,7 +4334,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_3 = {
 			}
 		},
 		{
-			.name = _("KATHLEEN"),
+			.name = _("קתלין"),
 			.facilityClass = FACILITY_CLASS_COOLTRAINER_F,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_TOO, EC_WORD_BAD, EC_WORD_IT_S, EC_WORD_OVER, EC_WORD_FOR, EC_WORD_YOU},
@@ -4487,7 +4487,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_6 = {
 	.prize = TTPRIZE_CARBOS,
 	.trainers = {
 	    {
-			.name = _("BRADEN"),
+			.name = _("ברדן"),
 			.facilityClass = FACILITY_CLASS_SWIMMER_M,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_PRETTY, EC_WORD_HAPPY, EC_WORD_WITH, EC_WORD_MY, EC_WORD_TOUGHNESS},
@@ -4642,7 +4642,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_1 = {
 	.prize = TTPRIZE_KINGS_ROCK,
 	.trainers = {
 	    {
-			.name = _("ALLYSON"),
+			.name = _("אליסון"),
 			.facilityClass = FACILITY_CLASS_COOLTRAINER_F,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_NOT, EC_WORD_ABOUT, EC_WORD_TO, EC_WORD_LOSE, EC_WORD_TODAY},
@@ -4797,7 +4797,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_1 = {
 	.prize = TTPRIZE_UP_GRADE,
 	.trainers = {
 	    {
-			.name = _("ALBERTO"),
+			.name = _("אלברטו"),
 			.facilityClass = FACILITY_CLASS_SAILOR,
 			.textColor = 5,
 			.speechBefore = {EC_WORD_LET_S, EC_WORD_GET, EC_WORD_WITH, EC_WORD_IT, EC_WORD_RIGHT, EC_WORD_AWAY},
@@ -4952,7 +4952,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_5 = {
 	.prize = TTPRIZE_METAL_COAT,
 	.trainers = {
 	    {
-			.name = _("KAT & KIPP"),
+			.name = _("קט וקיפ"),
 			.facilityClass = FACILITY_CLASS_SIS_AND_BRO,
 			.textColor = 4,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_GOING, EC_WORD_TO, EC_WORD_TRY, EC_WORD_MY, EC_WORD_BEST},
@@ -5095,7 +5095,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_5 = {
 			}
 		},
 		{
-			.name = _("KAT & KIPP"),
+			.name = _("קט וקיפ"),
 			.facilityClass = FACILITY_CLASS_SIS_AND_BRO,
 			.textColor = 4,
 			.speechBefore = {EC_WORD_FUFUFU, EC_WORD_ELLIPSIS, EC_WORD_WE, EC_WORD_NEVER, EC_WORD_LOSE, EC_WORD_EXCL},
@@ -5249,7 +5249,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_8 = {
 	.prize = TTPRIZE_MENTAL_HERB,
 	.trainers = {
 	    {
-			.name = _("GEB&MEGAN"),
+			.name = _("גב ומייגן"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_YOU_RE, EC_WORD_OUR, EC_WORD_OPPONENT, EC_WORD_QUES, EC_WORD_PUSHOVER, EC_WORD_HAHAHA},
@@ -5392,7 +5392,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_8 = {
 			}
 		},
 		{
-			.name = _("GEB&MEGAN"),
+			.name = _("גב ומייגן"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 7,
 			.speechBefore = {EC_WORD_YOU_RE, EC_WORD_OUR, EC_WORD_FOE, EC_WORD_QUES, EC_WORD_GIGGLE, EC_WORD_ELLIPSIS},
@@ -5546,7 +5546,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused1 = {
 	.prize = TTPRIZE_ZINC,
 	.trainers = {
 	    {
-			.name = _("LISA&LEAH"),
+			.name = _("ליסה ולאה"),
 			.facilityClass = FACILITY_CLASS_TWINS,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_ABSOLUTELY, EC_WORD_WE_RE, EC_WORD_GOING, EC_WORD_TO, EC_WORD_WIN, EC_WORD_EXCL},
@@ -5689,7 +5689,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused1 = {
 			}
 		},
 		{
-			.name = _("LISA&LEAH"),
+			.name = _("ליסה ולאה"),
 			.facilityClass = FACILITY_CLASS_TWINS,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_CAN, EC_WORD_WE, EC_WORD_WIN, EC_WORD_QUES, EC_WORD_IT_S, EC_WORD_EXCITING},
@@ -5843,7 +5843,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 	.prize = TTPRIZE_PROTEIN,
 	.trainers = {
 	    {
-			.name = _("PRISCILLA"),
+			.name = _("פריסילה"),
 			.facilityClass = FACILITY_CLASS_TUBER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_A_LITTLE, EC_WORD_POKEMON, EC_WORD_GIRL, EC_WORD_HERE_I_COME, EC_WORD_EXCL},
@@ -5986,7 +5986,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 			}
 		},
 		{
-			.name = _("CHARLOTTE"),
+			.name = _("שרלוט"),
 			.facilityClass = FACILITY_CLASS_LADY,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_HELLO, EC_WORD_THERE, EC_WORD_I_AM, EC_WORD_A, EC_WORD_POKEMON, EC_WORD_LADY},
@@ -6129,7 +6129,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 			}
 		},
 		{
-			.name = _("SHANIA"),
+			.name = _("שאנאיה"),
 			.facilityClass = FACILITY_CLASS_SWIMMER_F,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_A, EC_WORD_POKEMON, EC_WORD_HEROINE, EC_WORD_THAT_S, EC_WORD_WHAT, EC_WORD_I_AM},
@@ -6282,7 +6282,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
 	.prize = TTPRIZE_DRAGON_SCALE,
 	.trainers = {
 	    {
-			.name = _("BRENNAN"),
+			.name = _("ברנן"),
 			.facilityClass = FACILITY_CLASS_SAILOR,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_TAKE, EC_WORD_THINGS, EC_WORD_EASY, EC_WORD_ELLIPSIS, EC_WORD_THAT_S, EC_WORD_IMPORTANT},
@@ -6425,7 +6425,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
 			}
 		},
 		{
-			.name = _("KADEN"),
+			.name = _("קיידן"),
 			.facilityClass = FACILITY_CLASS_FISHERMAN,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_MY, EC_WORD_FISHING, EC_WORD_FASHION, EC_WORD_APPEAL, EC_WORD_IS, EC_WORD_FANTASTIC},
@@ -6568,7 +6568,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
 			}
 		},
 		{
-			.name = _("EMANUEL"),
+			.name = _("עמנואל"),
 			.facilityClass = FACILITY_CLASS_GENTLEMAN,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_HMM, EC_WORD_QUES, EC_WORD_ARE, EC_WORD_YOU, EC_WORD_SKILLED, EC_WORD_QUES},
@@ -6721,7 +6721,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Single_3 = {
 	.prize = TTPRIZE_METAL_COAT,
 	.trainers = {
 	    {
-			.name = _("JARRETT"),
+			.name = _("ג'רט"),
 			.facilityClass = FACILITY_CLASS_JUGGLER,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_LET_S, EC_WORD_HAVE, EC_WORD_AN, EC_MOVE2(EXPLOSION), EC_WORD_PARTY, EC_WORD_EXCL},
@@ -6876,7 +6876,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_3 = {
 	.prize = TTPRIZE_DRAGON_SCALE,
 	.trainers = {
 	    {
-			.name = _("OWEN"),
+			.name = _("אוון"),
 			.facilityClass = FACILITY_CLASS_SUPER_NERD,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_HERE_IT_IS, EC_MOVE2(THUNDER_WAVE), EC_WORD_DON_T, EC_MOVE2(WRAP), EC_WORD_ME, EC_WORD_EXCL},
@@ -7031,7 +7031,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Mixed_2 = {
 	.prize = TTPRIZE_PROTEIN,
 	.trainers = {
 	    {
-			.name = _("LORENZO"),
+			.name = _("לורנצו"),
 			.facilityClass = FACILITY_CLASS_PSYCHIC_M,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_THIS, EC_WORD_POWER, EC_WORD_IS, EC_WORD_NOW, EC_WORD_COMPLETE, EC_WORD_EXCL},
@@ -7186,7 +7186,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused2 = {
 	.prize = TTPRIZE_SCOPE_LENS,
 	.trainers = {
 		{
-			.name = _("NIA & CARL"),
+			.name = _("ניה וקרל"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 4,
 			.speechBefore = {EC_WORD_HERE_GOES, EC_WORD_MY, EC_WORD_DIGITAL, EC_WORD_ROMANTIC, EC_WORD_HERO, EC_WORD_STRATEGY},
@@ -7329,7 +7329,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused2 = {
 			}
 		},
 		{
-			.name = _("NIA & CARL"),
+			.name = _("ניה וקרל"),
 			.facilityClass = FACILITY_CLASS_COOL_COUPLE,
 			.textColor = 4,
 			.speechBefore = {EC_WORD_MASTER, EC_WORD_COMPLETE, EC_WORD_FASHION, EC_WORD_SYSTEM, EC_WORD_START, EC_WORD_EXCL},
@@ -7483,7 +7483,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_7 = {
 	.prize = TTPRIZE_CARBOS,
 	.trainers = {
 		{
-			.name = _("AXE & REN"),
+			.name = _("אקס ורן"),
 			.facilityClass = FACILITY_CLASS_SIS_AND_BRO,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_IT_S, EC_WORD_GOING, EC_WORD_TO, EC_WORD_GET, EC_WORD_AWFULLY, EC_WORD_COLD},
@@ -7626,7 +7626,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_7 = {
 			}
 		},
 		{
-			.name = _("AXE & REN"),
+			.name = _("אקס ורן"),
 			.facilityClass = FACILITY_CLASS_SIS_AND_BRO,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_OUR, EC_WORD_SWIFT_SWIM, EC_WORD_LEFT, EC_WORD_ME, EC_WORD_FEELING, EC_WORD_COLD},
@@ -7780,7 +7780,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused3 = {
 	.prize = TTPRIZE_ZINC,
 	.trainers = {
 		{
-			.name = _("KATI & GEB"),
+			.name = _("קייטי וגב"),
 			.facilityClass = FACILITY_CLASS_YOUNG_COUPLE,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_WELCOME, EC_WORD_TO, EC_WORD_OUR, EC_WORD_LOVEY_DOVEY, EC_MOVE2(THUNDER_WAVE), EC_MOVE(SANDSTORM)},
@@ -7923,7 +7923,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_Unused3 = {
 			}
 		},
 		{
-			.name = _("KATI & GEB"),
+			.name = _("קייטי וגב"),
 			.facilityClass = FACILITY_CLASS_YOUNG_COUPLE,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_PLUS, EC_WORD_YOU_RE, EC_WORD_MINUS, EC_WORD_LOVEY_DOVEY, EC_WORD_MAGNET_PULL},
@@ -8077,7 +8077,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_6 = {
 	.prize = TTPRIZE_WHITE_HERB,
 	.trainers = {
 		{
-			.name = _("BEN"),
+			.name = _("בן"),
 			.facilityClass = FACILITY_CLASS_ROCKER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_LALALA, EC_WORD_LET_S, EC_MOVE(SING), EC_WORD_ABOUT, EC_WORD_ELECTRIC, EC_WORD_POWER},
@@ -8220,7 +8220,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_6 = {
 			}
 		},
 		{
-			.name = _("CAMDEN"),
+			.name = _("קמדן"),
 			.facilityClass = FACILITY_CLASS_ENGINEER,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_LALALA, EC_WORD_LET_S, EC_MOVE(SING), EC_WORD_ABOUT, EC_WORD_ELECTRIC, EC_WORD_POWER},
@@ -8363,7 +8363,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_6 = {
 			}
 		},
 		{
-			.name = _("ZACKERY"),
+			.name = _("זאקרי"),
 			.facilityClass = FACILITY_CLASS_SCIENTIST,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_LALALA, EC_WORD_LET_S, EC_MOVE(SING), EC_WORD_ABOUT, EC_WORD_ELECTRIC, EC_WORD_POWER},
@@ -8516,7 +8516,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_5 = {
 	.prize = TTPRIZE_UP_GRADE,
 	.trainers = {
 		{
-			.name = _("MAURA"),
+			.name = _("מורה"),
 			.facilityClass = FACILITY_CLASS_BEAUTY,
 			.textColor = 2,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_THE, EC_WORD_GROUP, EC_WORD_LEADER, EC_WORD_EXCL, 0xFFFF},
@@ -8659,7 +8659,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_5 = {
 			}
 		},
 		{
-			.name = _("MIKAELA"),
+			.name = _("מיקאלה"),
 			.facilityClass = FACILITY_CLASS_LASS,
 			.textColor = 1,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_REALLY, EC_WORD_THE, EC_WORD_NO_1, EC_WORD_TRAINER, EC_WORD_HERE},
@@ -8802,7 +8802,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_5 = {
 			}
 		},
 		{
-			.name = _("FLINT"),
+			.name = _("פלינט"),
 			.facilityClass = FACILITY_CLASS_ENGINEER,
 			.textColor = 4,
 			.speechBefore = {EC_WORD_I_AM, EC_WORD_THE, EC_MOVE2(MILK_DRINK), EC_WORD_WORLD, EC_WORD_LEADER, EC_WORD_EXCL},
