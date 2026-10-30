@@ -577,7 +577,7 @@
       "secondaryId": 0
     },
     {
-      "english": "שיקוי",
+      "english": "אליקסיר",
       "itemId": "ITEM_ELIXIR",
       "price": 3000,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -705,7 +705,7 @@
       "secondaryId": 0
     },
     {
-      "english": "מיץ ברי",
+      "english": "מיץ גרגרים",
       "itemId": "ITEM_BERRY_JUICE",
       "price": 100,
       "holdEffect": "HOLD_EFFECT_RESTORE_HP",
@@ -2193,7 +2193,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות אספר",
+      "english": "גרגר אספר",
       "itemId": "ITEM_ASPEAR_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CURE_FRZ",
@@ -2209,7 +2209,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות לפה",
+      "english": "גרגר לפה",
       "itemId": "ITEM_LEPPA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_RESTORE_PP",
@@ -2225,7 +2225,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות אורן",
+      "english": "גרגר אורן",
       "itemId": "ITEM_ORAN_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_RESTORE_HP",
@@ -2241,7 +2241,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות פרסים",
+      "english": "גרגר פרסים",
       "itemId": "ITEM_PERSIM_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CURE_CONFUSION",
@@ -2257,7 +2257,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות לום",
+      "english": "גרגר לום",
       "itemId": "ITEM_LUM_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CURE_STATUS",
@@ -2273,7 +2273,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פירות סיטרוס",
+      "english": "גרגר סיטרוס",
       "itemId": "ITEM_SITRUS_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_RESTORE_HP",
@@ -2289,7 +2289,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות פיגי",
+      "english": "גרגר פיגי",
       "itemId": "ITEM_FIGY_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SPICY",
@@ -2305,7 +2305,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות וויקי",
+      "english": "גרגר וויקי",
       "itemId": "ITEM_WIKI_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CONFUSE_DRY",
@@ -2321,7 +2321,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות מאגו",
+      "english": "גרגר מאגו",
       "itemId": "ITEM_MAGO_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SWEET",
@@ -2337,7 +2337,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות אגאו",
+      "english": "גרגר אגאו",
       "itemId": "ITEM_AGUAV_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CONFUSE_BITTER",
@@ -2353,7 +2353,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות יאיפאפה",
+      "english": "גרגר יאיפאפה",
       "itemId": "ITEM_IAPAPA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CONFUSE_SOUR",
@@ -2369,7 +2369,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות ראז",
+      "english": "גרגר ראז",
       "itemId": "ITEM_RAZZ_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2385,7 +2385,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות בלוק",
+      "english": "גרגר בלוק",
       "itemId": "ITEM_BLUK_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2401,7 +2401,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות נאנאב",
+      "english": "גרגר נאנאב",
       "itemId": "ITEM_NANAB_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2417,7 +2417,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות ופיר",
+      "english": "גרגר ופיר",
       "itemId": "ITEM_WEPEAR_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2433,7 +2433,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות פינאפ",
+      "english": "גרגר פינאפ",
       "itemId": "ITEM_PINAP_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2449,7 +2449,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות פומג",
+      "english": "גרגר פומג",
       "itemId": "ITEM_POMEG_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2465,7 +2465,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות קלפסי",
+      "english": "גרגר קלפסי",
       "itemId": "ITEM_KELPSY_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2481,7 +2481,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות קואלות",
+      "english": "גרגר קואלות",
       "itemId": "ITEM_QUALOT_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2497,7 +2497,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות הונדיו",
+      "english": "גרגר הונדיו",
       "itemId": "ITEM_HONDEW_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2513,7 +2513,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות גרפה",
+      "english": "גרגר גרפה",
       "itemId": "ITEM_GREPA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2529,7 +2529,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות טמטו",
+      "english": "גרגר טמטו",
       "itemId": "ITEM_TAMATO_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2545,7 +2545,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות קורן",
+      "english": "גרגר קורן",
       "itemId": "ITEM_CORNN_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2561,7 +2561,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות מגוסט",
+      "english": "גרגר מגוסט",
       "itemId": "ITEM_MAGOST_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2577,7 +2577,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות רבוטה",
+      "english": "גרגר רבוטה",
       "itemId": "ITEM_RABUTA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2593,7 +2593,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות נומל",
+      "english": "גרגר נומל",
       "itemId": "ITEM_NOMEL_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2609,7 +2609,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות ספלאון",
+      "english": "גרגר ספלאון",
       "itemId": "ITEM_SPELON_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2625,7 +2625,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תות פאמטרי",
+      "english": "גרגר פאמטרי",
       "itemId": "ITEM_PAMTRE_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2641,7 +2641,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי ואטמל",
+      "english": "גרגר ואטמל",
       "itemId": "ITEM_WATMEL_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2657,7 +2657,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי דורין",
+      "english": "גרגר דורין",
       "itemId": "ITEM_DURIN_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2673,7 +2673,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי בלו",
+      "english": "גרגר בלו",
       "itemId": "ITEM_BELUE_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2689,7 +2689,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי לייצ'י",
+      "english": "גרגר לייצ'י",
       "itemId": "ITEM_LIECHI_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_ATTACK_UP",
@@ -2705,7 +2705,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי גאנלון",
+      "english": "גרגר גאנלון",
       "itemId": "ITEM_GANLON_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_DEFENSE_UP",
@@ -2721,7 +2721,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי סלאק",
+      "english": "גרגר סלאק",
       "itemId": "ITEM_SALAC_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_SPEED_UP",
@@ -2737,7 +2737,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי פטיה",
+      "english": "גרגר פטיה",
       "itemId": "ITEM_PETAYA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_SP_ATTACK_UP",
@@ -2753,7 +2753,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי אפיקוט",
+      "english": "גרגר אפיקוט",
       "itemId": "ITEM_APICOT_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_SP_DEFENSE_UP",
@@ -2769,7 +2769,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי לנסאט",
+      "english": "גרגר לנסאט",
       "itemId": "ITEM_LANSAT_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_CRITICAL_UP",
@@ -2785,7 +2785,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי סטארף",
+      "english": "גרגר סטארף",
       "itemId": "ITEM_STARF_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_RANDOM_STAT_UP",
@@ -2801,7 +2801,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פרי אניגמה",
+      "english": "גרגר אניגמה",
       "itemId": "ITEM_ENIGMA_BERRY",
       "price": 20,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -2913,7 +2913,7 @@
       "secondaryId": 0
     },
     {
-      "english": "חולק נסיון",
+      "english": "חולק ניסיון",
       "itemId": "ITEM_EXP_SHARE",
       "price": 3000,
       "holdEffect": "HOLD_EFFECT_EXP_SHARE",
@@ -4241,7 +4241,7 @@
       "secondaryId": "SUPER_ROD"
     },
     {
-      "english": "כרטיס ס.ס",
+      "english": "כרטיס הפלגה",
       "itemId": "ITEM_SS_TICKET",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
@@ -5899,7 +5899,7 @@
       "secondaryId": 0
     },
     {
-      "english": "פאוץ' פירות",
+      "english": "תיק גרגרים",
       "itemId": "ITEM_BERRY_POUCH",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
