@@ -4241,7 +4241,7 @@
       "secondaryId": "SUPER_ROD"
     },
     {
-      "english": "כרטיס הפלגה",
+      "english": "כרטיס ס.ס",
       "itemId": "ITEM_SS_TICKET",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
