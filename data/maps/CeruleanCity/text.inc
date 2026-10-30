@@ -82,7 +82,7 @@ CeruleanCity_Text_PeopleHereWereRobbed::
 
 CeruleanCity_Text_SlowbroUseSonicboom::
     .string "אוקיי! סלוברו!\n"
-    .string "השתמש בבום על- קולי!$"
+    .string "השתמש בבום על-קולי!$"
 
 CeruleanCity_Text_SlowbroPayAttention::
     .string "קדימה, סלוברו,\l"

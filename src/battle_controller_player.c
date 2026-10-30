@@ -1431,7 +1431,7 @@ void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 arg1)
 
     src[0] = arg1 + 1;
     src[1] = arg1 + 2;
-    CopyToBgTilemapBufferRect_ChangePalette(0, src, 9 * (cursorPosition & 1) + 1, 55 + (cursorPosition & 2), 1, 2, 0x11);
+    CopyToBgTilemapBufferRect_ChangePalette(0, src, 10 * (cursorPosition & 1) + 1, 55 + (cursorPosition & 2), 1, 2, 0x11);
     CopyBgTilemapBufferToVram(0);
 }
 
@@ -1441,7 +1441,7 @@ void MoveSelectionDestroyCursorAt(u8 cursorPosition)
 
     src[0] = 32;
     src[1] = 32;
-    CopyToBgTilemapBufferRect_ChangePalette(0, src, 9 * (cursorPosition & 1) + 1, 55 + (cursorPosition & 2), 1, 2, 0x11);
+    CopyToBgTilemapBufferRect_ChangePalette(0, src, 10 * (cursorPosition & 1) + 1, 55 + (cursorPosition & 2), 1, 2, 0x11);
     CopyBgTilemapBufferToVram(0);
 }
 

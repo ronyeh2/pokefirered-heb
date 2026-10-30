@@ -24,7 +24,7 @@ CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
     .string "{PLAYER} קיבל\n"
-    .string "{} !{}$"
+    .string "מ”מ83 מבליין!$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
     .string "מ”מ83 מכיל\n"

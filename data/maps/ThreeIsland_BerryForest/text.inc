@@ -29,7 +29,7 @@ ThreeIsland_BerryForest_Text_LetsGoHome::
     .string "בוא נלך הביתה!$"
 
 ThreeIsland_BerryForest_Text_BerryPouchIsFull::
-    .string "נרתיק הפירות שלך מלא.\n"
+    .string "תיק הגרגרים שלך מלא.\n"
     .string "כנראה שאתה לא רוצה את זה.$"
 
 ThreeIsland_BerryForest_Text_WelcomeToBerryForest::

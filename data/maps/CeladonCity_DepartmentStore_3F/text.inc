@@ -58,8 +58,8 @@ Text_CounterDeclined::
 
 Text_CounterWhichMon::
     .string "איזה פוקימון תרצה שאלמד\n"
-    .string "את המהלך נגידה?$"
+    .string "את המהלך מתקפת נגד?$"
 
 Text_CounterTaught::
     .string "נו, כבר השתמשת במהלך\n"
-    .string "נגידה שלימדתי אותך?$"
+    .string "מתקפת נגד שלימדתי אותך?$"

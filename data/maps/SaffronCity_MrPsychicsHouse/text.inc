@@ -4,7 +4,7 @@ SaffronCity_MrPsychicsHouse_Text_YouWantedThis::
 
 SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic::
     .string "{PLAYER} קיבל מ”מ92\n"
-    .string "אשליה.$"
+    .string "כוח נפש.$"
 
 SaffronCity_MrPsychicsHouse_Text_ExplainTM29::
     .string "אתה כבר יודע, נכון?\n"
