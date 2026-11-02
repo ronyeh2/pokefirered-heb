@@ -11,13 +11,14 @@ CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer::
 CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter::
     .string "יאללה!\p"
     .string "החבר שלי מוכן להחליף את הקנגסקאן\l"
-    .string "שלו בעד הגרבלר שלי!$"
+    .string "שלו בעד ההאנטר שלי!$"
 
 CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade::
-    .string "בוא אלי, גרבלר!\p"
-    .string "אני אוהבת גרבלרים! אני אוסף אותם!\p"
+    .string "בוא אלי, האנטר!\p"
+    .string "אני אוהבת האנטרים!\n"
+    .string "אני אוספת אותם!\p"
     .string "רגע, מה?\p"
-    .string "גרבלר הפך לפוקימון אחר!$"
+    .string "האנטר הפך לפוקימון אחר!$"
 
 CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID::
     .string "אתה יכול לזהות\n"
@@ -58,8 +59,8 @@ Text_CounterDeclined::
 
 Text_CounterWhichMon::
     .string "איזה פוקימון תרצה שאלמד\n"
-    .string "את המהלך נגידה?$"
+    .string "את המהלך מתקפת נגד?$"
 
 Text_CounterTaught::
     .string "נו, כבר השתמשת במהלך\n"
-    .string "נגידה שלימדתי אותך?$"
+    .string "מתקפת נגד שלימדתי אותך?$"

@@ -32,10 +32,10 @@ SilphCo_7F_Text_SavedAtLast::
 
 SilphCo_7F_Text_RocketsAfterMasterBall::
     .string "צוות רוקט רדפו אחרי ה\n"
-    .string "מאסטרבול, שתופס כל פוקימון.$"
+    .string "מאסטר בול, שתופס כל פוקימון.$"
 
 SilphCo_7F_Text_CanceledMasterBallProject::
-    .string "הפסקנו את פרויקט המאסטרבול\n"
+    .string "הפסקנו את פרויקט המאסטר בול\n"
     .string "בגלל צוות רוקט.$"
 
 SilphCo_7F_Text_BadIfTeamRocketTookOver::

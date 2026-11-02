@@ -55,12 +55,12 @@ PewterCity_Museum_1F_Text_WantYouToGetAmberExamined::
     .string "במעבדת פוקימון כלשהי.$"
 
 PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan::
-    .string "{PLAYER} קיבל את האמבר הישן\n"
+    .string "{PLAYER} קיבל את הענבר העתיק\n"
     .string "מהאיש.$"
 
 PewterCity_Museum_1F_Text_GetOldAmberChecked::
     .string "ששש!\n"
-    .string "תבדוק את האמבר הישן!$"
+    .string "תבדוק את הענבר העתיק!$"
 
 PewterCity_Museum_1F_Text_DontHaveSpaceForThis::
     .string "אין לך מקום בשביל זה.$"

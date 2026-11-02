@@ -184,6 +184,80 @@ def check_items():
     return sorted(bad, reverse=True)
 
 
+def move_name_pen():
+    """The battle move list prints at sTextOnWindowsInfo_Normal[B_WIN_MOVE_NAME_1].x,
+    which is where the first glyph lands and where the pen starts walking left.
+    Read it from the source so a change to the slot width is picked up here."""
+    g = io.open(os.path.join(ROOT, "include/constants/global.h"), encoding="utf-8").read()
+    name_len = int(re.search(r"#define MOVE_NAME_LENGTH\s+(\d+)", g).group(1))
+    b = io.open(os.path.join(ROOT, "src/battle_message.c"), encoding="utf-8").read()
+    pad = int(re.search(r"\[B_WIN_MOVE_NAME_1\].*?\.x = 0 \+ MOVE_NAME_LENGTH \* 4 \+ (\d+)",
+                        b, re.S).group(1))
+    return name_len * 4 + pad
+
+
+def check_move_names():
+    """A move name wider than the slot does not smear -- currentX is a u8, so a
+    clipped glyph wraps past zero and is blitted off-window. It just vanishes."""
+    path = os.path.join(ROOT, "src/data/text/move_names.h")
+    if not os.path.exists(path):
+        return []
+    pen = move_name_pen()
+    text = io.open(path, encoding="utf-8").read()
+    bad = []
+    for mid, name in re.findall(r'\[(MOVE_\w+)\]\s*=\s*_\("([^"]*)"\)', text):
+        o = T.overhang(name, pen=pen, font="small")
+        if o is not None and o > 0:
+            bad.append((o, mid, name))
+    return sorted(bad, reverse=True)
+
+
+def check_name_spacing():
+    """A name is allowed to lose a space in its table -- the battle slot is 57px
+    and prose has 200 -- but never the other way round. Prose written without a
+    space the table keeps is just a typo, and it reads as one word in the box."""
+    seps = "[ \u05be-]"
+    names = []
+    for rel in ("src/data/text/move_names.h", "src/data/text/abilities.h",
+                "src/data/text/trainer_class_names.h"):
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        for key, val in re.findall(r'\[(\w+)\]\s*=\s*_\("([^"]*)"\)',
+                                   io.open(path, encoding="utf-8").read()):
+            if re.search(seps, val) and len(re.sub(seps, "", val)) >= 7:
+                names.append((key, val))
+    items_path = os.path.join(ROOT, "src/data/items.json")
+    if os.path.exists(items_path):
+        doc = json.load(io.open(items_path, encoding="utf-8"))
+        for item in (doc["items"] if isinstance(doc, dict) and "items" in doc else doc):
+            val = item.get("english") or ""
+            if re.search(seps, val) and "{" not in val and len(re.sub(seps, "", val)) >= 7:
+                names.append((item.get("itemId", "?"), val))
+    # The same letters with the separators made optional, so only spacing differs.
+    pats = [(key, val, re.compile("(?<![\u0590-\u05FF])(%s)(?![\u0590-\u05FF])" %
+                                  ("%s*" % seps).join(re.escape(c)
+                                                      for c in re.sub(seps, "", val))))
+            for key, val in names]
+    bad = []
+    for rel in list(_script_files()) + ["src/move_descriptions.c", "src/strings.c"]:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        for lineno, line in enumerate(io.open(path, encoding="utf-8",
+                                              errors="replace"), 1):
+            m = re.search(r'\.string "(.*)"|_\("(.*)"\)', line)
+            if not m:
+                continue
+            body = m.group(1) or m.group(2) or ""
+            for key, val, pat in pats:
+                for found in pat.findall(body):
+                    # Prose keeping a space the table dropped is fine and wanted.
+                    if found != val and not re.search(seps, found):
+                        bad.append((key, val, found, rel, lineno))
+    return sorted(set(bad))
+
+
 def check_terminators(blocks, msg):
     """A block with no $ anywhere never ends; the printer reads on into the
     bytes the assembler laid down after it, i.e. the next label's text."""
@@ -223,6 +297,10 @@ def main():
             lambda r: "+%dpx %s  %s" % r)
     section("battle text outside the battle box", check_battle_box(),
             lambda r: "+%dpx %s  %s" % r)
+    section("move names wider than the battle slot (%dpx)" % move_name_pen(),
+            check_move_names(), lambda r: "+%dpx %s  %s" % r)
+    section("prose missing a space the name table keeps", check_name_spacing(),
+            lambda r: "%s  %s vs %s  %s:%d" % r)
     printer_rows, unresolved = printers.find()
     section("printer call sites whose x cannot hold the string", printer_rows,
             lambda r: "+%dpx %s:%d  x=%d  %s  %s" % r)

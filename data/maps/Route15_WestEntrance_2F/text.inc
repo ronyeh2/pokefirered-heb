@@ -21,9 +21,9 @@ Route15_WestEntrance_2F_Text_ReceivedItemFromAide::
     .string "מהעוזר.$"
 
 Route15_WestEntrance_2F_Text_ExplainExpShare::
-    .string "משתף XP הוא פריט שניתן\n"
+    .string "חולק ניסיון הוא פריט שניתן\n"
     .string "להחזיק על ידי פוקימון.\p"
-    .string "הפוקימון יקבל חלק מנקודות הXP\n"
+    .string "הפוקימון יקבל חלק מנקודות הניסיון\n"
     .string "מבלי להשתתף בקרב.$"
 
 Route15_WestEntrance_2F_Text_LargeShiningBird::

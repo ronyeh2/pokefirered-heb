@@ -1416,7 +1416,13 @@ static void MoveSelectionDisplayMoveType(void)
     u8 *txtPtr;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
 
-    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+    // The type field is one tile narrower than the string it has to hold, so
+    // the pen is tightened the way the healthbox tightens the level.
+    txtPtr = gDisplayedStringBattle;
+    *txtPtr++ = EXT_CTRL_CODE_BEGIN;
+    *txtPtr++ = EXT_CTRL_CODE_MIN_LETTER_SPACING;
+    *txtPtr++ = 5;
+    txtPtr = StringCopy(txtPtr, gText_MoveInterfaceType);
     *txtPtr++ = EXT_CTRL_CODE_BEGIN;
     *txtPtr++ = 6;
     *txtPtr++ = 1;

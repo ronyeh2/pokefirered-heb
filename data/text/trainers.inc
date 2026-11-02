@@ -295,7 +295,7 @@ Route13_Text_GwenRematchIntro::
 
 Route13_Text_AlmaRematchIntro::
 	.string "רוקנתי את החסכונות שלי\n"
-	.string "וקניתי עוד קרבוס.$"
+	.string "וקניתי עוד פחמימות.$"
 
 Route13_Text_PerryRematchIntro::
 	.string "אני לא הולך להפסיד הפעם.\n"

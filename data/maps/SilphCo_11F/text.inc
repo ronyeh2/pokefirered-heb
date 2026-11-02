@@ -19,13 +19,14 @@ SilphCo_11F_Text_ThanksForSavingMeDearGirl::
     .string "הנה, אולי זה יתאים.$"
 
 SilphCo_11F_Text_ObtainedMasterBallFromPresident::
-    .string "{PLAYER} קיבל את המאסטרבול\n"
+    .string "{PLAYER} קיבל את המאסטר בול\n"
     .string "מהנשיא!$"
 
 SilphCo_11F_Text_ThatsOurSecretPrototype::
     .string "נשיא: אתה לא יכול לקנות את זה\n"
     .string "בכל מקום.\p"
-    .string "זהו המאסטרבול שלנו, אבטיפוס סודי.\p"
+    .string "זהו המאסטר בול שלנו,\n"
+    .string "אבטיפוס סודי.\p"
     .string "הוא יתפוס כל פוקימון ללא\n"
     .string "כישלון!\p"
     .string "אתה צריך לשמור על השימוש בו בסוד,\n"

@@ -106,9 +106,11 @@ u8 MailboxPC_InitListMenu(struct PlayerPCItemPageStruct * playerPcStruct)
     gMultiuseListMenuTemplate.totalItems = playerPcStruct->count + 1;
     gMultiuseListMenuTemplate.windowId = sWindowIds[1];
     gMultiuseListMenuTemplate.header_X = 0;
-    // Upstream's left inset, which under RTL is the row's first glyph. The
-    // cursor keeps column 0; the titles run leftwards from the far edge.
-    gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_WINDOW(sWindowIds[1]);
+    // Upstream's left inset mirrored onto the far edge of this 10-tile window.
+    // A constant rather than GetWindowAttribute: a list built before the window
+    // it names reads nothing for the width and draws no row at all, which is
+    // how the move relearner's list came out empty.
+    gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_EDGE(10 * 8);
     gMultiuseListMenuTemplate.cursor_X = 0;
     gMultiuseListMenuTemplate.lettersSpacing = 0;
     gMultiuseListMenuTemplate.itemVerticalPadding = 2;

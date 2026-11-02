@@ -25,7 +25,7 @@ CeladonCity_Restaurant_Text_TakeThisImBusted::
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
     .string "{PLAYER} קיבל\n"
-    .string "את ארנק האסימונים$"
+    .string "את ארנק המטבעות$"
 
 CeladonCity_Restaurant_Text_MakeRoomForThis::
     .string "פנה קצת מקום\n"

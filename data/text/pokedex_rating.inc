@@ -41,7 +41,7 @@ PokedexRating_Text_LessThan60::
 	.string "אה, סוף סוף עברת את ה-05\n"
 	.string "מינים!\p"
 	.string "נתתי לאחד מהעוזרים שלי\n"
-	.string "חולק נסיון. וודא שאתה מקבל אותו!$"
+	.string "חולק ניסיון. וודא שאתה מקבל אותו!$"
 
 PokedexRating_Text_LessThan70::
 	.string "הוהו! זה הופך לפוקדקס\n"

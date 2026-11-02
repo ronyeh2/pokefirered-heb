@@ -45,7 +45,7 @@ Route13_Text_GwenPostBattle::
     .string "כדי לחזק אותם.$"
 
 Route13_Text_AlmaIntro::
-    .string "מצאתי קרבוס פעם במערה בזמן\n"
+    .string "מצאתי פחמימות פעם במערה בזמן\n"
     .string "ששחזרתי.$"
 
 Route13_Text_AlmaDefeat::
@@ -53,7 +53,7 @@ Route13_Text_AlmaDefeat::
     .string "פשוט טעיתי!$"
 
 Route13_Text_AlmaPostBattle::
-    .string "קרבוס שיפר את המהירות של\n"
+    .string "פחמימות שיפרו את המהירות של\n"
     .string "הפוקימונים שלי.$"
 
 Route13_Text_PerryIntro::

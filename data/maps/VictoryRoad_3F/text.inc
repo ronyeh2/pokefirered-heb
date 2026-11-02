@@ -3,7 +3,7 @@ Text_DoubleEdgeTeach::
     .string "שבאת בדרך כל כך אמיצה:\l"
     .string "דרך הניצחון.\p"
     .string "כהכרה בהישג שלך,\n"
-    .string "אני אלמד אותך את חרבפיפיות.\p"
+    .string "אני אלמד אותך את חרב פיפיות.\p"
     .string "האם אתה רוצה שאלמד את\n"
     .string "הטכניקה הזו?$"
 
@@ -13,7 +13,7 @@ Text_DoubleEdgeDeclined::
 
 Text_DoubleEdgeWhichMon::
     .string "לאיזה פוקימון עלי ללמד\n"
-    .string "את ה-חרבפיפיות?$"
+    .string "את ה-חרב פיפיות?$"
 
 Text_DoubleEdgeTaught::
     .string "שמור על המוטיבציה הזו גם\n"

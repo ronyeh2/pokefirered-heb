@@ -14,7 +14,7 @@ PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp::
     .string "הנה, זה יעזור לך.$"
 
 PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy::
-    .string "{PLAYER} קיבל את המפה מדייזי.$"
+    .string "{PLAYER} קיבל את מפת העיר מדייזי.$"
 
 PalletTown_RivalsHouse_Text_DontHaveSpaceForThis::
     .string "אין לך מקום בשביל זה בתיק שלך.$"

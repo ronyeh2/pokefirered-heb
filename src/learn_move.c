@@ -344,7 +344,11 @@ static const struct ListMenuTemplate sMoveRelearnerListMenuTemplate = {
     .maxShowed = 7,
     .windowId = 6,
     .header_X = 0,
-    .item_X = 8,
+    // Upstream's left inset mirrored onto the far edge of this 10-tile
+    // window. A constant, not GetWindowAttribute: the list is built before
+    // the window it names exists, so asking for its width here reads
+    // nothing and the pen lands off-screen with no row drawn at all.
+    .item_X = 10 * 8 - 8,
     .cursor_X = 0,
     .upText_Y = 0,
     .cursorPal = 2,
@@ -770,11 +774,6 @@ static void MoveRelearnerInitListMenuBuffersEtc(void)
     sMoveRelearner->listMenuItems[i].label = gFameCheckerText_Cancel;
     sMoveRelearner->listMenuItems[i].index = 0xFE;
     gMultiuseListMenuTemplate = sMoveRelearnerListMenuTemplate;
-    // The template still carries upstream's left inset in item_X, which under
-    // RTL is where a row's FIRST glyph goes -- the widest move name is 69px and
-    // this window is 10 tiles, so mirrored onto the far edge every one of them
-    // clears the cursor at column 0 with room over.
-    gMultiuseListMenuTemplate.item_X = RTL_ANCHOR_WINDOW(gMultiuseListMenuTemplate.windowId);
     gMultiuseListMenuTemplate.items = sMoveRelearner->listMenuItems;
     gMultiuseListMenuTemplate.totalItems = count + 1;
 }

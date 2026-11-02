@@ -22,10 +22,10 @@ Route2_EastBuilding_Text_ReceivedHM05FromAide::
 
 Route2_EastBuilding_Text_ExplainHM05::
     .string "מ”נ50 מכיל את המהלך הנסתר\n"
-    .string "פלאש.\p"
-    .string "פלאש מאיר אפילו את המערות\n"
+    .string "הבזק.\p"
+    .string "הבזק מאיר אפילו את המערות\n"
     .string "והמבוכים החשוכים ביותר.$"
 
 Route2_EastBuilding_Text_CanGetThroughRockTunnel::
-    .string "ברגע שפוקימון לומד את פלאש, תוכל\n"
+    .string "ברגע שפוקימון לומד את הבזק, תוכל\n"
     .string "לעבור במנהרת הרוק.$"

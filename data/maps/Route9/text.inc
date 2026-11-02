@@ -8,7 +8,7 @@ Route9_Text_AliciaDefeat::
 Route9_Text_AliciaPostBattle::
     .string "המנהרה שמגיעה היא חשוכה לגמרי\n"
     .string "בפנים.\p"
-    .string "תצטרך פלאש כדי לעבור\n"
+    .string "תצטרך הבזק כדי לעבור\n"
     .string "שם.$"
 
 Route9_Text_ChrisIntro::

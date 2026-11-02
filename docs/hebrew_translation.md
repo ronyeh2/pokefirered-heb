@@ -198,6 +198,48 @@ panel's left edge instead of clipping it. So help-system text measures narrower
 than the same words in a dialogue box, and overflows there lose whole letters
 rather than slivers.
 
+## The battle move panel
+
+The panel is a fixed BG tilemap, `gBattleInterface_Textbox_Tilemap`, copied in
+`LoadBattleTextboxAndBackground()`. Nothing moves it, so the windows have to be
+laid out around the frame it draws, not the other way round. Thirty columns,
+and every one of them is spoken for:
+
+| columns | what |
+| --- | --- |
+| 0 | left border |
+| 1 | cursor for the right-hand move column |
+| 2-9 | move names 1 and 3 |
+| 10 | cursor for the left-hand move column |
+| 11-18 | move names 2 and 4 |
+| 19-20 | the frame's divider |
+| 21-23 | the PP label |
+| 21-28 | the move type (bottom row) |
+| 24-28 | the PP value |
+| 29 | right border |
+
+The divider is drawn 12px wide, straddling the 19/20 boundary at x154-165. A
+window that starts at column 20 fills its own half of that white and the seam
+disappears. Widening the name windows to nine tiles each costs the divider
+entirely -- the panel then reads as one unbroken strip, and the PP label ends
+up on the names' side of a seam that is no longer there.
+
+A move name prints at `sTextOnWindowsInfo_Normal[B_WIN_MOVE_NAME_1].x`, which
+is `MOVE_NAME_LENGTH * 4 + 9` = 57. That is one more than the usual
+right-edge-minus-a-glyph-cell anchor, and it is safe only because no glyph in
+the move table is wider than 6px inside a 64px window. Check that before
+raising it again. At 57 every name in the game fits; 19 of them had to give up
+a space to get there, which is the trade the slot forces.
+
+The type field is one tile narrower than its widest string, so
+`MoveSelectionDisplayMoveType` prefixes `EXT_CTRL_CODE_MIN_LETTER_SPACING 5`
+the way `UpdateLvlInHealthbox` does. `סוג/על-חושי` is 61px at the default
+spacing and 52px at 5.
+
+A name is allowed to lose a space in its table, because the slot is 57px and
+prose has 200. Never the other way round: prose written without a space the
+table keeps reads as one word, and `audit.py` fails on it.
+
 ## Rules for editing text
 
 1. **Every `.string` block ends with `$`.** A missing terminator produces no build error and runs
@@ -373,6 +415,54 @@ To inspect a state without RetroArch: `tools/hebrew/emu/unstate.py` unwraps Retr
 RASTATE containers down to the raw core blob, and `crosscore`'s `state <blob>` command hands it
 to `retro_unserialize`. The blob has to come from the same core, which `SERIALIZE size=` on
 startup tells you — VBA-M's is 723,452 bytes, mGBA's 528,448.
+
+## Traps this fork has already fallen into
+
+Each of these cost a round of rework. They are listed so the next change does
+not pay for them again.
+
+**Measure in the emulator before rewording anything.** `width()` used to add
+the wide-letter pad after the final byte as well. That pad walks the pen one
+more pixel along with no glyph behind it, so it never pushed anything off a
+window -- but it measured every string ending in a wide letter one pixel too
+wide. Six move names were rewritten on the strength of it, including
+`אנדרלמוסיה`, which had rendered correctly for years. Four names in a single
+battle screenshot settled it in one run: 57px renders whole, 58px drops its
+leftmost glyph.
+
+**A clipped glyph vanishes, it does not smear.** `currentX` is a `u8`; past
+zero it wraps to about 255 and the glyph is blitted off-window. So measuring
+the ink extent of a screenshot proves nothing about clipping -- the ink always
+lands inside the box whether or not a letter was dropped. Only reading the
+rendered name proves it is complete.
+
+**A longer name clips dialogue that never changed.** Renaming the berries to
+`פרי יער X` took the widest item name from 81px to 92px, and seventeen lines
+written against the old budget started clipping. Run `audit.py` after editing a
+name table, not only after editing dialogue.
+
+**Shoot every state the bug can be in.** Cursor overdraw was "verified" with
+the cursor parked in slot 1 in all five screenshots -- the one position where
+the bug cannot appear. Four slots, four shots.
+
+**`src/data/items.json` is the source; `src/data/items.h` is generated.** Parse
+the JSON and key on `itemId`. A regex sweep pairs one record's `english` with a
+later record's `itemId` and invents findings that are not there.
+
+**`{}` in a `.string` emits nothing.** `ReadBracketedConstants` only errors on
+an unknown *named* constant, so an empty `{}` assembles silently and the line
+renders short.
+
+## Still open
+
+- A three-digit level overwrites the first letter of `רמה` in the player's
+  healthbox. `UpdateLvlInHealthbox` chooses this deliberately -- 24px holds
+  `רמה` at 12px plus two 5px digits and no more -- but Lv 100 is common enough
+  to deserve a better answer than dropping the glyph.
+- A ten-character nickname collides with the level and pushes the gender symbol
+  off the box.
+- `gText_MoveInterfacePP` is `נכ`, which reads as a non-word; it is meant to be
+  נ"כ.
 
 ## Where to continue
 

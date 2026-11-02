@@ -111,8 +111,10 @@ def width(text, font="normal", min_spacing=None, placeholders=False):
     for i, b in enumerate(data):
         # min_spacing only pads a glyph out; it can never make one narrower.
         total += max(table[b], min_spacing) if min_spacing else table[b]
-        nxt = data[i + 1] if i + 1 < len(data) else 0xFF
-        if b in WIDE_LETTERS and nxt not in NO_PAD_AFTER:
+        # The pad walks the pen one more pixel along, so it only matters when a
+        # glyph follows. After the last byte nothing is drawn in it, and
+        # counting it there measured every wide-ending string 1px too wide.
+        if i + 1 < len(data) and b in WIDE_LETTERS and data[i + 1] not in NO_PAD_AFTER:
             total += 1
     return total
 

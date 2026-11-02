@@ -72,7 +72,7 @@ Text_SoftboiledDeclined::
 
 Text_SoftboiledWhichMon::
     .string "אז, מי הפוקימון שיזכה ללמוד\n"
-    .string "את המהלך הטלת ביצה?$"
+    .string "את המהלך ביצה רכה?$"
 
 Text_SoftboiledTaught::
     .string "שיהיה בהצלחה!$"
