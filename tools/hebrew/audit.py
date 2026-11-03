@@ -258,6 +258,76 @@ def check_name_spacing():
     return sorted(set(bad))
 
 
+def check_empty_braces():
+    """{} assembles to nothing. ReadBracketedConstants only errors on an unknown
+    NAMED constant, so an empty one is silent -- which is how a TM number once
+    went missing from a line that still built and still ran."""
+    bad = []
+    for path in _script_files():
+        rel = os.path.relpath(path, ROOT)
+        for lineno, line in enumerate(io.open(path, encoding="utf-8",
+                                              errors="replace"), 1):
+            if re.search(r'\.string\s+"[^"]*\{\}', line):
+                bad.append((rel, lineno, line.strip()[:60]))
+    return sorted(bad)
+
+
+# Fields that are handed a runtime buffer, so printers.py cannot see what goes
+# in them. Each entry says which table fills the buffer, and the pen is read
+# from the call rather than copied, so moving the field moves the check.
+_BUFFER_FIELDS = [
+    ("summary: species name", "src/pokemon_summary_screen.c",
+     r"speciesNameStrBuf", "src/data/text/species_names.h"),
+    ("summary: item name", "src/pokemon_summary_screen.c",
+     r"itemNameStrBuf", "items"),
+    ("summary: move name", "src/pokemon_summary_screen.c",
+     r"moveNameStrBufs\[i\]", "src/data/text/move_names.h"),
+    ("summary: ability name", "src/pokemon_summary_screen.c",
+     r"abilityNameStrBuf", "src/data/text/abilities.h"),
+]
+
+
+def _names_of(source):
+    if source == "items":
+        path = os.path.join(ROOT, "src/data/items.json")
+        if not os.path.exists(path):
+            return []
+        doc = json.load(io.open(path, encoding="utf-8"))
+        rows = doc["items"] if isinstance(doc, dict) and "items" in doc else doc
+        return [(i.get("itemId", "?"), i.get("english") or "") for i in rows]
+    path = os.path.join(ROOT, source)
+    if not os.path.exists(path):
+        return []
+    return re.findall(r'\[(\w+)\]\s*=\s*_\("([^"]*)"\)',
+                      io.open(path, encoding="utf-8").read())
+
+
+def check_name_fields():
+    """A name printed from a buffer still has to fit the field it lands in."""
+    bad = []
+    for label, rel, buf, source in _BUFFER_FIELDS:
+        path = os.path.join(ROOT, rel)
+        if not os.path.exists(path):
+            continue
+        text = io.open(path, encoding="utf-8").read()
+        # This file keeps the pre-RTL calls around, commented out, with the old
+        # x still in them. Measuring one of those measures nothing.
+        text = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+        text = re.sub(r"//[^\n]*", "", text)
+        m = re.search(r"^\s*AddTextPrinterParameterized3\([^;]*?,\s*FONT_(\w+),"
+                      r"\s*(\d+)[^;]*?%s[^;]*?\);" % buf, text, re.M | re.S)
+        if not m:
+            bad.append((0, label, "no call site found"))
+            continue
+        font = "small" if m.group(1) == "SMALL" else "normal"
+        pen = int(m.group(2))
+        for key, name in _names_of(source):
+            o = T.overhang(name, pen=pen, font=font)
+            if o is not None and o > 0:
+                bad.append((o, "%s (pen %d)" % (label, pen), "%s %s" % (key, name)))
+    return sorted(bad, reverse=True)
+
+
 def check_terminators(blocks, msg):
     """A block with no $ anywhere never ends; the printer reads on into the
     bytes the assembler laid down after it, i.e. the next label's text."""
@@ -301,6 +371,10 @@ def main():
             check_move_names(), lambda r: "+%dpx %s  %s" % r)
     section("prose missing a space the name table keeps", check_name_spacing(),
             lambda r: "%s  %s vs %s  %s:%d" % r)
+    section("names too wide for the field they print into", check_name_fields(),
+            lambda r: "+%dpx %s  %s" % r)
+    section("strings carrying an empty {} (emits nothing)", check_empty_braces(),
+            lambda r: "%s:%d  %s" % r)
     printer_rows, unresolved = printers.find()
     section("printer call sites whose x cannot hold the string", printer_rows,
             lambda r: "+%dpx %s:%d  x=%d  %s  %s" % r)

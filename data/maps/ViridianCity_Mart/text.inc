@@ -14,7 +14,7 @@ ViridianCity_Mart_Text_TakeThisToProfOak::
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
     .string "{PLAYER} קיבל את\n"
-    .string "החבילה של אוק!{}$"
+    .string "החבילה של אוק!$"
 
 ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
     .string "החנות הזאת מוכרת\n"

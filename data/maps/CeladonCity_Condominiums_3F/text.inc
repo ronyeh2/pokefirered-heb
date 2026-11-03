@@ -23,7 +23,7 @@ CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex::
 CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations::
     .string "ואו! מעולה!\n"
     .string "סיימת למלא את הפוקדקס שלך!\l"
-    .string "ברכותיי! ...{}$"
+    .string "ברכותיי! ...$"
 
 CeladonCity_Condominiums_3F_Text_ItsTheGameProgram::
     .string "זו תוכנית המשחק!\n"

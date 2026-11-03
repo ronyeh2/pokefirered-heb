@@ -38,11 +38,11 @@ CeruleanCity_Text_GruntIntro::
 
 CeruleanCity_Text_RecoveredTM28FromGrunt::
     .string "{PLAYER} מצא\n"
-    .string "מ”מ82!{}$"
+    .string "מ”מ82!$"
 
 CeruleanCity_Text_BetterGetMovingBye::
     .string "כדאי שאני אסתלק\n"
-    .string "לי עכשיו! ביי!{}$"
+    .string "לי עכשיו! ביי!$"
 
 CeruleanCity_Text_MakeRoomForThisCantRun::
     .string "פנה קצת מקום\n"

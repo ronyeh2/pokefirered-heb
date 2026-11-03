@@ -16,7 +16,7 @@ CeladonCity_Text_BlewItAllAtSlots::
 
 CeladonCity_Text_Poliwrath::
     .string "פוליראת': קוה\n"
-    .string "קוה קוה!{}$"
+    .string "קוה קוה!$"
 
 CeladonCity_Text_GetLostOrIllPunchYou::
     .string "למה אתה מסתכל\n"

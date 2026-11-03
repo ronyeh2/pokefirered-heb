@@ -9,7 +9,7 @@ CinnabarIsland_Gym_Text_BlaineIntro::
 CinnabarIsland_Gym_Text_BlaineDefeat::
     .string "אני...\n"
     .string "הפסדתי\p"
-    .string "הרווחת ביושר את תג המגמה!{}$"
+    .string "הרווחת ביושר את תג המגמה!$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
     .string "אש מתפרצת היא\n"
