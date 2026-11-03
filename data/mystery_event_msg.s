@@ -32,10 +32,10 @@ MysteryEventScript_StampCard::
 	end
 
 sText_MysteryGiftStampCard:
-	.string "Thank you for using the STAMP CARD\n"
-	.string "System.\p"
-	.string "You have {STR_VAR_1} more to collect to\n"
-	.string "fill your STAMP CARD.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "כרטיס החותמות.\p"
+	.string "נותרו לך עוד {STR_VAR_1} חותמות\n"
+	.string "כדי למלא את הכרטיס.$"
 
 MysteryEventScript_SurfPichu::
 	setvaddress MysteryEventScript_SurfPichu
@@ -98,17 +98,17 @@ SurfPichu_Slot5:
 	return
 
 sText_MysteryGiftEgg:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "From the POKéMON CENTER we\n"
-	.string "have a gift - a POKéMON EGG!\p"
-	.string "Please raise it with love and\n"
-	.string "kindness.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "ממרכז הפוקימון יש לנו\n"
+	.string "מתנה עבורך - ביצת פוקימון!\p"
+	.string "אנא גדל אותה באהבה\n"
+	.string "ובעדינות.$"
 
 sText_FullParty:
-	.string "Oh, your party appears to be full.\p"
-	.string "Please come see me after storing\n"
-	.string "a POKéMON on a PC.$"
+	.string "אוי, נראה שהקבוצה שלך מלאה.\p"
+	.string "אנא בוא לראות אותי אחרי\n"
+	.string "שתאחסן פוקימון במחשב.$"
 
 MysteryEventScript_VisitingTrainer::
 	setvaddress MysteryEventScript_VisitingTrainer
@@ -132,32 +132,32 @@ MysteryEventScript_VisitingTrainerArrived:
 	end
 
 sText_MysteryGiftVisitingTrainer:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "By holding this WONDER CARD, you\n"
-	.string "may take part in a survey at a\l"
-	.string "POKéMON MART.\p"
-	.string "Use these surveys to invite\n"
-	.string "TRAINERS to the SEVII ISLANDS.\p"
-	.string "…Let me give you a secret\n"
-	.string "password for a survey:\p"
-	.string "“GIVE ME\n"
-	.string "AWESOME TRAINER”\p"
-	.string "Write that in on a survey and send\n"
-	.string "it to the WIRELESS\l"
-	.string "COMMUNICATION SYSTEM.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "בעזרת כרטיס הפלא הזה תוכל\n"
+	.string "להשתתף בסקר בחנות\l"
+	.string "הפוקימונים.\p"
+	.string "השתמש בסקרים כדי להזמין\n"
+	.string "מאמנים לאיי סביי.\p"
+	.string "…תן לי לתת לך סיסמה\n"
+	.string "סודית לסקר:\p"
+	.string "“תנו לי\n"
+	.string "מאמן מדהים”\p"
+	.string "כתוב אותה בסקר ושלח אותה\n"
+	.string "אל מערכת התקשורת\l"
+	.string "האלחוטית.$"
 
 sText_MysteryGiftVisitingTrainer_2:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "A TRAINER has arrived in the SEVII\n"
-	.string "ISLANDS looking for you.\p"
-	.string "We hope you will enjoy\n"
-	.string "battling the visiting TRAINER.\p"
-	.string "You may invite other TRAINERS by\n"
-	.string "entering other passwords.\p"
-	.string "Try looking for other passwords\n"
-	.string "that may work.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "מאמן הגיע לאיי סביי\n"
+	.string "ומחפש אותך.\p"
+	.string "אנחנו מקווים שתיהנה\n"
+	.string "מהקרב מול המאמן האורח.\p"
+	.string "תוכל להזמין מאמנים נוספים\n"
+	.string "על ידי הזנת סיסמאות אחרות.\p"
+	.string "נסה לחפש סיסמאות נוספות\n"
+	.string "שעשויות לעבוד.$"
 
 MysteryEventScript_BattleCard::
 	setvaddress MysteryEventScript_BattleCard
@@ -185,25 +185,25 @@ MysteryEventScript_BattleCardInfo:
 	end
 
 sText_MysteryGiftBattleCountCard:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "Your BATTLE COUNT CARD keeps\n"
-	.string "track of your battle record against\l"
-	.string "TRAINERS with the same CARD.\p"
-	.string "Look for and battle TRAINERS who\n"
-	.string "have the same CARD as you.\p"
-	.string "You may check the overall rankings\n"
-	.string "by reading the NEWS.\p"
-	.string "Please do give it a try!$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "כרטיס מניין הקרבות עוקב\n"
+	.string "אחרי מאזן הקרבות שלך מול\l"
+	.string "מאמנים עם אותו כרטיס.\p"
+	.string "חפש והילחם במאמנים שיש\n"
+	.string "להם אותו כרטיס כמו שלך.\p"
+	.string "תוכל לבדוק את הדירוג הכללי\n"
+	.string "בקריאת החדשות.\p"
+	.string "אנא נסה את זה!$"
 
 sText_MysteryGiftBattleCountCard_2:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "Congratulations!\p"
-	.string "You have won a prize for winning\n"
-	.string "three battles!\p"
-	.string "We hope you will be inspired to\n"
-	.string "battle some more.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "ברכותיי!\p"
+	.string "זכית בפרס על ניצחון\n"
+	.string "בשלושה קרבות!\p"
+	.string "אנחנו מקווים שזה יעודד\n"
+	.string "אותך להילחם עוד.$"
 
 MysteryEventScript_AuroraTicket::
 	setvaddress MysteryEventScript_AuroraTicket
@@ -242,26 +242,26 @@ AuroraTicket_Obtained:
 	end
 
 sText_AuroraTicket1:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "אתה בטח {PLAYER}.\n"
+	.string "יש כאן כרטיס עבורך.$"
 
 sText_AuroraTicket2:
-	.string "It appears to be for use at the\n"
-	.string "VERMILION CITY port.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
+	.string "נראה שהוא מיועד לשימוש\n"
+	.string "בנמל העיר ורמיליון.\p"
+	.string "למה שלא תנסה ותראה\n"
+	.string "במה מדובר?$"
 
 sText_AuroraTicketGot:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.$"
 
 sText_AuroraTicketNoPlace:
-	.string "Oh, I'm sorry, {PLAYER}. Your BAG's\n"
-	.string "KEY ITEMS POCKET is full.\p"
-	.string "Please store something on your PC,\n"
-	.string "then come back for this.$"
+	.string "אוי, אני מצטער, {PLAYER}. תא\n"
+	.string "פריטי המפתח בתיק שלך מלא.\p"
+	.string "אנא אחסן משהו במחשב,\n"
+	.string "ואז חזור לקחת את זה.$"
 
 MysteryEventScript_MysticTicket::
 	setvaddress MysteryEventScript_MysticTicket
@@ -301,26 +301,26 @@ MysticTicket_Obtained:
 	end
 
 sText_MysticTicket2:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "You must be {PLAYER}.\n"
-	.string "There is a ticket here for you.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "אתה בטח {PLAYER}.\n"
+	.string "יש כאן כרטיס עבורך.$"
 
 sText_MysticTicket1:
-	.string "It appears to be for use at the\n"
-	.string "VERMILION CITY port.\p"
-	.string "Why not give it a try and see what\n"
-	.string "it is about?$"
+	.string "נראה שהוא מיועד לשימוש\n"
+	.string "בנמל העיר ורמיליון.\p"
+	.string "למה שלא תנסה ותראה\n"
+	.string "במה מדובר?$"
 
 sText_MysticTicketGot:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.$"
 
 sText_MysticTicketNoPlace:
-	.string "Oh, I'm sorry, {PLAYER}. Your BAG's\n"
-	.string "KEY ITEMS POCKET is full.\p"
-	.string "Please store something on your PC,\n"
-	.string "then come back for this.$"
+	.string "אוי, אני מצטער, {PLAYER}. תא\n"
+	.string "פריטי המפתח בתיק שלך מלא.\p"
+	.string "אנא אחסן משהו במחשב,\n"
+	.string "ואז חזור לקחת את זה.$"
 
 MysteryEventScript_AlteringCave::
 	setvaddress MysteryEventScript_AlteringCave
@@ -337,11 +337,11 @@ MysteryEventScript_AlteringCave_:
 	end
 
 sText_MysteryGiftAlteringCave:
-	.string "Thank you for using the MYSTERY\n"
-	.string "GIFT System.\p"
-	.string "Recently, there have been rumors\n"
-	.string "of rare POKéMON appearances.\p"
-	.string "The rumors are about ALTERING\n"
-	.string "CAVE on OUTCAST ISLAND.\p"
-	.string "Why not visit there and check if\n"
-	.string "the rumors are indeed true?$"
+	.string "תודה שהשתמשת במערכת\n"
+	.string "מתנת מסתורין.\p"
+	.string "לאחרונה יש שמועות על\n"
+	.string "הופעות של פוקימונים נדירים.\p"
+	.string "השמועות הן על מערת\n"
+	.string "השינויים באי המנודים.\p"
+	.string "למה שלא תבקר שם ותבדוק\n"
+	.string "אם השמועות נכונות?$"

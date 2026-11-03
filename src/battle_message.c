@@ -1293,7 +1293,7 @@ const u8 gText_BattleMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}ת�
 // 36, not the upstream 56, for the same reason gText_BattleMenu above uses 36:
 // with 56 the left column starts at 39 and runs under the 48..55 cursor cell.
 const u8 gText_SafariZoneMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}פיתיון{CLEAR_TO 36}כדור\nלברוח{CLEAR_TO 36}אבן");
-const u8 gText_MoveInterfacePP[] = _("נכ");
+const u8 gText_MoveInterfacePP[] = _("נ”כ");
 const u8 gText_MoveInterfaceType[] = _("סוג/");
 const u8 gText_MoveInterfaceDynamicColors[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}");
 const u8 gText_WhichMoveToForget_Unused[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}איזה מהלך\nלשכוח?");
