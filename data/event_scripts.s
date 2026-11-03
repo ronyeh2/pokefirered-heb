@@ -856,7 +856,7 @@ Text_WantWhichFloor::
 
 Text_BagItemCanBeRegistered::
 	.string "ניתן לרשום פריט מהתיק\n"
-	.string "ללחצן SELECT לשימוש מהיר.$"
+	.string "ללחצן TCELES לשימוש מהיר.$"
 
 @ Unused (email from R/S Rivals computer)
 Text_TrainerSchoolEmail::

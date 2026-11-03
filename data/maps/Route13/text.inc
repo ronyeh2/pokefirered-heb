@@ -119,7 +119,7 @@ Route13_Text_LookToLeftOfThatPost::
 
 Route13_Text_SelectToSwitchItems::
     .string "טיפים למאמנים\p"
-    .string "השתמש ב-SELECT כדי להחליף פריטים\n"
+    .string "השתמש ב-TCELES כדי להחליף פריטים\n"
     .string "בחלון הפריטים.$"
 
 Route13_Text_RouteSign::

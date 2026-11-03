@@ -185,3 +185,37 @@ it answers the question directly.
 
 One trap when diffing: cores differ in pixel format. Normalise to RGB565 before comparing, or
 an XRGB8888 core shows hundreds of "differing" pixels that are nothing but rounding.
+
+## When the runner will not boot
+
+`no read-back of 03005008 -- did the boot script fail?` usually is not the boot
+script. `runner` links `libmgba` through an rpath that points at wherever mGBA
+was built, and if that was a temporary directory it is gone by the next
+session. Check it:
+
+```
+./tools/hebrew/emu/runner rom.gba out 2>&1 | head -3
+```
+
+A `Library not loaded: @rpath/libmgba.0.10.dylib` names the real problem. Point
+`DYLD_LIBRARY_PATH` at a build of mGBA that has Qt, SDL and ffmpeg off --
+Homebrew's own libmgba pulls in ffmpeg and will not load without it:
+
+```
+DYLD_LIBRARY_PATH=/path/to/mgba/build python3 -P tools/hebrew/emu/journey.py ...
+```
+
+## Driving the overworld
+
+Map JSON coordinates are what `journey.py` wants -- `data/maps/<Map>/map.json`
+lists each `bg_events` entry at the x and y to warp to, plus one on whichever
+side you want to approach from. No map offset to add.
+
+Two things waste a run:
+
+- **An A press of 4 frames does not register.** Use 10.
+- **A second A press closes the box you just opened.** One press, then wait.
+
+So a sign is read with `30 UP`, `30 -`, `10 A`, `130 -`, `shot`, and nothing
+else. The Oak's Lab sign in Pallet Town (map 3 0, warp 16 19) is the cheapest
+place to put a string you want to photograph.

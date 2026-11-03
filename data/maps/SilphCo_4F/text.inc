@@ -11,7 +11,7 @@ SilphCo_4F_Text_Grunt1Intro::
     .string "על ארגון סילף!$"
 
 SilphCo_4F_Text_Grunt1Defeat::
-    .string "ארgh!$"
+    .string "אררגה!$"
 
 SilphCo_4F_Text_Grunt1PostBattle::
     .string "פוואהההה!\n"

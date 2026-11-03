@@ -705,7 +705,7 @@
       "secondaryId": 0
     },
     {
-      "english": "מיץ גרגרים",
+      "english": "מיץ פירות",
       "itemId": "ITEM_BERRY_JUICE",
       "price": 100,
       "holdEffect": "HOLD_EFFECT_RESTORE_HP",
@@ -5899,7 +5899,7 @@
       "secondaryId": 0
     },
     {
-      "english": "תיק גרגרים",
+      "english": "נרתיק פירות",
       "itemId": "ITEM_BERRY_POUCH",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",

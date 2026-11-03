@@ -67,7 +67,7 @@ ViridianCity_School_Text_ExplainSleep::
 
 ViridianCity_School_Text_ExplainBurn::
     .string "כווייה מפחיתה את כוח ההתקפה.\n"
-    .string "היא גם גורמת לאובדן HP מתמשך.\p"
+    .string "היא גם גורמת לאובדן PH מתמשך.\p"
     .string "כווייה נשארת לאחר הקרב. השתמש\n"
     .string "במשחה לכוויות כדי לרפא כווייה.$"
 

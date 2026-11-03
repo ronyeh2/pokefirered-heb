@@ -1,7 +1,7 @@
 #include "global.h"
 
 // Easy Chat keyboard
-const u8 gText_EasyChatKeyboard_ABCDEFothers[] = _("{CLEAR 11}א{CLEAR 6}ב{CLEAR 6}ג{CLEAR 26}ד{CLEAR 6}ה{CLEAR 6}ו{CLEAR 26}others");
+const u8 gText_EasyChatKeyboard_ABCDEFothers[] = _("{CLEAR 11}א{CLEAR 6}ב{CLEAR 6}ג{CLEAR 26}ד{CLEAR 6}ה{CLEAR 6}ו{CLEAR 26}אחרים");
 const u8 gText_EasyChatKeyboard_GHIJKL[] = _("{CLEAR 11}ז{CLEAR 6}ח{CLEAR 6}ט{CLEAR 26}י{CLEAR 6}כ{CLEAR 6}ל{CLEAR 6}מ");
 const u8 gText_EasyChatKeyboard_MNOPQRS[] = _("{CLEAR 11}נ{CLEAR 6}ס{CLEAR 6}ע{CLEAR 26}פ{CLEAR 6}צ{CLEAR 6}ק{CLEAR 6}ר{CLEAR 26} ");
 const u8 gText_EasyChatKeyboard_TUVWXYZ[] = _("{CLEAR 11}ש{CLEAR 6}ת{CLEAR 6}ן{CLEAR 26}ם{CLEAR 6}ץ{CLEAR 6}ף{CLEAR 6}ך{CLEAR 26} ");
